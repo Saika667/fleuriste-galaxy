@@ -1,0 +1,88 @@
+{
+  "_doc": "Commandes. type precise : required {fleur: quantité}, required_colors {couleur: quantité}. type intent : liste de règles (kind : min_stems, max_stems, min_varieties, color_any{colors,min_fraction}, max_colors, tag_fraction{tag,min_fraction}, forbid_tag{tag}). hint = indice montré au joueur si la règle échoue. min_demand = demande minimale, min_score = score total minimal.",
+  "orders": {
+    "precise_roses": {
+      "type": "precise", "text": "Trois roses et une fleur blanche, avec du papier kraft s'il vous plaît.",
+      "required": { "rose": 3 }, "required_colors": { "white": 1 }, "extra_allowed": true,
+      "wrap_tags": ["rustic"], "accessory_tags": [], "min_demand": 1.0, "min_score": 0.55
+    },
+    "precise_sunny": {
+      "type": "precise", "text": "Deux tournesols et deux marguerites. Surtout pas de lys : j'ai déjà un enterrement cette semaine.",
+      "required": { "sunflower": 2, "daisy": 2 }, "required_colors": {}, "extra_allowed": false,
+      "wrap_tags": [], "accessory_tags": [], "min_demand": 1.0, "min_score": 0.5
+    },
+    "intent_romantic": {
+      "type": "intent", "text": "C'est pour un premier rendez-vous, quelque chose de romantique mais pas trop.",
+      "rules": [
+        { "id": "stems", "kind": "min_stems", "value": 5, "hint": "Un peu plus fourni, pour que ça se remarque." },
+        { "id": "mood", "kind": "tag_fraction", "tag": "romantic", "min_fraction": 0.4, "hint": "Il faut que ça parle d'amour." },
+        { "id": "warm", "kind": "color_any", "colors": ["red", "pink", "white"], "min_fraction": 0.7, "hint": "Des teintes douces, rouges ou roses." },
+        { "id": "calm", "kind": "forbid_tag", "tag": "funeral", "hint": "Rien de funèbre, voyons : c'est un rendez-vous, pas une veillée." }
+      ],
+      "wrap_tags": ["romantic", "elegant"], "accessory_tags": ["romantic"], "min_demand": 1.0, "min_score": 0.55
+    },
+    "intent_cheer_up": {
+      "type": "intent", "text": "Mon amie est triste, remontez-lui le moral.",
+      "rules": [
+        { "id": "mood", "kind": "tag_fraction", "tag": "cheerful", "min_fraction": 0.5, "hint": "Du joyeux, du lumineux." },
+        { "id": "colors", "kind": "max_colors", "value": 3, "hint": "Pas trop de couleurs, elle a déjà mal à la tête." },
+        { "id": "stems", "kind": "min_stems", "value": 4, "hint": "Un bouquet généreux." }
+      ],
+      "wrap_tags": ["casual", "rustic"], "accessory_tags": ["card"], "min_demand": 0.66, "min_score": 0.5
+    },
+    "alien_welcome": {
+      "type": "intent", "text": "Bzzt. Un présent pour mon hôte, calme et inconnu de ma planète.",
+      "rules": [
+        { "id": "exotic", "kind": "tag_fraction", "tag": "exotic", "min_fraction": 0.3, "hint": "Quelque chose que je n'ai jamais vu." },
+        { "id": "stems", "kind": "min_stems", "value": 3, "hint": "Trois tiges au moins, c'est la coutume." }
+      ],
+      "wrap_tags": ["elegant"], "accessory_tags": [], "min_demand": 1.0, "min_score": 0.45
+    },
+    "weeper_condolence": {
+      "type": "intent", "text": "Mon défunt mari s'est évaporé mardi, par accident. Quelque chose de blanc et de solennel, avec un crêpe noir, je vous prie.",
+      "rules": [
+        { "id": "mood", "kind": "tag_fraction", "tag": "funeral", "min_fraction": 0.6, "hint": "Des fleurs de deuil, voyons : il s'est évaporé, pas échappé en vacances." },
+        { "id": "colors", "kind": "color_any", "colors": ["white", "purple"], "min_fraction": 0.8, "hint": "Du blanc ou du violet pâle, comme une brume de chagrin." },
+        { "id": "stems", "kind": "min_stems", "value": 4, "hint": "Un bouquet à la mesure de son vide." }
+      ],
+      "wrap_tags": ["funeral", "elegant"], "accessory_tags": ["funeral"], "min_demand": 1.0, "min_score": 0.5
+    },
+    "weeper_vigil": {
+      "type": "intent", "text": "C'est pour la veillée : une fleur qui pleure avec nous, et d'autres qui font semblant.",
+      "rules": [
+        { "id": "alien", "kind": "tag_fraction", "tag": "exotic", "min_fraction": 0.3, "hint": "Une fleur qui n'est pas d'ici, pour pleurer à l'unisson." },
+        { "id": "mood", "kind": "tag_fraction", "tag": "funeral", "min_fraction": 0.5, "hint": "Il faut que ça sente le recueillement, pas le pique-nique." },
+        { "id": "stems", "kind": "min_stems", "value": 4, "hint": "On est nombreux à pleurer, il en faut assez." }
+      ],
+      "wrap_tags": ["funeral"], "accessory_tags": ["funeral"], "min_demand": 1.0, "min_score": 0.5
+    },
+    "weeper_consolation": {
+      "type": "intent", "text": "Un bouquet pour remonter le moral d'un nuage : joyeux, mais discret, il pleut déjà assez.",
+      "rules": [
+        { "id": "mood", "kind": "tag_fraction", "tag": "cheerful", "min_fraction": 0.5, "hint": "Du joyeux : un nuage triste a besoin de soleil." },
+        { "id": "colors", "kind": "max_colors", "value": 2, "hint": "Deux couleurs, pas plus : il a le vertige." },
+        { "id": "stems", "kind": "min_stems", "value": 3, "hint": "Trois tiges au moins, c'est la coutume des brumes." }
+      ],
+      "wrap_tags": ["casual", "rustic"], "accessory_tags": ["card"], "min_demand": 0.66, "min_score": 0.5
+    },
+    "ploc_feast": {
+      "type": "precise", "text": "Deux orchidées mordeuses, bien vivantes. Si elles me mordent, c'est qu'elles sont fraîches.",
+      "required": { "snap_orchid": 2 }, "required_colors": {}, "extra_allowed": true,
+      "wrap_tags": [], "accessory_tags": [], "min_demand": 1.0, "min_score": 0.5
+    },
+    "ploc_picnic": {
+      "type": "precise", "text": "Un pique-nique à offrir : une orchidée mordeuse, deux tournesols, deux marguerites. Pas de lys, ça me reste en travers de la gorge.",
+      "required": { "snap_orchid": 1, "sunflower": 2, "daisy": 2 }, "required_colors": {}, "extra_allowed": false,
+      "wrap_tags": ["rustic"], "accessory_tags": [], "min_demand": 1.0, "min_score": 0.5
+    },
+    "ploc_gift": {
+      "type": "intent", "text": "Un cadeau à croquer pour ma grand-mère, qui n'a plus de dents mais beaucoup de bouches.",
+      "rules": [
+        { "id": "alien", "kind": "tag_fraction", "tag": "exotic", "min_fraction": 0.4, "hint": "Quelque chose d'exotique, qui change de la gelée." },
+        { "id": "stems", "kind": "min_stems", "value": 4, "hint": "Un cadeau généreux : elle a beaucoup de bouches." },
+        { "id": "variety", "kind": "min_varieties", "value": 2, "hint": "Plusieurs sortes de fleurs, elle s'ennuie vite." }
+      ],
+      "wrap_tags": ["casual", "elegant"], "accessory_tags": [], "min_demand": 1.0, "min_score": 0.5
+    }
+  }
+}

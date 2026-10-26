@@ -1,0 +1,66 @@
+{
+  "_doc": "Definitions de clients. kind: florist | shady | police | thief. routes: street | sewer | portal. unlock_chapter: index de chapitre. pay_multiplier: facteur sur le prix paye. spawn_weight: poids dans le tirage automatique des clients (defaut 1 ; les extraterrestres restent rares). unlock_flags: drapeaux de progression requis en plus du chapitre ; unlock_min_day / unlock_min_reputation (optionnels). species : identifiant d espece (human, zorbian, weeper, ploc...). currency : monnaie etrangere (balance.exchange.currencies) : le client paie en unites etrangeres converties au cours du jour. lines : repliques {greet, thanks, grumble, leave} (florists, Game.customer_line). reward: recompense unique PAR DEFINITION de client (une seule fois dans la partie, pas par visite). GDD 9 : aucun champ public ne doit identifier un policier. Pour les kinds shady et police, nom, etiquette, tells visibles, look_seed et replique d'ouverture sont tires par INSTANCE dans visitor_pools (memes pools, memes probabilites) ; les champs name/visible_tells des definitions shady/police ne servent que de repli et sont identiques en style. face_id : visage fixe d'un personnage recurrent (florist) ; les visiteurs recoivent un face_id anonyme derive de look_seed.",
+  "visitor_pools": {
+    "_doc": "Pools PARTAGES par les clandestins et le policier. names : surnoms et noms civils melanges. tells : indices visibles (chaque client visiteur en recoit tell_count_min a tell_count_max, tires uniformement). openers : repliques d'ouverture communes. faces : nombre de visages anonymes.",
+    "names": ["Le Chuchoteur", "Le Nerveux", "Le Pressé", "Le Grand Maigre", "Monsieur Lambert", "Madame Vasseur", "Monsieur Girard", "Monsieur Morel", "Madame Roussel", "Le Cousin d'un ami", "La Dame au chapeau", "Monsieur Tanguy"],
+    "tells": ["sunglasses", "hurried", "suit", "checks_watch", "asks_back_door"],
+    "tell_count_min": 2,
+    "tell_count_max": 3,
+    "faces": 12,
+    "openers": [
+      "Bonjour. On m'a dit que vous aviez de bonnes herbes... pour les bouquets, bien sûr.",
+      "Vous avez ce dont on parle ? Je ne dis pas quoi : les murs écoutent, et ils sont bavards.",
+      "Bonsoir. On m'a parlé de vos spécialités d'arrière-boutique. Elles sont, paraît-il, à mourir.",
+      "Psst. Il paraît que vous gardez de drôles de plantes quelque part, au frais.",
+      "Mon cousin dit que vos fleurs poussent mieux la nuit. Moi je ne dis rien, je suis juste curieux.",
+      "Bonjour. Une amie vous recommande : elle dit que votre cave sent la bonne affaire.",
+      "Salut. Je cherche un bouquet qu'on ne met pas dans un vase.",
+      "Bonjour. Je voudrais... enfin, vous voyez. Ou vous ne voyez pas. Dans le doute, souriez."
+    ]
+  },
+  "customers": {
+    "regular_woman": { "name": "Madame Pivoine", "kind": "florist", "species": "human", "face_id": "mme_pivoine", "routes": ["street"], "orders": ["precise_roses", "intent_romantic"], "patience": 70, "price_tolerance": 1.4, "visible_tells": ["sunglasses", "hurried"], "sub_spawnable": true, "unlock_chapter": 0,
+      "lines": { "greet": ["Bonjour ! Surtout rien de funèbre aujourd'hui, j'ai déjà donné.", "Bonjour, c'est encore moi, avec mes histoires de coeur."], "thanks": ["Il est adorable, merci ! Je vais en prendre soin, comme de mes plantes. Enfin, presque."], "grumble": ["Ce n'est pas tout à fait ce que je voulais, mais enfin."], "leave": ["Tant pis, je repasserai quand vous serez inspiré."] } },
+    "regular_man": { "name": "Monsieur Bleuet", "kind": "florist", "species": "human", "face_id": "m_bleuet", "routes": ["street"], "orders": ["intent_cheer_up", "precise_sunny"], "patience": 60, "price_tolerance": 1.3, "visible_tells": ["suit", "checks_watch", "asks_back_door"], "sub_spawnable": true, "unlock_chapter": 0,
+      "lines": { "greet": ["Bonjour. Quelque chose de gai, et vite : j'ai une réunion dans le brouillard.", "Bonsoir... enfin bonjour. Je vous cherchais depuis hier."], "thanks": ["Parfait, c'est exactement ce qu'il faut. Gardez le sourire, il est offert."], "grumble": ["Hum. J'aurais préféré plus de couleur, et moins de questions."], "leave": ["Je reviendrai. Ou pas. On verra."] } },
+    "shady_regular": { "name": "Monsieur Vasseur", "kind": "shady", "species": "human", "routes": ["street"], "orders": [], "patience": 45, "price_tolerance": 1.2, "visible_tells": ["sunglasses", "suit", "hurried"], "unlock_chapter": 2, "sub_spawnable": false, "dialogue": "shady_sale" },
+    "shady_nervous": { "name": "Le Nerveux", "kind": "shady", "species": "human", "routes": ["street", "sewer"], "orders": [], "patience": 45, "price_tolerance": 1.5, "visible_tells": ["sunglasses", "suit", "hurried"], "unlock_chapter": 2, "sub_spawnable": true, "dialogue": "shady_sale" },
+    "undercover_cop": { "name": "Le Pressé", "kind": "police", "species": "human", "routes": ["street", "sewer"], "orders": [], "patience": 45, "price_tolerance": 1.2, "visible_tells": ["sunglasses", "suit", "hurried"], "dialogue": "police_visit", "unlock_chapter": 3, "sub_spawnable": false },
+    "thief_basic": { "name": "Rôdeur", "kind": "thief", "species": "human", "routes": ["street", "sewer"], "orders": [], "patience": 30, "price_tolerance": 1.0, "visible_tells": ["hurried", "asks_back_door"], "unlock_chapter": 3, "sub_spawnable": false },
+    "zorbian_first": { "name": "Zzorb le voyageur", "kind": "florist", "species": "zorbian", "face_id": "zzorb", "routes": ["portal", "sewer"], "orders": ["alien_welcome"], "patience": 120, "price_tolerance": 2.0, "pay_multiplier": 1.5, "spawn_weight": 0.3, "visible_tells": ["antennae"], "reward": { "seeds": { "xeno_lotus": 2 }, "reputation": 5 }, "unlock_chapter": 4, "sub_spawnable": true,
+      "lines": { "greet": ["Bzzt ! Bonjour, créature de la boutique. Je viens de très loin, et j'ai déjà mal aux pieds.", "Bzzt. Chez moi on dit que vos fleurs poussent sans qu'on les arrose de larmes."], "thanks": ["Bzzt-bzzt ! Je raconterai ça à mes trois estomacs.", "Magnifique. Je le mets dans mon deuxième cerveau, celui des cadeaux."], "grumble": ["Bzzt... ce n'est pas du tout ce que mes antennes réclamaient."], "leave": ["Bzzt. Je repartirai sans rien, mais très poliment."] } },
+    "weeper_veuve": { "name": "Veuve Brumeline", "kind": "florist", "species": "weeper", "face_id": "brumeline", "routes": ["sewer", "street"], "orders": ["weeper_condolence", "weeper_vigil"], "patience": 110, "price_tolerance": 1.8, "pay_multiplier": 1.4, "currency": "comet_tear", "spawn_weight": 0.15, "visible_tells": ["veil", "dripping"],
+      "reward": { "seeds": { "gloom_moss": 2 }, "reputation": 3, "flag": "weeper_served" }, "unlock_chapter": 5, "sub_spawnable": true,
+      "lines": { "greet": ["Snif... pardon, c'est la brume qui déborde. Je paie en larmes de comète, le cours est affiché, ne me regardez pas comme ça.", "Bonsoir, bonsoir... j'ai pleuré dans votre bouche d'égout, il y en a un peu partout, désolée."], "thanks": ["Oh... c'est si beau que je pleure encore. Gardez la monnaie, elle est mouillée.", "Merci. Mon défunt aurait adoré, s'il n'était pas devenu un nuage."], "grumble": ["Snif... je m'attendais à plus triste, ou à plus blanc."], "leave": ["Je repars en brume. Ne respirez pas trop."] } },
+    "weeper_cousin": { "name": "Sanglot de la Nébuleuse", "kind": "florist", "species": "weeper", "face_id": "sanglot", "routes": ["sewer", "street"], "orders": ["weeper_consolation", "weeper_vigil", "weeper_condolence"], "patience": 100, "price_tolerance": 1.6, "pay_multiplier": 1.3, "currency": "comet_tear", "spawn_weight": 0.1, "visible_tells": ["veil", "dripping"], "unlock_chapter": 5, "unlock_flags": ["weeper_served"], "sub_spawnable": true,
+      "lines": { "greet": ["Hou-hou... on m'a dit que c'était ici, la boutique qui console les nuages.", "Je suis le cousin de la veuve. Je suis moins triste, mais plus mouillé."], "thanks": ["Hou-hou ! Je suis presque gai. Presque.", "Ça me donne envie de pleuvoir de joie."], "grumble": ["Hou... ça ne me console même pas un peu."], "leave": ["Hou-hou, tant pis. Je vais pleurer ailleurs."] } },
+    "ploc_goinfre": { "name": "Goinfre Gloutonille", "kind": "florist", "species": "ploc", "face_id": "gloutonille", "routes": ["portal", "street"], "orders": ["ploc_feast", "ploc_picnic"], "patience": 90, "price_tolerance": 1.6, "pay_multiplier": 1.6, "spawn_weight": 0.15, "visible_tells": ["tentacles", "drooling"],
+      "reward": { "seeds": { "star_vine": 2 }, "reputation": 3, "flag": "ploc_served" }, "unlock_chapter": 5, "unlock_flags": ["weeper_served"], "sub_spawnable": true,
+      "lines": { "greet": ["Glouglou ! Ça sent bon, ici. Ça sent surtout le déjeuner, mais je me retiens.", "Bonjour ! Je suis un Ploc, je suis un peu collant, mais je paie rubis sur l'ongle."], "thanks": ["Glou ! Je ne le mange pas tout de suite, promis. Peut-être un pétale.", "Quelle merveille ! J'ai déjà faim, c'est le plus beau des compliments."], "grumble": ["Glouglou... ça ne se mange même pas, ce truc."], "leave": ["Glou. Je reviendrai quand vous aurez mieux, ou plus gros."] } },
+    "ploc_gourmet": { "name": "Madame Mâchouille", "kind": "florist", "species": "ploc", "face_id": "machouille", "routes": ["portal", "street"], "orders": ["ploc_gift", "ploc_feast"], "patience": 90, "price_tolerance": 1.5, "pay_multiplier": 1.5, "spawn_weight": 0.1, "visible_tells": ["tentacles", "drooling"], "unlock_chapter": 5, "unlock_flags": ["ploc_served"], "sub_spawnable": true,
+      "lines": { "greet": ["Bien le bonjour ! Je goûte avec les yeux, et les ventouses, et le reste.", "Madame Mâchouille, critique gastronomique et florale. Surprenez-moi, ou je vous avale."], "thanks": ["Exquis ! Un bouquet qui a du caractère et de la sauce.", "Je vous mets cinq étoiles, ou cinq tentacules, selon le client."], "grumble": ["Fade. Sans relief. Sans pétale croquant."], "leave": ["Je reste sur ma faim, c'est dire si c'est grave."] } }
+  },
+  "dialogues": {
+    "_doc": "Graphes courts. Noeud: text + choices [{id,text,next}] ; noeud final: outcome (sell | refuse | stall). text_pool: le texte du noeud est tire de visitor_pools.<pool> selon la graine du client. police_visit et shady_sale DOIVENT rester identiques (memes libelles, meme ordre, memes repliques) : GDD 9, teste dans tests/test_visitors.gd.",
+    "police_visit": {
+      "start": { "text_pool": "openers", "text": "Bonjour. On m'a dit que vous aviez de bonnes herbes... pour les bouquets, bien sûr.", "choices": [
+        { "id": "sell", "text": "Bien sûr, je vous prépare ça.", "next": "end_sell" },
+        { "id": "refuse", "text": "Navré, je ne vends rien de tel.", "next": "end_refuse" },
+        { "id": "stall", "text": "Repassez demain, ce n'est pas le moment.", "next": "end_stall" }
+      ] },
+      "end_sell": { "text": "Parfait. Je ne vous ai jamais vu, et vous non plus.", "outcome": "sell" },
+      "end_refuse": { "text": "Tant pis. Bonne journée, et méfiez-vous des courants d'air.", "outcome": "refuse" },
+      "end_stall": { "text": "Hmm. Je reviendrai. Ou quelqu'un d'autre, à ma place.", "outcome": "stall" }
+    },
+    "shady_sale": {
+      "start": { "text_pool": "openers", "text": "Vous avez ce dont on parle ? Je ne dis pas quoi : les murs écoutent, et ils sont bavards.", "choices": [
+        { "id": "sell", "text": "Bien sûr, je vous prépare ça.", "next": "end_sell" },
+        { "id": "refuse", "text": "Navré, je ne vends rien de tel.", "next": "end_refuse" },
+        { "id": "stall", "text": "Repassez demain, ce n'est pas le moment.", "next": "end_stall" }
+      ] },
+      "end_sell": { "text": "Parfait. Je ne vous ai jamais vu, et vous non plus.", "outcome": "sell" },
+      "end_refuse": { "text": "Tant pis. Bonne journée, et méfiez-vous des courants d'air.", "outcome": "refuse" },
+      "end_stall": { "text": "Hmm. Je reviendrai. Ou quelqu'un d'autre, à ma place.", "outcome": "stall" }
+    }
+  }
+}

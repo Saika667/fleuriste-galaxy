@@ -1,0 +1,172 @@
+{
+  "_doc": "Valeurs d'equilibrage initiales (provisoires, a regler en jouant). Durees en secondes de jeu actif, montants en unites entieres. Cles commencant par _ = commentaires.",
+  "clock": {
+    "_doc": "Cycle actif ~26 min: ouverture + nuit. Preparation, bilan et sauvegarde sont sans chronometre (temps arrete).",
+    "opening_seconds": 780,
+    "night_seconds": 780,
+    "opening_start_hour": 9,
+    "opening_end_hour": 19
+  },
+  "freshness": {
+    "_doc": "Fraicheur 0..1. Taux de base par fleur dans flowers.json (decay_per_min). fridge_factor multiplie le taux au refrigerateur; ne remet jamais a zero.",
+    "fridge_factor": 0.2,
+    "air_factor": 1.0,
+    "wilted_below": 0.15,
+    "min_sellable": 0.3
+  },
+  "economy": {
+    "start_legit": 150,
+    "start_shady": 0,
+    "supplier_markup": 1.25,
+    "daily_charges": { "energy": 6, "taxes": 4, "upkeep": 5 },
+    "categories": {
+      "_doc": "Portefeuilles autorises par categorie d'achat. L'argent clandestin ne paie jamais un meuble de fleuriste.",
+      "stock": ["legit"],
+      "furniture": ["legit"],
+      "charges": ["legit"],
+      "expansion": ["legit"],
+      "story": ["legit"],
+      "staff": ["legit"],
+      "cellar_upgrade": ["shady"],
+      "cellar_supplies": ["shady"],
+      "cellar_furniture": ["shady"]
+    },
+    "conversion": {
+      "_doc": "capacite quotidienne = base + per_legit_sales*ventes legitimes du jour + per_reputation*reputation + per_shop_level*niveau. fee_rate = part perdue. Au-dela de la capacite (jusqu'a overflow_max_factor) : possible si allow_overflow, genere de la suspicion.",
+      "base_capacity": 20,
+      "per_legit_sales": 0.5,
+      "per_reputation": 1.5,
+      "per_shop_level": 10,
+      "fee_rate": 0.15,
+      "overflow_max_factor": 1.5,
+      "overflow_suspicion_per_unit": 0.01
+    },
+    "pricing": {
+      "markup": 1.8,
+      "labor": 2,
+      "reputation_per_point": 0.01,
+      "decoration_per_point": 0.01,
+      "min_price": 1
+    },
+    "arrears_installment_fraction": 0.5
+  },
+  "scoring": {
+    "weights": { "demand": 0.4, "harmony": 0.2, "freshness": 0.25, "presentation": 0.15 },
+    "max_colors_before_penalty": 4,
+    "color_penalty": 0.2,
+    "reputation_per_star": 0.1
+  },
+  "planters": { "max_slots": 4, "start_planters": 1, "max_planters": 4 },
+  "crops": {
+    "cannabis": {
+      "_doc": "Plante fictive de la cave. growth_seconds: duree de pousse de base; value: prix de vente de base clandestin.",
+      "name": "Herbe sombre", "growth_seconds": 300, "value": 40, "seed_cost": 6,
+      "quality_bonus": 0, "growth_factor": 1.0, "alien": false
+    },
+    "xeno_lotus": {
+      "name": "Lotus xéno", "growth_seconds": 300, "value": 70, "seed_cost": 25,
+      "quality_bonus": 1, "growth_factor": 1.5, "alien": true, "unlock_chapter": 4
+    },
+    "gloom_moss": {
+      "_doc": "Plante des Pleurnoïdes (tour 6). unlock_flags : drapeaux de progression requis en plus du chapitre. Voie sans tuer : bonus de qualité, pousse plus lente, graine plus chère.",
+      "name": "Mousse de gouffre", "growth_seconds": 300, "value": 85, "seed_cost": 30,
+      "quality_bonus": 1, "growth_factor": 1.3, "alien": true, "unlock_chapter": 5, "unlock_flags": ["weeper_served"]
+    },
+    "star_vine": {
+      "name": "Liane d'étoile", "growth_seconds": 300, "value": 125, "seed_cost": 70,
+      "quality_bonus": 2, "growth_factor": 2.0, "alien": true, "unlock_chapter": 5, "unlock_flags": ["ploc_served"]
+    }
+  },
+  "exchange": {
+    "_doc": "Monnaies étrangères. Chaque jour le cours (1 unité étrangère = rate euros) fait une marche aléatoire ramenée vers base_rate (reversion), bornée par min_rate/max_rate ; le tirage est local et déterministe (graine de la partie + jour). fee_rate : part perdue à l'encaissement. history : nombre de cours conservés pour l'affichage.",
+    "currencies": {
+      "comet_tear": { "name": "larmes de comète", "symbol": "lc", "base_rate": 1.0, "min_rate": 0.6, "max_rate": 1.5, "volatility": 0.22, "reversion": 0.3, "fee_rate": 0.05, "history": 7 }
+    }
+  },
+  "quality": {
+    "_doc": "Deux voies. Avec tuer: compost (+1 par unite, max 2 par plant). Sans tuer: plante xeno (+1) et equipement lampe (+1 par niveau) plus longs et plus chers. Max atteignable par les deux voies.",
+    "base": 1,
+    "max": 4,
+    "compost_bonus_per_unit": 1,
+    "max_compost_units_per_plant": 2,
+    "lamp_bonus_per_level": 1,
+    "price_factor_per_quality": 0.25
+  },
+  "cellar": {
+    "base_supported_plants": 4,
+    "plants_per_capacity_level": 4,
+    "equipment_max_level": 3,
+    "equipment_costs": { "capacity": [80, 160, 320], "lamp": [100, 200, 400], "filter": [60, 120, 240], "lock": [50, 100, 200] },
+    "lamp_growth_per_level": 0.2,
+    "nuisance": {
+      "_doc": "Probabilite par controle de signaler fumee/bruit: base si surcharge, + par point de surcharge, - par niveau de filtre.",
+      "base_when_overloaded": 0.2,
+      "per_overload": 0.4,
+      "filter_reduction_per_level": 0.15,
+      "max": 0.9,
+      "signals": ["green_smoke", "noise"]
+    }
+  },
+  "suspicion": {
+    "_doc": "Etat interne INVISIBLE. Jamais affiche (hors outils dev).",
+    "sources": { "overcapacity": 1.0, "green_smoke": 0.08, "noise": 0.05, "witness": 0.12, "incident": 0.1, "shady_day_sale": 0.02 },
+    "decay_per_day": 0.04,
+    "tier_thresholds": [0.2, 0.4, 0.6],
+    "visit_threshold": 0.4,
+    "min_days_between_visits": 2,
+    "min_hint_days_before_visit": 2,
+    "after_sanction": 0.15,
+    "after_refused_cop": -0.1,
+    "after_stall": 0.05,
+    "hints": ["customer_remark", "vehicle_returns", "behavior_change"]
+  },
+  "police": {
+    "fine": 120,
+    "refuse_reputation_penalty": 2.0,
+    "refuse_ordinary_reputation_penalty": 1.0
+  },
+  "stock": {
+    "_doc": "Capacité du stock de fleurs en tiges (tous lots). Plein : buy_stock refuse (stock_full). La remise et l étage l augmentent (data/expansions.json).",
+    "capacity": 60
+  },
+  "fridge": {
+    "_doc": "Capacité en tiges par réfrigérateur placé (un bouquet compte son nombre de tiges). Plein : refus fridge_full, rien n est modifié. Les lots peuvent être scindés pour remplir exactement.",
+    "capacity_per_unit": 24
+  },
+  "thieves": {
+    "_doc": "Combat par états : approach -> stealing -> fleeing (tick). endurance du voleur, durées en secondes de jeu. auto_advance : si vrai, Game.tick fait avancer les incidents (laisser à false tant que la vue de cave pilote elle-même ses voleurs). Armes débloquées par chapitre (index) ; la voie sans tuer (poings, subdue) reste toujours possible.",
+    "max_per_night": 1, "steal_products": 2, "lock_block_level": 2,
+    "auto_advance": false,
+    "endurance": 3, "approach_seconds": 12, "steal_seconds": 4, "flee_seconds": 3,
+    "weapons": {
+      "fists": { "damage": 1, "lethal": false, "unlock_chapter": 0 },
+      "bat": { "damage": 2, "lethal": true, "unlock_chapter": 3 },
+      "gun": { "damage": 3, "lethal": true, "unlock_chapter": 5, "noisy": true }
+    }
+  },
+  "compost": { "capacity": 3, "units_per_body": 2, "units_capacity": 4, "delay_seconds": 60 },
+  "customers": {
+    "queue_max": 6,
+    "default_patience": 60,
+    "spawn_interval_opening": 120,
+    "spawn_interval_night": 45,
+    "shady_chance_opening": 0.1
+  },
+  "sub_queue": {
+    "_doc": "Simulateur local. min_spacing en secondes de jeu; limites configurables.",
+    "min_spacing_seconds": 20,
+    "max_pending": 20,
+    "max_releases_per_cycle": 10,
+    "max_releases_per_minute": 3,
+    "max_releases_per_day": 24,
+    "wave_window_seconds": 30,
+    "wave_threshold": 8,
+    "wave_spacing_factor": 1.5,
+    "kind_weights": { "event": 1.0, "customer": 1.0 },
+    "feed_size": 12,
+    "simulator": { "wave_size": 12 }
+  },
+  "progression": { "cellar_price": 80, "start_day": 1 },
+  "decoration": { "decay_ratio": 0.6, "variety_bonus": 1.0 },
+  "save": { "path": "user://savegame.json", "version": 1 }
+}

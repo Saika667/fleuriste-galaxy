@@ -1,0 +1,21 @@
+{
+  "_doc": "Mode streamer (GDD 13) : pseudos FICTIFS générés localement, jamais de connexion réseau. pseudos : liste de pseudos drôles prêts à l'emploi ; prefixes + suffixes : combinaisons (Préfixe + Suffixe, avec un nombre facultatif) pour en fabriquer d'autres. feed : phrases du fil d'activité ({name} = pseudo, {what} = texte de l'événement ou du client). Les limites (espacement, plafonds par minute/jour/cycle, taille de la file) sont dans balance.json > sub_queue.",
+  "pseudos": [
+    "PetuniaMaudite", "Fossoyeur_du_Dimanche", "TulipeAssassine", "Monsieur_Compost", "DameChrysanthème",
+    "LeRatDeLEgout", "ZzorbFanClub", "BouquetDeTrop", "Pivoine_Sanglante", "TontonTronçonneuse",
+    "MamieMarguerite", "NuageEnDeuil", "LeCroquePétales", "Cadavre_Exquis_42", "SeigneurSécateur",
+    "CapitaineLavande", "LaVeuveJoyeuse", "PotDeFleursVolant", "Mortelle_Rose", "ChouxFleur_Cosmique",
+    "LePlocAffamé", "GrandMaîtreArrosoir", "Épouvantail_Nocturne", "TantePoussière", "L_Orchidée_Mordeuse",
+    "BaronDuBouchon", "Lys_et_Désastre", "RoseDesSables_Mouvants", "DocteurTerreau", "LaTulipeQuiRit",
+    "CourtJusDeBrume", "Fantôme_Fleuriste", "MonsieurSouciDuDétail", "Sylvestre_Squelette", "JeudiNoir",
+    "BelladoneEnVacances", "SaindoubleZéro", "LaMarguerite_Fatale", "Pétale_Rebelle", "OncleCaveau"
+  ],
+  "prefixes": ["Petit", "Grand", "Sieur", "Dame", "Tonton", "Mamie", "Docteur", "Baron", "Comte", "Sœur", "Capitaine", "Maître", "Zombie", "Fantôme", "Gentil", "Méchant"],
+  "suffixes": ["Pétale", "Terreau", "Tombeau", "Compost", "Sécateur", "Brouillard", "Orage", "Pissenlit", "Cimetière", "Arrosoir", "Cactus", "Bourdon", "Cercueil", "Trèfle", "Gazon", "Vermisseau"],
+  "feed": [
+    "{name} a offert : {what}",
+    "{name} a lancé : {what}",
+    "{name} a réveillé la boutique : {what}",
+    "Merci {name} ! {what}"
+  ]
+}

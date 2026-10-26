@@ -1,0 +1,23 @@
+{
+  "_doc": "Pièces (grille) et meubles. Les cases de porte sont réservées. w,h à rotation 0. category : voir balance.economy.categories (meuble de fleuriste = argent légitime uniquement). decor : valeur décorative (rendements décroissants). Les pièces terrace, garden, annex, upstairs n'existent dans Game.rooms qu'une fois l'extension correspondante achetée (data/expansions.json, clé room).",
+  "rooms": {
+    "shop":   { "w": 10, "h": 8, "doors": [ { "id": "front", "x": 5, "y": 7 }, { "id": "back", "x": 9, "y": 3 }, { "id": "cellar_stairs", "x": 0, "y": 1 } ] },
+    "cellar": { "w": 8, "h": 6, "doors": [ { "id": "stairs", "x": 0, "y": 0 } ] },
+    "terrace": { "w": 6, "h": 3, "doors": [ { "id": "to_shop", "x": 0, "y": 1 } ] },
+    "garden":  { "w": 6, "h": 4, "doors": [ { "id": "to_shop", "x": 0, "y": 2 } ] },
+    "annex":   { "w": 5, "h": 6, "doors": [ { "id": "to_shop", "x": 0, "y": 3 } ] },
+    "upstairs": { "w": 6, "h": 4, "doors": [ { "id": "stairs", "x": 0, "y": 0 } ] }
+  },
+  "furniture": {
+    "workbench":   { "name": "Établi", "w": 3, "h": 1, "rooms": ["shop"], "cost": 60, "category": "furniture", "decor": 0 },
+    "fridge":      { "name": "Réfrigérateur", "w": 1, "h": 2, "rooms": ["shop"], "cost": 90, "category": "furniture", "decor": 0 },
+    "counter":     { "name": "Comptoir", "w": 3, "h": 1, "rooms": ["shop"], "cost": 50, "category": "furniture", "decor": 0 },
+    "display":     { "name": "Présentoir", "w": 2, "h": 1, "rooms": ["shop", "annex", "upstairs"], "cost": 35, "category": "furniture", "decor": 1.0 },
+    "plant_pot":   { "name": "Pot décoratif", "w": 1, "h": 1, "rooms": ["shop", "terrace", "garden", "annex", "upstairs"], "cost": 10, "category": "furniture", "decor": 0.5 },
+    "rug":         { "name": "Tapis fleuri", "w": 2, "h": 2, "rooms": ["shop", "annex", "upstairs"], "cost": 25, "category": "furniture", "decor": 0.8 },
+    "bench":       { "name": "Banc", "w": 2, "h": 1, "rooms": ["terrace", "garden", "annex"], "cost": 30, "category": "furniture", "decor": 0.8 },
+    "parasol":     { "name": "Parasol", "w": 2, "h": 2, "rooms": ["terrace", "garden"], "cost": 45, "category": "furniture", "decor": 1.2 },
+    "grow_bin":    { "name": "Bac de culture", "w": 2, "h": 1, "rooms": ["cellar"], "cost": 40, "category": "cellar_furniture", "decor": 0 },
+    "composter":   { "name": "Composteur", "w": 2, "h": 2, "rooms": ["cellar"], "cost": 60, "category": "cellar_furniture", "decor": 0 }
+  }
+}

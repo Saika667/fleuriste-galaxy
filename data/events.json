@@ -1,0 +1,201 @@
+{
+  "_doc": "Événements. once : une seule fois par identifiant d'instance (anti-doublon). conditions : min_chapter, phase (liste : opening|night), flags requis. reward : reputation, legit, shady, flag. max_rewards_per_day : plafond de récompenses de cet événement par jour (au-delà il a lieu sans récompense : une vague de subs ne gonfle pas la réputation). effect : modificateur temporaire {spawn_factor (x intervalle d arrivée des clients, <1 = affluence), growth_factor (x croissance des plantes), seconds}. sub_spawnable : tirable par un sub. Conditions supplementaires (tour 6) : min_day, min_reputation, min_stems (fleurs en stock), min_plants (plants en cave), min_queue_room (places libres dans la file). max_per_day : plafond de declenchements par jour (les vagues de subs ne le contournent pas). incident : effet de jeu immediat {type: stock_loss (stems) | suspicion (signal) | rate_shock (currency, factor)}.",
+  "events": {
+    "sewer_rat_king": {
+      "text": "Un rat géant sort de l'égout, s'essuie les moustaches et demande un bouquet. Il paie en fromage, bien sûr.",
+      "kind": "customer",
+      "customer": "regular_man",
+      "conditions": {
+        "min_chapter": 0,
+        "phase": [
+          "opening"
+        ]
+      },
+      "reward": {
+        "reputation": 1
+      },
+      "max_rewards_per_day": 2,
+      "sub_spawnable": true
+    },
+    "street_parade": {
+      "text": "Un défilé passe : affluence temporaire. La fanfare joue faux, le croque-mort applaudit.",
+      "kind": "modifier",
+      "conditions": {
+        "min_chapter": 0,
+        "phase": [
+          "opening"
+        ]
+      },
+      "reward": {
+        "reputation": 2
+      },
+      "max_rewards_per_day": 1,
+      "effect": {
+        "spawn_factor": 0.4,
+        "seconds": 150
+      },
+      "sub_spawnable": true
+    },
+    "night_blackout": {
+      "text": "Panne de courant dans le quartier. Quelque chose a mâché les câbles, ou quelqu'un.",
+      "kind": "modifier",
+      "conditions": {
+        "min_chapter": 2,
+        "phase": [
+          "night"
+        ]
+      },
+      "reward": {
+        "flag": "blackout_seen"
+      },
+      "effect": {
+        "growth_factor": 0.5,
+        "seconds": 120
+      },
+      "sub_spawnable": true
+    },
+    "alien_arrival": {
+      "text": "Un vaisseau se pose derrière la boutique et écrase poliment une poubelle.",
+      "kind": "customer",
+      "customer": "zorbian_first",
+      "conditions": {
+        "min_chapter": 4,
+        "phase": [
+          "opening",
+          "night"
+        ]
+      },
+      "reward": {
+        "flag": "alien_arrived"
+      },
+      "sub_spawnable": true
+    },
+    "weeper_arrival": {
+      "text": "Un nuage noir sort de la bouche d'égout, se mouche dans un mouchoir de brume et pousse la porte de la boutique.",
+      "kind": "customer",
+      "customer": "weeper_veuve",
+      "conditions": {
+        "min_chapter": 5,
+        "phase": [
+          "opening"
+        ]
+      },
+      "reward": {
+        "flag": "weeper_arrived"
+      },
+      "sub_spawnable": true
+    },
+    "ploc_arrival": {
+      "text": "Un portail crache un Ploc, qui atterrit sur le paillasson avec un bruit de flan et s'excuse en glougloutant.",
+      "kind": "customer",
+      "customer": "ploc_goinfre",
+      "conditions": {
+        "min_chapter": 5,
+        "phase": [
+          "opening"
+        ],
+        "flags": [
+          "weeper_served"
+        ]
+      },
+      "reward": {
+        "flag": "ploc_arrived"
+      },
+      "sub_spawnable": true
+    },
+    "weeper_fog": {
+      "text": "Un brouillard de deuil envahit la rue : on y voit à trois pas, les passants à zéro, et des voisins se demandent d'où vient cette fumée verdâtre.",
+      "kind": "modifier",
+      "conditions": {
+        "min_chapter": 5,
+        "phase": [
+          "opening",
+          "night"
+        ],
+        "min_plants": 1
+      },
+      "reward": {
+        "reputation": 1
+      },
+      "max_rewards_per_day": 1,
+      "max_per_day": 1,
+      "effect": {
+        "spawn_factor": 1.6,
+        "seconds": 150
+      },
+      "incident": {
+        "type": "suspicion",
+        "signal": "green_smoke"
+      },
+      "sub_spawnable": true
+    },
+    "ploc_munch": {
+      "text": "Un Ploc, pris d'une fringale, avale un pot de tulipes, le pot, et fait mine de n'avoir rien vu.",
+      "kind": "incident",
+      "conditions": {
+        "min_chapter": 5,
+        "phase": [
+          "opening"
+        ],
+        "flags": [
+          "weeper_served"
+        ],
+        "min_stems": 12
+      },
+      "reward": {
+        "reputation": 1
+      },
+      "max_rewards_per_day": 1,
+      "max_per_day": 1,
+      "incident": {
+        "type": "stock_loss",
+        "stems": 4
+      },
+      "sub_spawnable": true
+    },
+    "tear_market_crash": {
+      "text": "Krach sur la larme de comète : une rumeur de beau temps sur Gémir-7 fait chuter le cours des pleurs.",
+      "kind": "incident",
+      "conditions": {
+        "min_chapter": 5,
+        "flags": [
+          "weeper_served"
+        ],
+        "phase": [
+          "opening",
+          "night"
+        ]
+      },
+      "reward": {},
+      "max_per_day": 1,
+      "incident": {
+        "type": "rate_shock",
+        "currency": "comet_tear",
+        "factor": 0.65
+      },
+      "sub_spawnable": true
+    },
+    "tear_market_boom": {
+      "text": "Ruée sur la larme de comète : un feuilleton triste passe en boucle dans toute la nébuleuse et le cours des pleurs s'envole.",
+      "kind": "incident",
+      "conditions": {
+        "min_chapter": 5,
+        "flags": [
+          "weeper_served"
+        ],
+        "phase": [
+          "opening",
+          "night"
+        ]
+      },
+      "reward": {},
+      "max_per_day": 1,
+      "incident": {
+        "type": "rate_shock",
+        "currency": "comet_tear",
+        "factor": 1.4
+      },
+      "sub_spawnable": true
+    }
+  }
+}

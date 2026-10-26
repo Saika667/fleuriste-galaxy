@@ -1,0 +1,37 @@
+{
+  "_doc": "cost : coût unitaire. decay_per_min : perte de fraîcheur (0..1) par minute de jeu actif à l'air libre. tags utilisés par les intentions. unlock_chapter / unlock_flags (optionnels) : la fleur n'est achetable chez le fournisseur qu'une fois le chapitre atteint et les drapeaux posés (Game.flower_available, Game.available_flowers).",
+  "flowers": {
+    "rose":      { "name": "Rose",        "color": "red",    "cost": 2, "decay_per_min": 0.030, "tags": ["romantic", "classic"] },
+    "tulip":     { "name": "Tulipe",      "color": "pink",   "cost": 1, "decay_per_min": 0.040, "tags": ["spring", "cheerful"] },
+    "lily":      { "name": "Lys",         "color": "white",  "cost": 3, "decay_per_min": 0.025, "tags": ["elegant", "funeral"] },
+    "sunflower": { "name": "Tournesol",   "color": "yellow", "cost": 2, "decay_per_min": 0.030, "tags": ["cheerful", "summer"] },
+    "lavender":  { "name": "Lavande",     "color": "purple", "cost": 2, "decay_per_min": 0.015, "tags": ["calm", "rustic"] },
+    "daisy":     { "name": "Marguerite",  "color": "white",  "cost": 1, "decay_per_min": 0.035, "tags": ["cheerful", "rustic"] },
+    "poppy":     { "name": "Coquelicot",  "color": "red",    "cost": 1, "decay_per_min": 0.045, "tags": ["rustic", "summer"] },
+    "xeno_bloom":{ "name": "Fleur xéno",  "color": "green",  "cost": 5, "decay_per_min": 0.020, "tags": ["exotic", "calm"] },
+    "snap_orchid":{ "name": "Orchidée mordeuse", "color": "pink", "cost": 5, "decay_per_min": 0.022, "tags": ["exotic", "cheerful"], "unlock_chapter": 5, "unlock_flags": ["weeper_served"] },
+    "pleurelune": { "name": "Pleurelune",  "color": "purple", "cost": 4, "decay_per_min": 0.018, "tags": ["exotic", "funeral", "calm"], "unlock_chapter": 5 }
+  },
+  "wraps": {
+    "none":  { "name": "Sans emballage", "cost": 0, "tags": [] },
+    "paper": { "name": "Papier kraft",   "cost": 1, "tags": ["rustic", "casual"] },
+    "silk":  { "name": "Soie",           "cost": 3, "tags": ["elegant", "romantic"] },
+    "black": { "name": "Crêpe noir",     "cost": 2, "tags": ["funeral", "elegant"] }
+  },
+  "accessories": {
+    "ribbon": { "name": "Ruban", "cost": 1, "tags": ["romantic", "cheerful"] },
+    "card":   { "name": "Carte", "cost": 1, "tags": ["casual", "elegant"] },
+    "candle": { "name": "Bougie", "cost": 2, "tags": ["calm", "funeral"] }
+  },
+  "harmony": {
+    "_doc": "Compatibilité 0..1 entre couleurs (clé = noms triés séparés par |). same : même couleur. default : non listée.",
+    "same": 1.0,
+    "default": 0.6,
+    "pairs": {
+      "red|white": 0.95, "pink|white": 0.95, "purple|white": 0.9, "white|yellow": 0.9,
+      "pink|purple": 0.85, "red|yellow": 0.5, "green|white": 0.9, "green|purple": 0.8,
+      "pink|red": 0.55, "purple|yellow": 0.85, "pink|yellow": 0.5, "purple|red": 0.3,
+      "green|red": 0.35, "green|yellow": 0.7, "green|pink": 0.7
+    }
+  }
+}

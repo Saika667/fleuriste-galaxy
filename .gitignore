@@ -1,0 +1,13 @@
+# Godot
+.godot/
+*.translation
+
+# Exports et sorties générées
+build/
+out/
+out6/
+out7/
+outI2/
+
+# Binaire Godot (> 100 Mo, refusé par GitHub)
+tools/godot-4.7.2/

@@ -1,0 +1,36 @@
+{
+  "_doc": "Employés (GDD 12). settings.unlock : conditions d'embauche, toutes obligatoires (expansion = extension possédée dont l'effet employee_slots donne les emplacements, min_reputation, chapter = id de chapters.json, min_day). L'embauche coûte hire_fee (catégorie staff, argent LÉGITIME) ; le salaire quotidien (wage) s'ajoute aux charges annoncées (clé wages de Economy.upcoming_charges) et est prélevé avec elles au bilan : le manque devient dette (jamais de solde négatif). Licenciement : gratuit pendant probation_days jours, ensuite indemnité severance_days x salaire ; un employé impayé quit_after_unpaid_days jours de suite démissionne. Un employé licencié ou démissionnaire est de nouveau engageable après rehire_days jours. quality 0..1 : réputation gagnée par ses ventes (x quality) et risque de bourde (blunder_base x (1 - quality) par tâche). speed : multiplicateur de vitesse de marche et de travail. roles : poste, poste de travail (station = meuble de la boutique), durée de base, phases pendant lesquelles il travaille. Les employés réservent leurs composants (Game.reserve_components) et leurs cibles (client, bouquet, lot) : aucune double consommation.",
+  "settings": {
+    "unlock": { "expansion": "upstairs", "min_reputation": 30, "chapter": "species", "min_day": 0 },
+    "home_door": "back",
+    "walk_speed": 1.8,
+    "task_cooldown": 4.0,
+    "retry_seconds": 6.0,
+    "unstick_seconds": 20.0,
+    "probation_days": 2,
+    "severance_days": 2,
+    "quit_after_unpaid_days": 2,
+    "rehire_days": 4,
+    "blunder_base": 0.35,
+    "blunder_patience_loss": 20.0,
+    "max_stems": 7
+  },
+  "roles": {
+    "cashier": { "name": "Caisse", "description": "Sert les clients avec les bouquets déjà prêts, aux mêmes prix et aux mêmes règles que vous.", "station": "counter", "base_seconds": 6.0, "phases": ["opening"] },
+    "caretaker": { "name": "Entretien des fleurs", "description": "Range les fleurs et les bouquets les plus fatigués au frais, tant qu'il y a de la place.", "station": "fridge", "base_seconds": 8.0, "batch": 4, "phases": ["opening", "night"] },
+    "preparer": { "name": "Préparation de commandes", "description": "Prépare les commandes simples des clients en attente avec le stock libre, sans toucher à ce que vous avez réservé.", "station": "workbench", "base_seconds": 12.0, "seconds_per_stem": 2.0, "phases": ["opening"] }
+  },
+  "candidates": {
+    "gaston": { "name": "Gaston Mollard", "role": "cashier", "trait": "Pointilleux", "quirk": "Vérifie chaque pièce avec les dents, ce qui rassure moyennement la clientèle.", "quality": 0.8, "speed": 0.8, "wage": 14, "hire_fee": 40 },
+    "kevin": { "name": "Kévin Morbier", "role": "cashier", "trait": "Charmeur", "quirk": "Appelle tous les clients « mon chou », même ceux qui n'ont pas de visage.", "quality": 0.7, "speed": 1.2, "wage": 12, "hire_fee": 30 },
+    "ophelie": { "name": "Ophélie Trépas", "role": "caretaker", "trait": "Soigneuse", "quirk": "Parle à chaque fleur et les console avant qu'elles fanent.", "quality": 0.9, "speed": 0.9, "wage": 15, "hire_fee": 40 },
+    "hortense": { "name": "Hortense Fossoyeur", "role": "caretaker", "trait": "Distraite", "quirk": "Oublie souvent quelle fleur elle arrose, mais jamais d'arroser.", "quality": 0.65, "speed": 1.1, "wage": 11, "hire_fee": 25 },
+    "bruno": { "name": "Bruno Cisaille", "role": "preparer", "trait": "Rapide mais brouillon", "quirk": "Coupe les tiges à la tronçonneuse, par principe.", "quality": 0.6, "speed": 1.3, "wage": 13, "hire_fee": 30 },
+    "mireille": { "name": "Mireille Sépulcre", "role": "preparer", "trait": "Perfectionniste", "quirk": "Refuse de livrer un bouquet sans l'avoir présenté au miroir.", "quality": 0.95, "speed": 0.7, "wage": 17, "hire_fee": 50 }
+  },
+  "blunders": {
+    "cashier": ["a confondu la monnaie avec des pastilles à la menthe", "a rendu le bouquet au mauvais client, puis l'a repris", "a oublié de sourire, et le client l'a remarqué"],
+    "caretaker": ["a rangé les tulipes avec les glaçons du bar", "a arrosé le réfrigérateur, par distraction", "a sermonné une rose qui n'avait rien demandé"],
+    "preparer": ["a oublié le papier d'emballage sur l'établi", "a utilisé le ruban comme marque-page", "a emballé le bouquet dans le journal du jour"]
+  }
+}

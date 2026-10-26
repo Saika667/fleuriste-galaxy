@@ -1,0 +1,12 @@
+{
+  "_doc": "Chapitres (proposition, GDD 14). unlock : conditions explicites et testables : flags[], min_day, min_reputation.",
+  "chapters": [
+    { "id": "takeover", "name": "Reprise de la boutique", "unlock": {} },
+    { "id": "secret", "name": "Le secret de la cave", "unlock": { "min_day": 2, "flags": ["secret_discovered"] } },
+    { "id": "first_night", "name": "Première nuit", "unlock": { "flags": ["cellar_acquired"] } },
+    { "id": "expansion", "name": "Agrandissements, voleurs, contrôles", "unlock": { "flags": ["first_night_done"] } },
+    { "id": "first_alien", "name": "Le premier extraterrestre", "unlock": { "min_day": 6, "min_reputation": 15 } },
+    { "id": "species", "name": "Nouvelles espèces", "unlock": { "flags": ["first_alien_served"] } },
+    { "id": "galaxy", "name": "Adresse galactique", "unlock": { "min_reputation": 100 } }
+  ]
+}

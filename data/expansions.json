@@ -1,0 +1,236 @@
+{
+  "_doc": "Extensions de la boutique (GDD 4). cost : argent LEGITIME uniquement (categorie economy 'expansion'). requires : chapter (id de chapters.json), min_reputation, min_day, expansions[] (extensions precedentes) ; toutes les conditions doivent etre remplies. charges : charges quotidiennes en plus (cles de economy.daily_charges : energy, taxes, upkeep), annoncees dans le bilan des l'achat. effects : fridge_capacity (tiges), queue_capacity (places de file/boutique), stock_capacity (tiges), customer_rate (+part de clients), decoration_bonus (valeur percue, points), employee_slots (emplacements d'employe, usage a venir), garden_daily {variete: quantite}, garden_quality, garden_multiplier (serre : multiplie la recolte du jardin). room : piece de placement ajoutee a Game.rooms (grille dans furniture.json). Extensions de fin de partie (tour 6) : galerie, entrepôt, salon (2e emplacement d'employé), ambassade : puits d'argent légitime avec charges élevées ; sans nouvelle pièce de placement.",
+  "order": [
+    "terrace",
+    "shed",
+    "garden",
+    "greenhouse",
+    "enlargement",
+    "upstairs",
+    "gallery",
+    "warehouse",
+    "salon",
+    "embassy"
+  ],
+  "expansions": {
+    "terrace": {
+      "name": "Terrasse",
+      "description": "Quelques tables dehors : plus de passage, une boutique plus avenante et un peu de place pour décorer.",
+      "cost": 90,
+      "requires": {
+        "min_reputation": 4
+      },
+      "charges": {
+        "energy": 2,
+        "taxes": 3
+      },
+      "room": "terrace",
+      "effects": {
+        "queue_capacity": 1,
+        "customer_rate": 0.15,
+        "decoration_bonus": 3
+      }
+    },
+    "shed": {
+      "name": "Remise",
+      "description": "Une remise pour entreposer davantage de fleurs, avec un coin frais en plus.",
+      "cost": 150,
+      "requires": {
+        "min_reputation": 10
+      },
+      "charges": {
+        "upkeep": 3
+      },
+      "effects": {
+        "stock_capacity": 60,
+        "fridge_capacity": 12
+      }
+    },
+    "garden": {
+      "name": "Jardin",
+      "description": "Un petit jardin derrière la boutique : quelques fleurs fraîches cueillies chaque matin.",
+      "cost": 300,
+      "requires": {
+        "min_reputation": 12,
+        "expansions": [
+          "terrace"
+        ]
+      },
+      "charges": {
+        "energy": 3,
+        "upkeep": 4
+      },
+      "room": "garden",
+      "effects": {
+        "garden_daily": {
+          "rose": 3,
+          "lavender": 2,
+          "tulip": 3,
+          "daisy": 3
+        },
+        "garden_quality": 1,
+        "decoration_bonus": 2
+      }
+    },
+    "greenhouse": {
+      "name": "Serre",
+      "description": "Une serre chauffée : le jardin pousse plus vite (récolte x1,5) et donne des fleurs rares.",
+      "cost": 600,
+      "requires": {
+        "chapter": "expansion",
+        "min_reputation": 18,
+        "expansions": [
+          "garden"
+        ]
+      },
+      "charges": {
+        "energy": 6,
+        "taxes": 4,
+        "upkeep": 4
+      },
+      "effects": {
+        "garden_multiplier": 1.5,
+        "garden_daily": {
+          "xeno_bloom": 2,
+          "lily": 2
+        },
+        "garden_quality": 2,
+        "decoration_bonus": 2
+      }
+    },
+    "enlargement": {
+      "name": "Agrandissement",
+      "description": "On abat une cloison : une pièce annexe, une file plus longue et un frigo plus grand.",
+      "cost": 750,
+      "requires": {
+        "chapter": "expansion",
+        "min_reputation": 20,
+        "expansions": [
+          "terrace"
+        ]
+      },
+      "charges": {
+        "energy": 3,
+        "taxes": 7,
+        "upkeep": 4
+      },
+      "room": "annex",
+      "effects": {
+        "queue_capacity": 1,
+        "customer_rate": 0.15,
+        "fridge_capacity": 12,
+        "decoration_bonus": 2
+      }
+    },
+    "upstairs": {
+      "name": "Étage",
+      "description": "Un étage aménagé : un poste de travail pour un futur employé et un grand atelier.",
+      "cost": 1000,
+      "requires": {
+        "chapter": "expansion",
+        "min_reputation": 30,
+        "expansions": [
+          "enlargement"
+        ]
+      },
+      "charges": {
+        "energy": 4,
+        "taxes": 5,
+        "upkeep": 3
+      },
+      "room": "upstairs",
+      "effects": {
+        "employee_slots": 1,
+        "stock_capacity": 20,
+        "customer_rate": 0.1,
+        "decoration_bonus": 3
+      }
+    },
+    "gallery": {
+      "name": "Galerie d'art macabre",
+      "description": "Une galerie où l'on expose des bouquets de collection et quelques souvenirs de famille très encadrés : la boutique prend de la valeur.",
+      "cost": 2500,
+      "requires": {
+        "min_reputation": 45,
+        "expansions": [
+          "enlargement"
+        ]
+      },
+      "charges": {
+        "energy": 6,
+        "taxes": 12,
+        "upkeep": 10
+      },
+      "effects": {
+        "customer_rate": 0.05,
+        "decoration_bonus": 3
+      }
+    },
+    "warehouse": {
+      "name": "Entrepôt de fret",
+      "description": "Un entrepôt réfrigéré au bout de la rue, pour stocker en gros les fleurs des fournisseurs d'ailleurs.",
+      "cost": 3000,
+      "requires": {
+        "min_reputation": 55,
+        "expansions": [
+          "shed"
+        ]
+      },
+      "charges": {
+        "energy": 5,
+        "upkeep": 11
+      },
+      "effects": {
+        "stock_capacity": 120,
+        "fridge_capacity": 24
+      }
+    },
+    "salon": {
+      "name": "Salon interstellaire",
+      "description": "Un salon de réception pour clients de toutes les planètes, avec un poste de travail de plus pour un employé.",
+      "cost": 7000,
+      "requires": {
+        "chapter": "species",
+        "min_reputation": 80,
+        "expansions": [
+          "gallery",
+          "upstairs"
+        ]
+      },
+      "charges": {
+        "energy": 10,
+        "taxes": 20,
+        "upkeep": 14
+      },
+      "effects": {
+        "customer_rate": 0.08,
+        "queue_capacity": 1,
+        "decoration_bonus": 4,
+        "employee_slots": 1
+      }
+    },
+    "embassy": {
+      "name": "Ambassade galactique",
+      "description": "Une ambassade officielle : la boutique devient une adresse reconnue à travers la galaxie, avec le protocole et les factures qui vont avec.",
+      "cost": 18000,
+      "requires": {
+        "chapter": "galaxy",
+        "min_reputation": 130,
+        "expansions": [
+          "salon"
+        ]
+      },
+      "charges": {
+        "energy": 15,
+        "taxes": 40,
+        "upkeep": 25
+      },
+      "effects": {
+        "customer_rate": 0.08,
+        "queue_capacity": 1,
+        "decoration_bonus": 6,
+        "stock_capacity": 60
+      }
+    }
+  }
+}
