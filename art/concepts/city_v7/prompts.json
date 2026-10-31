@@ -1,0 +1,17 @@
+{
+  "mode": "Built-in image_gen.imagegen",
+  "assets": [
+    {
+      "file": "residents_sheet.png",
+      "references": [
+        "art/concepts/cast_v1/02_noe_15_ans.png",
+        "art/concepts/cast_v1/04_gaston_44_ans.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create a production character model sheet for three NEW adult neighborhood residents, matching EXACTLY the hand drawn cartoon art direction of the two reference sheets: thin black contours, huge white oval eyes tiny black pupils, expressive brows, long rounded nose, small chin, slim neck, lanky limbs, restrained flat colors and soft cel shadow. NOT chibi, not blocky, not realistic, not generic 3D. Landscape sheet white background divided in three rows. Each row shows SAME resident in front, profile, back and 3/4 full body, with one expressive head closeup. Row 1: middle aged woman, warm brown skin, dark curly bun, rust cardigan over cream shirt, dark teal trousers, simple sneakers. Row 2: slim young adult man, fair skin, messy brown hair, muted ochre jacket, blue trousers, cream sneakers. Row 3: older man, gray balding temples, mustache, sage jacket, beige shirt, charcoal trousers, brown shoes. Varied anatomies and ages but all visibly belong to Noe and Gaston's world. Consistent clothing in every view, all hands visible, feet uncut. Small French labels only. Sheet will be used to build animated 3D characters."
+    },
+    {
+      "file": "roof_studio_sheet.png",
+      "prompt": "Use case: stylized-concept. Production architecture sheet for the first floor of a French pastel cartoon florist shop, 10m wide x 8m deep roof plan. Hand-painted stylized architectural illustration, cream plaster and sage green trim, dark gray zinc metal detailing. Show large cutaway axonometric view plus exact top view and two parapet detail callouts. Small enclosed roofed studio occupying rear 10x3m, with large floor to ceiling sliding glass bay opening south onto 10x5m open roof terrace. Access spiral staircase in rear left studio corner. A retractable striped canvas awning over the bay with triangular metal arms and scalloped cream-bound valance. Inside honey oak boards; outside warm pale stone paving. Elaborately layered classical parapet all around terrace: low solid masonry, inset panels, pilasters, cornice, broad 40cm stone top ledge supporting small potted plants safely, dark slender wrought iron railing above. Two desks inside to the right. Real openings visible through glass; careful buildable geometry, no floating ornaments. Pleasant inhabited terrace with few small potted plants along parapet, not a rooftop jungle. Include dimensions 10 m and 8 m on plan. White backdrop. French annotation 'PIÈCE', 'TOIT TERRASSE', 'BAIE COULISSANTE'."
+    }
+  ]
+}

@@ -4,9 +4,7 @@ const STYLE=preload("res://src/world/shop_collection_visual.gd")
 const MERGE=preload("res://src/world/static_merge.gd")
 static var scenes: Dictionary={}
 static func create(id: String) -> Node3D:
-	if not scenes.has(id):scenes[id]=load("res://assets/models/surface/"+id+".glb")
-	assert(scenes[id]!=null,"Missing surface model: "+id)
-	var n: Node3D=scenes[id].instantiate()
+	var n:Node3D=STYLE.prepared("res://assets/models/surface/"+id+".glb")
 	n.set_meta("surface_model",id)
 	STYLE._prepare(n)
 	MERGE.merge(n,[],[],[],1000.0)

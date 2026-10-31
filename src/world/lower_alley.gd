@@ -15,13 +15,22 @@ static func build(v) -> void:
 	var world_ramp=Node3D.new();v.get_parent().add_child(world_ramp);world_ramp.name="StreetToLowerAlley"
 	preload("res://src/world/neighborhood_v2.gd").alley(world_ramp)
 	load("res://src/world/district_v5.gd").alley(world_ramp)
+	load("res://src/world/city_v7.gd").frontage_transition(world_ramp)
 	preload("res://src/world/frontage_v4.gd").cellar(v)
 	# Door leaf follows its hinge; its interactive target is reachable from both sides.
-	var mount=Node3D.new();mount.position=Vector3(-3.45,0,9.1);mount.set_meta("cellar_external",true);v.add_child(mount)
-	C.attach(mount,"door_frame")
-	var leaf=C.attach(mount,"visitor_door");v._door=leaf
-	var body=StaticBody3D.new();leaf.add_child(body);K.solid(body,Vector3(.96,2.18,.06),Vector3(.48,1.09,0))
-	var controller=DOOR.new();mount.add_child(controller);controller.setup([leaf],[-PI*.55],"Porte de la ruelle",Vector3(.48,1.09,0),Vector3(.96,2.18,.16))
+	var mount=Node3D.new();mount.position=Vector3(-3.72,0,9.1);mount.set_meta("cellar_external",true);v.add_child(mount)
+	var leaf=Node3D.new();leaf.name="IndustrialSteelDoor";mount.add_child(leaf);leaf.set_meta("articulated",true);v._door=leaf
+	for x in [-.06,1.56]:K.box(mount,Vector3(.12,2.4,.22),Vector3(x,1.2,0),Color("#414A4D"),0)
+	K.box(mount,Vector3(1.74,.12,.22),Vector3(.75,2.38,0),Color("#414A4D"),0)
+	K.box(leaf,Vector3(1.48,2.26,.08),Vector3(.75,1.13,0),Color("#657175"),.008)
+	for yy in [.12,2.13]:K.box(leaf,Vector3(1.35,.045,.04),Vector3(.75,yy,.055),Color("#A1A8A6"),0)
+	for xx in [.12,1.38]:
+		for yy in [.16,.65,1.15,1.65,2.1]:K.sphere(leaf,.018,Vector3(xx,yy,.055),Color("#ADB2AB"))
+	for j in 6:K.box(leaf,Vector3(.65,.035,.035),Vector3(.75,1.65+j*.075,.06),Color("#343F42"),0)
+	K.box(leaf,Vector3(.05,.27,.07),Vector3(1.29,1.05,.08),Color("#CCD0C6"),.005)
+	K.label(leaf,"ACCÈS TECHNIQUE",Vector3(.75,.58,.055),24,Color("#D2CCAD"),.002).outline_size=0
+	var body=StaticBody3D.new();leaf.add_child(body);K.solid(body,Vector3(1.48,2.26,.08),Vector3(.75,1.13,0))
+	var controller=DOOR.new();mount.add_child(controller);controller.setup([leaf],[-PI*.55],"Porte métallique de la place",Vector3(.75,1.13,0),Vector3(1.5,2.26,.16))
 	leaf.set_meta("manual_door",true)
 	# Service bay: counter sill and a rising metal shutter, controlled from inside.
 	for x in [-.85,2.85]:block(v,Vector3(.15,2.8,.35),Vector3(x,1.4,9.1),Color("#434E4E"))

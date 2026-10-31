@@ -62,6 +62,11 @@ static func rbox_mesh(size: Vector3, radius: float, grad := 0.22) -> ArrayMesh:
 	var key = "rb|%s|%s|%s" % [size, radius, grad]
 	if _mesh_cache.has(key):
 		return _mesh_cache[key]
+	if radius <= 0.0:
+		var primitive=BoxMesh.new();primitive.size=size
+		var plain=ArrayMesh.new();plain.add_surface_from_arrays(Mesh.PRIMITIVE_TRIANGLES,primitive.surface_get_arrays(0));plain.set_meta("shared",true)
+		_mesh_cache[key]=plain
+		return plain
 	var half = size * 0.5
 	var r = maxf(0.002, minf(radius, minf(half.x, minf(half.y, half.z)) - 0.002))
 	var inner = half - Vector3(r, r, r)

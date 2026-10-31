@@ -253,8 +253,7 @@ func _on_nuisance(kind: String) -> void:
 
 func _on_phase_changed(_new: int, _old: int) -> void:
 	_sig = ""
-	if ambient != null and ambient.walkers.size() < 3:
-		ambient.populate(3 - ambient.walkers.size())
+	# Public residents are owned by CityResidents and return to their own homes.
 
 
 # ---------------------------------------------------------------- meubles

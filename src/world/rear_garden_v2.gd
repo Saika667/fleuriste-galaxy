@@ -13,9 +13,9 @@ void fragment(){float n=noise(wp.xz*.6);float fine=noise(wp.xz*22.0);ALBEDO=mix(
 static func garden(ext) -> Node3D:
 	var root=Node3D.new();root.set_meta("locked_zone","garden")
 	var shader=Shader.new();shader.code=GROUND;var material=ShaderMaterial.new();material.shader=shader
-	for rect in preload("res://src/world/district_detail.gd").floor_rects(Rect2(-18,-13,34,12.9),[Rect2(-5,-13,8,9.56)]):
+	for rect in preload("res://src/world/district_detail.gd").floor_rects(Rect2(-18,-13,37.3,12.9),[Rect2(-10,-9.56,8,9.56),Rect2(-17,-13,7,13.9)]):
 		var c=rect.get_center();var ground=K.box(root,Vector3(rect.size.x,.06,rect.size.y),Vector3(c.x,-.03,c.y),Color("#66834B"),0);ground.material_override=material
-	R.solid(root,Vector3(34,.18,12.8),Vector3(-1,-.09,-6.5))
+	R.solid(root,Vector3(37.3,.18,12.8),Vector3(.65,-.09,-6.5))
 	# Two clear paths: door to back boundary, and across to the greenhouse entrance.
 	K.box(root,Vector3(1.8,.018,12.6),Vector3(6,.005,-6.5),Color("#B5A78D"),.01)
 	K.box(root,Vector3(9,.018,1.55),Vector3(6.5,.006,-9.4),Color("#B5A78D"),.01)
@@ -23,9 +23,10 @@ static func garden(ext) -> Node3D:
 		for x in [5.0,7.0]:K.box(root,Vector3(.13,.09,.95),Vector3(x,.025,-.65-z),Color("#8C8D71"),.018)
 	R.solid(root,Vector3(.18,1.15,12.9),Vector3(-18.1,.575,-6.5))
 	K.box(root,Vector3(.18,1.15,12.9),Vector3(-18.1,.575,-6.5),Color("#A39D87"),.025)
-	load("res://src/world/district_v5.gd").hedge(root,Vector3(15.85,0,-6.5),12.5,PI/2)
+	load("res://src/world/district_v5.gd").hedge(root,Vector3(19.05,0,-8.8),7.8,PI/2)
+	load("res://src/world/district_v5.gd").hedge(root,Vector3(19.05,0,-1.6),3.0,PI/2)
+	load("res://src/world/city_v7.gd").garden_stair(root)
 	for z in [-3,-10]:preload("res://src/world/district_detail.gd").tree(root,Vector3(14.7,0,z),int(absf(z)))
-	preload("res://src/world/district_detail.gd").house(root,"corner_apartments",Vector3(-24.2,0,-6),0,Color("#ACB4A4"))
 	for span in [[-18.1,-5.1],[3.1,16.1]]:
 		K.box(root,Vector3(span[1]-span[0],.25,.30),Vector3((span[0]+span[1])*.5,.125,-13),Color("#817A68"),.015)
 	# Untended garden: uneven groups of weeds and flowers, never solid raised beds.
@@ -49,15 +50,19 @@ static func grass(root: Node3D) -> void:
 	var transforms=[]
 	for i in 2400:
 		var x=rng.randf_range(-17.7,15.7);var z=rng.randf_range(-12.7,-.4)
-		if absf(x-6)<1.15 or (z< -8.5 and z> -10.3 and x>1) or (x> -5.3 and x<3.3 and z< -2.3):continue
+		if absf(x-6)<1.15 or (z< -8.5 and z> -10.3 and x>1) or (x> -5.3 and x<3.3 and z> -9.8):continue
 		transforms.append(Transform3D(Basis(Vector3.UP,rng.randf()*TAU).scaled(Vector3.ONE*rng.randf_range(.45,1.15)),Vector3(x,.015,z)))
 	var instance=MultiMeshInstance3D.new();instance.name="GrassTufts";instance.cast_shadow=GeometryInstance3D.SHADOW_CASTING_SETTING_OFF;root.add_child(instance)
 	var multi=MultiMesh.new();multi.transform_format=MultiMesh.TRANSFORM_3D;multi.mesh=mesh;multi.instance_count=transforms.size();instance.multimesh=multi
 	for i in transforms.size():multi.set_instance_transform(i,transforms[i])
 static func greenhouse(ext) -> Node3D:
 	var root=Node3D.new();root.set_meta("locked_zone","greenhouse")
-	root.position.z=-.82
+	root.position=Vector3(-5,0,2.62)
 	var center=Vector3(-1,0,-7.4);var shell=C.attach(root,"greenhouse_shell",center);shell.scale=Vector3(2,1.25,2.25)
+	var floor_mesh=K.box(root,Vector3(7.9,.03,9.44),Vector3(-1,-.005,-7.4),Color("#B7B8A6"),0)
+	var party=K.box(root,Vector3(.15,3.0,9.56),Vector3(-5,1.5,-7.4),Color("#D6D4C5"),0)
+	load("res://src/world/city_v7.gd").brick(party,Color("#D6D4C5"),true)
+	var shader=Shader.new();shader.code=preload("res://src/world/district_detail.gd").PAVING;var material=ShaderMaterial.new();material.shader=shader;floor_mesh.material_override=material
 	R.solid(root,Vector3(8,.16,9.56),center-Vector3(0,.08,0))
 	for x in [-5,3]:
 		if x<0:R.solid(root,Vector3(.12,3,9.56),Vector3(x,1.5,-7.4))
@@ -65,7 +70,9 @@ static func greenhouse(ext) -> Node3D:
 			for span in [[-11.52,1.34],[-5.32,5.44]]:R.solid(root,Vector3(.12,3,span[1]),Vector3(x,1.5,span[0]))
 	for z in [-12.18,-2.62]:R.solid(root,Vector3(8,3,.12),Vector3(-1,1.5,z))
 	var door=D.new();door.name="GreenhouseEntrance";root.add_child(door);door.position=Vector3(3,0,-10.83);door.rotation.y=-PI/2
-	var leaf=C.attach(door,"greenhouse_door");leaf.scale=Vector3(2.25,1.25,1)
+	var leaf=C.attach(door,"greenhouse_door");leaf.scale=Vector3(1.1,1.25,1)
+	for spec in [[Vector3(.12,2.65,1.18),Vector3(3,1.325,-8.76)]]:
+		var pane=K.box(root,spec[0],spec[1],Color.WHITE,0);pane.material_override=K.mat(Color(.6,.8,.8),.4,0,0,.3);R.solid(root,spec[0],spec[1])
 	door.setup([leaf],[-PI*.49],"Serre — visite libre",Vector3(.59,1.06,0),Vector3(1.23,2.12,.10))
 	R.solid(leaf,Vector3(1.17,2.1,.045),Vector3(.59,1.05,0))
 	for x in [-3.6,1.6]:

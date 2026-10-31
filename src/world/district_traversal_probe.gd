@@ -8,12 +8,12 @@ func _ready() -> void:
 	var main=load("res://scenes/main.tscn").instantiate();add_child(main)
 	for i in 6:await get_tree().physics_frame
 	main.hud.close_all();Game.clock.set_paused(true);var p=main.player;p.set_physics_process(false)
-	for n in main.cellar.get_children():
+	for n in main.cellar.find_children("*","Node3D",true,false):
 		if n is Node3D and n.get_script()==preload("res://src/world/surface_door.gd") and n.position.y>4:
 			n.toggle()
 	for i in 60:await get_tree().physics_frame
-	p.teleport(Vector3(8.4,-4.1,2.6),0,0)
-	for goal in [Vector3(8.4,-4.2,2.9),Vector3(8.4,0,7.40),Vector3(7.0,0,7.40),Vector3(8.4,0,7.40),Vector3(8.4,-4.2,2.6)]:
+	p.teleport(Vector3(9.35,-4.1,-1.0),0,0)
+	for goal in [Vector3(9.35,-4.2,-.35),Vector3(9.35,0,3.1),Vector3(9.35,0,3.8),Vector3(7.0,0,3.8),Vector3(9.35,0,3.8),Vector3(9.35,-4.2,-.35)]:
 		var reached=false
 		for i in 1100:
 			await get_tree().physics_frame
@@ -58,7 +58,7 @@ func _ready() -> void:
 	check("Aperçu avec filtre coloré",not layout.tinted_meshes.is_empty())
 	layout.cancel();check("Filtre retiré après annulation",layout.tinted_meshes.is_empty())
 	check("Étage et escalier visibles avant achat",main.world.ext._nodes.has("stairs") and main.world.ext._nodes.has("upstairs"))
-	check("Composteur au jardin",main.cellar._composter.global_position.distance_to(Vector3(13.5,0,-11.5))<.01)
+	check("Composteur au bord du jardin",main.cellar._composter.global_position.distance_to(Vector3(14.35,0,-11.9))<.01)
 	check("Bouche d’égout extérieure",main.cellar._hatch_lid.global_position.z < -18)
 	var vents=[]
 	for n in main.cellar.find_children("*","Node3D",true,false):
@@ -66,17 +66,20 @@ func _ready() -> void:
 	check("Deux filtres au centre du plafond",vents.size()==2 and vents.all(func(v):return absf(main.cellar.to_local(v.global_position).z)<.01))
 	var traffic=main.world.room.find_child("StreetTraffic",true,false);traffic.set_physics_process(false)
 	var crossing_root=main.world.room.find_child("StreetRemodel",true,false).get_child(1)
-	var walker=crossing_root.spawn(true);walker.position=Vector3(8.3,0,12.6);walker.speed=0
-	var car=traffic.spawn_car(1);car.position.x=3;var before=car.position.x;p.teleport(Vector3(0,0,4),0,0)
+	crossing_root.set_process(false)
+	var walker=crossing_root.spawn(true);walker.position=Vector3(8.3,0,15.6)
+	var car=traffic.spawn_car(1);car.position=Vector3(3,0,15.6);traffic.cars[-1].route=[Vector3(60,0,15.6)];var before=car.position.x;p.teleport(Vector3(0,0,4),0,0)
 	Game.clock.set_paused(false);traffic._physics_process(.5);Game.clock.set_paused(true)
 	check("Voiture cède le passage au piéton",is_equal_approx(car.position.x,before))
 	check("Passants humains de l’autre trottoir",walker.is_in_group("street_pedestrian"))
+	var old_review=ReviewAccess.active;ReviewAccess.active=false;Game.expansions.owned.erase("upstairs")
 	var old_pos=p.global_position;main.world._climb(p,true)
 	check("Étage verrouillé par l’histoire",not main.world._climbing and p.global_position.is_equal_approx(old_pos))
+	ReviewAccess.active=old_review
 	Game.expansions.owned.upstairs=1
 	p.teleport(Vector3(-1.1,0,2.1),0,0);main.world._climb(p,true)
 	for i in 200:await get_tree().physics_frame
-	p.set_physics_process(false);check("Montée à l’étage après déblocage",absf(p.global_position.y-3.4)<.12)
+	p.set_physics_process(false);check("Montée à l’étage après déblocage",absf(p.global_position.y-5.4)<.12)
 	main.world._climb(p,false)
 	for i in 200:await get_tree().physics_frame
 	p.set_physics_process(false);check("Retour de l’étage vers la boutique",absf(p.global_position.y)<.12)

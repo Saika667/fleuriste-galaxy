@@ -7,8 +7,7 @@ static var scenes: Dictionary={}
 
 static func create(id: String) -> Node3D:
 	assert(id in NAMES)
-	if not scenes.has(id):scenes[id]=load("res://assets/models/shop/"+id+".glb")
-	var node: Node3D=scenes[id].instantiate()
+	var node:Node3D=BASE.prepared("res://assets/models/shop/"+id+".glb")
 	node.set_meta("native_shop_asset",id)
 	BASE._prepare(node)
 	# Painted planes, woven prints and letters must never acquire a thick shell outline.

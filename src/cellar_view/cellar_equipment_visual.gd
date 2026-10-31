@@ -17,10 +17,7 @@ func setup(v) -> void:
 			func(_p):
 				if Game.cellar.toggle_vent_filter(ii):view.toast("Filtre installé." if Game.cellar.vent_filters[ii] else "Filtre retiré.")
 				else:view.equip_action("filter",_p))
-	for z in [-5.0,0.0,5.0]:
-		for i in 20:C.attach(self,"duct_module",Vector3(-9.5+i,3.48,z))
-	for x in [-8.0,4.0]:
-		for i in 14:C.attach(self,"duct_module",Vector3(x,3.48,-6.5+i),PI/2)
+	load("res://src/world/city_v7.gd").pipe_network(self)
 	for i in (0 if Game.progression.has_flag("empty_shop_start") else 8):
 		var p=load("res://src/cellar_view/single_pot_view.gd").new()
 		add_child(p);p.position=Vector3(-5.4+(i%4)*3.6,0,-2.6+(i/4)*4.0)

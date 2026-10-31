@@ -23,11 +23,35 @@ static var last_stats := {}
 static var last_pinned := {}
 static var _class_mats := {}  # cle de type -> StandardMaterial3D partage (albedo blanc)
 static var _baked := {}  # "mesh|couleur" -> ArrayMesh a couleurs cuites
+static var _surface_cache := {}
+static func pack_static(root:Node3D) -> PackedScene:
+	for child in root.find_children("*","",true,false):child.owner=root
+	var packed=PackedScene.new();var error=packed.pack(root)
+	assert(error==OK,"Unable to cache static geometry")
+	return packed
+
+static func _expand_surfaces(root:Node3D) -> void:
+	for mi in root.find_children("*","MeshInstance3D",true,false):
+		if mi.mesh==null or mi.mesh.get_surface_count()<2 or mi.skin!=null or mi.get_meta("articulated",false):continue
+		var mesh=mi.mesh;var active=[]
+		for i in mesh.get_surface_count():active.append(mi.get_active_material(i))
+		for i in mesh.get_surface_count():
+			var key="%d:%d"%[mesh.get_instance_id(),i]
+			if not _surface_cache.has(key):
+				var part=ArrayMesh.new();part.add_surface_from_arrays(mesh.surface_get_primitive_type(i),mesh.surface_get_arrays(i));part.set_meta("shared",true);_surface_cache[key]=part
+			if i==0:
+				mi.mesh=_surface_cache[key];mi.material_override=active[i];mi.set_surface_override_material(0,null)
+			else:
+				var sibling=MeshInstance3D.new();sibling.name=String(mi.name)+"_surface_"+str(i);sibling.mesh=_surface_cache[key];sibling.material_override=active[i];sibling.material_overlay=mi.material_overlay;sibling.transform=mi.transform;sibling.visible=mi.visible;sibling.cast_shadow=mi.cast_shadow;sibling.layers=mi.layers
+				for meta in mi.get_meta_list():sibling.set_meta(meta,mi.get_meta(meta))
+				mi.get_parent().add_child(sibling)
 
 
 static func merge(root: Node3D, owners: Array = [], containers: Array = [], deep: Array = [], cell := CELL) -> Dictionary:
+	if root.get_meta("optimized_prepared",false):return {}
 	if not enabled:
 		return {}
+	_expand_surfaces(root)
 	var pinned := {}
 	var pinned_mats := {}
 	var cont := {}
@@ -81,9 +105,11 @@ static func merge(root: Node3D, owners: Array = [], containers: Array = [], deep
 		st.begin(Mesh.PRIMITIVE_TRIANGLES)
 		for i in g.items.size():
 			st.append_from(g.mesh[i], 0, g.xf[i])
+		# Preserve shared vertices after append_from, including hard-edge normals and UV seams.
+		st.index()
 		var node = MeshInstance3D.new()
 		node.name = "Merged"
-		node.mesh = st.commit()
+		node.mesh = _with_lods(st.commit())
 		node.material_override = g.mat
 		node.material_overlay = g.ov
 		node.cast_shadow = g.shadow
@@ -101,6 +127,25 @@ static func merge(root: Node3D, owners: Array = [], containers: Array = [], deep
 				mi.mesh = null
 	last_stats = {"candidates": candidates, "removed": removed, "merged": merged}
 	return last_stats
+
+
+static func _with_lods(mesh:ArrayMesh) -> ArrayMesh:
+	# Rebuilding surface arrays used to discard the GLB importer's distance LODs.
+	# Regenerate them after batching; keep full geometry, normals, UVs and colors at close range.
+	if OS.get_cmdline_user_args().has("no-lods") or mesh.surface_get_array_index_len(0)<1500:return mesh
+	var context=HashingContext.new();context.start(HashingContext.HASH_SHA256);context.update(var_to_bytes(mesh.surface_get_arrays(0)))
+	var key=context.finish().hex_encode()
+	var path="res://assets/optimized_batches/v7/"+key+".res"
+	if ResourceLoader.exists(path):return load(path)
+	# Heavy simplification is a build step, never work imposed on a player's first launch.
+	if not OS.get_cmdline_user_args().has("bake-lods"):return mesh
+	var importer=ClassDB.instantiate("ImporterMesh")
+	for i in mesh.get_surface_count():importer.add_surface(mesh.surface_get_primitive_type(i),mesh.surface_get_arrays(i),[],{},mesh.surface_get_material(i))
+	importer.generate_lods(60.0,25.0,[])
+	var output:ArrayMesh=importer.get_mesh()
+	DirAccess.make_dir_recursive_absolute("res://assets/optimized_batches/v7")
+	ResourceSaver.save(output,path,ResourceSaver.FLAG_COMPRESS)
+	return output
 
 
 static func _cell(v: float, cell: float) -> int:
@@ -240,6 +285,7 @@ static func _plain(n: Node) -> bool:
 
 
 static func _mergeable(mi: MeshInstance3D) -> bool:
+	if mi.skin!=null:return false
 	if mi.mesh == null or mi.mesh.get_surface_count() != 1 or mi.transparency != 0.0 or not mi.visible:
 		return false
 	if mi.visibility_range_end > 0.0 or mi.visibility_range_begin > 0.0:

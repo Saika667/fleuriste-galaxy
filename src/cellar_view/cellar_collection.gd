@@ -8,9 +8,7 @@ static func create(id: String) -> Node3D:
 	var district_id="skeleton" if id=="skeleton" else ("mushroom" if id.begins_with("mushroom_") else "")
 	if id=="sleeping_cat":
 		var cat=load("res://assets/models/animals/cat_sleeping.glb").instantiate();STYLE._prepare(cat);MERGE.merge(cat,[],[],[],1000.0);return cat
-	if not scenes.has(id):scenes[id]=load("res://assets/models/"+("district/"+district_id if district_id!="" else "cellar/"+id)+".glb")
-	assert(scenes[id]!=null,"Missing cellar asset "+id)
-	var node: Node3D=scenes[id].instantiate()
+	var node:Node3D=STYLE.prepared("res://assets/models/"+("district/"+district_id if district_id!="" else "cellar/"+id)+".glb")
 	node.set_meta("cellar_model",id)
 	STYLE._prepare(node)
 	MERGE.merge(node,[],[],[],1000.0)

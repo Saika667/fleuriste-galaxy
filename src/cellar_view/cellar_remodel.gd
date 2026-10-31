@@ -9,20 +9,24 @@ static func room(v) -> void:
 	for rect in preload("res://src/world/district_detail.gd").floor_rects(Rect2(-12,-12,24,21),[Rect2(-4.9,-7.5,1.1,3.8)]):
 		var center=rect.get_center();var size=Vector3(rect.size.x,.24,rect.size.y);var pos=Vector3(center.x,3.92,center.y)
 		CellarKit.box(v,size,pos,CellarKit.stone(Color("6A5890"),.34));CellarKit.solid(v,size,pos)
+		load("res://src/world/city_revision.gd").occluder(v,size-Vector3(.02,.02,.02),pos)
 	# Keep the original stone wall shaders and their original colours.
 	for span in [[-12.3,12.3]]:
 		var size=Vector3(span[1]-span[0],3.8,.25);var pos=Vector3((span[0]+span[1])/2,1.9,-9.1)
 		CellarKit.box(v,size,pos,CellarKit.stone(Color("6A5890"),.34));CellarKit.solid(v,size,pos)
 	var front=Node3D.new();front.name="CellarFrontage";front.set_meta("cellar_external",true);v.add_child(front)
-	for segment in [[-12.2,-3.45],[-2.49,-.85],[2.85,12.2]]:
+	for segment in [[-12.2,-3.72],[-2.22,-.85],[2.85,12.2]]:
 		var width=float(segment[1])-float(segment[0]);var pos=Vector3((segment[0]+segment[1])*.5,1.9,9.2)
-		CellarKit.box(front,Vector3(width,3.8,.2),pos,CellarKit.stone(Color("6A5890"),.34));CellarKit.solid(front,Vector3(width,3.8,.3),pos)
-	for spec in [[Vector3(.96,1.5,.3),Vector3(-2.97,3.05,9.2)],[Vector3(3.7,1.05,.3),Vector3(1,.525,9.2)],[Vector3(3.7,1.0,.3),Vector3(1,3.3,9.2)]]:
-		CellarKit.box(front,spec[0],spec[1],CellarKit.stone(Color("6A5890"),.34));CellarKit.solid(front,spec[0],spec[1])
+		CellarKit.box(front,Vector3(width,3.8,.2),pos,CellarKit.stone(Color("746F60"),.34));CellarKit.solid(front,Vector3(width,3.8,.3),pos)
+	for spec in [[Vector3(1.5,1.5,.3),Vector3(-2.97,3.05,9.2)],[Vector3(3.7,1.05,.3),Vector3(1,.525,9.2)],[Vector3(3.7,1.0,.3),Vector3(1,3.3,9.2)]]:
+		CellarKit.box(front,spec[0],spec[1],CellarKit.stone(Color("746F60"),.34));CellarKit.solid(front,spec[0],spec[1])
 
 	for x in [-1,1]:
 		CellarKit.box(v,Vector3(.3,3.8,18.7),Vector3(x*12.1,1.9,0),CellarKit.stone(Color("5E4E80"),.34))
 		CellarKit.solid(v,Vector3(.3,3.8,18.4),Vector3(x*12.2,1.9,0))
+		load("res://src/world/city_revision.gd").occluder(v,Vector3(.18,3.6,18.2),Vector3(x*12.1,1.9,0))
+	for child in v.get_children():
+		if child is Node3D:child.set_meta("cellar_structure",true)
 
 static func stairs(v) -> void:
 	load("res://src/world/district_v5.gd").stairs(v)
@@ -88,6 +92,9 @@ static func consoles(v) -> void:
 		v._consoles[kind]=node;i+=1
 
 static func decor(v) -> void:
+	var bed=C.attach(v,"grow_bed",Vector3(7.8,0,-5.5),0,.75)
+	for z in [-.32,.32]:C.attach(v,"herb_growing",Vector3(7.8,.365,-5.5+z),0,.7)
+	C.attach(v,"bed_lamp",Vector3(7.8,1.75,-5.5),0,.75)
 	var equipment=load("res://src/cellar_view/cellar_equipment_visual.gd").new();v.add_child(equipment);equipment.setup(v)
 	var mesh_kit=preload("res://src/world/mesh_kit.gd")
 	for x in [-8.0,0.0,8.0]:

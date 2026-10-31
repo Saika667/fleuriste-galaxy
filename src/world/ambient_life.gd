@@ -414,7 +414,7 @@ func _process(dt: float) -> void:
 		return
 	_t += dt
 	var night = world.daynight.night_factor
-	_update_walkers(dt)
+	# CityResidents owns public pedestrians and their house return routes.
 	_update_cat(dt)
 	_update_pigeon(dt)
 	_update_butterflies(1.0 - smoothstep(0.2, 0.7, night))

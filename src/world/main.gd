@@ -29,6 +29,7 @@ var bench_layer: CanvasLayer
 var bench: Node
 var cellar: Node3D
 var cellar_menu_open := false
+var _cellar_shadow_inside:=false
 var _last_mouse := -1
 var vase_controller: Node
 var free_layout: Node3D
@@ -74,7 +75,7 @@ func _ready() -> void:
 	surface_controller.setup(self)
 	_prepare_cellar()
 	# Keep the same functional compost interface, now physically in the garden.
-	cellar._composter.reparent(world,true);cellar._composter.global_position=Vector3(10,0,-6.2);cellar._composter.show();cellar.set_meta("interior_visibility",cellar.get_meta("interior_visibility",[]).filter(func(entry):return entry.node!=cellar._composter))
+	cellar._composter.reparent(world,true);cellar._composter.global_position=Vector3(14.35,0,-11.9);cellar._composter.show();cellar.set_meta("interior_visibility",cellar.get_meta("interior_visibility",[]).filter(func(entry):return entry.node!=cellar._composter))
 	free_layout=preload("res://src/world/free_layout.gd").new();add_child(free_layout);free_layout.setup(self)
 	_apply_mouse()
 	if Game.logistics.tutorial and not Game.progression.has_flag("welcome_seen"):
@@ -111,7 +112,9 @@ func _process(_dt: float) -> void:
 		elif player.global_position.y > -.05 and mode=="cellar":_set_cellar_active(false)
 		if mode=="cellar":
 			var local=cellar.to_local(player.global_position)
-			player.camera.environment=cellar.get_meta("interior_environment",null) if absf(local.x)<12 and absf(local.z)<9.1 else null
+			var inside=absf(local.x)<12 and absf(local.z)<9.1
+			player.camera.environment=cellar.get_meta("interior_environment",null) if inside else null
+			if inside!=_cellar_shadow_inside:_set_cellar_shadows(inside)
 	_apply_mouse()
 
 
@@ -291,15 +294,28 @@ func _prepare_cellar() -> void:
 	for child in cellar.get_children():
 		if (child is Node3D or child is CanvasLayer) and not child.get_meta("cellar_external",false):defaults.append({"node":child,"visible":child.visible})
 	cellar.set_meta("interior_visibility",defaults)
+	var shadows=[]
+	for entry in defaults:
+		if entry.node.get_meta("cellar_structure",false):continue
+		var meshes=entry.node.find_children("*","MeshInstance3D",true,false)
+		if entry.node is MeshInstance3D:meshes.append(entry.node)
+		for mesh in meshes:shadows.append({"node":mesh,"shadow":mesh.cast_shadow})
+	cellar.set_meta("interior_shadows",shadows)
 	_set_cellar_active(false)
 
 func _set_cellar_active(on: bool) -> void:
 	cellar.show();cellar.set_process(on)
+	_set_cellar_shadows(on)
 	for entry in cellar.get_meta("interior_visibility",[]):
 		if is_instance_valid(entry.node):entry.node.visible=(on or entry.node is MeshInstance3D or entry.node is StaticBody3D) and bool(entry.visible)
 	mode="cellar" if on else "shop"
 	cellar_menu_open=false
 	player.camera.environment=cellar.get_meta("interior_environment",null) if on else null
+
+func _set_cellar_shadows(on:bool) -> void:
+	_cellar_shadow_inside=on
+	for entry in cellar.get_meta("interior_shadows",[]):
+		if is_instance_valid(entry.node):entry.node.cast_shadow=entry.shadow if on else GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
 
 func enter_cellar() -> void:
 	if mode!="shop":return

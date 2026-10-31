@@ -7,12 +7,45 @@ const NAMES = ["vase_orange", "awning_display", "rose_planter", "floral_rug", "b
 const EXTRA_MODELS = ["botanical_shelf_medium","botanical_shelf_small","poster_flower","bucket_roses","bucket_lilies","bucket_tulips","bucket_poppies","shelf_wide","big_plant","crate_flowers","crate_bulbs","crate_skulls","crate_seedlings","stand_classic","flytrap","poster_skull","stand_botanical","bucket_daisies","bucket_widow","shelf_medium_wide","coffin_planter","hanging_flowered"]
 static var _scenes: Dictionary = {}
 static var _outline: ShaderMaterial
+static var _foliage_mats: Dictionary = {}
+static var _surface_meshes: Dictionary = {}
+static var _prepared_scenes:Dictionary={}
+
+static func prepared(path:String) -> Node3D:
+	var loop=Engine.get_main_loop();var prefs=loop.root.get_node_or_null("Preferences") if loop is SceneTree and loop.root!=null else null
+	var tier=2 if prefs!=null and prefs.quality==2 else 1
+	var version="prepared_v7_2" if path.ends_with("/flytrap.glb") else "prepared_v7_1"
+	var key=("%s|%d|%s"%[version,tier,path]).sha256_text()
+	var baked="res://assets/optimized_props/v7/"+key+".scn"
+	if OS.get_cmdline_user_args().has("no-lods"):
+		var raw:Node3D=load(path).instantiate();_prepare(raw);return raw
+	if _prepared_scenes.has(key):return _prepared_scenes[key].instantiate()
+	if ResourceLoader.exists(baked) and not OS.get_cmdline_user_args().has("bake-props"):
+		_prepared_scenes[key]=load(baked);return _prepared_scenes[key].instantiate()
+	var n:Node3D=load(path).instantiate();_prepare(n)
+	# These pivots are animated by code, rather than annotated in the original GLB.
+	if path.ends_with("/flytrap.glb"):
+		for part_name in ["jaw_up","jaw_dn","head"]:
+			var part=n.find_child(part_name,true,false)
+			if part!=null:part.set_meta("articulated",true)
+	MERGE.merge(n,[],[],[],1000)
+	n.set_meta("optimized_prepared",true)
+	_prepared_scenes[key]=MERGE.pack_static(n)
+	if OS.get_cmdline_user_args().has("bake-props"):
+		DirAccess.make_dir_recursive_absolute("res://assets/optimized_props/v7")
+		ResourceSaver.save(_prepared_scenes[key],baked,ResourceSaver.FLAG_COMPRESS)
+	return n
+
+static func _single_surface(mesh:Mesh,index:int) -> ArrayMesh:
+	var key="%d:%d"%[mesh.get_instance_id(),index]
+	if not _surface_meshes.has(key):
+		var single=ArrayMesh.new();single.add_surface_from_arrays(Mesh.PRIMITIVE_TRIANGLES,mesh.surface_get_arrays(index));single.surface_set_material(0,mesh.surface_get_material(index));single.set_meta("shared",true)
+		_surface_meshes[key]=single
+	return _surface_meshes[key]
 
 static func create(id: String) -> Node3D:
 	assert(id in NAMES or id in EXTRA_MODELS, "Unknown shop asset: "+id)
-	if not _scenes.has(id):
-		_scenes[id] = load("res://assets/models/shop/"+id+".glb")
-	var node: Node3D = _scenes[id].instantiate()
+	var node:Node3D=prepared("res://assets/models/shop/"+id+".glb")
 	node.set_meta("native_shop_asset",id)
 	_prepare(node)
 	if id=="flytrap":
@@ -25,8 +58,21 @@ static func create(id: String) -> Node3D:
 	return node
 
 static func _prepare(node: Node) -> void:
+	if node.get_meta("optimized_prepared",false):return
 	var extras=node.get_meta("extras",{})
 	if extras is Dictionary and extras.get("articulated",false):node.set_meta("articulated",true)
+	# glTF parts with several material surfaces used to bypass static batching entirely.
+	# Split them into sibling surfaces so the existing material batches can include them.
+	if node is MeshInstance3D and node.mesh!=null and node.mesh.get_surface_count()>1 and node.skin==null and not node.get_meta("articulated",false):
+		var mesh=node.mesh
+		for i in range(1,mesh.get_surface_count()):
+			var part=MeshInstance3D.new();part.name=String(node.name)+"_surface_"+str(i);part.mesh=_single_surface(mesh,i);part.transform=node.transform;part.cast_shadow=node.cast_shadow
+			part.material_override=node.material_override if node.material_override!=null else node.get_surface_override_material(i)
+			node.get_parent().add_child(part)
+			_prepare(part)
+		var override_mat=node.get_surface_override_material(0)
+		node.mesh=_single_surface(mesh,0);node.set_surface_override_material(0,null)
+		if node.material_override==null:node.material_override=override_mat
 	if node.name.begins_with("Removable_"):
 		_protect(node)
 		return
@@ -34,6 +80,13 @@ static func _prepare(node: Node) -> void:
 		var material = node.get_active_material(0)
 		var role = material.resource_name if material != null else ""
 		var glass = role == "glass" or role == "cold"
+		if material is StandardMaterial3D and ("leaf" in role or "foliage" in role):
+			if not _foliage_mats.has(material.get_instance_id()):
+				var copy=material.duplicate();copy.cull_mode=BaseMaterial3D.CULL_DISABLED;copy.transparency=BaseMaterial3D.TRANSPARENCY_DISABLED;copy.albedo_color.a=1.0
+				_foliage_mats[material.get_instance_id()]=copy
+			node.material_override=_foliage_mats[material.get_instance_id()]
+			node.material_overlay=null;node.set_meta("no_outline",true)
+			return
 		if glass and material is StandardMaterial3D:
 			var copy = material.duplicate() as StandardMaterial3D
 			copy.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
@@ -45,7 +98,9 @@ static func _prepare(node: Node) -> void:
 			node.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
 		elif not node.name.begins_with("Chalk_") and not node.name.begins_with("Label_") and not node.name.begins_with("Flat_") and not node.name.begins_with("Individual_seed"):
 			if _outline==null: _outline=KIT.outline_material(Color("#302A3D"),.0006)
-			node.material_overlay = _outline
+			var loop=Engine.get_main_loop()
+			var preferences=loop.root.get_node_or_null("Preferences") if loop is SceneTree and loop.root!=null else null
+			node.material_overlay = null if preferences==null or preferences.quality<2 else _outline
 		node.set_meta("no_outline",true)
 	for child in node.get_children():
 		_prepare(child)

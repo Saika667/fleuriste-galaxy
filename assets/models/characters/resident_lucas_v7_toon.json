@@ -1,0 +1,17 @@
+{
+  "file": "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\assets/models/characters/resident_lucas_v7_toon.glb",
+  "bytes": 1097148,
+  "triangles_including_outlines": 37956,
+  "meshes": 15,
+  "material_primitives": 44,
+  "materials": 12,
+  "skins": 1,
+  "joints": 17,
+  "animations": 0,
+  "shading": "KHR_materials_unlit; inverted hull outlines",
+  "checks": [
+    "GLB header and JSON parsed",
+    "skeleton exported",
+    "hidden expressions excluded"
+  ]
+}

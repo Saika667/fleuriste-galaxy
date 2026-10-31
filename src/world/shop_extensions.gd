@@ -423,9 +423,9 @@ func _build_annex() -> Node3D:
 	# lambris vert + papier peint a petites fleurs, comme la boutique
 	for wspec in [[Vector3(-5.0, 0.5, 3.0), Vector3(0.05, 1.0, 6.0)], [Vector3(-2.6, 0.5, 6.0), Vector3(5.0, 1.0, 0.05)]]:
 		MeshKit.box(walls, wspec[1], wspec[0], Color("#6FB57A"), 0.015)
-	var wp_h = room.H - 1.06
+	var wp_h = 3.2 - 1.06
 	var wp_y = 1.06 + wp_h * 0.5
-	room._pattern_quad(walls, room.WALLPAPER, Vector2(6.0, wp_h), Vector3(-4.989, wp_y, 3.0), Vector3(0, -PI * 0.5, 0))
+	room._pattern_quad(walls, room.WALLPAPER, Vector2(6.0, wp_h), Vector3(-4.989, wp_y, 3.0), Vector3(0, PI * 0.5, 0))
 	room._pattern_quad(walls, room.WALLPAPER, Vector2(5.0, wp_h), Vector3(-2.5, wp_y, 5.989), Vector3(0, PI, 0))
 	# plafond + poutres + pendule
 	var ceil_root = Node3D.new()
@@ -469,7 +469,7 @@ static func reserved_cells(room_id: String) -> Array:
 		for s in mini(slots, 2):
 			for dx in 2:
 				for dy in 2:
-					out.append(Vector2i((4 if s == 0 else 2) + dx, 2 + dy))
+					out.append(Vector2i(dx, (2 if s == 0 else 0) + dy))
 	elif room_id == "annex" and Game.expansions.is_owned("upstairs") and Game.expansions.is_owned("enlargement"):
 		out = [Vector2i(0, 4), Vector2i(0, 5), Vector2i(1, 4), Vector2i(1, 5)]
 	return out
@@ -620,15 +620,15 @@ func _update_slot_marks() -> void:
 	marks.name = "SlotMarks"
 	loft_group.add_child(marks)
 	for i in mini(maxi(_staff_slots, 1), 2):
-		var z0 = 6.0 if i == 0 else 4.0
+		var desk_x = 6.3+i*2.0
 		var taken = i < _staff_names.size()
 		var col = Color("#FFD24A") if taken else Color("#7CFF6B")
-		var pad = MeshKit.box(marks, Vector3(2.0, 0.02, 2.0), Vector3(7.0, LOFT_FLOOR_Y + 0.03, z0 - 1.0), col, 0.02, 0.8, 0.0, 0.0)
+		var pad = MeshKit.box(marks, Vector3(1.8, 0.02, 2.0), Vector3(desk_x, LOFT_FLOOR_Y + 0.03, 1.0), col, 0.02, 0.8, 0.0, 0.0)
 		pad.material_override = MeshKit.mat(col, 0.8, 0.0, 0.0, 0.35)
 		pad.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
 		pad.set_meta("pad", true)
 		var who = String(_staff_names[i].name) if taken else "libre"
-		var lab = MeshKit.label(marks, "POSTE %d\n%s" % [i + 1, who], Vector3(7.0, LOFT_FLOOR_Y + 0.06, z0 - 1.0), 40, col, 0.005, 10)
+		var lab = MeshKit.label(marks, "POSTE %d\n%s" % [i + 1, who], Vector3(desk_x, LOFT_FLOOR_Y + 0.06, 1.0), 40, col, 0.005, 10)
 		lab.rotation.x = -PI * 0.5
 		lab.rotation.y = -PI * 0.5
 

@@ -1,0 +1,17 @@
+{
+  "file": "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\assets/models/characters/resident_marcel_v7_toon.glb",
+  "bytes": 1201388,
+  "triangles_including_outlines": 41624,
+  "meshes": 15,
+  "material_primitives": 42,
+  "materials": 12,
+  "skins": 1,
+  "joints": 17,
+  "animations": 0,
+  "shading": "KHR_materials_unlit; inverted hull outlines",
+  "checks": [
+    "GLB header and JSON parsed",
+    "skeleton exported",
+    "hidden expressions excluded"
+  ]
+}

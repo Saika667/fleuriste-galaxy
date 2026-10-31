@@ -11,7 +11,7 @@ const Collection54 = preload("res://src/world/shop_collection_54_73.gd")
 const Collection74 = preload("res://src/world/shop_collection_74_89.gd")
 
 const WALLPAPER = """shader_type spatial;
-render_mode blend_mix, cull_disabled, depth_draw_never;
+render_mode cull_back;
 uniform vec4 ink : source_color = vec4(0.96, 0.62, 0.72, 1.0);
 uniform float scale = 2.2;
 uniform float strength = 0.42;
@@ -27,8 +27,7 @@ void fragment() {
 	float petal = 0.15 + 0.07 * cos(5.0 * a);
 	float m = smoothstep(petal, petal - 0.04, r);
 	float core = smoothstep(0.05, 0.03, r);
-	ALBEDO = mix(ink.rgb, vec3(1.0, 0.82, 0.3), core);
-	ALPHA = m * strength;
+	ALBEDO = mix(vec3(.91,.93,.88), mix(ink.rgb, vec3(1.0,.82,.3),core),m*strength);
 	ROUGHNESS = 1.0;
 }
 """
@@ -265,7 +264,7 @@ func _slab(center: Vector3, size: Vector3, color: Color, collide := true, parent
 
 
 func _build_floor_ceiling() -> void:
-	for rect in preload("res://src/world/district_detail.gd").floor_rects(Rect2(-65,-56,140,146),[Rect2(19.0,-22,12,32.6),Rect2(-22,-53,70,39.8),Rect2(8.8,-.2,1.1,3.6)]):
+	for rect in preload("res://src/world/district_detail.gd").floor_rects(Rect2(-65,-56,140,146),[Rect2(19.0,-22,17,29.7),Rect2(-25,-53,73,39.8),Rect2(8.8,-.2,1.1,3.6)]):
 		var center=rect.get_center();MeshKit.solid(_static,Vector3(rect.size.x,.2,rect.size.y),Vector3(center.x,-.1,center.y))
 	# plancher en lattes
 	var floor_root = Node3D.new()
@@ -283,6 +282,7 @@ func _build_floor_ceiling() -> void:
 	for rect in preload("res://src/world/district_detail.gd").floor_rects(Rect2(-.2,-.2,W+.4,D+.4),[Rect2(.22,.10,1.96,2.25)]):
 		var center=rect.get_center();var size=Vector3(rect.size.x,.2,rect.size.y);var pos=Vector3(center.x,H+.1,center.y)
 		MeshKit.box(ceil_root,size,pos,Color("#DDE4D5"),0,.9,0,0);MeshKit.solid(_static,size,pos)
+		preload("res://src/world/city_revision.gd").occluder(ceil_root,size-Vector3(.02,.02,.02),pos)
 	placement_hide.append(ceil_root)
 	cut_hide.append(ceil_root)
 	Decor.catalog(ceil_root, "ceiling", "Plafond et poutres")
@@ -298,6 +298,9 @@ func _wall_run(axis: String, fixed: float, a0: float, a1: float, y0: float, y1: 
 		return
 	var mid = (a0 + a1) * 0.5
 	var ym = (y0 + y1) * 0.5
+	var occluder_size=Vector3(length,y1-y0,T) if axis=="x" else Vector3(T,y1-y0,length)
+	var occluder_pos=Vector3(mid,ym,fixed) if axis=="x" else Vector3(fixed,ym,mid)
+	if minf(length,y1-y0)>.08:preload("res://src/world/city_revision.gd").occluder(_wall_root,occluder_size-Vector3(.02,.02,.02),occluder_pos)
 	if axis == "x":
 		_slab(Vector3(mid, ym, fixed), Vector3(length, y1 - y0, T), color)
 	else:
@@ -395,28 +398,16 @@ func _build_walls() -> void:
 	# parapet + facade exterieure rose
 	_wall_run("x", sz, -T, W + T, h, 4.5, Color("#A5B6A7"))
 	var facade = MeshKit.box(self, Vector3(W + 0.4, 1.3, 0.06), Vector3(W * 0.5, 3.85, D + 0.23), Color("#A5B6A7"), 0.02)
-	# enseigne
-	var board = MeshKit.box(self, Vector3(4.2, 0.85, 0.14), Vector3(5.5, 3.85, D + 0.32), MeshKit.WOOD, 0.05)
-	var fpl = MeshKit.box(self, Vector3(4.0, 0.7, 0.04), Vector3(5.5, 3.85, D + 0.4), MeshKit.CREAM, 0.03)
-	fleurs_mat = fpl.material_override.duplicate()
-	fpl.material_override = fleurs_mat
-	var sl = MeshKit.label(self, "FLEURS", Vector3(5.5, 3.88, D + 0.45), 110, MeshKit.INK, 0.0075)
-	fleurs_label = sl
-	for e in [[Vector3(4.1, 0.05, 0.05), Vector3(5.5, 4.22, D + 0.43)], [Vector3(4.1, 0.05, 0.05), Vector3(5.5, 3.48, D + 0.43)], [Vector3(0.05, 0.8, 0.05), Vector3(3.47, 3.85, D + 0.43)], [Vector3(0.05, 0.8, 0.05), Vector3(7.53, 3.85, D + 0.43)]]:
-		_neon(self, e[0], e[1], Color("#A87CFF"), 3.4)
-	_neon_light(Vector3(5.5, 3.3, D + 1.7), Color("#A87CFF"), 2.2, 8.0)
-	sl.rotation.y = 0.0
-	sl.double_sided = false
-	MeshKit.sphere(self, 0.16, Vector3(3.6, 3.86, D + 0.45), MeshKit.PETAL, Vector3(1, 1, 0.3))
-	MeshKit.sphere(self, 0.16, Vector3(7.4, 3.86, D + 0.45), MeshKit.PETAL, Vector3(1, 1, 0.3))
-	MeshKit.sphere(self, 0.06, Vector3(3.6, 3.86, D + 0.5), MeshKit.SUN)
-	MeshKit.sphere(self, 0.06, Vector3(7.4, 3.86, D + 0.5), MeshKit.SUN)
-	# auvent raye
-	for i in 18:
-		var xx = 0.3 + i * 0.5
-		var s = MeshKit.box(self, Vector3(0.5, 0.05, 1.5), Vector3(xx, 2.85, D + 0.9), MeshKit.PETAL if i % 2 == 0 else MeshKit.CREAM, 0.02)
-		s.rotation.x = 0.22
-		MeshKit.box(self, Vector3(0.5, 0.2, 0.04), Vector3(xx, 2.55, D + 1.55), MeshKit.PETAL if i % 2 == 0 else MeshKit.CREAM, 0.015)
+	# Painted timber fascia with recessed lettering and discrete brass lighting.
+	var board=MeshKit.box(self,Vector3(5.4,.78,.14),Vector3(5.3,3.85,D+.34),Color("#38594E"),.018)
+	var fpl=MeshKit.box(self,Vector3(5.16,.56,.025),Vector3(5.3,3.85,D+.425),Color("#294B40"),.008)
+	fleurs_mat=fpl.material_override.duplicate();fpl.material_override=fleurs_mat
+	fleurs_label=MeshKit.label(self,"FLEURISTE",Vector3(5.3,3.86,D+.455),90,Color("#E4D7AF"),.006)
+	fleurs_label.outline_size=0
+	for x in [3.25,7.35]:
+		preload("res://src/world/city_revision.gd").bar(self,Vector3(x,4.35,8.35),Vector3(x,4.35,8.85),.018,Color("#A8996E"))
+		MeshKit.box(self,Vector3(.25,.08,.20),Vector3(x,4.32,8.85),Color("#A8996E"),.025)
+	preload("res://src/world/city_revision.gd").awning(self,Vector3(4.7,3.03,8.25),9.2,1.45,Color("#668C77"))
 	preload("res://src/world/frontage_v4.gd").shop(self)
 	# bas de murs (mode placement)
 	wall_stubs = Node3D.new()
@@ -463,6 +454,7 @@ func _make_door(name: String, hinge_pos: Vector3, along: Vector3, angle: float, 
 	var frame=native.find_child("FixedFrame",true,false)
 	if frame!=null:
 		frame.reparent(self)
+		if name=="back":frame.position.x+=.055
 		for part in frame.find_children("*","MeshInstance3D",true,false):
 			part.material_overlay=null;part.cast_shadow=GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
 		placement_hide.append(frame)
@@ -828,11 +820,11 @@ func _build_exterior() -> void:
 	# sol global + trottoir + route
 	# Leave the visual shaft open all the way through the exterior ground slab.
 	# The invisible walking collider stays continuous: cellar travel uses the interaction.
-	for rect in preload("res://src/world/district_detail.gd").floor_rects(Rect2(-65,-56,140,146),[Rect2(19.0,-22,12,32.6),Rect2(-22,-53,70,39.8),Rect2(8.8,-.2,1.1,3.6)]):
+	for rect in preload("res://src/world/district_detail.gd").floor_rects(Rect2(-65,-56,140,146),[Rect2(19.0,-22,17,29.7),Rect2(-25,-53,73,39.8),Rect2(8.8,-.2,1.1,3.6)]):
 		var c=rect.get_center()
 		MeshKit.box(ex,Vector3(rect.size.x,.1,rect.size.y),Vector3(c.x,-.07,c.y),Color("#77756B"),0,1.0,0.0,0.0)
-	MeshKit.box(ex,Vector3(70,.03,5.6),Vector3(5,-.03,13.4),Color("#62696B"),0)
-	for i in 14:MeshKit.box(ex,Vector3(1.6,.012,.14),Vector3(-28+i*5,.0,13.4),Color("#E2D8B7"),.002)
+	load("res://src/world/city_v7.gd").road(MeshKit.box(ex,Vector3(80,.03,8),Vector3(5,-.03,17.6),Color("#62696B"),0))
+	for i in 14:MeshKit.box(ex,Vector3(1.6,.012,.14),Vector3(-28+i*5,.0,17.6),Color("#E2D8B7"),.002)
 	# voisins : blocs colores le long de la rue
 	var win_mat = MeshKit.mat(Color("#FFE9A8"), 0.5, 0.0, 0.0)
 	window_mats.append(win_mat)
@@ -1007,9 +999,9 @@ func set_night(n: float) -> void:
 		yard_light.light_color = Color("#FFD9A0").lerp(Color("#C9A8FF"), k)
 		yard_light.light_energy = lerpf(0.0, 1.1, smoothstep(0.2, 0.8, n))
 	if fleurs_mat != null:
-		fleurs_mat.albedo_color = MeshKit.CREAM.lerp(Color("#1B1230"), k)
+		fleurs_mat.albedo_color = Color("#294B40").lerp(Color("#203D35"), k)
 		var fg = 1.0 + 2.2 * k
-		fleurs_label.modulate = MeshKit.INK.lerp(Color(0.75 * fg, 0.5 * fg, 1.0 * fg), k)
+		fleurs_label.modulate = Color.WHITE.lerp(Color(.88*fg,.91*fg,.80*fg),k)
 	for m in window_mats:
 		m.emission_enabled = true
 		m.emission = Color("#FFD27A").lerp(Color("#B9A0FF"), smoothstep(0.5, 0.95, n))

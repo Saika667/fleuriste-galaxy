@@ -9,25 +9,27 @@ void vertex(){world_pos=(MODEL_MATRIX*vec4(VERTEX,1.0)).xyz;}
 void fragment(){vec2 p=world_pos.xz;float row=floor(p.y/.58);p.x+=mod(row,2.0)*.30;vec2 cell=p/vec2(1.25,.58);vec2 edge=min(fract(cell),1.0-fract(cell))*vec2(1.25,.58);float width=max(fwidth(p.x),fwidth(p.y));float joint=1.0-smoothstep(.010-width,.010+width,min(edge.x,edge.y));float variation=fract(sin(dot(floor(cell),vec2(12.989,78.233)))*43758.54);ALBEDO=mix(vec3(.79,.75,.65)*(.96+.065*variation),vec3(.61,.60,.53),joint*.45);ROUGHNESS=.98;}
 """
 static func attach(parent:Node3D,id:String,pos:=Vector3.ZERO,yaw:=0.0) -> Node3D:
-	if not cache.has(id):cache[id]=load("res://assets/models/district/"+id+".glb")
-	var n:Node3D=cache[id].instantiate();parent.add_child(n);n.position=pos;n.rotation.y=yaw;n.name=id.to_pascal_case();STYLE._prepare(n);MERGE.merge(n,[],[],[],1000)
+	if id=="street_lamp":return load("res://src/world/city_v7.gd").lamp(parent,pos,yaw)
+	var n:Node3D
+	if cache.has(id):n=cache[id].instantiate()
+	else:
+		n=load("res://assets/models/"+("city_v6/" if id=="street_lamp" else "district/")+id+".glb").instantiate();STYLE._prepare(n);MERGE.merge(n,[],[],[],1000);cache[id]=MERGE.pack_static(n)
+	parent.add_child(n);n.position=pos;n.rotation.y=yaw;n.name=id.to_pascal_case()
 	if id in ["skeleton","mushroom"]:n.set_meta("cellar_model",id)
 	return n
 static func house(parent:Node3D,id:String,pos:Vector3,yaw:float,col:Color,scale_factor:=1.0) -> Node3D:
-	var path="res://assets/models/street/"+id+".glb"
-	if not cache.has(path):cache[path]=load(path)
-	var n:Node3D=cache[path].instantiate();parent.add_child(n);n.position=pos;n.rotation.y=yaw;n.scale=Vector3.ONE*scale_factor;STYLE._prepare(n)
-	for m in n.find_children("*","MeshInstance3D",true,false):
-		var mat=m.get_active_material(0)
-		if mat is StandardMaterial3D and mat.resource_name=="facade":var copy=mat.duplicate();copy.albedo_color=col;m.material_override=copy
-	MERGE.merge(n,[],[],[],1000)
-	var width={"sage_townhouse":10.0,"blue_workshop":8.0,"brick_bakery":12.0,"apartment_three":12.0,"apartment_four":12.0,"apartment_five":12.0,"corner_apartments":12.0}.get(id,10.0)
-	var height=12.2 if id=="apartment_three" else 15.25 if id=="apartment_four" else 18.3 if id=="apartment_five" else 6.1 if id in ["sage_townhouse","blue_workshop"] else 9.15
-	var body=StaticBody3D.new();n.add_child(body);K.solid(body,Vector3(width,height,9 if id.begins_with("apartment_") else 7),Vector3(0,height/2,0))
+	var width={"sage_townhouse":10.0,"blue_workshop":8.0,"brick_bakery":12.0,"corner_apartments":12.0}.get(id,12.0)
+	var levels=2 if id in ["sage_townhouse","blue_workshop"] else 3
+	if id.begins_with("apartment_"):levels=4 if id=="apartment_three" else 5 if id=="apartment_four" else 6
+	var city=load("res://src/world/city_revision.gd")
+	var n=city.building(parent,pos,yaw,width,9.0 if id.begins_with("apartment_") else 7.0,levels,col,{"sage_townhouse":30,"blue_workshop":33,"brick_bakery":36,"corner_apartments":39}.get(id,40))
+	n.scale=Vector3.ONE*scale_factor;n.name=id.to_pascal_case()
+	if id=="brick_bakery":
+		city.awning(n,Vector3(0,2.8,3.65),10.5,1.25,Color("#83644C"))
+		K.label(n,"BOULANGERIE",Vector3(0,3.45,3.61),42,Color("#F0E1BD"),.004).outline_size=0
 	return n
 static func tree(p:Node3D,pos:Vector3,seed_index:int) -> void:
-	var r=load("res://assets/models/animals/tree_"+str(posmod(seed_index,3))+".glb").instantiate();p.add_child(r);r.position=pos;r.name="StreetTree"
-	STYLE._prepare(r);MERGE.merge(r,[],[],[],1000)
+	var r=load("res://src/world/city_revision.gd").model(p,"tree_"+str(posmod(seed_index,3)),pos);r.name="StreetTree"
 	var body=StaticBody3D.new();r.add_child(body);K.solid(body,Vector3(.35,2.7,.35),Vector3(0,1.35,0))
 static func bench(p:Node3D,pos:Vector3,yaw:float) -> void:
 	var n=load("res://assets/models/completion/garden_bench.glb").instantiate();p.add_child(n);n.position=pos;n.rotation.y=yaw;STYLE._prepare(n);MERGE.merge(n,[],[],[],1000)
@@ -43,49 +45,52 @@ static func fence(p:Node3D,pos:Vector3,length:float,yaw:=0.0) -> void:
 	for y in [.24,.78]:K.box(n,Vector3(length,.075,.06),Vector3(0,y,-.025),Color("#596C5A"),.012)
 	var b=StaticBody3D.new();n.add_child(b);K.solid(b,Vector3(length,1,.08),Vector3(0,.5,0))
 static func pavement(p:Node3D,z:float,depth:float) -> void:
-	var holes=[Rect2(19.0,8,12,3)] if z<13 else []
-	for rect in floor_rects(Rect2(-30,z-depth/2,70,depth),holes):
+	var holes=[Rect2(19.0,8,12,5.6)] if z<13 else []
+	for rect in floor_rects(Rect2(-35,z-depth/2,80,depth),holes):
 		var c=rect.get_center();var slab=K.box(p,Vector3(rect.size.x,.05,rect.size.y),Vector3(c.x,-.005,c.y),Color("#D9CBB2"),0)
 		var shader=Shader.new();shader.code=PAVING;var mat=ShaderMaterial.new();mat.shader=shader;slab.material_override=mat
-	var edge=z+depth/2 if z<13 else z-depth/2
-	for i in 28:
-		var x=-29+i*2.5
-		if z<13 and x>18 and x<30:continue
-		K.box(p,Vector3(2.42,.15,.22),Vector3(x,.025,edge),Color("#BEB9A7"),.015)
 static func plaza(v:Node3D,root:Node3D) -> void:
 	# Local cellar coordinates: the court is 32 x 20 m at level -1.
-	K.box(root,Vector3(61,.20,32),Vector3(-7.5,-.1,25.0),Color("#666D6A"),.015)
-	var b=StaticBody3D.new();root.add_child(b);K.solid(b,Vector3(61,.20,32),Vector3(-7.5,-.1,25.0))
+	for rect in floor_rects(Rect2(-38,9,68,39),[Rect2(-25.3,9,11,8.5)]):
+		var c=rect.get_center();load("res://src/world/city_revision.gd").slab(root,Vector3(rect.size.x,.20,rect.size.y),Vector3(c.x,-.10,c.y),Color("#666D6A"))
 	for x in [-10,-7.5,-5,-2.5,0,2.5,5,7.5]:
 		for dx in [-1.25,1.25]:K.box(root,Vector3(.07,.009,4.8),Vector3(x+dx,.008,20),Color("#DAD5BC"),.005)
 		K.box(root,Vector3(2.5,.009,.07),Vector3(x,.008,22.4),Color("#DAD5BC"),.005)
 	for x in [-10,0,10]:
-		house(root,"sage_townhouse",Vector3(x,0,33),0,Color("#AFB5A0") if x<0 else Color("#BBA68F"),1.0)
+		house(root,"sage_townhouse",Vector3(x,0,33),PI,Color("#AFB5A0") if x<0 else Color("#BBA68F"),1.0)
 		K.box(root,Vector3(.85,1.9,.07),Vector3(x,.95,31.34),Color("#6D7F75"),.02)
 		for dx in [-.47,.47]:K.box(root,Vector3(.07,2.0,.12),Vector3(x+dx,1,31.30),Color("#D6C6A6"),.012)
 		K.box(root,Vector3(1.04,.1,.32),Vector3(x,.05,31.2),Color("#C5B79C"),.018)
 		K.box(root,Vector3(7,.015,4.8),Vector3(x,.005,28),Color("#667D50"),.02)
-		fence(root,Vector3(x,0,25.5),7)
-		for side in [-1,1]:fence(root,Vector3(x+side*3.5,0,28),5,PI/2)
+		for dx in [-2.05,2.05]:fence(root,Vector3(x+dx,0,25.5),2.9)
+		load("res://src/world/city_v7.gd").gate(root,Vector3(x,0,25.5))
+		for side in [-1,1]:fence(root,Vector3(x+side*3.5,0,27.5),4,PI/2)
 		for prop in [["garden_bench",Vector3(x+2.4,0,28.5)],["watering_can",Vector3(x-1.4,.1,27.5)]]:
 			if prop[0]=="garden_bench":bench(root,prop[1],PI)
 		for j in 4:K.box(root,Vector3(1.15,.025,.52),Vector3(x,.025,26.1+j*.78),Color("#BEB29A"),.01)
 		for j in 3:K.sphere(root,.35,Vector3(x-2+j*.7,.30,29.3),Color("#708650"),Vector3(1,.8,1))
 	for side in [-1,1]:
-		for z in [18.5,26.0]:
-			var x=-33.0 if side<0 else 19.5
-			house(root,"sage_townhouse",Vector3(x,0,z),-PI/2 if side<0 else PI/2,Color("#B5A69D") if z<20 else Color("#9FAEAD"),.72)
-			K.box(root,Vector3(3,.02,6.2),Vector3(-28.4 if side<0 else 13.8,.01,z),Color("#687F53"),.02)
-			fence(root,Vector3(-26.9 if side<0 else 12.3,0,z),6.2,PI/2)
-			for dz in [-3.1,3.1]:fence(root,Vector3(-28.4 if side<0 else 13.8,0,z+dz),3)
-	for x in [-21,12]:
-		for z in [16,23]:tree(root,Vector3(x,0,z),int(x+z))
-	for x in [-12,9]:attach(root,"street_lamp",Vector3(x,0,24),PI/2)
+		for z in [18.5,25.7]:
+			var x=-34.5 if side<0 else 20.3
+			house(root,"sage_townhouse",Vector3(x,0,z),PI/2 if side<0 else -PI/2,Color("#B5A69D") if z<20 else Color("#9FAEAD"),.72)
+			var garden_width=5.08 if side<0 else 5.48;var garden_x=-29.44 if side<0 else 15.04
+			K.box(root,Vector3(garden_width,.02,6.2),Vector3(garden_x,.01,z),Color("#687F53"),.02)
+			for dz in [-1.85,1.85]:fence(root,Vector3(-26.9 if side<0 else 12.3,0,z+dz),2.5,PI/2)
+			load("res://src/world/city_v7.gd").gate(root,Vector3(-26.9 if side<0 else 12.3,0,z),1.2,-PI/2 if side<0 else PI/2)
+			for dz in [-3.1,3.1]:fence(root,Vector3(garden_x,0,z+dz),garden_width)
+			if side<0 and z<20:
+				# Continue the first garden until it physically meets the blue slope house.
+				K.box(root,Vector3(garden_width,.02,2.4),Vector3(garden_x,.01,14.2),Color("#687F53"),0)
+				fence(root,Vector3(-26.9,0,14.2),2.4,PI/2)
+				fence(root,Vector3(garden_x,0,13.0),garden_width)
+	for x in [-23.9,10.3]:
+		for z in [19,23]:tree(root,Vector3(x,0,z),int(x+z))
+	for x in [-12,9]:attach(root,"street_lamp",Vector3(x,0,24.1),PI)
 	load("res://src/world/district_v5.gd").perimeter(root)
 	var sewer=preload("res://src/cellar_view/cellar_collection.gd").attach(root,"sewer",Vector3(8,0,17.5));v._hatch_lid=sewer.find_child("HatchHinge",true,false)
 	v._hatch_light=CellarKit.omni(sewer,Vector3(0,.3,0),Color("9FE3B4"),.5,2)
 	v._smoke=CellarKit.puffs(sewer,Vector3(0,.1,0),Color("A6FF9A"),8,2.5,.35,20,.4,false);v._smoke.emitting=false
-	var trash=load("res://src/world/world_interactable.gd").new();root.add_child(trash);trash.name="MunicipalDisposal";trash.position=Vector3(-12.5,0,24)
+	var trash=load("res://src/world/world_interactable.gd").new();root.add_child(trash);trash.name="MunicipalDisposal";trash.position=v.to_local(Vector3(12.4,0,8.8))
 	attach(trash,"municipal_bin");K.solid(trash,Vector3(1.7,1.3,.95),Vector3(0,.65,0))
 	trash.prompt_fn=func():return "Jeter les cartons vides / l’objet porté"
 	trash.action_fn=func(_p):

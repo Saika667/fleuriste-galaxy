@@ -62,8 +62,7 @@ static func raw_model(d: Dictionary) -> Node3D:
 	else:
 		var path=String(d.get("model",""))
 		if path=="":return Node3D.new()
-		if not model_cache.has(path):model_cache[path]=load(path)
-		node=model_cache[path].instantiate()
+		node=STYLE.prepared(path)
 	var vase_id=String(d.get("model","")).get_file().get_basename()
 	if VASE_DESIGNS.has(vase_id) and d.get("role","")!="flower_pot":
 		node.free();node=preload("res://src/world/shop_vase_visual.gd").create(VASE_DESIGNS[vase_id],0)
@@ -422,10 +421,10 @@ func drop_box() -> void:
 	if not get_world_3d().direct_space_state.intersect_shape(query).is_empty():main._on_toast("Pas assez de place pour poser le carton.","warn");return
 	order.position=[pos.x,pos.y,pos.z];set_collisions(parcels[carried_box],true);carried_boxes.erase(carried_box);carried_box=carried_boxes.back() if not carried_boxes.is_empty() else "";sync()
 func build_trash() -> void:
-	trash=INTER.new();add_child(trash);trash.position=Vector3(9,0,9.5)
-	preload("res://src/world/district_detail.gd").attach(trash,"recycling_bin")
-	K.solid(trash,Vector3(.7,1.1,.7),Vector3(0,.55,0));trash.prompt_fn=func():return "Recycler les cartons vides" if carried_box!="" else "~Recyclage des emballages"
-	trash.action_fn=func(_p):discard_box()
+	trash=main.find_child("MunicipalDisposal",true,false)
+	assert(trash!=null,"The florist needs its one usable recycling bin")
+	trash.prompt_fn=func():return "Recycler les cartons / jeter l’objet porté"
+	trash.action_fn=func(_p):discard_at_municipal_bin()
 func discard_box() -> void:
 	var disposed=0
 	var all=carried_boxes.duplicate()

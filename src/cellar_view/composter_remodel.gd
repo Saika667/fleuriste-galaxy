@@ -6,7 +6,7 @@ func setup(v) -> void:
 	super.setup(v)
 	for m in find_children("*","MeshInstance3D",true,false):m.hide()
 	for m in find_children("*","Label3D",true,false):m.hide()
-	new_body=preload("res://src/world/district_detail.gd").attach(self,"composter")
+	new_body=preload("res://src/world/city_revision.gd").model(self,"composter")
 	new_jaw=new_body.find_child("LidHinge",true,false)
 
 func _process(delta:float) -> void:

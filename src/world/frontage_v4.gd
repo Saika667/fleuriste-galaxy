@@ -18,46 +18,38 @@ static func shop(p:Node3D) -> void:
 		K.box(r,Vector3(.23,2.72,.23),Vector3(x,1.36,8.27),Color("#D8CAB0"),.008)
 		for y in [.15,.40,2.55]:K.box(r,Vector3(.31,.11,.29),Vector3(x,y,8.29),Color("#C1B69D"),.008)
 	for y in [2.75,3.28,4.52]:K.box(r,Vector3(10.65,.16,.32),Vector3(5,y,8.25),Color("#D8CAB0"),.008)
-	# Upper storey has real recessed window joinery and the same stone trim as the street.
-	K.box(r,Vector3(10.4,3.0,.20),Vector3(5,6.9,8.72),Color("#A5B6A7"),0)
-	for x in [.05,9.95]:
-		for i in 6:K.box(r,Vector3(.28,.36,.28),Vector3(x,5.56+i*.49,8.85),Color("#D8CAB0"),.004)
-	for x in [1.5,5,8.5]:window(r,Vector3(x,6.9,8.86),1.2,1.55,true)
-	K.box(r,Vector3(10.7,.20,.40),Vector3(5,8.48,8.76),Color("#D8CAB0"),.008)
-	for x in [-.15,10.15]:
-		K.cylinder(r,.045,.045,7.1,Vector3(x,3.55,9.05),Color("#576A66"))
-		for y in [1,3,5,6.7]:K.box(r,Vector3(.15,.05,.16),Vector3(x,y,8.99),Color("#384B48"),.003)
-	for x in [-.23,10.23]:K.box(r,Vector3(.20,3.0,9.0),Vector3(x,6.9,4.3),Color("#A5B6A7"),0)
-	K.box(r,Vector3(10.65,3.0,.20),Vector3(5,6.9,-.20),Color("#A5B6A7"),0)
-	for side in [-1,1]:
-		var roof=K.box(r,Vector3(11.3,.13,4.95),Vector3(5,9.25,4.3+side*2.34),Color("#526568"),.008);roof.rotation.x=side*atan(1.5/4.68)
-		for i in 9:
-			var z=side*(.22+i*.52);var y=10.0-absf(z)*1.5/4.68
-			K.box(r,Vector3(11.3,.025,.035),Vector3(5,y,4.3+z),Color("#6A7777"),.002)
+	# Rear ground floor is solid plaster without decorative fake windows.
 	for spec in [[Vector3(5.6,5.2,.08),Vector3(2.6,2.6,-.32)],[Vector3(3.97,5.2,.08),Vector3(8.415,2.6,-.32)],[Vector3(1.03,2.9,.08),Vector3(5.915,3.75,-.32)]]:K.box(r,spec[0],spec[1],Color("#A5B6A7"),0,.95,0,0)
-	# Rear elevation: continuous plaster, framed ground-floor openings and upper windows.
-	var back=Node3D.new();r.add_child(back);back.rotation.y=PI;back.position=Vector3(5,0,-.25)
-	for x in [-5.05,5.05]:K.box(back,Vector3(.24,8.4,.23),Vector3(x,4.2,.05),Color("#D8CAB0"),0)
-	for y in [.2,5.3,8.45]:K.box(back,Vector3(10.5,.18,.30),Vector3(0,y,.10),Color("#D8CAB0"),.004)
-	for x in [-3.5,0,3.5]:window(back,Vector3(x,6.9,.16),1.2,1.55,true)
-	for x in [-3.4,2.6]:window(back,Vector3(x,2.2,.15),1.15,1.6,true)
 	p.placement_hide.append(r);p.cut_hide.append(r)
 static func cellar(v:Node3D) -> void:
 	var r=Node3D.new();r.name="CellarStreetFrontage";r.set_meta("cellar_external",true);v.add_child(r)
-	# Local +Z faces the lower plaza. Stone piers break up the long elevation.
-	for x in [-12,-8.4,-4.8,3.45,7.5,12]:
-		K.box(r,Vector3(.30,3.78,.24),Vector3(x,1.89,9.36),Color("#AEA58F"),.008)
-		for y in [.17,3.58]:K.box(r,Vector3(.43,.18,.34),Vector3(x,y,9.4),Color("#C5B79B"),.012)
-	for y in [.15,3.77]:K.box(r,Vector3(24.5,.19,.34),Vector3(0,y,9.35),Color("#AEA58F"),.008)
-	for x in [-10.3,-6.6,5.6,9.5]:window(r,Vector3(x,2.1,9.36),1.10,1.25,true)
-	for x in [-11.8,11.8]:
-		K.cylinder(r,.05,.05,3.65,Vector3(x,1.82,9.55),Color("#4F6560"))
-	# Shutter cassette closes the header, including the strip above the metal slats.
-	K.box(r,Vector3(4,.43,.48),Vector3(1,2.61,9.41),Color("#515F5B"),.022)
-	for y in [2.46,2.60,2.74]:K.box(r,Vector3(3.85,.023,.025),Vector3(1,y,9.67),Color("#75847A"),.003)
-
+	# Industrial envelope: corrugated cladding, low concrete footing and exposed steel.
+	var steel=Color("#4E5C5C");var concrete=Color("#85867B")
+	K.box(r,Vector3(2.1,.16,18.5),Vector3(-13.3,4.12,0),steel,0)
+	for z in [-9.2,9.2]:K.box(r,Vector3(2.1,4.2,.16),Vector3(-13.3,2.1,z),concrete,0)
+	for span in [[-12.25,-3.78],[-2.16,-.90],[2.90,12.25]]:
+		var width=span[1]-span[0];var cx=(span[0]+span[1])/2
+		K.box(r,Vector3(width,4.2,.08),Vector3(cx,2.1,9.34),Color("#887F6D"),0)
+		K.box(r,Vector3(width,.22,.10),Vector3(cx,.11,9.39),concrete,0)
+		for i in ceili(width/.20):K.box(r,Vector3(.045,3.8,.045),Vector3(span[0]+.10+i*.20,2.1,9.41),steel,0)
+	for x in [-12.25,-7.7,-3.80,-2.14,2.92,7.7,12.25]:
+		for dz in [9.40,9.57]:K.box(r,Vector3(.19,3.8,.045),Vector3(x,1.9,dz),steel,0)
+		K.box(r,Vector3(.06,3.8,.19),Vector3(x,1.9,9.48),steel,0)
+	K.box(r,Vector3(24.6,.18,.30),Vector3(0,4.18,9.45),steel,0)
+	K.box(r,Vector3(3.9,.4,.42),Vector3(1,2.64,9.40),steel,.012)
 	for side in [-1,1]:
-		var elevation=Node3D.new();r.add_child(elevation);elevation.position=Vector3(side*12.32,0,0);elevation.rotation.y=side*PI/2
-		K.box(elevation,Vector3(18,3.8,.15),Vector3(0,1.9,0),Color("#777F73"),0)
-		for y in [.15,3.78]:K.box(elevation,Vector3(18.3,.18,.30),Vector3(0,y,.12),Color("#AEA58F"),.006)
-		for z in [-6,-2,2,6]:window(elevation,Vector3(z,2.1,.12),1.0,1.3,true)
+		var elevation=Node3D.new();r.add_child(elevation);elevation.position=Vector3(-14.3 if side<0 else 12.28,0,0);elevation.rotation.y=side*PI/2
+		K.box(elevation,Vector3(18.5,4.2,.12),Vector3(0,2.1,0),concrete,0)
+		for i in 91:K.box(elevation,Vector3(.04,3.8,.05),Vector3(-9+i*.20,2.1,.095),steel,0)
+		for x in [-8.8,-4.4,0,4.4,8.8]:K.box(elevation,Vector3(.16,4.2,.22),Vector3(x,2.1,.12),steel,0)
+		K.box(elevation,Vector3(18.7,.13,.34),Vector3(0,4.18,.10),steel,0)
+		K.box(elevation,Vector3(18.5,.22,.17),Vector3(0,.11,.08),concrete,0)
+		# Two narrow cellar vents; no house-sized windows beside the slope.
+		for x in [-6.5,4.5]:
+			K.box(elevation,Vector3(1.3,.45,.10),Vector3(x,3.30,.14),Color("#273B3B"),0)
+			for j in 7:K.box(elevation,Vector3(.025,.48,.07),Vector3(x-.55+j*.18,3.30,.23),steel,0)
+		for i in 3:
+			var x=-3.0+i*.72
+			K.box(elevation,Vector3(.56,.76,.012),Vector3(x,1.1+(i%2)*.13,.19),Color("#A69979") if i%2 else Color("#7B8173"),0)
+			for j in 5:K.box(elevation,Vector3(.06,.08,.014),Vector3(x-.24+j*.10,.73+(i%2)*.13+fmod(j*.13,.15),.203),concrete,0)
+			K.label(elevation,["CONCERT","AVIS","PERDU"][i],Vector3(x,1.23+(i%2)*.13,.21),24,Color("#3B4540"),.0023).outline_size=0

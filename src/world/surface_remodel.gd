@@ -34,7 +34,6 @@ static func terrace(ext) -> Node3D:
 		for z in 4:
 			var n=C.attach(r,"deck_tile",Vector3(-2.7+x*.9222,0,8.65625+z*.8125));n.scale=Vector3(.9222,1,.8125)
 	for i in 8:C.attach(r,"railing",Vector3(-2.7+i,0,11.45))
-	for z in [8.95,9.95,10.95]:C.attach(r,"railing",Vector3(-3.15,0,z),PI/2)
 	for x in [-2.2,0.0,2.2,4.1]:
 		C.attach(r,"rail_planter",Vector3(x,.65,11.66))
 		flowers(r,Vector3(x,.84,11.66),5,["rose","daisy","tulip","lavender"][int(abs(x*2))%4],.31,.29)
@@ -44,7 +43,7 @@ static func terrace(ext) -> Node3D:
 		for x in [-2.85,-1.45]:
 			C.attach(r,"chair_mint" if x< -2 else "chair_rose",Vector3(x,.06,z),-PI/2 if x< -2 else PI/2)
 			solid(r,Vector3(.40,.82,.40),Vector3(x,.47,z))
-	C.attach(r,"parasol",Vector3(-2.15,.06,9.15))
+	load("res://src/world/city_revision.gd").model(r,"parasol",Vector3(-2.15,.06,9.15))
 	for x in [-3.1,5.0]:K.cylinder(r,.025,.025,2.8,Vector3(x,1.4,11.35),K.INK)
 	for x in [-1.1,2.9]:C.attach(r,"outdoor_garland",Vector3(x,2.75,11.35))
 	ext._lamp(r,Vector3(.5,2.35,10.3),Color("#FFE3B7"),.05,1.25,7.0)
@@ -129,8 +128,8 @@ static func shed(ext) -> Node3D:
 	return r
 static func late(ext,id: String) -> Node3D:
 	var r=Node3D.new();var cx={"gallery":36.0,"warehouse":40.0,"salon":44.0,"embassy":48.0}[id]
-	var base=Vector3(cx,0,8.25)
-	C.attach(r,{"gallery":"gallery_display","warehouse":"warehouse_bay","salon":"salon_display","embassy":"embassy_front"}[id],base)
+	var base={"warehouse":Vector3(-46,0,22.8),"embassy":Vector3(60,0,23.8),"salon":Vector3(-44,0,8.8),"gallery":Vector3(43.2,0,-10)}[id]
+	C.attach(r,{"gallery":"gallery_display","warehouse":"warehouse_bay","salon":"salon_display","embassy":"embassy_front"}[id],base,{"gallery":-PI/2,"warehouse":PI,"salon":0.0,"embassy":PI}[id])
 	match id:
 		"gallery":C.attach(r,"gallery_easel",base+Vector3(1.65,0,.6),-.15)
 		"warehouse":C.attach(r,"pallet",base+Vector3(-.45,0,1.0));C.attach(r,"handtruck",base+Vector3(1.1,0,.75),-.2)
@@ -161,7 +160,7 @@ static func decorate(ext,id: String,r: Node3D) -> void:
 		# Landing rails and the existing climbing interactions stay in place.
 		var stair=C.attach(r,"spiral_stair",ext.STAIR_C);stair.scale.y=5.4/3.4
 		for d in ext.desks:
-			d.root.set_meta("fixed_grid",{"room":"upstairs","cells":[Vector2i(int(d.root.position.z),3),Vector2i(int(d.root.position.z)-1,3)]})
+			d.root.set_meta("fixed_grid",{"room":"upstairs","staff_slot":0 if d.root.position.x<7 else 1,"cells":[Vector2i(0,2 if d.root.position.x<7 else 0),Vector2i(1,2 if d.root.position.x<7 else 0)]})
 			ext._fixed_fixture_roots.append(d.root)
 			for child in d.root.get_children():
 				if child is MeshInstance3D or child.name.begins_with("Vase_"):child.hide()
@@ -171,7 +170,7 @@ static func decorate(ext,id: String,r: Node3D) -> void:
 			C.attach(d.root,"task_lamp",Vector3(-.20,.775,.65))
 			SHOP.attach(d.root,"botanical_book_teal",Vector3(.04,.775,-.4))
 			surface(d.root,"desk","Poste d’employé",.7725,.8,1.8)
-		C.attach(ext.loft_walk,"filing_cabinet",Vector3(8.7,5.4,1.0),PI/2)
+		C.attach(ext.loft_walk,"filing_cabinet",Vector3(3.0,5.4,.48),PI/2)
 	elif id=="upstairs":
 		pass # Balcony and all planters/lanterns now come from CompletionRemodel.
 	# Courtyard accessories are built once with the shed expansion.
@@ -182,13 +181,9 @@ static func decorate(ext,id: String,r: Node3D) -> void:
 
 static func courtyard(room,p: Node3D) -> void:
 	# Shared finished cellar models replace the old block-and-sphere props.
-	var bed=CELL.attach(p,"grow_bed",Vector3(12.70,0,3.5),PI/2,.75)
-	for z in [-.32,.32]:CELL.attach(p,"herb_growing",Vector3(12.70,.365,3.5+z),0,.7)
-	CELL.attach(p,"bed_lamp",Vector3(12.70,1.75,3.5),PI/2,.75)
 	for spec in [[Vector3(12.75,0,1.1),.1],[Vector3(12.75,.52,1.1),-.1],[Vector3(12.70,0,7.8),.2]]:CELL.attach(p,"shipping_crate",spec[0],spec[1],.80)
 	CELL.attach(p,"barrel",Vector3(12.75,0,5.1),0,.80)
 	CELL.attach(p,"jerrycan_red",Vector3(12.75,0,5.7),0,.85)
-	CELL.attach(p,"bulb",Vector3(10.9,2.45,3.5))
 	CELL.attach(p,"duct_elbow",Vector3(12.4,2.75,6.0),PI/2)
 
 static func fixed_visibility(ext) -> void:
@@ -204,7 +199,7 @@ static func fixed_visibility(ext) -> void:
 		var old=bool(n.get_meta("inactive_surface",false))
 		n.set_meta("inactive_surface",conflict)
 		if old==conflict:continue
-		var unlocked=not (def.room=="upstairs" and n.position.z<4.0 and ext._staff_slots<2)
+		var unlocked=not (def.room=="upstairs" and int(def.get("staff_slot",0))>0 and ext._staff_slots<2)
 		n.visible=not conflict and unlocked
 		for body in n.find_children("*","StaticBody3D",true,false):
 			if not body.has_meta("original_layer"):body.set_meta("original_layer",body.collision_layer)

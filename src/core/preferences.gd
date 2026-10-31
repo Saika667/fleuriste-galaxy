@@ -22,6 +22,7 @@ func apply_graphics() -> void:
 	get_viewport().msaa_3d=Viewport.MSAA_4X if quality==2 else Viewport.MSAA_DISABLED
 	get_viewport().screen_space_aa=Viewport.SCREEN_SPACE_AA_FXAA
 	get_viewport().scaling_3d_scale=render_scale
+	get_viewport().use_occlusion_culling=true
 	for n in get_tree().root.find_children("*","WorldEnvironment",true,false):apply_environment(n.environment)
 	for camera in get_tree().root.find_children("*","Camera3D",true,false):apply_environment(camera.environment)
 func apply_environment(env: Environment) -> void:
