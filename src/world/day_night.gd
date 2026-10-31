@@ -82,6 +82,7 @@ func _build() -> void:
 	env_node.name = "WorldEnvironment"
 	env_node.environment = env
 	add_child(env_node)
+	Preferences.apply_environment(env)
 	sun = DirectionalLight3D.new()
 	sun.name = "Sun"
 	sun.shadow_enabled = true

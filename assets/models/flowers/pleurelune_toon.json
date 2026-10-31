@@ -1,0 +1,16 @@
+{
+  "id": "pleurelune",
+  "source": "art/concepts/flowers/pleurelune_cartoon.png",
+  "triangles_with_outlines": 15208,
+  "meshes": 1,
+  "surfaces": 7,
+  "height_m": 0.5408825278282166,
+  "features": {
+    "bell_lobes": 5,
+    "hollow_interior": true,
+    "tears": 1,
+    "drooping_leaves": 2
+  },
+  "head_height_m": 0.445,
+  "shading": "unlit; inverted hull contours"
+}

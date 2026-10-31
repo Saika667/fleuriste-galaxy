@@ -11,3 +11,11 @@ outI2/
 
 # Binaire Godot (> 100 Mo, refusé par GitHub)
 tools/godot-4.7.2/
+
+# Sauvegardes Blender
+*.blend1
+.runtime/
+
+# Cache Python local
+__pycache__/
+*.pyc

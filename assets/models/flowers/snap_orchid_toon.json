@@ -1,0 +1,17 @@
+{
+  "id": "snap_orchid",
+  "source": "art/concepts/flowers/snap_orchid_cartoon.png",
+  "triangles_with_outlines": 19096,
+  "meshes": 1,
+  "surfaces": 9,
+  "height_m": 0.5395631790161133,
+  "features": {
+    "orchid_petals": 5,
+    "lips": 2,
+    "teeth_per_lip": 5,
+    "mouth": "open, static",
+    "leaves": 2
+  },
+  "head_height_m": 0.445,
+  "shading": "unlit; inverted hull contours"
+}

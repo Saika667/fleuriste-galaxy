@@ -163,7 +163,18 @@ func test_alien_spawn_weight() -> void:
 				n_alien += 1
 	t.check(n > 400, "arrivees simulees")
 	t.check(float(n_alien) / maxf(1.0, n) < 0.2, "les aliens restent rares (%d/%d)" % [n_alien, n])
-	t.check(n_alien > 0, "mais ils apparaissent")
+	t.eq(n_alien,0,"aucun alien dans le flux commercial de jour")
+	g.clock.goto_phase(GameClock.Phase.NIGHT);n_alien=0;n=0
+	for i in 600:
+		g.customers.queue.clear();g.customers.arriving.clear();g._spawn_timer=1000;g._auto_spawn(.1)
+		for c in g.customers.queue+g.customers.arriving:
+			n+=1
+			if GameData.customer(c.def).get("species","human")!="human":
+				n_alien+=1;t.eq(c.kind,"shady","les aliens de nuit achètent au commerce clandestin")
+	t.check(n_alien>0,"les aliens apparaissent la nuit")
+	t.check(float(n_alien)/maxf(1,n)<.3,"ils restent des visiteurs discrets")
+	g.clock.goto_phase(GameClock.Phase.OPENING)
+	t.check(not (g.customers.queue+g.customers.arriving).any(func(c):return GameData.customer(c.def).get("species","human")!="human"),"aucun alien restant au matin")
 
 
 ## Un policier qui part sans finir son dialogue ne laisse pas de visite fantome.
@@ -188,7 +199,7 @@ func test_planter_cap() -> void:
 	var g = t.new_game()
 	var maxp = int(GameData.bal("planters.max_planters", 4))
 	var guard = 0
-	while g.cellar.planters.size() < maxp and guard < 10:
+	while g.cellar.planters.size() < maxp and guard < maxp + 1:
 		g.cellar.add_planter()
 		guard += 1
 	t.eq(g.cellar.planters.size(), maxp, "plafond de bacs atteint")
@@ -203,3 +214,14 @@ func _night_thief(g) -> Dictionary:
 			return g.thieves.incidents[id]
 	g.thieves._per_night.clear()
 	return g.thieves.spawn(g.clock.day)
+
+func test_nocturnal_alien_sales_preserve_progression_rewards() -> void:
+	var g=t.new_game();g.dev.goto_chapter("first_alien");g.clock.goto_phase(GameClock.Phase.NIGHT)
+	for i in 2:
+		var c=g.customers.spawn("zorbian_first","sewer",99,g.rng);g.customers.tick(4);g.apply_visitor_policy()
+		t.eq(c.kind,"shady","visiteur alien converti au commerce nocturne")
+		g.cellar.stock.append({"crop":"cannabis","quality":1})
+		t.check(g.sell_product(c.uid,0).ok,"vente nocturne à l’alien")
+		t.check(g.progression.has_flag("first_alien_served"),"progression après vente nocturne")
+		t.eq(int(g.cellar.seeds.get("xeno_lotus",0)),2,"récompense unique conservée, sans duplication")
+	g.free()

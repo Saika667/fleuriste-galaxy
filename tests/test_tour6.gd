@@ -96,7 +96,7 @@ func test_new_species_availability_chain() -> void:
 	# les subs ne produisent que des clients disponibles
 	g.clock.goto_phase(GameClock.Phase.OPENING)
 	var ids = g._eligible_for_subs().filter(func(p): return p.kind == "customer").map(func(p): return p.id)
-	t.check("weeper_veuve" in ids and not ("ploc_gourmet" in ids), "candidats de sub = clients disponibles")
+	t.check(not ("weeper_veuve" in ids) and not ("ploc_gourmet" in ids), "aucun alien de jour dans les candidats de sub")
 	var g2 = t.new_game(3)
 	g2.clock.goto_phase(GameClock.Phase.OPENING)
 	var ids2 = g2._eligible_for_subs().filter(func(p): return p.kind == "customer").map(func(p): return p.id)

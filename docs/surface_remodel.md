@@ -1,0 +1,23 @@
+# Refonte des autres zones
+
+32 planches imagegen, 59 modèles GLB et 59 sources Blender éditables. Tous les éléments sont en mètres, axe Y vertical dans Godot. Les fleurs réutilisent les modèles cartoon approuvés et leurs variantes. La géométrie existante du shop et du sous-sol n’est pas remplacée par cette collection.
+
+Terrasse : platelage modulaire, rambardes, jardinières séparées, tables à incrustations, deux chaises, parasol à baleines et festons, guirlandes. Jardin : bordures, dalles, haies feuillues, arche, point d’eau, tuyau, brouette, outils et drain. Serre : charpente à deux pans, vitrage, gouttières, vraie ouverture côté jardin, porte articulée avec collision mobile, tables à lattes et réserves, pots, semis, ventilateur, thermomètre et irrigation. Remise : coque creuse à portes doubles, étagères accessibles depuis la cour, pots emboîtés, terreau et graines, accès au stock existant.
+
+Annexe : station d’emballage reliée à l’atelier de bouquets existant, cisailles reconnaissables, dérouleur, chariot et rangements muraux. Étage : bureaux d’employés, chaises, lampes, classeur, livres existants, escalier aligné avec l’animation de montée et rambardes. Les noms des employés restent dynamiques. Les murs et sols structurels réutilisés gardent les emprises et grilles existantes.
+
+Galerie, entrepôt, salon et ambassade : nouveaux ensembles de devantures, ornements et accessoires séparés. Ces quatre extensions conservent leurs bonus économiques et ne deviennent pas de nouvelles pièces jouables intérieures. Cour : éclairage, tri, sonnette de livraison et signalétique cohérente.
+
+Les nouvelles surfaces sont enregistrées par le contrôleur de placement continu déjà utilisé dans le shop : tables, réserves, étagères, bureaux, chariot et station. Les zones occupées par des accessoires fixes sont réservées dans les métadonnées de surface. Les objets placés par le joueur utilisent le système de sauvegarde existant. Les meubles fixes restent ceux de l’agencement d’extension ; l’éditeur de grille conserve les pièces achetées existantes.
+
+La porte de serre s’ouvre et se ferme avec un vrai battant collidable, ainsi que les deux battants de remise. Leur état d’ouverture est local à la scène et n’est pas une nouvelle donnée de sauvegarde. La remise ouvre le stock existant ; la sonnette ouvre le même inventaire de livraison. Le jardin garde sa récolte quotidienne automatique. Le point d’eau, la ventilation et l’irrigation sont des accessoires visuels ; aucun nouveau besoin d’arrosage ou de climat n’est imposé.
+
+Les captures utilisent le véritable jeu Godot avec toutes les extensions achetées dans une session distincte. Aucun rendu illustré n’est présenté comme capture. Les vues isolées viennent des mêmes GLB. interaction_checks.json contient l’état des passages, l’enregistrement des surfaces et les portes contrôlées.
+
+Reproduction : lancer Blender sur tools/blender/surface_collection.py, importer dans Godot, lancer scenes/shop/shot_surface_remodel.tscn, puis tools/package_surface_remodel.py. Les prompts sont conservés dans art/concepts/surface/prompts.json. Les modèles sont une interprétation native des planches ; les plans guident l’implantation dans les emprises réelles du jeu.
+
+Validation finale : 6 302 vérifications réussies, zéro échec. Neuf points de passage dégagés, 18 surfaces enregistrées, fermeture et dégagement physique des deux accès validés. Le stock et l’atelier s’ouvrent via leurs interactions, un vase est créé sur une étagère de remise puis déplacé sans paiement supplémentaire. Les empreintes des accessoires fixes empêchent les superpositions. Les anciennes enseignes sont masquées lors du remplacement des devantures. Les nouvelles positions de meubles fixes sont réservées dans les grilles ; les anciens meubles sauvegardés gardent leurs positions et les nouveaux équipements de l’annexe ou de l’étage se masquent en cas de conflit.
+
+La cour réutilise aussi les GLB approuvés du sous-sol : bac, herbe en croissance, lampe, caisses, tonneau, bidon, ampoule et conduit. Les seaux extérieurs réutilisent la collection du shop et ses véritables fleurs. Ces actifs partagés restent dans leurs bibliothèques existantes.
+
+Optimisation : la haie répétée passe de 163 072 à 10 400 triangles, avec feuilles modelées et sans multiplication des petites courbes de nervures. La collection finale contient 496 368 triangles avant instanciation dans les scènes. Les collisions et interactions restent indépendantes des maillages. Un contrôle par rayon confirme que les portes ouvertes restent refermables et ne masquent plus la sélection du stock derrière elles.

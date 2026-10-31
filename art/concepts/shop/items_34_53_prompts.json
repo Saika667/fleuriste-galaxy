@@ -1,0 +1,509 @@
+{
+  "tool": "built-in image_gen",
+  "date": "2026-10-27",
+  "jobs": [
+    {
+      "back": "34_poster_flower_back.png",
+      "category": "Décoration / accessoires",
+      "front": "34_poster_flower_front.png",
+      "id": "poster_flower",
+      "instances_seen": 1,
+      "native_flowers": 0,
+      "number": 34,
+      "size_m": [
+        0.610000133514404,
+        0.859999895095825,
+        0.0721587687730789
+      ],
+      "title": "Affiche — COURS DE BOUQUET",
+      "title_fr": "Affiche — Cours de bouquet",
+      "group": "Décor mural et signalétique",
+      "code_source": "src/world/shop_decor.gd",
+      "output": "34_poster_flower_sheet.png",
+      "prompt": "Use case: stylized-concept. Create ONE landscape production reference sheet for a cartoon video-game florist shop. Hand-drawn 2D cartoon inspired by Rick and Morty: strong clean dark outlines, flat muted colors, simple cel shadows, expressive chunky shapes, NO photorealism, no realistic materials. Warm ivory background with tidy framed panels matching the approved existing sheets. Same redesigned object consistent across all views. Large title with item number. Panels FACE, DOS, PROFIL, DESSUS, TROIS-QUARTS, plus 2-3 construction closeups and palette swatches. Orthographic front/back/side/top, perspective only for three-quarter. All objects fully visible with margins. Few meaningful overall metric dimensions; no cluttered tiny dimension lines. French labels legible. Improve the simplistic in-game reference while preserving function and identity. No people, no watermark. Exact title: \"34 — AFFICHE — COURS DE BOUQUET\". Specific design: Framed florist workshop poster, portrait yellow ivory paper, teal wood frame, pink flower and botanical illustration, tasteful hand lettering COURS DE BOUQUET. Add rear backing, two hangers, corner joints, thin glass layer. H .86 W .61 depth .045 m. Poster typography is a printed texture, frame geometry separate.",
+      "refs": [
+        "C:/Users/Saïka/Documents/entreprises/jeu/fleuriste-galaxy/out/shop_catalog/34_poster_flower_front.png",
+        "C:/Users/Saïka/Documents/entreprises/jeu/fleuriste-galaxy/art/concepts/shop/01_counter_sheet_v2.png"
+      ],
+      "submitted_prompt": "Use case: stylized-concept. Create ONE landscape production reference sheet for a cartoon video-game florist shop. Hand-drawn 2D cartoon inspired by Rick and Morty: strong clean dark outlines, flat muted colors, simple cel shadows, expressive chunky shapes, NO photorealism, no realistic materials. Warm ivory background with tidy framed panels matching the approved existing sheets. Same redesigned object consistent across all views. Large title with item number. Panels FACE, DOS, PROFIL, DESSUS, TROIS-QUARTS, plus 2-3 construction closeups and palette swatches. Orthographic front/back/side/top, perspective only for three-quarter. All objects fully visible with margins. Few meaningful overall metric dimensions; no cluttered tiny dimension lines. French labels legible. Improve the simplistic in-game reference while preserving function and identity. No people, no watermark. Exact title: \"34 — AFFICHE — COURS DE BOUQUET\". Specific design: Framed florist workshop poster, portrait yellow ivory paper, teal wood frame, pink flower and botanical illustration, tasteful hand lettering COURS DE BOUQUET. Add rear backing, two hangers, corner joints, thin glass layer. H .86 W .61 depth .045 m. Poster typography is a printed texture, frame geometry separate. Input image 1: old game object, identity only. Input image 2: approved sheet layout and cartoon style."
+    },
+    {
+      "back": "35_bucket_0_back.png",
+      "category": "Décoration / accessoires",
+      "front": "35_bucket_0_front.png",
+      "id": "bucket_0",
+      "instances_seen": 1,
+      "native_flowers": 10,
+      "number": 35,
+      "size_m": [
+        0.536210536956787,
+        1.03424882888794,
+        0.66401594877243
+      ],
+      "title": "Seau fleuri — Roses 2 €",
+      "title_fr": "Seau fleuri — Roses",
+      "group": "Fleurs et contenants",
+      "code_source": "src/world/shop_decor.gd",
+      "output": "35_bucket_roses_sheet.png",
+      "prompt": "Use case: stylized-concept. Create ONE landscape production reference sheet for a cartoon video-game florist shop. Hand-drawn 2D cartoon inspired by Rick and Morty: strong clean dark outlines, flat muted colors, simple cel shadows, expressive chunky shapes, NO photorealism, no realistic materials. Warm ivory background with tidy framed panels matching the approved existing sheets. Same redesigned object consistent across all views. Large title with item number. Panels FACE, DOS, PROFIL, DESSUS, TROIS-QUARTS, plus 2-3 construction closeups and palette swatches. Orthographic front/back/side/top, perspective only for three-quarter. All objects fully visible with margins. Few meaningful overall metric dimensions; no cluttered tiny dimension lines. French labels legible. Improve the simplistic in-game reference while preserving function and identity. No people, no watermark. Exact title: \"35 — SEAU FLEURI — ROSES\". Specific design: Galvanized pale blue tapered florist bucket, rolled rim, two wire handle lugs, slender movable handle, subtle stamped ribs, brass edged removable cream price tag handwritten Roses 2 €. Empty orthographic views; separate example of full red/pink/cream cartoon roses. Bucket H .40 diameter .36, flowers total H 1.0 m. Hollow water reservoir and stable base.",
+      "refs": [
+        "C:/Users/Saïka/Documents/entreprises/jeu/fleuriste-galaxy/out/shop_catalog/35_bucket_0_front.png",
+        "C:/Users/Saïka/Documents/entreprises/jeu/fleuriste-galaxy/art/concepts/shop/01_counter_sheet_v2.png"
+      ],
+      "submitted_prompt": "Use case: stylized-concept. Create ONE landscape production reference sheet for a cartoon video-game florist shop. Hand-drawn 2D cartoon inspired by Rick and Morty: strong clean dark outlines, flat muted colors, simple cel shadows, expressive chunky shapes, NO photorealism, no realistic materials. Warm ivory background with tidy framed panels matching the approved existing sheets. Same redesigned object consistent across all views. Large title with item number. Panels FACE, DOS, PROFIL, DESSUS, TROIS-QUARTS, plus 2-3 construction closeups and palette swatches. Orthographic front/back/side/top, perspective only for three-quarter. All objects fully visible with margins. Few meaningful overall metric dimensions; no cluttered tiny dimension lines. French labels legible. Improve the simplistic in-game reference while preserving function and identity. No people, no watermark. Exact title: \"35 — SEAU FLEURI — ROSES\". Specific design: Galvanized pale blue tapered florist bucket, rolled rim, two wire handle lugs, slender movable handle, subtle stamped ribs, brass edged removable cream price tag handwritten Roses 2 €. Empty orthographic views; separate example of full red/pink/cream cartoon roses. Bucket H .40 diameter .36, flowers total H 1.0 m. Hollow water reservoir and stable base. Input image 1: old game object, identity only. Input image 2: approved sheet layout and cartoon style."
+    },
+    {
+      "back": "36_bucket_1_back.png",
+      "category": "Décoration / accessoires",
+      "front": "36_bucket_1_front.png",
+      "id": "bucket_1",
+      "instances_seen": 1,
+      "native_flowers": 10,
+      "number": 36,
+      "size_m": [
+        0.702077865600586,
+        1.05721735954285,
+        0.550000071525574
+      ],
+      "title": "Seau fleuri — Lys 3 € (deuil)",
+      "title_fr": "Seau fleuri — Lys de deuil",
+      "group": "Fleurs et contenants",
+      "code_source": "src/world/shop_decor.gd",
+      "output": "36_bucket_lilies_sheet.png",
+      "prompt": "Use case: stylized-concept. Create ONE landscape production reference sheet for a cartoon video-game florist shop. Hand-drawn 2D cartoon inspired by Rick and Morty: strong clean dark outlines, flat muted colors, simple cel shadows, expressive chunky shapes, NO photorealism, no realistic materials. Warm ivory background with tidy framed panels matching the approved existing sheets. Same redesigned object consistent across all views. Large title with item number. Panels FACE, DOS, PROFIL, DESSUS, TROIS-QUARTS, plus 2-3 construction closeups and palette swatches. Orthographic front/back/side/top, perspective only for three-quarter. All objects fully visible with margins. Few meaningful overall metric dimensions; no cluttered tiny dimension lines. French labels legible. Improve the simplistic in-game reference while preserving function and identity. No people, no watermark. Exact title: \"36 — SEAU FLEURI — LYS DE DEUIL\". Specific design: Tall elegant slate blue galvanized florist bucket with rolled rim, two riveted handles, ivory floral crest and removable charcoal card Lys 3 € (deuil). Empty orthographic views and separate white/lilac cartoon lily arrangement with visible stamens. Bucket H .44 diameter .35, flowers total 1.05 m. Coherent with rose bucket family but distinctive slender profile.",
+      "refs": [
+        "C:/Users/Saïka/Documents/entreprises/jeu/fleuriste-galaxy/out/shop_catalog/36_bucket_1_front.png",
+        "C:/Users/Saïka/Documents/entreprises/jeu/fleuriste-galaxy/art/concepts/shop/01_counter_sheet_v2.png"
+      ],
+      "submitted_prompt": "Use case: stylized-concept. Create ONE landscape production reference sheet for a cartoon video-game florist shop. Hand-drawn 2D cartoon inspired by Rick and Morty: strong clean dark outlines, flat muted colors, simple cel shadows, expressive chunky shapes, NO photorealism, no realistic materials. Warm ivory background with tidy framed panels matching the approved existing sheets. Same redesigned object consistent across all views. Large title with item number. Panels FACE, DOS, PROFIL, DESSUS, TROIS-QUARTS, plus 2-3 construction closeups and palette swatches. Orthographic front/back/side/top, perspective only for three-quarter. All objects fully visible with margins. Few meaningful overall metric dimensions; no cluttered tiny dimension lines. French labels legible. Improve the simplistic in-game reference while preserving function and identity. No people, no watermark. Exact title: \"36 — SEAU FLEURI — LYS DE DEUIL\". Specific design: Tall elegant slate blue galvanized florist bucket with rolled rim, two riveted handles, ivory floral crest and removable charcoal card Lys 3 € (deuil). Empty orthographic views and separate white/lilac cartoon lily arrangement with visible stamens. Bucket H .44 diameter .35, flowers total 1.05 m. Coherent with rose bucket family but distinctive slender profile. Input image 1: old game object, identity only. Input image 2: approved sheet layout and cartoon style."
+    },
+    {
+      "back": "37_bucket_2_back.png",
+      "category": "Décoration / accessoires",
+      "front": "37_bucket_2_front.png",
+      "id": "bucket_2",
+      "instances_seen": 1,
+      "native_flowers": 10,
+      "number": 37,
+      "size_m": [
+        0.569243907928467,
+        1.0370317697525,
+        0.675410747528076
+      ],
+      "title": "Seau fleuri — Tulipes -50 %",
+      "title_fr": "Seau fleuri — Tulipes",
+      "group": "Fleurs et contenants",
+      "code_source": "src/world/shop_decor.gd",
+      "output": "37_bucket_tulips_sheet.png",
+      "prompt": "Use case: stylized-concept. Create ONE landscape production reference sheet for a cartoon video-game florist shop. Hand-drawn 2D cartoon inspired by Rick and Morty: strong clean dark outlines, flat muted colors, simple cel shadows, expressive chunky shapes, NO photorealism, no realistic materials. Warm ivory background with tidy framed panels matching the approved existing sheets. Same redesigned object consistent across all views. Large title with item number. Panels FACE, DOS, PROFIL, DESSUS, TROIS-QUARTS, plus 2-3 construction closeups and palette swatches. Orthographic front/back/side/top, perspective only for three-quarter. All objects fully visible with margins. Few meaningful overall metric dimensions; no cluttered tiny dimension lines. French labels legible. Improve the simplistic in-game reference while preserving function and identity. No people, no watermark. Exact title: \"37 — SEAU FLEURI — TULIPES\". Specific design: Shorter rounded galvanized teal-blue bucket, embossed ribs, riveted fold-down handle, removable scalloped blush price tag Tulipes -50 %. Empty orthographic views plus separate vivid pink purple yellow cartoon tulips example. Bucket H .38 diameter .36, arrangement 1.0 m. Stylish florist family same cream trim and botanical emblem.",
+      "refs": [
+        "C:/Users/Saïka/Documents/entreprises/jeu/fleuriste-galaxy/out/shop_catalog/37_bucket_2_front.png",
+        "C:/Users/Saïka/Documents/entreprises/jeu/fleuriste-galaxy/art/concepts/shop/01_counter_sheet_v2.png"
+      ],
+      "submitted_prompt": "Use case: stylized-concept. Create ONE landscape production reference sheet for a cartoon video-game florist shop. Hand-drawn 2D cartoon inspired by Rick and Morty: strong clean dark outlines, flat muted colors, simple cel shadows, expressive chunky shapes, NO photorealism, no realistic materials. Warm ivory background with tidy framed panels matching the approved existing sheets. Same redesigned object consistent across all views. Large title with item number. Panels FACE, DOS, PROFIL, DESSUS, TROIS-QUARTS, plus 2-3 construction closeups and palette swatches. Orthographic front/back/side/top, perspective only for three-quarter. All objects fully visible with margins. Few meaningful overall metric dimensions; no cluttered tiny dimension lines. French labels legible. Improve the simplistic in-game reference while preserving function and identity. No people, no watermark. Exact title: \"37 — SEAU FLEURI — TULIPES\". Specific design: Shorter rounded galvanized teal-blue bucket, embossed ribs, riveted fold-down handle, removable scalloped blush price tag Tulipes -50 %. Empty orthographic views plus separate vivid pink purple yellow cartoon tulips example. Bucket H .38 diameter .36, arrangement 1.0 m. Stylish florist family same cream trim and botanical emblem. Input image 1: old game object, identity only. Input image 2: approved sheet layout and cartoon style."
+    },
+    {
+      "back": "38_bucket_3_back.png",
+      "category": "Décoration / accessoires",
+      "front": "38_bucket_3_front.png",
+      "id": "bucket_3",
+      "instances_seen": 1,
+      "native_flowers": 10,
+      "number": 38,
+      "size_m": [
+        0.720151901245117,
+        1.05409979820251,
+        0.595893919467926
+      ],
+      "title": "Seau fleuri — Pavots : ne pas lécher",
+      "title_fr": "Seau fleuri — Pavots",
+      "group": "Fleurs et contenants",
+      "code_source": "src/world/shop_decor.gd",
+      "output": "38_bucket_poppies_sheet.png",
+      "prompt": "Use case: stylized-concept. Create ONE landscape production reference sheet for a cartoon video-game florist shop. Hand-drawn 2D cartoon inspired by Rick and Morty: strong clean dark outlines, flat muted colors, simple cel shadows, expressive chunky shapes, NO photorealism, no realistic materials. Warm ivory background with tidy framed panels matching the approved existing sheets. Same redesigned object consistent across all views. Large title with item number. Panels FACE, DOS, PROFIL, DESSUS, TROIS-QUARTS, plus 2-3 construction closeups and palette swatches. Orthographic front/back/side/top, perspective only for three-quarter. All objects fully visible with margins. Few meaningful overall metric dimensions; no cluttered tiny dimension lines. French labels legible. Improve the simplistic in-game reference while preserving function and identity. No people, no watermark. Exact title: \"38 — SEAU FLEURI — PAVOTS\". Specific design: Dark dusty blue metal bucket, cream rolled rim, riveted side grips and foot ring, removable ivory caution plaque Pavots : ne pas lécher with small botanical poppy emblem. Empty orthographic views plus separate red cartoon poppies example. H .40 diameter .36, arrangement 1.05 m. Keep mildly irreverent cozy sci-fi florist mood.",
+      "refs": [
+        "C:/Users/Saïka/Documents/entreprises/jeu/fleuriste-galaxy/out/shop_catalog/38_bucket_3_front.png",
+        "C:/Users/Saïka/Documents/entreprises/jeu/fleuriste-galaxy/art/concepts/shop/01_counter_sheet_v2.png"
+      ],
+      "submitted_prompt": "Use case: stylized-concept. Create ONE landscape production reference sheet for a cartoon video-game florist shop. Hand-drawn 2D cartoon inspired by Rick and Morty: strong clean dark outlines, flat muted colors, simple cel shadows, expressive chunky shapes, NO photorealism, no realistic materials. Warm ivory background with tidy framed panels matching the approved existing sheets. Same redesigned object consistent across all views. Large title with item number. Panels FACE, DOS, PROFIL, DESSUS, TROIS-QUARTS, plus 2-3 construction closeups and palette swatches. Orthographic front/back/side/top, perspective only for three-quarter. All objects fully visible with margins. Few meaningful overall metric dimensions; no cluttered tiny dimension lines. French labels legible. Improve the simplistic in-game reference while preserving function and identity. No people, no watermark. Exact title: \"38 — SEAU FLEURI — PAVOTS\". Specific design: Dark dusty blue metal bucket, cream rolled rim, riveted side grips and foot ring, removable ivory caution plaque Pavots : ne pas lécher with small botanical poppy emblem. Empty orthographic views plus separate red cartoon poppies example. H .40 diameter .36, arrangement 1.05 m. Keep mildly irreverent cozy sci-fi florist mood. Input image 1 is old object identity only. Input image 2 is style/layout reference. IMPORTANT: empty container orthographic panels must actually show an EMPTY object; flowers ONLY in a separate usage example, never hide interior geometry."
+    },
+    {
+      "back": "39_shelf_4.2_back.png",
+      "category": "Décoration / accessoires",
+      "front": "39_shelf_4.2_front.png",
+      "id": "shelf_4.2",
+      "instances_seen": 1,
+      "native_flowers": 0,
+      "number": 39,
+      "size_m": [
+        4.19999980926514,
+        0.214999914169312,
+        0.300000190734863
+      ],
+      "title": "Étagère murale — 4.2 m",
+      "title_fr": "Étagère murale — 4,20 m",
+      "group": "Décor mural et signalétique",
+      "code_source": "src/world/shop_decor.gd",
+      "output": "39_shelf_wide_sheet.png",
+      "prompt": "Use case: stylized-concept. Create ONE landscape production reference sheet for a cartoon video-game florist shop. Hand-drawn 2D cartoon inspired by Rick and Morty: strong clean dark outlines, flat muted colors, simple cel shadows, expressive chunky shapes, NO photorealism, no realistic materials. Warm ivory background with tidy framed panels matching the approved existing sheets. Same redesigned object consistent across all views. Large title with item number. Panels FACE, DOS, PROFIL, DESSUS, TROIS-QUARTS, plus 2-3 construction closeups and palette swatches. Orthographic front/back/side/top, perspective only for three-quarter. All objects fully visible with margins. Few meaningful overall metric dimensions; no cluttered tiny dimension lines. French labels legible. Improve the simplistic in-game reference while preserving function and identity. No people, no watermark. Exact title: \"39 — ÉTAGÈRE MURALE — 4,20 M\". Specific design: Long open wall shelf 4.20 m W, .34 m depth, wood thickness .045 m, bracket height .26 m. Warm wood plank with cream front lip, teal curved metal botanical brackets, brass screw caps, fine carved leaf accent. Four evenly spaced supports. Empty uncluttered shelf orthos, separate example with a few removable varied vases and ample clearance. No upper shelf, no fixed flowers; unobstructed flat usable top. Label OBJETS LIBREMENT POSITIONNABLES.",
+      "refs": [
+        "C:/Users/Saïka/Documents/entreprises/jeu/fleuriste-galaxy/out/shop_catalog/39_shelf_4.2_front.png",
+        "C:/Users/Saïka/Documents/entreprises/jeu/fleuriste-galaxy/art/concepts/shop/01_counter_sheet_v2.png"
+      ],
+      "submitted_prompt": "Use case: stylized-concept. Create ONE landscape production reference sheet for a cartoon video-game florist shop. Hand-drawn 2D cartoon inspired by Rick and Morty: strong clean dark outlines, flat muted colors, simple cel shadows, expressive chunky shapes, NO photorealism, no realistic materials. Warm ivory background with tidy framed panels matching the approved existing sheets. Same redesigned object consistent across all views. Large title with item number. Panels FACE, DOS, PROFIL, DESSUS, TROIS-QUARTS, plus 2-3 construction closeups and palette swatches. Orthographic front/back/side/top, perspective only for three-quarter. All objects fully visible with margins. Few meaningful overall metric dimensions; no cluttered tiny dimension lines. French labels legible. Improve the simplistic in-game reference while preserving function and identity. No people, no watermark. Exact title: \"39 — ÉTAGÈRE MURALE — 4,20 M\". Specific design: Long open wall shelf 4.20 m W, .34 m depth, wood thickness .045 m, bracket height .26 m. Warm wood plank with cream front lip, teal curved metal botanical brackets, brass screw caps, fine carved leaf accent. Four evenly spaced supports. Empty uncluttered shelf orthos, separate example with a few removable varied vases and ample clearance. No upper shelf, no fixed flowers; unobstructed flat usable top. Label OBJETS LIBREMENT POSITIONNABLES. Input image 1 is old object identity only. Input image 2 is style/layout reference. IMPORTANT: empty container orthographic panels must actually show an EMPTY object; flowers ONLY in a separate usage example, never hide interior geometry."
+    },
+    {
+      "back": "40_big_plant_back.png",
+      "category": "Décoration / accessoires",
+      "front": "40_big_plant_front.png",
+      "id": "big_plant",
+      "instances_seen": 1,
+      "native_flowers": 0,
+      "number": 40,
+      "size_m": [
+        1.33084201812744,
+        2.13900542259216,
+        1.33985114097595
+      ],
+      "title": "Grande plante verte",
+      "title_fr": "Grande plante verte",
+      "group": "Plantes décoratives",
+      "code_source": "src/world/shop_decor.gd",
+      "output": "40_big_plant_sheet.png",
+      "prompt": "Use case: stylized-concept. Create ONE landscape production reference sheet for a cartoon video-game florist shop. Hand-drawn 2D cartoon inspired by Rick and Morty: strong clean dark outlines, flat muted colors, simple cel shadows, expressive chunky shapes, NO photorealism, no realistic materials. Warm ivory background with tidy framed panels matching the approved existing sheets. Same redesigned object consistent across all views. Large title with item number. Panels FACE, DOS, PROFIL, DESSUS, TROIS-QUARTS, plus 2-3 construction closeups and palette swatches. Orthographic front/back/side/top, perspective only for three-quarter. All objects fully visible with margins. Few meaningful overall metric dimensions; no cluttered tiny dimension lines. French labels legible. Improve the simplistic in-game reference while preserving function and identity. No people, no watermark. Exact title: \"40 — GRANDE PLANTE VERTE\". Specific design: Lush tall indoor monstera/philodendron cartoon plant, many broad heart-shaped and split leaves in three shades of green, organically branching slender stems, terracotta-purple rounded heavy ceramic floor pot with teal cream collar and saucer, visible soil. H 2.10 m W 1.20 m pot H .45 diameter .43. Layered asymmetric foliage readable from every direction, no thin sparse sticks. Details leaf shape branch junction pot drainage.",
+      "refs": [
+        "C:/Users/Saïka/Documents/entreprises/jeu/fleuriste-galaxy/out/shop_catalog/40_big_plant_front.png",
+        "C:/Users/Saïka/Documents/entreprises/jeu/fleuriste-galaxy/art/concepts/shop/01_counter_sheet_v2.png"
+      ],
+      "submitted_prompt": "Use case: stylized-concept. Create ONE landscape production reference sheet for a cartoon video-game florist shop. Hand-drawn 2D cartoon inspired by Rick and Morty: strong clean dark outlines, flat muted colors, simple cel shadows, expressive chunky shapes, NO photorealism, no realistic materials. Warm ivory background with tidy framed panels matching the approved existing sheets. Same redesigned object consistent across all views. Large title with item number. Panels FACE, DOS, PROFIL, DESSUS, TROIS-QUARTS, plus 2-3 construction closeups and palette swatches. Orthographic front/back/side/top, perspective only for three-quarter. All objects fully visible with margins. Few meaningful overall metric dimensions; no cluttered tiny dimension lines. French labels legible. Improve the simplistic in-game reference while preserving function and identity. No people, no watermark. Exact title: \"40 — GRANDE PLANTE VERTE\". Specific design: Lush tall indoor monstera/philodendron cartoon plant, many broad heart-shaped and split leaves in three shades of green, organically branching slender stems, terracotta-purple rounded heavy ceramic floor pot with teal cream collar and saucer, visible soil. H 2.10 m W 1.20 m pot H .45 diameter .43. Layered asymmetric foliage readable from every direction, no thin sparse sticks. Details leaf shape branch junction pot drainage. Input image 1 is old object identity only. Input image 2 is style/layout reference. IMPORTANT: empty container orthographic panels must actually show an EMPTY object; flowers ONLY in a separate usage example, never hide interior geometry."
+    },
+    {
+      "back": "41_crate_flowers_back.png",
+      "category": "Décoration / accessoires",
+      "front": "41_crate_flowers_front.png",
+      "id": "crate_flowers",
+      "instances_seen": 1,
+      "native_flowers": 7,
+      "number": 41,
+      "size_m": [
+        0.689401626586914,
+        0.832005679607391,
+        0.569202899932861
+      ],
+      "title": "Cageot — flowers",
+      "title_fr": "Cageot — Fleurs",
+      "group": "Accessoires et rangement",
+      "code_source": "src/world/shop_decor.gd",
+      "output": "41_crate_flowers_sheet.png",
+      "prompt": "Use case: stylized-concept. Create ONE landscape production reference sheet for a cartoon video-game florist shop. Hand-drawn 2D cartoon inspired by Rick and Morty: strong clean dark outlines, flat muted colors, simple cel shadows, expressive chunky shapes, NO photorealism, no realistic materials. Warm ivory background with tidy framed panels matching the approved existing sheets. Same redesigned object consistent across all views. Large title with item number. Panels FACE, DOS, PROFIL, DESSUS, TROIS-QUARTS, plus 2-3 construction closeups and palette swatches. Orthographic front/back/side/top, perspective only for three-quarter. All objects fully visible with margins. Few meaningful overall metric dimensions; no cluttered tiny dimension lines. French labels legible. Improve the simplistic in-game reference while preserving function and identity. No people, no watermark. Exact title: \"41 — CAGEOT — FLEURS\". Specific design: Florist wooden slatted crate with finger cutout handles, chamfered corners, teal corner brackets, brass nail heads, removable water insert and removable small pots of mixed cartoon flowers. Main orthos show empty crate and removable insert, example composition separate. W .64 depth .46 H .32 m, flower arrangement H .80. Useful storage volume accessible, no permanently fused contents. Label FLEURS INTERCHANGEABLES.",
+      "refs": [
+        "C:/Users/Saïka/Documents/entreprises/jeu/fleuriste-galaxy/out/shop_catalog/41_crate_flowers_front.png",
+        "C:/Users/Saïka/Documents/entreprises/jeu/fleuriste-galaxy/art/concepts/shop/01_counter_sheet_v2.png"
+      ],
+      "submitted_prompt": "Use case: stylized-concept. Create ONE landscape production reference sheet for a cartoon video-game florist shop. Hand-drawn 2D cartoon inspired by Rick and Morty: strong clean dark outlines, flat muted colors, simple cel shadows, expressive chunky shapes, NO photorealism, no realistic materials. Warm ivory background with tidy framed panels matching the approved existing sheets. Same redesigned object consistent across all views. Large title with item number. Panels FACE, DOS, PROFIL, DESSUS, TROIS-QUARTS, plus 2-3 construction closeups and palette swatches. Orthographic front/back/side/top, perspective only for three-quarter. All objects fully visible with margins. Few meaningful overall metric dimensions; no cluttered tiny dimension lines. French labels legible. Improve the simplistic in-game reference while preserving function and identity. No people, no watermark. Exact title: \"41 — CAGEOT — FLEURS\". Specific design: Florist wooden slatted crate with finger cutout handles, chamfered corners, teal corner brackets, brass nail heads, removable water insert and removable small pots of mixed cartoon flowers. Main orthos show empty crate and removable insert, example composition separate. W .64 depth .46 H .32 m, flower arrangement H .80. Useful storage volume accessible, no permanently fused contents. Label FLEURS INTERCHANGEABLES. Input image 1 is old object identity only. Input image 2 is style/layout reference. IMPORTANT: empty container orthographic panels must actually show an EMPTY object; flowers ONLY in a separate usage example, never hide interior geometry."
+    },
+    {
+      "back": "42_crate_bulbs_back.png",
+      "category": "Décoration / accessoires",
+      "front": "42_crate_bulbs_front.png",
+      "id": "crate_bulbs",
+      "instances_seen": 1,
+      "native_flowers": 0,
+      "number": 42,
+      "size_m": [
+        0.644925117492676,
+        0.420500010251999,
+        0.509900093078613
+      ],
+      "title": "Cageot — bulbs",
+      "title_fr": "Cageot — Bulbes",
+      "group": "Accessoires et rangement",
+      "code_source": "src/world/shop_decor.gd",
+      "output": "42_crate_bulbs_sheet.png",
+      "prompt": "Use case: stylized-concept. Create ONE landscape production reference sheet for a cartoon video-game florist shop. Hand-drawn 2D cartoon inspired by Rick and Morty: strong clean dark outlines, flat muted colors, simple cel shadows, expressive chunky shapes, NO photorealism, no realistic materials. Warm ivory background with tidy framed panels matching the approved existing sheets. Same redesigned object consistent across all views. Large title with item number. Panels FACE, DOS, PROFIL, DESSUS, TROIS-QUARTS, plus 2-3 construction closeups and palette swatches. Orthographic front/back/side/top, perspective only for three-quarter. All objects fully visible with margins. Few meaningful overall metric dimensions; no cluttered tiny dimension lines. French labels legible. Improve the simplistic in-game reference while preserving function and identity. No people, no watermark. Exact title: \"42 — CAGEOT — BULBES\". Specific design: Warm wood nursery crate W .64 depth .46 H .32 m with slats, reinforced cream corners, hand holes, teal enamel botanical tag BULBES. Show bulbs settled on straw liner, distinct papery teardrop bulb bodies with root tufts and tiny shoots. Empty crate and separate removable liner/bulbs detail. No levitating bulbs. Side joints and bottom drainage slats.",
+      "refs": [
+        "C:/Users/Saïka/Documents/entreprises/jeu/fleuriste-galaxy/out/shop_catalog/42_crate_bulbs_front.png",
+        "C:/Users/Saïka/Documents/entreprises/jeu/fleuriste-galaxy/art/concepts/shop/01_counter_sheet_v2.png"
+      ],
+      "submitted_prompt": "Use case: stylized-concept. Create ONE landscape production reference sheet for a cartoon video-game florist shop. Hand-drawn 2D cartoon inspired by Rick and Morty: strong clean dark outlines, flat muted colors, simple cel shadows, expressive chunky shapes, NO photorealism, no realistic materials. Warm ivory background with tidy framed panels matching the approved existing sheets. Same redesigned object consistent across all views. Large title with item number. Panels FACE, DOS, PROFIL, DESSUS, TROIS-QUARTS, plus 2-3 construction closeups and palette swatches. Orthographic front/back/side/top, perspective only for three-quarter. All objects fully visible with margins. Few meaningful overall metric dimensions; no cluttered tiny dimension lines. French labels legible. Improve the simplistic in-game reference while preserving function and identity. No people, no watermark. Exact title: \"42 — CAGEOT — BULBES\". Specific design: Warm wood nursery crate W .64 depth .46 H .32 m with slats, reinforced cream corners, hand holes, teal enamel botanical tag BULBES. Show bulbs settled on straw liner, distinct papery teardrop bulb bodies with root tufts and tiny shoots. Empty crate and separate removable liner/bulbs detail. No levitating bulbs. Side joints and bottom drainage slats. Input image 1 old object identity only. Input image 2 approved drawing style/layout. Main orthographic panels show EMPTY CRATE or EMPTY DISPLAY without contents. Show contents separately in usage example and details, with consistent scale."
+    },
+    {
+      "back": "43_crate_skulls_back.png",
+      "category": "Décoration / accessoires",
+      "front": "43_crate_skulls_front.png",
+      "id": "crate_skulls",
+      "instances_seen": 1,
+      "native_flowers": 0,
+      "number": 43,
+      "size_m": [
+        0.655767440795898,
+        0.389999985694885,
+        0.594709873199463
+      ],
+      "title": "Cageot — skulls",
+      "title_fr": "Cageot — Crânes",
+      "group": "Accessoires et rangement",
+      "code_source": "src/world/shop_decor.gd",
+      "output": "43_crate_skulls_sheet.png",
+      "prompt": "Use case: stylized-concept. Create ONE landscape production reference sheet for a cartoon video-game florist shop. Hand-drawn 2D cartoon inspired by Rick and Morty: strong clean dark outlines, flat muted colors, simple cel shadows, expressive chunky shapes, NO photorealism, no realistic materials. Warm ivory background with tidy framed panels matching the approved existing sheets. Same redesigned object consistent across all views. Large title with item number. Panels FACE, DOS, PROFIL, DESSUS, TROIS-QUARTS, plus 2-3 construction closeups and palette swatches. Orthographic front/back/side/top, perspective only for three-quarter. All objects fully visible with margins. Few meaningful overall metric dimensions; no cluttered tiny dimension lines. French labels legible. Improve the simplistic in-game reference while preserving function and identity. No people, no watermark. Exact title: \"43 — CAGEOT — CRÂNES\". Specific design: Whimsical florist slatted dark wood crate W .64 depth .46 H .32 m, aged cream reinforced corners, brass nails, hand slots, removable cream inventory tag CRÂNES. Three small stylized ivory skull props resting securely on straw inside; comical large eye sockets no gore. Empty crate view plus separate removable skulls and straw insert. Show actual interior floor and rear joints.",
+      "refs": [
+        "C:/Users/Saïka/Documents/entreprises/jeu/fleuriste-galaxy/out/shop_catalog/43_crate_skulls_front.png",
+        "C:/Users/Saïka/Documents/entreprises/jeu/fleuriste-galaxy/art/concepts/shop/01_counter_sheet_v2.png"
+      ],
+      "submitted_prompt": "Use case: stylized-concept. Create ONE landscape production reference sheet for a cartoon video-game florist shop. Hand-drawn 2D cartoon inspired by Rick and Morty: strong clean dark outlines, flat muted colors, simple cel shadows, expressive chunky shapes, NO photorealism, no realistic materials. Warm ivory background with tidy framed panels matching the approved existing sheets. Same redesigned object consistent across all views. Large title with item number. Panels FACE, DOS, PROFIL, DESSUS, TROIS-QUARTS, plus 2-3 construction closeups and palette swatches. Orthographic front/back/side/top, perspective only for three-quarter. All objects fully visible with margins. Few meaningful overall metric dimensions; no cluttered tiny dimension lines. French labels legible. Improve the simplistic in-game reference while preserving function and identity. No people, no watermark. Exact title: \"43 — CAGEOT — CRÂNES\". Specific design: Whimsical florist slatted dark wood crate W .64 depth .46 H .32 m, aged cream reinforced corners, brass nails, hand slots, removable cream inventory tag CRÂNES. Three small stylized ivory skull props resting securely on straw inside; comical large eye sockets no gore. Empty crate view plus separate removable skulls and straw insert. Show actual interior floor and rear joints. Input image 1 old object identity only. Input image 2 approved drawing style/layout. Main orthographic panels show EMPTY CRATE or EMPTY DISPLAY without contents. Show contents separately in usage example and details, with consistent scale."
+    },
+    {
+      "back": "44_crate_seedlings_back.png",
+      "category": "Décoration / accessoires",
+      "front": "44_crate_seedlings_front.png",
+      "id": "crate_seedlings",
+      "instances_seen": 1,
+      "native_flowers": 0,
+      "number": 44,
+      "size_m": [
+        0.600000143051147,
+        0.45100000500679,
+        0.449999809265137
+      ],
+      "title": "Cageot — seedlings",
+      "title_fr": "Cageot — Jeunes plants",
+      "group": "Accessoires et rangement",
+      "code_source": "src/world/shop_decor.gd",
+      "output": "44_crate_seedlings_sheet.png",
+      "prompt": "Use case: stylized-concept. Create ONE landscape production reference sheet for a cartoon video-game florist shop. Hand-drawn 2D cartoon inspired by Rick and Morty: strong clean dark outlines, flat muted colors, simple cel shadows, expressive chunky shapes, NO photorealism, no realistic materials. Warm ivory background with tidy framed panels matching the approved existing sheets. Same redesigned object consistent across all views. Large title with item number. Panels FACE, DOS, PROFIL, DESSUS, TROIS-QUARTS, plus 2-3 construction closeups and palette swatches. Orthographic front/back/side/top, perspective only for three-quarter. All objects fully visible with margins. Few meaningful overall metric dimensions; no cluttered tiny dimension lines. French labels legible. Improve the simplistic in-game reference while preserving function and identity. No people, no watermark. Exact title: \"44 — CAGEOT — JEUNES PLANTS\". Specific design: Nursery slatted warm wood crate W .60 depth .45 H .30 m, teal reinforced corners and cream handwritten JEUNES PLANTS plaque. Removable seedling tray with 8 individual square soil cells, each has two to four broad tiny cartoon leaves and short stem. Soil fills cells, roots stay inside. Empty crate orthos plus tray removed and plant detail. Neat but organic variety, no floating greenery.",
+      "refs": [
+        "C:/Users/Saïka/Documents/entreprises/jeu/fleuriste-galaxy/out/shop_catalog/44_crate_seedlings_front.png",
+        "C:/Users/Saïka/Documents/entreprises/jeu/fleuriste-galaxy/art/concepts/shop/01_counter_sheet_v2.png"
+      ],
+      "submitted_prompt": "Use case: stylized-concept. Create ONE landscape production reference sheet for a cartoon video-game florist shop. Hand-drawn 2D cartoon inspired by Rick and Morty: strong clean dark outlines, flat muted colors, simple cel shadows, expressive chunky shapes, NO photorealism, no realistic materials. Warm ivory background with tidy framed panels matching the approved existing sheets. Same redesigned object consistent across all views. Large title with item number. Panels FACE, DOS, PROFIL, DESSUS, TROIS-QUARTS, plus 2-3 construction closeups and palette swatches. Orthographic front/back/side/top, perspective only for three-quarter. All objects fully visible with margins. Few meaningful overall metric dimensions; no cluttered tiny dimension lines. French labels legible. Improve the simplistic in-game reference while preserving function and identity. No people, no watermark. Exact title: \"44 — CAGEOT — JEUNES PLANTS\". Specific design: Nursery slatted warm wood crate W .60 depth .45 H .30 m, teal reinforced corners and cream handwritten JEUNES PLANTS plaque. Removable seedling tray with 8 individual square soil cells, each has two to four broad tiny cartoon leaves and short stem. Soil fills cells, roots stay inside. Empty crate orthos plus tray removed and plant detail. Neat but organic variety, no floating greenery. Input image 1 old object identity only. Input image 2 approved drawing style/layout. Main orthographic panels show EMPTY CRATE or EMPTY DISPLAY without contents. Show contents separately in usage example and details, with consistent scale."
+    },
+    {
+      "back": "45_stand_1_back.png",
+      "category": "Décoration / accessoires",
+      "front": "45_stand_1_front.png",
+      "id": "stand_1",
+      "instances_seen": 1,
+      "native_flowers": 36,
+      "number": 45,
+      "size_m": [
+        0.899999618530273,
+        1.16500663757324,
+        0.561548709869385
+      ],
+      "title": "Gradin fleuri — variante 1",
+      "title_fr": "Gradin fleuri — Variante 1",
+      "group": "Fleurs et contenants",
+      "code_source": "src/world/shop_decor.gd",
+      "output": "45_stand_classic_sheet.png",
+      "prompt": "Use case: stylized-concept. Create ONE landscape production reference sheet for a cartoon video-game florist shop. Hand-drawn 2D cartoon inspired by Rick and Morty: strong clean dark outlines, flat muted colors, simple cel shadows, expressive chunky shapes, NO photorealism, no realistic materials. Warm ivory background with tidy framed panels matching the approved existing sheets. Same redesigned object consistent across all views. Large title with item number. Panels FACE, DOS, PROFIL, DESSUS, TROIS-QUARTS, plus 2-3 construction closeups and palette swatches. Orthographic front/back/side/top, perspective only for three-quarter. All objects fully visible with margins. Few meaningful overall metric dimensions; no cluttered tiny dimension lines. French labels legible. Improve the simplistic in-game reference while preserving function and identity. No people, no watermark. Exact title: \"45 — GRADIN FLEURI — VARIANTE 1\". Specific design: Three stepped florist display levels W .90 depth .58 total H 1.05 m, warm wood stair silhouette, teal curved side supports, cream tray lips, brass fastening and botanical rosettes. Each level .28 m rise with .20 m deep flat top; removable pots only in separate usage view, empty front/back/side/top views. Small rear stabilizing brace, no bulky backboard. Label POTS LIBREMENT POSITIONNABLES. Clear headroom for flowers on all steps.",
+      "refs": [
+        "C:/Users/Saïka/Documents/entreprises/jeu/fleuriste-galaxy/out/shop_catalog/45_stand_1_front.png",
+        "C:/Users/Saïka/Documents/entreprises/jeu/fleuriste-galaxy/art/concepts/shop/01_counter_sheet_v2.png"
+      ],
+      "submitted_prompt": "Use case: stylized-concept. Create ONE landscape production reference sheet for a cartoon video-game florist shop. Hand-drawn 2D cartoon inspired by Rick and Morty: strong clean dark outlines, flat muted colors, simple cel shadows, expressive chunky shapes, NO photorealism, no realistic materials. Warm ivory background with tidy framed panels matching the approved existing sheets. Same redesigned object consistent across all views. Large title with item number. Panels FACE, DOS, PROFIL, DESSUS, TROIS-QUARTS, plus 2-3 construction closeups and palette swatches. Orthographic front/back/side/top, perspective only for three-quarter. All objects fully visible with margins. Few meaningful overall metric dimensions; no cluttered tiny dimension lines. French labels legible. Improve the simplistic in-game reference while preserving function and identity. No people, no watermark. Exact title: \"45 — GRADIN FLEURI — VARIANTE 1\". Specific design: Three stepped florist display levels W .90 depth .58 total H 1.05 m, warm wood stair silhouette, teal curved side supports, cream tray lips, brass fastening and botanical rosettes. Each level .28 m rise with .20 m deep flat top; removable pots only in separate usage view, empty front/back/side/top views. Small rear stabilizing brace, no bulky backboard. Label POTS LIBREMENT POSITIONNABLES. Clear headroom for flowers on all steps. Input image 1 old object identity only. Input image 2 approved drawing style/layout. Main orthographic panels show EMPTY CRATE or EMPTY DISPLAY without contents. Show contents separately in usage example and details, with consistent scale."
+    },
+    {
+      "back": "46_flytrap_back.png",
+      "category": "Décoration / accessoires",
+      "front": "46_flytrap_front.png",
+      "id": "flytrap",
+      "instances_seen": 1,
+      "native_flowers": 0,
+      "number": 46,
+      "size_m": [
+        0.21917200088501,
+        0.551788508892059,
+        0.26278018951416
+      ],
+      "title": "Plante carnivore animée",
+      "title_fr": "Plante carnivore animée",
+      "group": "Plantes décoratives",
+      "code_source": "src/world/shop_decor.gd",
+      "output": "46_flytrap_sheet_v2.png",
+      "prompt": "Use case: stylized-concept. Create ONE landscape production reference sheet for a cartoon video-game florist shop. Hand-drawn 2D cartoon inspired by Rick and Morty: strong clean dark outlines, flat muted colors, simple cel shadows, expressive chunky shapes, NO photorealism, no realistic materials. Warm ivory background with tidy framed panels matching the approved existing sheets. Same redesigned object consistent across all views. Large title with item number. Panels FACE, DOS, PROFIL, DESSUS, TROIS-QUARTS, plus 2-3 construction closeups and palette swatches. Orthographic front/back/side/top, perspective only for three-quarter. All objects fully visible with margins. Few meaningful overall metric dimensions; no cluttered tiny dimension lines. French labels legible. Improve the simplistic in-game reference while preserving function and identity. No people, no watermark. Exact title: \"46 — PLANTE CARNIVORE ANIMÉE\". Specific design: Friendly weird cartoon carnivorous florist plant in dark purple ceramic pot cream/teal collar saucer, curved flexible green stem, two large opposing red/pink fleshy leaf jaws, rounded ivory teeth on rim and two short expressive eye stalks. H .55 m pot H .15 diameter .16. Face back profile top and 3/4; separate animation construction: jaw open, closed, stem bend. Anatomically consistent hinge, leaves and pot soil, cartoon no gore. Strong clean readable design.",
+      "refs": [
+        "C:/Users/Saïka/Documents/entreprises/jeu/fleuriste-galaxy/out/shop_catalog/46_flytrap_front.png",
+        "C:/Users/Saïka/Documents/entreprises/jeu/fleuriste-galaxy/art/concepts/shop/01_counter_sheet_v2.png"
+      ],
+      "submitted_prompt": "Use case: stylized-concept. Create ONE landscape production reference sheet for a cartoon video-game florist shop. Hand-drawn 2D cartoon inspired by Rick and Morty: strong clean dark outlines, flat muted colors, simple cel shadows, expressive chunky shapes, NO photorealism, no realistic materials. Warm ivory background with tidy framed panels matching the approved existing sheets. Same redesigned object consistent across all views. Large title with item number. Panels FACE, DOS, PROFIL, DESSUS, TROIS-QUARTS, plus 2-3 construction closeups and palette swatches. Orthographic front/back/side/top, perspective only for three-quarter. All objects fully visible with margins. Few meaningful overall metric dimensions; no cluttered tiny dimension lines. French labels legible. Improve the simplistic in-game reference while preserving function and identity. No people, no watermark. Exact title: \"46 — PLANTE CARNIVORE ANIMÉE\". Specific design: Friendly weird cartoon carnivorous florist plant in dark purple ceramic pot cream/teal collar saucer, curved flexible green stem, two large opposing red/pink fleshy leaf jaws, rounded ivory teeth on rim and two short expressive eye stalks. H .55 m pot H .15 diameter .16. Face back profile top and 3/4; separate animation construction: jaw open, closed, stem bend. Anatomically consistent hinge, leaves and pot soil, cartoon no gore. Strong clean readable design. Input image 1 is original in-game identity only; input image 2 approved style and layout. Empty display/container orthographic views without any contents, separate usage example. For plant keep the complete plant in every view. Clean cartoon construction sheet, not a rendered model.",
+      "original_output": "46_flytrap_sheet.png",
+      "revision_prompt": "Edit this existing production concept sheet, item 46 PLANTE CARNIVORE ANIMÉE. Change ONLY the teeth in ALL views and the jaw construction close-up, keeping all other artwork, plant silhouette, red jaws, two eye stalks, purple pot, leaves, palette, dimensions, French headings and panel layout unchanged. Replace the few ugly vertical rectangular ivory bars that look like staples bridging the mouth with a coherent row of short cream triangular conical cartoon teeth, slightly rounded tips, visibly rooted directly into the INNER EDGES of BOTH upper and lower red jaws. About 6 teeth per jaw distributed around the mouth opening, alternating/interlocking when closed, upper teeth point down, lower teeth point up, no tooth floating or sticking across both lips. In closed views a few overlapping points remain visible along the mouth seam, not huge fangs. In open mouth animation and detail view clearly show both rows attached to their own jaw and a dark mouth cavity. Preserve friendly funny cartoon character, no gore, no realism. All orthographic and animation views must depict the same redesigned dentition. Keep original landscape 1536x1024 sheet and clean black-outlined flat-color cartoon style.",
+      "revision_reference": "46_flytrap_sheet.png"
+    },
+    {
+      "back": "47_poster_skull_back.png",
+      "category": "Décoration / accessoires",
+      "front": "47_poster_skull_front.png",
+      "id": "poster_skull",
+      "instances_seen": 1,
+      "native_flowers": 0,
+      "number": 47,
+      "size_m": [
+        0.460000038146973,
+        0.610000133514404,
+        0.0708498954772949
+      ],
+      "title": "Affiche — NE PAS NOURRIR",
+      "title_fr": "Affiche — Ne pas nourrir",
+      "group": "Décor mural et signalétique",
+      "code_source": "src/world/shop_decor.gd",
+      "output": "47_poster_skull_sheet.png",
+      "prompt": "Use case: stylized-concept. Create ONE landscape production reference sheet for a cartoon video-game florist shop. Hand-drawn 2D cartoon inspired by Rick and Morty: strong clean dark outlines, flat muted colors, simple cel shadows, expressive chunky shapes, NO photorealism, no realistic materials. Warm ivory background with tidy framed panels matching the approved existing sheets. Same redesigned object consistent across all views. Large title with item number. Panels FACE, DOS, PROFIL, DESSUS, TROIS-QUARTS, plus 2-3 construction closeups and palette swatches. Orthographic front/back/side/top, perspective only for three-quarter. All objects fully visible with margins. Few meaningful overall metric dimensions; no cluttered tiny dimension lines. French labels legible. Improve the simplistic in-game reference while preserving function and identity. No people, no watermark. Exact title: \"47 — AFFICHE — NE PAS NOURRIR\". Specific design: Portrait warning wall poster H .61 W .46 depth .04 m. Coral/red paper, teal/wood detailed rounded frame cream inner lip and brass corners, amusing ivory skull above tiny leaf motif. Exact bold readable text NE PAS NOURRIR. Well designed retro botanical caution typography. Show front rear hanging wire backing and joints, side/top thickness, printed design closeup; printed art stays flat, not floating 3D skull.",
+      "refs": [
+        "C:/Users/Saïka/Documents/entreprises/jeu/fleuriste-galaxy/out/shop_catalog/47_poster_skull_front.png",
+        "C:/Users/Saïka/Documents/entreprises/jeu/fleuriste-galaxy/art/concepts/shop/01_counter_sheet_v2.png"
+      ],
+      "submitted_prompt": "Use case: stylized-concept. Create ONE landscape production reference sheet for a cartoon video-game florist shop. Hand-drawn 2D cartoon inspired by Rick and Morty: strong clean dark outlines, flat muted colors, simple cel shadows, expressive chunky shapes, NO photorealism, no realistic materials. Warm ivory background with tidy framed panels matching the approved existing sheets. Same redesigned object consistent across all views. Large title with item number. Panels FACE, DOS, PROFIL, DESSUS, TROIS-QUARTS, plus 2-3 construction closeups and palette swatches. Orthographic front/back/side/top, perspective only for three-quarter. All objects fully visible with margins. Few meaningful overall metric dimensions; no cluttered tiny dimension lines. French labels legible. Improve the simplistic in-game reference while preserving function and identity. No people, no watermark. Exact title: \"47 — AFFICHE — NE PAS NOURRIR\". Specific design: Portrait warning wall poster H .61 W .46 depth .04 m. Coral/red paper, teal/wood detailed rounded frame cream inner lip and brass corners, amusing ivory skull above tiny leaf motif. Exact bold readable text NE PAS NOURRIR. Well designed retro botanical caution typography. Show front rear hanging wire backing and joints, side/top thickness, printed design closeup; printed art stays flat, not floating 3D skull. Input image 1 is original in-game identity only; input image 2 approved style and layout. Empty display/container orthographic views without any contents, separate usage example. For plant keep the complete plant in every view. Clean cartoon construction sheet, not a rendered model."
+    },
+    {
+      "back": "48_stand_3_back.png",
+      "category": "Décoration / accessoires",
+      "front": "48_stand_3_front.png",
+      "id": "stand_3",
+      "instances_seen": 1,
+      "native_flowers": 36,
+      "number": 48,
+      "size_m": [
+        0.900000095367432,
+        1.15875542163849,
+        0.560000419616699
+      ],
+      "title": "Gradin fleuri — variante 3",
+      "title_fr": "Gradin fleuri — Variante 3",
+      "group": "Fleurs et contenants",
+      "code_source": "src/world/shop_decor.gd",
+      "output": "48_stand_botanical_sheet.png",
+      "prompt": "Use case: stylized-concept. Create ONE landscape production reference sheet for a cartoon video-game florist shop. Hand-drawn 2D cartoon inspired by Rick and Morty: strong clean dark outlines, flat muted colors, simple cel shadows, expressive chunky shapes, NO photorealism, no realistic materials. Warm ivory background with tidy framed panels matching the approved existing sheets. Same redesigned object consistent across all views. Large title with item number. Panels FACE, DOS, PROFIL, DESSUS, TROIS-QUARTS, plus 2-3 construction closeups and palette swatches. Orthographic front/back/side/top, perspective only for three-quarter. All objects fully visible with margins. Few meaningful overall metric dimensions; no cluttered tiny dimension lines. French labels legible. Improve the simplistic in-game reference while preserving function and identity. No people, no watermark. Exact title: \"48 — GRADIN FLEURI — VARIANTE 3\". Specific design: Alternate three stepped florist display W .90 depth .58 H 1.05 m, dusty teal painted wood plank shelves cream lips, sculpted warm wood arched side rails with leaf-shaped cutouts, brass screws and rear X brace. Distinct from plain classic stand yet same furniture family. Empty orthos, separate usage view colorful removable pots. Levels .28 m apart, flat usable top of each tray, no overhead ornament hiding flowers. Label POTS LIBREMENT POSITIONNABLES.",
+      "refs": [
+        "C:/Users/Saïka/Documents/entreprises/jeu/fleuriste-galaxy/out/shop_catalog/48_stand_3_front.png",
+        "C:/Users/Saïka/Documents/entreprises/jeu/fleuriste-galaxy/art/concepts/shop/01_counter_sheet_v2.png"
+      ],
+      "submitted_prompt": "Use case: stylized-concept. Create ONE landscape production reference sheet for a cartoon video-game florist shop. Hand-drawn 2D cartoon inspired by Rick and Morty: strong clean dark outlines, flat muted colors, simple cel shadows, expressive chunky shapes, NO photorealism, no realistic materials. Warm ivory background with tidy framed panels matching the approved existing sheets. Same redesigned object consistent across all views. Large title with item number. Panels FACE, DOS, PROFIL, DESSUS, TROIS-QUARTS, plus 2-3 construction closeups and palette swatches. Orthographic front/back/side/top, perspective only for three-quarter. All objects fully visible with margins. Few meaningful overall metric dimensions; no cluttered tiny dimension lines. French labels legible. Improve the simplistic in-game reference while preserving function and identity. No people, no watermark. Exact title: \"48 — GRADIN FLEURI — VARIANTE 3\". Specific design: Alternate three stepped florist display W .90 depth .58 H 1.05 m, dusty teal painted wood plank shelves cream lips, sculpted warm wood arched side rails with leaf-shaped cutouts, brass screws and rear X brace. Distinct from plain classic stand yet same furniture family. Empty orthos, separate usage view colorful removable pots. Levels .28 m apart, flat usable top of each tray, no overhead ornament hiding flowers. Label POTS LIBREMENT POSITIONNABLES. Input image 1 is original in-game identity only; input image 2 approved style and layout. Empty display/container orthographic views without any contents, separate usage example. For plant keep the complete plant in every view. Clean cartoon construction sheet, not a rendered model."
+    },
+    {
+      "back": "49_bucket_4_back.png",
+      "category": "Décoration / accessoires",
+      "front": "49_bucket_4_front.png",
+      "id": "bucket_4",
+      "instances_seen": 1,
+      "native_flowers": 10,
+      "number": 49,
+      "size_m": [
+        0.588972568511963,
+        1.04025888442993,
+        0.704090118408203
+      ],
+      "title": "Seau fleuri — Marguerites 1 €",
+      "title_fr": "Seau fleuri — Marguerites",
+      "group": "Fleurs et contenants",
+      "code_source": "src/world/shop_decor.gd",
+      "output": "49_bucket_daisies_sheet.png",
+      "prompt": "Use case: stylized-concept. Create ONE landscape production reference sheet for a cartoon video-game florist shop. Hand-drawn 2D cartoon inspired by Rick and Morty: strong clean dark outlines, flat muted colors, simple cel shadows, expressive chunky shapes, NO photorealism, no realistic materials. Warm ivory background with tidy framed panels matching the approved existing sheets. Same redesigned object consistent across all views. Large title with item number. Panels FACE, DOS, PROFIL, DESSUS, TROIS-QUARTS, plus 2-3 construction closeups and palette swatches. Orthographic front/back/side/top, perspective only for three-quarter. All objects fully visible with margins. Few meaningful overall metric dimensions; no cluttered tiny dimension lines. French labels legible. Improve the simplistic in-game reference while preserving function and identity. No people, no watermark. Exact title: \"49 — SEAU FLEURI — MARGUERITES\". Specific design: Galvanized light teal bucket with cream rolled rim, two small brass lug handles, subtle embossed daisy crest, removable cream handwritten price tag Marguerites 1 €. Empty orthos and separate white yellow cartoon daisy arrangement example. H .38 diameter .35 m, arrangement H 1.0 m. Friendly rounded shape, stable foot ring, not photoreal, no noisy scratches.",
+      "refs": [
+        "C:/Users/Saïka/Documents/entreprises/jeu/fleuriste-galaxy/out/shop_catalog/49_bucket_4_front.png",
+        "C:/Users/Saïka/Documents/entreprises/jeu/fleuriste-galaxy/art/concepts/shop/01_counter_sheet_v2.png"
+      ],
+      "submitted_prompt": "Use case: stylized-concept. Create ONE landscape production reference sheet for a cartoon video-game florist shop. Hand-drawn 2D cartoon inspired by Rick and Morty: strong clean dark outlines, flat muted colors, simple cel shadows, expressive chunky shapes, NO photorealism, no realistic materials. Warm ivory background with tidy framed panels matching the approved existing sheets. Same redesigned object consistent across all views. Large title with item number. Panels FACE, DOS, PROFIL, DESSUS, TROIS-QUARTS, plus 2-3 construction closeups and palette swatches. Orthographic front/back/side/top, perspective only for three-quarter. All objects fully visible with margins. Few meaningful overall metric dimensions; no cluttered tiny dimension lines. French labels legible. Improve the simplistic in-game reference while preserving function and identity. No people, no watermark. Exact title: \"49 — SEAU FLEURI — MARGUERITES\". Specific design: Galvanized light teal bucket with cream rolled rim, two small brass lug handles, subtle embossed daisy crest, removable cream handwritten price tag Marguerites 1 €. Empty orthos and separate white yellow cartoon daisy arrangement example. H .38 diameter .35 m, arrangement H 1.0 m. Friendly rounded shape, stable foot ring, not photoreal, no noisy scratches. Input image 1 is original in-game identity only; input image 2 approved style and layout. Empty display/container orthographic views without any contents, separate usage example. For plant keep the complete plant in every view. Clean cartoon construction sheet, not a rendered model."
+    },
+    {
+      "back": "50_bucket_5_back.png",
+      "category": "Décoration / accessoires",
+      "front": "50_bucket_5_front.png",
+      "id": "bucket_5",
+      "instances_seen": 1,
+      "native_flowers": 10,
+      "number": 50,
+      "size_m": [
+        0.742172241210938,
+        1.07368564605713,
+        0.64698314666748
+      ],
+      "title": "Seau fleuri — Spécial veuve",
+      "title_fr": "Seau fleuri — Spécial veuve",
+      "group": "Fleurs et contenants",
+      "code_source": "src/world/shop_decor.gd",
+      "output": "50_bucket_widow_sheet.png",
+      "prompt": "Use case: stylized-concept. Create ONE landscape production reference sheet for a cartoon video-game florist shop. Hand-drawn 2D cartoon inspired by Rick and Morty: strong clean dark outlines, flat muted colors, simple cel shadows, expressive chunky shapes, NO photorealism, no realistic materials. Warm ivory background with tidy framed panels matching the approved existing sheets. Same redesigned object consistent across all views. Large title with item number. Panels FACE, DOS, PROFIL, DESSUS, TROIS-QUARTS, plus 2-3 construction closeups and palette swatches. Orthographic front/back/side/top, perspective only for three-quarter. All objects fully visible with margins. Few meaningful overall metric dimensions; no cluttered tiny dimension lines. French labels legible. Improve the simplistic in-game reference while preserving function and identity. No people, no watermark. Exact title: \"50 — SEAU FLEURI — SPÉCIAL VEUVE\". Specific design: Muted plum/slate blue florist bucket, cream rolled rim, dark brass wire handles and botanical mourning medallion, removable scalloped ivory tag Spécial veuve. Empty orthos and separate pastel white lilac pink hanging bell flower composition with a small removable black ribbon. H .42 diameter .36 m arrangement 1.05 m. Dark humorous cozy sci-fi florist design, no realism. Hollow vessel not permanently attached to stems.",
+      "refs": [
+        "C:/Users/Saïka/Documents/entreprises/jeu/fleuriste-galaxy/out/shop_catalog/50_bucket_5_front.png",
+        "C:/Users/Saïka/Documents/entreprises/jeu/fleuriste-galaxy/art/concepts/shop/01_counter_sheet_v2.png"
+      ],
+      "submitted_prompt": "Use case: stylized-concept. Create ONE landscape production reference sheet for a cartoon video-game florist shop. Hand-drawn 2D cartoon inspired by Rick and Morty: strong clean dark outlines, flat muted colors, simple cel shadows, expressive chunky shapes, NO photorealism, no realistic materials. Warm ivory background with tidy framed panels matching the approved existing sheets. Same redesigned object consistent across all views. Large title with item number. Panels FACE, DOS, PROFIL, DESSUS, TROIS-QUARTS, plus 2-3 construction closeups and palette swatches. Orthographic front/back/side/top, perspective only for three-quarter. All objects fully visible with margins. Few meaningful overall metric dimensions; no cluttered tiny dimension lines. French labels legible. Improve the simplistic in-game reference while preserving function and identity. No people, no watermark. Exact title: \"50 — SEAU FLEURI — SPÉCIAL VEUVE\". Specific design: Muted plum/slate blue florist bucket, cream rolled rim, dark brass wire handles and botanical mourning medallion, removable scalloped ivory tag Spécial veuve. Empty orthos and separate pastel white lilac pink hanging bell flower composition with a small removable black ribbon. H .42 diameter .36 m arrangement 1.05 m. Dark humorous cozy sci-fi florist design, no realism. Hollow vessel not permanently attached to stems. Input image 1 is old in-game object identity ONLY, redesign it substantially; image 2 approved illustrated style/layout reference. Main orthographic panels for containers and shelves MUST be empty, contents only in separate usage example. For hanging plant show complete lush plant with its entire hanging system. Clear shapes, no visual clutter."
+    },
+    {
+      "back": "51_shelf_3.0_back.png",
+      "category": "Décoration / accessoires",
+      "front": "51_shelf_3.0_front.png",
+      "id": "shelf_3.0",
+      "instances_seen": 2,
+      "native_flowers": 0,
+      "number": 51,
+      "size_m": [
+        3.0,
+        0.215000033378601,
+        0.299999237060547
+      ],
+      "title": "Étagère murale — 3.0 m",
+      "title_fr": "Étagère murale — 3,00 m",
+      "group": "Décor mural et signalétique",
+      "code_source": "src/world/shop_decor.gd",
+      "output": "51_shelf_medium_wide_sheet.png",
+      "prompt": "Use case: stylized-concept. Create ONE landscape production reference sheet for a cartoon video-game florist shop. Hand-drawn 2D cartoon inspired by Rick and Morty: strong clean dark outlines, flat muted colors, simple cel shadows, expressive chunky shapes, NO photorealism, no realistic materials. Warm ivory background with tidy framed panels matching the approved existing sheets. Same redesigned object consistent across all views. Large title with item number. Panels FACE, DOS, PROFIL, DESSUS, TROIS-QUARTS, plus 2-3 construction closeups and palette swatches. Orthographic front/back/side/top, perspective only for three-quarter. All objects fully visible with margins. Few meaningful overall metric dimensions; no cluttered tiny dimension lines. French labels legible. Improve the simplistic in-game reference while preserving function and identity. No people, no watermark. Exact title: \"51 — ÉTAGÈRE MURALE — 3,00 M\". Specific design: Wall shelf 3.00 m W .34 m depth wood thickness .045 m bracket H .26 m. Same collection as long shelf: warm wood plank cream lip, three teal botanical curved metal wall brackets brass screws. Empty front rear side top, joint and mounting detail, example with three varied removable objects. Preserve fully flat usable top. Label OBJETS LIBREMENT POSITIONNABLES. Distinguish shorter length from 4.20 m model without scaling the brackets.",
+      "refs": [
+        "C:/Users/Saïka/Documents/entreprises/jeu/fleuriste-galaxy/out/shop_catalog/51_shelf_3.0_front.png",
+        "C:/Users/Saïka/Documents/entreprises/jeu/fleuriste-galaxy/art/concepts/shop/01_counter_sheet_v2.png"
+      ],
+      "submitted_prompt": "Use case: stylized-concept. Create ONE landscape production reference sheet for a cartoon video-game florist shop. Hand-drawn 2D cartoon inspired by Rick and Morty: strong clean dark outlines, flat muted colors, simple cel shadows, expressive chunky shapes, NO photorealism, no realistic materials. Warm ivory background with tidy framed panels matching the approved existing sheets. Same redesigned object consistent across all views. Large title with item number. Panels FACE, DOS, PROFIL, DESSUS, TROIS-QUARTS, plus 2-3 construction closeups and palette swatches. Orthographic front/back/side/top, perspective only for three-quarter. All objects fully visible with margins. Few meaningful overall metric dimensions; no cluttered tiny dimension lines. French labels legible. Improve the simplistic in-game reference while preserving function and identity. No people, no watermark. Exact title: \"51 — ÉTAGÈRE MURALE — 3,00 M\". Specific design: Wall shelf 3.00 m W .34 m depth wood thickness .045 m bracket H .26 m. Same collection as long shelf: warm wood plank cream lip, three teal botanical curved metal wall brackets brass screws. Empty front rear side top, joint and mounting detail, example with three varied removable objects. Preserve fully flat usable top. Label OBJETS LIBREMENT POSITIONNABLES. Distinguish shorter length from 4.20 m model without scaling the brackets. Input image 1 is old in-game object identity ONLY, redesign it substantially; image 2 approved illustrated style/layout reference. Main orthographic panels for containers and shelves MUST be empty, contents only in separate usage example. For hanging plant show complete lush plant with its entire hanging system. Clear shapes, no visual clutter."
+    },
+    {
+      "back": "52_coffin_planter_back.png",
+      "category": "Décoration / accessoires",
+      "front": "52_coffin_planter_front.png",
+      "id": "coffin_planter",
+      "instances_seen": 1,
+      "native_flowers": 8,
+      "number": 52,
+      "size_m": [
+        0.761566638946533,
+        0.719309687614441,
+        1.27224206924438
+      ],
+      "title": "Jardinière cercueil fleurie",
+      "title_fr": "Jardinière cercueil fleurie",
+      "group": "Fleurs et contenants",
+      "code_source": "src/world/shop_room.gd",
+      "output": "52_coffin_planter_sheet.png",
+      "prompt": "Use case: stylized-concept. Create ONE landscape production reference sheet for a cartoon video-game florist shop. Hand-drawn 2D cartoon inspired by Rick and Morty: strong clean dark outlines, flat muted colors, simple cel shadows, expressive chunky shapes, NO photorealism, no realistic materials. Warm ivory background with tidy framed panels matching the approved existing sheets. Same redesigned object consistent across all views. Large title with item number. Panels FACE, DOS, PROFIL, DESSUS, TROIS-QUARTS, plus 2-3 construction closeups and palette swatches. Orthographic front/back/side/top, perspective only for three-quarter. All objects fully visible with margins. Few meaningful overall metric dimensions; no cluttered tiny dimension lines. French labels legible. Improve the simplistic in-game reference while preserving function and identity. No people, no watermark. Exact title: \"52 — JARDINIÈRE CERCUEIL FLEURIE\". Specific design: Whimsical hexagonal coffin-shaped open florist planter on short carved feet, dark walnut wood sides, cream inner rim, teal botanical inlaid panels, aged brass handles and corner trims; no person no corpse. Length 1.20 width .65 height .40 m, flower arrangement .75 m. Main orthos show open empty soil insert; separate example lush colorful cartoon flowers, separate removable waterproof liner with drainage detail, rear bottom and handles. No lid covering flowers. Label FLEURS INTERCHANGEABLES.",
+      "refs": [
+        "C:/Users/Saïka/Documents/entreprises/jeu/fleuriste-galaxy/out/shop_catalog/52_coffin_planter_front.png",
+        "C:/Users/Saïka/Documents/entreprises/jeu/fleuriste-galaxy/art/concepts/shop/01_counter_sheet_v2.png"
+      ],
+      "submitted_prompt": "Use case: stylized-concept. Create ONE landscape production reference sheet for a cartoon video-game florist shop. Hand-drawn 2D cartoon inspired by Rick and Morty: strong clean dark outlines, flat muted colors, simple cel shadows, expressive chunky shapes, NO photorealism, no realistic materials. Warm ivory background with tidy framed panels matching the approved existing sheets. Same redesigned object consistent across all views. Large title with item number. Panels FACE, DOS, PROFIL, DESSUS, TROIS-QUARTS, plus 2-3 construction closeups and palette swatches. Orthographic front/back/side/top, perspective only for three-quarter. All objects fully visible with margins. Few meaningful overall metric dimensions; no cluttered tiny dimension lines. French labels legible. Improve the simplistic in-game reference while preserving function and identity. No people, no watermark. Exact title: \"52 — JARDINIÈRE CERCUEIL FLEURIE\". Specific design: Whimsical hexagonal coffin-shaped open florist planter on short carved feet, dark walnut wood sides, cream inner rim, teal botanical inlaid panels, aged brass handles and corner trims; no person no corpse. Length 1.20 width .65 height .40 m, flower arrangement .75 m. Main orthos show open empty soil insert; separate example lush colorful cartoon flowers, separate removable waterproof liner with drainage detail, rear bottom and handles. No lid covering flowers. Label FLEURS INTERCHANGEABLES. Input image 1 is old in-game object identity ONLY, redesign it substantially; image 2 approved illustrated style/layout reference. Main orthographic panels for containers and shelves MUST be empty, contents only in separate usage example. For hanging plant show complete lush plant with its entire hanging system. Clear shapes, no visual clutter."
+    },
+    {
+      "back": "53_hanging_flowered_back.png",
+      "category": "Décoration / accessoires",
+      "front": "53_hanging_flowered_front.png",
+      "id": "hanging_flowered",
+      "instances_seen": 3,
+      "native_flowers": 3,
+      "number": 53,
+      "size_m": [
+        0.529265403747559,
+        1.19051671028137,
+        0.50476062297821
+      ],
+      "title": "Plante suspendue — retombante fleurie",
+      "title_fr": "Plante suspendue — Retombante fleurie",
+      "group": "Plantes décoratives",
+      "code_source": "src/world/shop_room.gd",
+      "output": "53_hanging_flowered_sheet.png",
+      "prompt": "Use case: stylized-concept. Create ONE landscape production reference sheet for a cartoon video-game florist shop. Hand-drawn 2D cartoon inspired by Rick and Morty: strong clean dark outlines, flat muted colors, simple cel shadows, expressive chunky shapes, NO photorealism, no realistic materials. Warm ivory background with tidy framed panels matching the approved existing sheets. Same redesigned object consistent across all views. Large title with item number. Panels FACE, DOS, PROFIL, DESSUS, TROIS-QUARTS, plus 2-3 construction closeups and palette swatches. Orthographic front/back/side/top, perspective only for three-quarter. All objects fully visible with margins. Few meaningful overall metric dimensions; no cluttered tiny dimension lines. French labels legible. Improve the simplistic in-game reference while preserving function and identity. No people, no watermark. Exact title: \"53 — PLANTE SUSPENDUE — RETOMBANTE FLEURIE\". Specific design: Lush hanging trailing flowering plant, terracotta round pot cream turquoise rim in three-cord macrame hanger with top ring. Thick upper crown, several distinct winding vines of varied lengths, broad small cartoon leaves and pink lilac tiny bell flowers, pot partly visible. Full assembly H 1.20 m canopy diameter .45 m pot .22 m. Face back profile top plus 3/4 and closeups suspension knot vine leaf flower. Leaves face varied directions with full volume, no uniform green curtain. Roots hidden in soil.",
+      "refs": [
+        "C:/Users/Saïka/Documents/entreprises/jeu/fleuriste-galaxy/out/shop_catalog/53_hanging_flowered_front.png",
+        "C:/Users/Saïka/Documents/entreprises/jeu/fleuriste-galaxy/art/concepts/shop/01_counter_sheet_v2.png"
+      ],
+      "submitted_prompt": "Use case: stylized-concept. Create ONE landscape production reference sheet for a cartoon video-game florist shop. Hand-drawn 2D cartoon inspired by Rick and Morty: strong clean dark outlines, flat muted colors, simple cel shadows, expressive chunky shapes, NO photorealism, no realistic materials. Warm ivory background with tidy framed panels matching the approved existing sheets. Same redesigned object consistent across all views. Large title with item number. Panels FACE, DOS, PROFIL, DESSUS, TROIS-QUARTS, plus 2-3 construction closeups and palette swatches. Orthographic front/back/side/top, perspective only for three-quarter. All objects fully visible with margins. Few meaningful overall metric dimensions; no cluttered tiny dimension lines. French labels legible. Improve the simplistic in-game reference while preserving function and identity. No people, no watermark. Exact title: \"53 — PLANTE SUSPENDUE — RETOMBANTE FLEURIE\". Specific design: Lush hanging trailing flowering plant, terracotta round pot cream turquoise rim in three-cord macrame hanger with top ring. Thick upper crown, several distinct winding vines of varied lengths, broad small cartoon leaves and pink lilac tiny bell flowers, pot partly visible. Full assembly H 1.20 m canopy diameter .45 m pot .22 m. Face back profile top plus 3/4 and closeups suspension knot vine leaf flower. Leaves face varied directions with full volume, no uniform green curtain. Roots hidden in soil. Input image 1 is old in-game object identity ONLY, redesign it substantially; image 2 approved illustrated style/layout reference. Main orthographic panels for containers and shelves MUST be empty, contents only in separate usage example. For hanging plant show complete lush plant with its entire hanging system. Clear shapes, no visual clutter."
+    }
+  ]
+}

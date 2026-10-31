@@ -1,0 +1,770 @@
+{
+  "tool": "built-in image_gen",
+  "mode": "generation from game references",
+  "wall_exclusions": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "jobs": [
+    {
+      "number": 1,
+      "id": "plan",
+      "title": "Plan du sous-sol agrandi",
+      "catalogue_numbers": [],
+      "brief": "Top-down orthographic master floor PLAN plus roofless axonometric of proposed expanded basement 24m x18m x3.8m high, replacing old10x8m footprint. SAME existing grey stone wall appearance, do not redesign walls. Clearly distinct accessible zones: stairs/shop entry southwest, discreet selling counter and visitor entrance southeast, lockable stock and packing along east, compost/service west, four reusable large grow beds north, generous center area with eight individual single-plant pots and separate dedicated lamps. Wide unobstructed circulation, 2m central aisle. Reflected ceiling inset shows EXACTLY TWO ceiling ventilation grilles A and B at west/east positions connected by silver METAL ducts; each grille has a removable game charcoal-filter cartridge slot. Illustrative layout only, no cultivation instructions. Show empty/modular player placement option and scale ruler. No third grille. Title PLAN DU SOUS-SOL AGRANDI.",
+      "output": "01_plan_sheet.png",
+      "refs": [
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\out\\cellar_catalog\\00_contrechamp.png",
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\art\\concepts\\cannabis\\01_compacte.png"
+      ],
+      "prompt": "Use case: stylized-concept. One polished LANDSCAPE 3D modeling reference sheet for a cartoon videogame underground florist basement. Professional adult science-fiction animation, Rick and Morty inspired, confident dark ink outlines, flat desaturated teal/olive/warm wood colors with violet and mint accents, restrained cel shadows. Ivory background, neatly separated spacious panels, fully visible objects, consistent geometry in all views, no photorealism, no childish scribbles, no people, no watermark. Image 1 is the existing game object or room for identity and function only: substantially refine it. Image 2 is the approved cartoon drawing and sheet style reference. Include orthographic FACE, DOS, PROFIL, DESSUS, a larger TROIS-QUARTS and construction closeups; use underside/section for ceiling and top plan for layout. Legible short French labels and palette swatches. Proposed metric dimensions only where useful. Every separate accessory is a separate modeling component and has multiple views. No practical growing instructions, real horticultural parameters or real odor concealment engineering: this is a fictional game prop design. Specific brief: Top-down orthographic master floor PLAN plus roofless axonometric of proposed expanded basement 24m x18m x3.8m high, replacing old10x8m footprint. SAME existing grey stone wall appearance, do not redesign walls. Clearly distinct accessible zones: stairs/shop entry southwest, discreet selling counter and visitor entrance southeast, lockable stock and packing along east, compost/service west, four reusable large grow beds north, generous center area with eight individual single-plant pots and separate dedicated lamps. Wide unobstructed circulation, 2m central aisle. Reflected ceiling inset shows EXACTLY TWO ceiling ventilation grilles A and B at west/east positions connected by silver METAL ducts; each grille has a removable game charcoal-filter cartridge slot. Illustrative layout only, no cultivation instructions. Show empty/modular player placement option and scale ruler. No third grille. Title PLAN DU SOUS-SOL AGRANDI. Main title: \"01 — PLAN DU SOUS-SOL AGRANDI\"."
+    },
+    {
+      "number": 2,
+      "id": "ceiling",
+      "title": "Plafond, poutres et deux aérations",
+      "catalogue_numbers": [
+        5,
+        7
+      ],
+      "brief": "Complete reflected ceiling plan24x18m, underside axonometric and side section at3.8m height. Existing warm grey masonry palette, timber beams with iron brackets. EXACTLY TWO large ceiling grilles A and B, connected by a visible modular SILVER metal duct run; each supports one detachable charcoal-filter game cartridge underneath. Diagram one slot empty and the other occupied but total TWO grilles. Clear suspension plates for lamps, no low pipes across paths. All components isolated in lower detail panels. No walls.",
+      "output": "02_ceiling_sheet.png",
+      "refs": [
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\out\\cellar_catalog\\05_ceiling_front.png",
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\art\\concepts\\cannabis\\01_compacte.png"
+      ],
+      "prompt": "Use case: stylized-concept. One polished LANDSCAPE 3D modeling reference sheet for a cartoon videogame underground florist basement. Professional adult science-fiction animation, Rick and Morty inspired, confident dark ink outlines, flat desaturated teal/olive/warm wood colors with violet and mint accents, restrained cel shadows. Ivory background, neatly separated spacious panels, fully visible objects, consistent geometry in all views, no photorealism, no childish scribbles, no people, no watermark. Image 1 is the existing game object or room for identity and function only: substantially refine it. Image 2 is the approved cartoon drawing and sheet style reference. Include orthographic FACE, DOS, PROFIL, DESSUS, a larger TROIS-QUARTS and construction closeups; use underside/section for ceiling and top plan for layout. Legible short French labels and palette swatches. Proposed metric dimensions only where useful. Every separate accessory is a separate modeling component and has multiple views. No practical growing instructions, real horticultural parameters or real odor concealment engineering: this is a fictional game prop design. Specific brief: Complete reflected ceiling plan24x18m, underside axonometric and side section at3.8m height. Existing warm grey masonry palette, timber beams with iron brackets. EXACTLY TWO large ceiling grilles A and B, connected by a visible modular SILVER metal duct run; each supports one detachable charcoal-filter game cartridge underneath. Diagram one slot empty and the other occupied but total TWO grilles. Clear suspension plates for lamps, no low pipes across paths. All components isolated in lower detail panels. No walls. Main title: \"02 — PLAFOND, POUTRES ET DEUX AÉRATIONS\"."
+    },
+    {
+      "number": 3,
+      "id": "ventilation",
+      "title": "Bouches, conduits métalliques et filtres amovibles",
+      "catalogue_numbers": [
+        45,
+        113,
+        115
+      ],
+      "brief": "Fictional game ventilation kit: EXACTLY TWO companion ceiling grilles A and B, silver metallic duct assembly connecting them. Removable dark charcoal-filter game cartridge for each grille: cartridge, empty receptacle, insertion arrow, latched installed state. Mechanically readable brackets and flange connections, detachable90degree elbows, straight module, T-free direct connecting pipe. Two-grille system diagram and clear orthographic views of grille/filter. Add small scent-cloud and florist/police alert pictograms for fictional game state only, not explanatory instructions. No third vent, no real ventilation calculations. Modules sized visually for24x18m proposed cellar.",
+      "output": "03_ventilation_sheet.png",
+      "refs": [
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\out\\cellar_catalog\\45_cellar_view__build_decor_4_01_front.png",
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\art\\concepts\\cannabis\\01_compacte.png"
+      ],
+      "prompt": "Use case: stylized-concept. One polished LANDSCAPE 3D modeling reference sheet for a cartoon videogame underground florist basement. Professional adult science-fiction animation, Rick and Morty inspired, confident dark ink outlines, flat desaturated teal/olive/warm wood colors with violet and mint accents, restrained cel shadows. Ivory background, neatly separated spacious panels, fully visible objects, consistent geometry in all views, no photorealism, no childish scribbles, no people, no watermark. Image 1 is the existing game object or room for identity and function only: substantially refine it. Image 2 is the approved cartoon drawing and sheet style reference. Include orthographic FACE, DOS, PROFIL, DESSUS, a larger TROIS-QUARTS and construction closeups; use underside/section for ceiling and top plan for layout. Legible short French labels and palette swatches. Proposed metric dimensions only where useful. Every separate accessory is a separate modeling component and has multiple views. No practical growing instructions, real horticultural parameters or real odor concealment engineering: this is a fictional game prop design. Specific brief: Fictional game ventilation kit: EXACTLY TWO companion ceiling grilles A and B, silver metallic duct assembly connecting them. Removable dark charcoal-filter game cartridge for each grille: cartridge, empty receptacle, insertion arrow, latched installed state. Mechanically readable brackets and flange connections, detachable90degree elbows, straight module, T-free direct connecting pipe. Two-grille system diagram and clear orthographic views of grille/filter. Add small scent-cloud and florist/police alert pictograms for fictional game state only, not explanatory instructions. No third vent, no real ventilation calculations. Modules sized visually for24x18m proposed cellar. Main title: \"03 — BOUCHES, CONDUITS MÉTALLIQUES ET FILTRES AMOVIBLES\"."
+    },
+    {
+      "number": 4,
+      "id": "floor",
+      "title": "Sol, plinthes et patine",
+      "catalogue_numbers": [
+        6,
+        8,
+        46,
+        149
+      ],
+      "brief": "Modular cellar floor kit in dark muted stone slabs, broad stylized grout, beveled edge, wood threshold strip, stone plinth with dark base. 1x1m repeatable tile, corners, broad24x18m top plan without walls, side thickness. Separate flat decal atlas for damp stain, subtle moss patches, small puddle edge and lamp light pool. Keep walkable floor level, no raised random rocks. Controlled cartoon surfaces rather than noisy realism.",
+      "output": "04_floor_sheet.png",
+      "refs": [
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\out\\cellar_catalog\\06_floor_front.png",
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\art\\concepts\\cannabis\\01_compacte.png"
+      ],
+      "prompt": "Use case: stylized-concept. One polished LANDSCAPE 3D modeling reference sheet for a cartoon videogame underground florist basement. Professional adult science-fiction animation, Rick and Morty inspired, confident dark ink outlines, flat desaturated teal/olive/warm wood colors with violet and mint accents, restrained cel shadows. Ivory background, neatly separated spacious panels, fully visible objects, consistent geometry in all views, no photorealism, no childish scribbles, no people, no watermark. Image 1 is the existing game object or room for identity and function only: substantially refine it. Image 2 is the approved cartoon drawing and sheet style reference. Include orthographic FACE, DOS, PROFIL, DESSUS, a larger TROIS-QUARTS and construction closeups; use underside/section for ceiling and top plan for layout. Legible short French labels and palette swatches. Proposed metric dimensions only where useful. Every separate accessory is a separate modeling component and has multiple views. No practical growing instructions, real horticultural parameters or real odor concealment engineering: this is a fictional game prop design. Specific brief: Modular cellar floor kit in dark muted stone slabs, broad stylized grout, beveled edge, wood threshold strip, stone plinth with dark base. 1x1m repeatable tile, corners, broad24x18m top plan without walls, side thickness. Separate flat decal atlas for damp stain, subtle moss patches, small puddle edge and lamp light pool. Keep walkable floor level, no raised random rocks. Controlled cartoon surfaces rather than noisy realism. Main title: \"04 — SOL, PLINTHES ET PATINE\"."
+    },
+    {
+      "number": 5,
+      "id": "stairs",
+      "title": "Escalier, marches et rampe",
+      "catalogue_numbers": [
+        10,
+        53,
+        54
+      ],
+      "brief": "Sturdy wooden stairs connecting3.8m cellar ceiling level to floor, warm worn treads, iron fixing plates, continuous solid handrail, clear headroom and landing. Front/back/side/top and axonometric with stringers, tread nose/nails details; no floating disconnected steps. Separate staircase/handrail/landing modules. Match current identity, refined cartoon craftsmanship. Geometry schematic, verify stair measurements in later3D integration.",
+      "output": "05_stairs_sheet.png",
+      "refs": [
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\out\\cellar_catalog\\10_cellar_view__build_stairs_0_01_front.png",
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\art\\concepts\\cannabis\\01_compacte.png"
+      ],
+      "prompt": "Use case: stylized-concept. One polished LANDSCAPE 3D modeling reference sheet for a cartoon videogame underground florist basement. Professional adult science-fiction animation, Rick and Morty inspired, confident dark ink outlines, flat desaturated teal/olive/warm wood colors with violet and mint accents, restrained cel shadows. Ivory background, neatly separated spacious panels, fully visible objects, consistent geometry in all views, no photorealism, no childish scribbles, no people, no watermark. Image 1 is the existing game object or room for identity and function only: substantially refine it. Image 2 is the approved cartoon drawing and sheet style reference. Include orthographic FACE, DOS, PROFIL, DESSUS, a larger TROIS-QUARTS and construction closeups; use underside/section for ceiling and top plan for layout. Legible short French labels and palette swatches. Proposed metric dimensions only where useful. Every separate accessory is a separate modeling component and has multiple views. No practical growing instructions, real horticultural parameters or real odor concealment engineering: this is a fictional game prop design. Specific brief: Sturdy wooden stairs connecting3.8m cellar ceiling level to floor, warm worn treads, iron fixing plates, continuous solid handrail, clear headroom and landing. Front/back/side/top and axonometric with stringers, tread nose/nails details; no floating disconnected steps. Separate staircase/handrail/landing modules. Match current identity, refined cartoon craftsmanship. Geometry schematic, verify stair measurements in later3D integration. Main title: \"05 — ESCALIER, MARCHES ET RAMPE\"."
+    },
+    {
+      "number": 6,
+      "id": "entry_props",
+      "title": "Pancartes d’accès et bottes oubliées",
+      "catalogue_numbers": [
+        11,
+        57
+      ],
+      "brief": "One family sheet: shop access wooden arrow plaque with short text BOUTIQUE and botanical symbol, small humorous seventh-step ATTENTION plaque, pair of worn work boots with folded leather cuffs and mud soles. Each prop front/back/profile and3/4; signs on actual brackets, boots rest flat with shaped soles and laces. Warm wood/ochre/olive; professional lettering.",
+      "output": "06_entry_props_sheet.png",
+      "refs": [
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\out\\cellar_catalog\\11_cellar_view__build_stairs_1_01_front.png",
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\art\\concepts\\cannabis\\01_compacte.png"
+      ],
+      "prompt": "Use case: stylized-concept. One polished LANDSCAPE 3D modeling reference sheet for a cartoon videogame underground florist basement. Professional adult science-fiction animation, Rick and Morty inspired, confident dark ink outlines, flat desaturated teal/olive/warm wood colors with violet and mint accents, restrained cel shadows. Ivory background, neatly separated spacious panels, fully visible objects, consistent geometry in all views, no photorealism, no childish scribbles, no people, no watermark. Image 1 is the existing game object or room for identity and function only: substantially refine it. Image 2 is the approved cartoon drawing and sheet style reference. Include orthographic FACE, DOS, PROFIL, DESSUS, a larger TROIS-QUARTS and construction closeups; use underside/section for ceiling and top plan for layout. Legible short French labels and palette swatches. Proposed metric dimensions only where useful. Every separate accessory is a separate modeling component and has multiple views. No practical growing instructions, real horticultural parameters or real odor concealment engineering: this is a fictional game prop design. Specific brief: One family sheet: shop access wooden arrow plaque with short text BOUTIQUE and botanical symbol, small humorous seventh-step ATTENTION plaque, pair of worn work boots with folded leather cuffs and mud soles. Each prop front/back/profile and3/4; signs on actual brackets, boots rest flat with shaped soles and laces. Warm wood/ochre/olive; professional lettering. Main title: \"06 — PANCARTES D’ACCÈS ET BOTTES OUBLIÉES\"."
+    },
+    {
+      "number": 7,
+      "id": "string_lights",
+      "title": "Ampoules et guirlande multicolore",
+      "catalogue_numbers": [
+        9,
+        49
+      ],
+      "brief": "Two modular lighting props: warm hanging bare bulb with dark braided cable, ceramic socket and ceiling rose; multicolored small-bulb string with convincing sockets, modest slack cable and two anchored hooks. Front/back/side/underside and3/4; bulb/socket closeup, separate cable module; moderately luminous without overwhelming outlines. Show off/on state.",
+      "output": "07_string_lights_sheet.png",
+      "refs": [
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\out\\cellar_catalog\\09_cellar_view__build_lighting_1_01_front.png",
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\art\\concepts\\cannabis\\01_compacte.png"
+      ],
+      "prompt": "Use case: stylized-concept. One polished LANDSCAPE 3D modeling reference sheet for a cartoon videogame underground florist basement. Professional adult science-fiction animation, Rick and Morty inspired, confident dark ink outlines, flat desaturated teal/olive/warm wood colors with violet and mint accents, restrained cel shadows. Ivory background, neatly separated spacious panels, fully visible objects, consistent geometry in all views, no photorealism, no childish scribbles, no people, no watermark. Image 1 is the existing game object or room for identity and function only: substantially refine it. Image 2 is the approved cartoon drawing and sheet style reference. Include orthographic FACE, DOS, PROFIL, DESSUS, a larger TROIS-QUARTS and construction closeups; use underside/section for ceiling and top plan for layout. Legible short French labels and palette swatches. Proposed metric dimensions only where useful. Every separate accessory is a separate modeling component and has multiple views. No practical growing instructions, real horticultural parameters or real odor concealment engineering: this is a fictional game prop design. Specific brief: Two modular lighting props: warm hanging bare bulb with dark braided cable, ceramic socket and ceiling rose; multicolored small-bulb string with convincing sockets, modest slack cable and two anchored hooks. Front/back/side/underside and3/4; bulb/socket closeup, separate cable module; moderately luminous without overwhelming outlines. Show off/on state. Main title: \"07 — AMPOULES ET GUIRLANDE MULTICOLORE\"."
+    },
+    {
+      "number": 8,
+      "id": "lanterns",
+      "title": "Lanternes du sous-sol",
+      "catalogue_numbers": [
+        55,
+        56,
+        91,
+        92,
+        93
+      ],
+      "brief": "Single cohesive hanging lantern family with staircase wall bracket variant, slender dark wrought metal cage, amber glass panes, warm bulb, iron cap and suspension loop. Front/back/profile/top/underside and3/4, glass and bulb separate. One short and one tall lantern variant, same style, hanging anchor detail. Not extreme bloom.",
+      "output": "08_lanterns_sheet.png",
+      "refs": [
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\out\\cellar_catalog\\55_lantern_01_front.png",
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\art\\concepts\\cannabis\\01_compacte.png"
+      ],
+      "prompt": "Use case: stylized-concept. One polished LANDSCAPE 3D modeling reference sheet for a cartoon videogame underground florist basement. Professional adult science-fiction animation, Rick and Morty inspired, confident dark ink outlines, flat desaturated teal/olive/warm wood colors with violet and mint accents, restrained cel shadows. Ivory background, neatly separated spacious panels, fully visible objects, consistent geometry in all views, no photorealism, no childish scribbles, no people, no watermark. Image 1 is the existing game object or room for identity and function only: substantially refine it. Image 2 is the approved cartoon drawing and sheet style reference. Include orthographic FACE, DOS, PROFIL, DESSUS, a larger TROIS-QUARTS and construction closeups; use underside/section for ceiling and top plan for layout. Legible short French labels and palette swatches. Proposed metric dimensions only where useful. Every separate accessory is a separate modeling component and has multiple views. No practical growing instructions, real horticultural parameters or real odor concealment engineering: this is a fictional game prop design. Specific brief: Single cohesive hanging lantern family with staircase wall bracket variant, slender dark wrought metal cage, amber glass panes, warm bulb, iron cap and suspension loop. Front/back/profile/top/underside and3/4, glass and bulb separate. One short and one tall lantern variant, same style, hanging anchor detail. Not extreme bloom. Main title: \"08 — LANTERNES DU SOUS-SOL\"."
+    },
+    {
+      "number": 9,
+      "id": "small_jars",
+      "title": "Bocaux de culture et étiquettes",
+      "catalogue_numbers": [
+        12,
+        15,
+        18,
+        21,
+        23,
+        26,
+        29,
+        32
+      ],
+      "brief": "Small reusable jars on grow-bed rim and detachable bed labels, four subtle material/color variants. Short chunky clear glass jar with heavy base, separate twist lid and colored fictional contents; empty and filled version. Small clip-on ivory label holder, blank replaceable icon face. Main front/back/side/top and3/4, lid underside and real clip closeup. Objects independent, no floating contents. Labels editable, no permanent specific crop inscription.",
+      "output": "09_small_jars_sheet.png",
+      "refs": [
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\out\\cellar_catalog\\12_planter_view__build_props_1_01_front.png",
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\art\\concepts\\cannabis\\01_compacte.png"
+      ],
+      "prompt": "Use case: stylized-concept. One polished LANDSCAPE 3D modeling reference sheet for a cartoon videogame underground florist basement. Professional adult science-fiction animation, Rick and Morty inspired, confident dark ink outlines, flat desaturated teal/olive/warm wood colors with violet and mint accents, restrained cel shadows. Ivory background, neatly separated spacious panels, fully visible objects, consistent geometry in all views, no photorealism, no childish scribbles, no people, no watermark. Image 1 is the existing game object or room for identity and function only: substantially refine it. Image 2 is the approved cartoon drawing and sheet style reference. Include orthographic FACE, DOS, PROFIL, DESSUS, a larger TROIS-QUARTS and construction closeups; use underside/section for ceiling and top plan for layout. Legible short French labels and palette swatches. Proposed metric dimensions only where useful. Every separate accessory is a separate modeling component and has multiple views. No practical growing instructions, real horticultural parameters or real odor concealment engineering: this is a fictional game prop design. Specific brief: Small reusable jars on grow-bed rim and detachable bed labels, four subtle material/color variants. Short chunky clear glass jar with heavy base, separate twist lid and colored fictional contents; empty and filled version. Small clip-on ivory label holder, blank replaceable icon face. Main front/back/side/top and3/4, lid underside and real clip closeup. Objects independent, no floating contents. Labels editable, no permanent specific crop inscription. Main title: \"09 — BOCAUX DE CULTURE ET ÉTIQUETTES\"."
+    },
+    {
+      "number": 10,
+      "id": "garden_tools",
+      "title": "Truelles, cisailles, arrosoirs et seaux",
+      "catalogue_numbers": [
+        13,
+        14,
+        17,
+        19,
+        20,
+        24,
+        25,
+        28,
+        30,
+        31
+      ],
+      "brief": "Four separate practical cartoon props: pointed concave steel trowel with olive wooden handle; real recognizable bypass pruning scissors with TWO oval finger loops, pivot screw and opposed curved steel blades; squat galvanized watering can with closed body/open fill hole, arched handle and long spout/rose; stout metal bucket with hinged wire handle and rolled lip. Each has front/profile/back or top and3/4, large tool mechanics closeups. Matching teal/ochre/dark steel palette, refined silhouettes, never ambiguous sticks.",
+      "output": "10_garden_tools_sheet.png",
+      "refs": [
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\out\\cellar_catalog\\13_planter_view__build_props_2_01_front.png",
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\art\\concepts\\cannabis\\01_compacte.png"
+      ],
+      "prompt": "Use case: stylized-concept. One polished LANDSCAPE 3D modeling reference sheet for a cartoon videogame underground florist basement. Professional adult science-fiction animation, Rick and Morty inspired, confident dark ink outlines, flat desaturated teal/olive/warm wood colors with violet and mint accents, restrained cel shadows. Ivory background, neatly separated spacious panels, fully visible objects, consistent geometry in all views, no photorealism, no childish scribbles, no people, no watermark. Image 1 is the existing game object or room for identity and function only: substantially refine it. Image 2 is the approved cartoon drawing and sheet style reference. Include orthographic FACE, DOS, PROFIL, DESSUS, a larger TROIS-QUARTS and construction closeups; use underside/section for ceiling and top plan for layout. Legible short French labels and palette swatches. Proposed metric dimensions only where useful. Every separate accessory is a separate modeling component and has multiple views. No practical growing instructions, real horticultural parameters or real odor concealment engineering: this is a fictional game prop design. Specific brief: Four separate practical cartoon props: pointed concave steel trowel with olive wooden handle; real recognizable bypass pruning scissors with TWO oval finger loops, pivot screw and opposed curved steel blades; squat galvanized watering can with closed body/open fill hole, arched handle and long spout/rose; stout metal bucket with hinged wire handle and rolled lip. Each has front/profile/back or top and3/4, large tool mechanics closeups. Matching teal/ochre/dark steel palette, refined silhouettes, never ambiguous sticks. Main title: \"10 — TRUELLES, CISAILLES, ARROSOIRS ET SEAUX\"."
+    },
+    {
+      "number": 11,
+      "id": "power",
+      "title": "Câbles et multiprises",
+      "catalogue_numbers": [
+        16,
+        22,
+        27,
+        33,
+        35
+      ],
+      "brief": "Game electrical accessory kit: chunky power strip with real recessed sockets, rocker switch, grounded plug; flexible dark cable, wall/ceiling cable tray with metal clips, separate small AMÉLIORATIONS sign. Front/back/side/top of strip, rear mounting slots,3/4, coil and socket detail. Stylized disconnected props no real wiring diagram. Components snap separately, no exposed loose floating ends in assembled view.",
+      "output": "11_power_sheet.png",
+      "refs": [
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\out\\cellar_catalog\\16_planter_view__build_props_5_01_front.png",
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\art\\concepts\\cannabis\\01_compacte.png"
+      ],
+      "prompt": "Use case: stylized-concept. One polished LANDSCAPE 3D modeling reference sheet for a cartoon videogame underground florist basement. Professional adult science-fiction animation, Rick and Morty inspired, confident dark ink outlines, flat desaturated teal/olive/warm wood colors with violet and mint accents, restrained cel shadows. Ivory background, neatly separated spacious panels, fully visible objects, consistent geometry in all views, no photorealism, no childish scribbles, no people, no watermark. Image 1 is the existing game object or room for identity and function only: substantially refine it. Image 2 is the approved cartoon drawing and sheet style reference. Include orthographic FACE, DOS, PROFIL, DESSUS, a larger TROIS-QUARTS and construction closeups; use underside/section for ceiling and top plan for layout. Legible short French labels and palette swatches. Proposed metric dimensions only where useful. Every separate accessory is a separate modeling component and has multiple views. No practical growing instructions, real horticultural parameters or real odor concealment engineering: this is a fictional game prop design. Specific brief: Game electrical accessory kit: chunky power strip with real recessed sockets, rocker switch, grounded plug; flexible dark cable, wall/ceiling cable tray with metal clips, separate small AMÉLIORATIONS sign. Front/back/side/top of strip, rear mounting slots,3/4, coil and socket detail. Stylized disconnected props no real wiring diagram. Components snap separately, no exposed loose floating ends in assembled view. Main title: \"11 — CÂBLES ET MULTIPRISES\"."
+    },
+    {
+      "number": 12,
+      "id": "terminals",
+      "title": "Quatre terminaux d’amélioration",
+      "catalogue_numbers": [
+        34,
+        114,
+        116
+      ],
+      "brief": "Four distinct freestanding compact game upgrade terminals, for ESPACE, LAMPES, FILTRE, SERRURE. Unified walnut/teal slanted console housing with brass screws, sculpted pictogram badge, large readable button, status light and small screen. One orthographic row of4 different faces and reverse row; one typical side/top/3quarter; mounting and detachable screen detail. Filter terminal controls fictional game state, actual cartridge is separate prop. No numeric real growth settings.",
+      "output": "12_terminals_sheet.png",
+      "refs": [
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\out\\cellar_catalog\\34_cellar_view__build_consoles_0_01_front.png",
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\art\\concepts\\cannabis\\01_compacte.png"
+      ],
+      "prompt": "Use case: stylized-concept. One polished LANDSCAPE 3D modeling reference sheet for a cartoon videogame underground florist basement. Professional adult science-fiction animation, Rick and Morty inspired, confident dark ink outlines, flat desaturated teal/olive/warm wood colors with violet and mint accents, restrained cel shadows. Ivory background, neatly separated spacious panels, fully visible objects, consistent geometry in all views, no photorealism, no childish scribbles, no people, no watermark. Image 1 is the existing game object or room for identity and function only: substantially refine it. Image 2 is the approved cartoon drawing and sheet style reference. Include orthographic FACE, DOS, PROFIL, DESSUS, a larger TROIS-QUARTS and construction closeups; use underside/section for ceiling and top plan for layout. Legible short French labels and palette swatches. Proposed metric dimensions only where useful. Every separate accessory is a separate modeling component and has multiple views. No practical growing instructions, real horticultural parameters or real odor concealment engineering: this is a fictional game prop design. Specific brief: Four distinct freestanding compact game upgrade terminals, for ESPACE, LAMPES, FILTRE, SERRURE. Unified walnut/teal slanted console housing with brass screws, sculpted pictogram badge, large readable button, status light and small screen. One orthographic row of4 different faces and reverse row; one typical side/top/3quarter; mounting and detachable screen detail. Filter terminal controls fictional game state, actual cartridge is separate prop. No numeric real growth settings. Main title: \"12 — QUATRE TERMINAUX D’AMÉLIORATION\"."
+    },
+    {
+      "number": 13,
+      "id": "cabinet",
+      "title": "Armoire à produits et serrure",
+      "catalogue_numbers": [
+        36,
+        142
+      ],
+      "brief": "Lockable stock cupboard warm walnut with teal reinforced frame, two upper shelves behind openable framed doors and lower enclosed storage. Empty shelves allow player chosen jars, clearance at least.60m. Front closed/open, rear, side, top and3/4. Separate visible heavy lock mechanism with three visual upgrade variants, hinges continuous, mint indicator, iron corner plates. No baked-in products. Matching wood/iron clandestine florist look.",
+      "output": "13_cabinet_sheet.png",
+      "refs": [
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\out\\cellar_catalog\\36_cellar_view__build_cabinet_0_01_front.png",
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\art\\concepts\\cannabis\\01_compacte.png"
+      ],
+      "prompt": "Use case: stylized-concept. One polished LANDSCAPE 3D modeling reference sheet for a cartoon videogame underground florist basement. Professional adult science-fiction animation, Rick and Morty inspired, confident dark ink outlines, flat desaturated teal/olive/warm wood colors with violet and mint accents, restrained cel shadows. Ivory background, neatly separated spacious panels, fully visible objects, consistent geometry in all views, no photorealism, no childish scribbles, no people, no watermark. Image 1 is the existing game object or room for identity and function only: substantially refine it. Image 2 is the approved cartoon drawing and sheet style reference. Include orthographic FACE, DOS, PROFIL, DESSUS, a larger TROIS-QUARTS and construction closeups; use underside/section for ceiling and top plan for layout. Legible short French labels and palette swatches. Proposed metric dimensions only where useful. Every separate accessory is a separate modeling component and has multiple views. No practical growing instructions, real horticultural parameters or real odor concealment engineering: this is a fictional game prop design. Specific brief: Lockable stock cupboard warm walnut with teal reinforced frame, two upper shelves behind openable framed doors and lower enclosed storage. Empty shelves allow player chosen jars, clearance at least.60m. Front closed/open, rear, side, top and3/4. Separate visible heavy lock mechanism with three visual upgrade variants, hinges continuous, mint indicator, iron corner plates. No baked-in products. Matching wood/iron clandestine florist look. Main title: \"13 — ARMOIRE À PRODUITS ET SERRURE\"."
+    },
+    {
+      "number": 14,
+      "id": "compost",
+      "title": "Composteur animé",
+      "catalogue_numbers": [
+        37
+      ],
+      "brief": "Friendly grotesque animated cylindrical wooden compost barrel, iron bands, separate hinged top lid, two expressive eye modules and wide mouth opening with flat irregular wood/ivory toothlike shapes. Four orthographic views,3/4, lid opened and mouth/eyelid animation pivots. Stable solid base, hollow contents cavity, separate tongue-like soft compost flap optional subtle. No gore. Original mischievous cartoon identity, substantial refinement.",
+      "output": "14_compost_sheet.png",
+      "refs": [
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\out\\cellar_catalog\\37_cellar_view__build_composter_0_01_front.png",
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\art\\concepts\\cannabis\\01_compacte.png"
+      ],
+      "prompt": "Use case: stylized-concept. One polished LANDSCAPE 3D modeling reference sheet for a cartoon videogame underground florist basement. Professional adult science-fiction animation, Rick and Morty inspired, confident dark ink outlines, flat desaturated teal/olive/warm wood colors with violet and mint accents, restrained cel shadows. Ivory background, neatly separated spacious panels, fully visible objects, consistent geometry in all views, no photorealism, no childish scribbles, no people, no watermark. Image 1 is the existing game object or room for identity and function only: substantially refine it. Image 2 is the approved cartoon drawing and sheet style reference. Include orthographic FACE, DOS, PROFIL, DESSUS, a larger TROIS-QUARTS and construction closeups; use underside/section for ceiling and top plan for layout. Legible short French labels and palette swatches. Proposed metric dimensions only where useful. Every separate accessory is a separate modeling component and has multiple views. No practical growing instructions, real horticultural parameters or real odor concealment engineering: this is a fictional game prop design. Specific brief: Friendly grotesque animated cylindrical wooden compost barrel, iron bands, separate hinged top lid, two expressive eye modules and wide mouth opening with flat irregular wood/ivory toothlike shapes. Four orthographic views,3/4, lid opened and mouth/eyelid animation pivots. Stable solid base, hollow contents cavity, separate tongue-like soft compost flap optional subtle. No gore. Original mischievous cartoon identity, substantial refinement. Main title: \"14 — COMPOSTEUR ANIMÉ\"."
+    },
+    {
+      "number": 15,
+      "id": "counter",
+      "title": "Comptoir de vente et accessoires",
+      "catalogue_numbers": [
+        38,
+        39,
+        143,
+        144
+      ],
+      "brief": "Refined clandestine sales counter warm walnut/olive planks, brass corner guards, recessed panel and subtle botanical ornament; separate detailed cash register with many keys, screen, opening coin drawer; desk bell; clear transaction jar with coins physically on bottom and separate tip jar. Main counter front/back/side/top empty and3/4 dressed, lower large register orthographic detail/open drawer, bell/jars two views each. Back service cubby and playable accessible surface, no fused accessories, no real transaction instructions.",
+      "output": "15_counter_sheet.png",
+      "refs": [
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\out\\cellar_catalog\\38_cellar_view__build_counter_0_01_front.png",
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\art\\concepts\\cannabis\\01_compacte.png"
+      ],
+      "prompt": "Use case: stylized-concept. One polished LANDSCAPE 3D modeling reference sheet for a cartoon videogame underground florist basement. Professional adult science-fiction animation, Rick and Morty inspired, confident dark ink outlines, flat desaturated teal/olive/warm wood colors with violet and mint accents, restrained cel shadows. Ivory background, neatly separated spacious panels, fully visible objects, consistent geometry in all views, no photorealism, no childish scribbles, no people, no watermark. Image 1 is the existing game object or room for identity and function only: substantially refine it. Image 2 is the approved cartoon drawing and sheet style reference. Include orthographic FACE, DOS, PROFIL, DESSUS, a larger TROIS-QUARTS and construction closeups; use underside/section for ceiling and top plan for layout. Legible short French labels and palette swatches. Proposed metric dimensions only where useful. Every separate accessory is a separate modeling component and has multiple views. No practical growing instructions, real horticultural parameters or real odor concealment engineering: this is a fictional game prop design. Specific brief: Refined clandestine sales counter warm walnut/olive planks, brass corner guards, recessed panel and subtle botanical ornament; separate detailed cash register with many keys, screen, opening coin drawer; desk bell; clear transaction jar with coins physically on bottom and separate tip jar. Main counter front/back/side/top empty and3/4 dressed, lower large register orthographic detail/open drawer, bell/jars two views each. Back service cubby and playable accessible surface, no fused accessories, no real transaction instructions. Main title: \"15 — COMPTOIR DE VENTE ET ACCESSOIRES\"."
+    },
+    {
+      "number": 16,
+      "id": "visitor_door",
+      "title": "Porte des visiteurs et accès discret",
+      "catalogue_numbers": [
+        40
+      ],
+      "brief": "Discrete heavy teal timber visitor entrance door with inset wood panels, metal lower kickplate, brass handle/keyhole, believable hinges and removable ENTRÉE DISCRÈTE plaque above. Front/back/side/top,3/4 ajar, frame and hinge/latch detail. Door leaf1x2.2m, clear opening, no other room behind. Same cartoon cellar palette.",
+      "output": "16_visitor_door_sheet.png",
+      "refs": [
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\out\\cellar_catalog\\40_cellar_view__build_counter_2_01_front.png",
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\art\\concepts\\cannabis\\01_compacte.png"
+      ],
+      "prompt": "Use case: stylized-concept. One polished LANDSCAPE 3D modeling reference sheet for a cartoon videogame underground florist basement. Professional adult science-fiction animation, Rick and Morty inspired, confident dark ink outlines, flat desaturated teal/olive/warm wood colors with violet and mint accents, restrained cel shadows. Ivory background, neatly separated spacious panels, fully visible objects, consistent geometry in all views, no photorealism, no childish scribbles, no people, no watermark. Image 1 is the existing game object or room for identity and function only: substantially refine it. Image 2 is the approved cartoon drawing and sheet style reference. Include orthographic FACE, DOS, PROFIL, DESSUS, a larger TROIS-QUARTS and construction closeups; use underside/section for ceiling and top plan for layout. Legible short French labels and palette swatches. Proposed metric dimensions only where useful. Every separate accessory is a separate modeling component and has multiple views. No practical growing instructions, real horticultural parameters or real odor concealment engineering: this is a fictional game prop design. Specific brief: Discrete heavy teal timber visitor entrance door with inset wood panels, metal lower kickplate, brass handle/keyhole, believable hinges and removable ENTRÉE DISCRÈTE plaque above. Front/back/side/top,3/4 ajar, frame and hinge/latch detail. Door leaf1x2.2m, clear opening, no other room behind. Same cartoon cellar palette. Main title: \"16 — PORTE DES VISITEURS ET ACCÈS DISCRET\"."
+    },
+    {
+      "number": 17,
+      "id": "seed_crate",
+      "title": "Caisse de graines",
+      "catalogue_numbers": [
+        41
+      ],
+      "brief": "Low reusable walnut seed crate with iron corners and removable compartments, packet slots and chalk icon label. Empty top, front/back/side,3/4 empty plus dressed example showing4 distinct colorful fictional seed sachets (leaf, star, lotus, moss pictograms). Sachets separate flat paper meshes with front/back; no cultivation instructions. Solid handles cut in end planks, base slats and visible joinery.",
+      "output": "17_seed_crate_sheet.png",
+      "refs": [
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\out\\cellar_catalog\\41_cellar_view__build_seed_crate_0_01_front.png",
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\art\\concepts\\cannabis\\01_compacte.png"
+      ],
+      "prompt": "Use case: stylized-concept. One polished LANDSCAPE 3D modeling reference sheet for a cartoon videogame underground florist basement. Professional adult science-fiction animation, Rick and Morty inspired, confident dark ink outlines, flat desaturated teal/olive/warm wood colors with violet and mint accents, restrained cel shadows. Ivory background, neatly separated spacious panels, fully visible objects, consistent geometry in all views, no photorealism, no childish scribbles, no people, no watermark. Image 1 is the existing game object or room for identity and function only: substantially refine it. Image 2 is the approved cartoon drawing and sheet style reference. Include orthographic FACE, DOS, PROFIL, DESSUS, a larger TROIS-QUARTS and construction closeups; use underside/section for ceiling and top plan for layout. Legible short French labels and palette swatches. Proposed metric dimensions only where useful. Every separate accessory is a separate modeling component and has multiple views. No practical growing instructions, real horticultural parameters or real odor concealment engineering: this is a fictional game prop design. Specific brief: Low reusable walnut seed crate with iron corners and removable compartments, packet slots and chalk icon label. Empty top, front/back/side,3/4 empty plus dressed example showing4 distinct colorful fictional seed sachets (leaf, star, lotus, moss pictograms). Sachets separate flat paper meshes with front/back; no cultivation instructions. Solid handles cut in end planks, base slats and visible joinery. Main title: \"17 — CAISSE DE GRAINES\"."
+    },
+    {
+      "number": 18,
+      "id": "sewer",
+      "title": "Bouche d’égout et accessoires",
+      "catalogue_numbers": [
+        42,
+        145,
+        146,
+        147,
+        148
+      ],
+      "brief": "Refined square stone/metal sewer-access surround with separate hinged round grate lid, inset shaft visible in sectional3/4. Separate bent rusty dripping pipe with real support, stylized little glowing mushrooms rooted in cracks, striped cartoon safety cone, separate SORTIE ÉGOUT arrow plaque. Main top/front/side/underside lid views and hero open state,2views per small accessory. No new ventilation grille: this is FLOOR sewer access only.",
+      "output": "18_sewer_sheet.png",
+      "refs": [
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\out\\cellar_catalog\\42_cellar_view__build_hatch_0_01_front.png",
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\art\\concepts\\cannabis\\01_compacte.png"
+      ],
+      "prompt": "Use case: stylized-concept. One polished LANDSCAPE 3D modeling reference sheet for a cartoon videogame underground florist basement. Professional adult science-fiction animation, Rick and Morty inspired, confident dark ink outlines, flat desaturated teal/olive/warm wood colors with violet and mint accents, restrained cel shadows. Ivory background, neatly separated spacious panels, fully visible objects, consistent geometry in all views, no photorealism, no childish scribbles, no people, no watermark. Image 1 is the existing game object or room for identity and function only: substantially refine it. Image 2 is the approved cartoon drawing and sheet style reference. Include orthographic FACE, DOS, PROFIL, DESSUS, a larger TROIS-QUARTS and construction closeups; use underside/section for ceiling and top plan for layout. Legible short French labels and palette swatches. Proposed metric dimensions only where useful. Every separate accessory is a separate modeling component and has multiple views. No practical growing instructions, real horticultural parameters or real odor concealment engineering: this is a fictional game prop design. Specific brief: Refined square stone/metal sewer-access surround with separate hinged round grate lid, inset shaft visible in sectional3/4. Separate bent rusty dripping pipe with real support, stylized little glowing mushrooms rooted in cracks, striped cartoon safety cone, separate SORTIE ÉGOUT arrow plaque. Main top/front/side/underside lid views and hero open state,2views per small accessory. No new ventilation grille: this is FLOOR sewer access only. Main title: \"18 — BOUCHE D’ÉGOUT ET ACCESSOIRES\"."
+    },
+    {
+      "number": 19,
+      "id": "skeleton",
+      "title": "Ancien associé et pancarte",
+      "catalogue_numbers": [
+        43
+      ],
+      "brief": "Comedic non-gory cartoon skeleton wall display, elongated skull, readable rib cage/pelvis and jointed arms/legs, slack resting pose physically supported by two metal wall hooks and feet. Separate small wooden ANCIEN ASSOCIÉ plaque. Front/back/profile/3quarter, skull front/side, hinge/support details. No spherical cheekbones, integrated jaw/cheek arcs, stylized coherent anatomy. Stone wall not redesigned or included.",
+      "output": "19_skeleton_sheet.png",
+      "refs": [
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\out\\cellar_catalog\\43_cellar_view__build_decor_1_01_front.png",
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\art\\concepts\\cannabis\\01_compacte.png"
+      ],
+      "prompt": "Use case: stylized-concept. One polished LANDSCAPE 3D modeling reference sheet for a cartoon videogame underground florist basement. Professional adult science-fiction animation, Rick and Morty inspired, confident dark ink outlines, flat desaturated teal/olive/warm wood colors with violet and mint accents, restrained cel shadows. Ivory background, neatly separated spacious panels, fully visible objects, consistent geometry in all views, no photorealism, no childish scribbles, no people, no watermark. Image 1 is the existing game object or room for identity and function only: substantially refine it. Image 2 is the approved cartoon drawing and sheet style reference. Include orthographic FACE, DOS, PROFIL, DESSUS, a larger TROIS-QUARTS and construction closeups; use underside/section for ceiling and top plan for layout. Legible short French labels and palette swatches. Proposed metric dimensions only where useful. Every separate accessory is a separate modeling component and has multiple views. No practical growing instructions, real horticultural parameters or real odor concealment engineering: this is a fictional game prop design. Specific brief: Comedic non-gory cartoon skeleton wall display, elongated skull, readable rib cage/pelvis and jointed arms/legs, slack resting pose physically supported by two metal wall hooks and feet. Separate small wooden ANCIEN ASSOCIÉ plaque. Front/back/profile/3quarter, skull front/side, hinge/support details. No spherical cheekbones, integrated jaw/cheek arcs, stylized coherent anatomy. Stone wall not redesigned or included. Main title: \"19 — ANCIEN ASSOCIÉ ET PANCARTE\"."
+    },
+    {
+      "number": 20,
+      "id": "pipes",
+      "title": "Tuyauterie décorative et vannes",
+      "catalogue_numbers": [
+        51,
+        58,
+        59,
+        60,
+        61
+      ],
+      "brief": "Decorative water/steam pipe kit, distinct from silver game ventilation: aged copper pipe, muted turquoise painted iron pipe, rusty elbow, vertical drain above bucket, red spoked shutoff valve. Straight/repeat modules, elbows, flanges, clamps and anchor plates, front/back/side/top/assembled3quarter. Plausible supports and rounded junctions, large valve design closeup. No real functional engineering instructions.",
+      "output": "20_pipes_sheet.png",
+      "refs": [
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\out\\cellar_catalog\\51_scenery__props_2_01_front.png",
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\art\\concepts\\cannabis\\01_compacte.png"
+      ],
+      "prompt": "Use case: stylized-concept. One polished LANDSCAPE 3D modeling reference sheet for a cartoon videogame underground florist basement. Professional adult science-fiction animation, Rick and Morty inspired, confident dark ink outlines, flat desaturated teal/olive/warm wood colors with violet and mint accents, restrained cel shadows. Ivory background, neatly separated spacious panels, fully visible objects, consistent geometry in all views, no photorealism, no childish scribbles, no people, no watermark. Image 1 is the existing game object or room for identity and function only: substantially refine it. Image 2 is the approved cartoon drawing and sheet style reference. Include orthographic FACE, DOS, PROFIL, DESSUS, a larger TROIS-QUARTS and construction closeups; use underside/section for ceiling and top plan for layout. Legible short French labels and palette swatches. Proposed metric dimensions only where useful. Every separate accessory is a separate modeling component and has multiple views. No practical growing instructions, real horticultural parameters or real odor concealment engineering: this is a fictional game prop design. Specific brief: Decorative water/steam pipe kit, distinct from silver game ventilation: aged copper pipe, muted turquoise painted iron pipe, rusty elbow, vertical drain above bucket, red spoked shutoff valve. Straight/repeat modules, elbows, flanges, clamps and anchor plates, front/back/side/top/assembled3quarter. Plausible supports and rounded junctions, large valve design closeup. No real functional engineering instructions. Main title: \"20 — TUYAUTERIE DÉCORATIVE ET VANNES\"."
+    },
+    {
+      "number": 21,
+      "id": "fusebox",
+      "title": "Boîte à fusibles et panneau haute tension",
+      "catalogue_numbers": [
+        52
+      ],
+      "brief": "Industrial cartoon teal metal fuse box with opening door, visible chunky switch handles and a single glowing status diode, reinforced hinges and short conduit stub, separate yellow triangle lightning warning plaque. Front closed and open, back mounting, side, top,3/4; handle/hinge/label detail. Fictional simplified interior, no real wiring schematic.",
+      "output": "21_fusebox_sheet.png",
+      "refs": [
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\out\\cellar_catalog\\52_scenery__props_3_01_front.png",
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\art\\concepts\\cannabis\\01_compacte.png"
+      ],
+      "prompt": "Use case: stylized-concept. One polished LANDSCAPE 3D modeling reference sheet for a cartoon videogame underground florist basement. Professional adult science-fiction animation, Rick and Morty inspired, confident dark ink outlines, flat desaturated teal/olive/warm wood colors with violet and mint accents, restrained cel shadows. Ivory background, neatly separated spacious panels, fully visible objects, consistent geometry in all views, no photorealism, no childish scribbles, no people, no watermark. Image 1 is the existing game object or room for identity and function only: substantially refine it. Image 2 is the approved cartoon drawing and sheet style reference. Include orthographic FACE, DOS, PROFIL, DESSUS, a larger TROIS-QUARTS and construction closeups; use underside/section for ceiling and top plan for layout. Legible short French labels and palette swatches. Proposed metric dimensions only where useful. Every separate accessory is a separate modeling component and has multiple views. No practical growing instructions, real horticultural parameters or real odor concealment engineering: this is a fictional game prop design. Specific brief: Industrial cartoon teal metal fuse box with opening door, visible chunky switch handles and a single glowing status diode, reinforced hinges and short conduit stub, separate yellow triangle lightning warning plaque. Front closed and open, back mounting, side, top,3/4; handle/hinge/label detail. Fictional simplified interior, no real wiring schematic. Main title: \"21 — BOÎTE À FUSIBLES ET PANNEAU HAUTE TENSION\"."
+    },
+    {
+      "number": 22,
+      "id": "window",
+      "title": "Soupirail grillagé",
+      "catalogue_numbers": [
+        47
+      ],
+      "brief": "Small horizontal deep-set cellar window.90x.40m, rust/teal iron rectangular frame, four sturdy bars, recessed frosted blue pane, thick stone sill insert compatible with existing grey masonry (do not redesign surrounding wall). Front/back/side section/top,3/4 detached insert, hinge/bar anchor closeup. Outside light soft. No ventilation filter here, maintain TWO dedicated ceiling vents only.",
+      "output": "22_window_sheet.png",
+      "refs": [
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\out\\cellar_catalog\\47_cellar_view__build_decor_6_01_front.png",
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\art\\concepts\\cannabis\\01_compacte.png"
+      ],
+      "prompt": "Use case: stylized-concept. One polished LANDSCAPE 3D modeling reference sheet for a cartoon videogame underground florist basement. Professional adult science-fiction animation, Rick and Morty inspired, confident dark ink outlines, flat desaturated teal/olive/warm wood colors with violet and mint accents, restrained cel shadows. Ivory background, neatly separated spacious panels, fully visible objects, consistent geometry in all views, no photorealism, no childish scribbles, no people, no watermark. Image 1 is the existing game object or room for identity and function only: substantially refine it. Image 2 is the approved cartoon drawing and sheet style reference. Include orthographic FACE, DOS, PROFIL, DESSUS, a larger TROIS-QUARTS and construction closeups; use underside/section for ceiling and top plan for layout. Legible short French labels and palette swatches. Proposed metric dimensions only where useful. Every separate accessory is a separate modeling component and has multiple views. No practical growing instructions, real horticultural parameters or real odor concealment engineering: this is a fictional game prop design. Specific brief: Small horizontal deep-set cellar window.90x.40m, rust/teal iron rectangular frame, four sturdy bars, recessed frosted blue pane, thick stone sill insert compatible with existing grey masonry (do not redesign surrounding wall). Front/back/side section/top,3/4 detached insert, hinge/bar anchor closeup. Outside light soft. No ventilation filter here, maintain TWO dedicated ceiling vents only. Main title: \"22 — SOUPIRAIL GRILLAGÉ\"."
+    },
+    {
+      "number": 23,
+      "id": "shelf_jars",
+      "title": "Étagère à cinq bocaux",
+      "catalogue_numbers": [
+        50
+      ],
+      "brief": "Single warm wood shelf1.5m long with two iron scroll brackets, 5 separate cartoon glass specimen jars various heights/lids containing non-specific colorful liquid, chunks or seeds grounded at bottom. Separate NE PAS BOIRE plaque. Front/back/profile/top EMPTY shelf and3quarter dressed;2views of each jar form. Open shelf supports arbitrary player placement, no fused jars, lids removable, glass lightly translucent.",
+      "output": "23_shelf_jars_sheet.png",
+      "refs": [
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\out\\cellar_catalog\\50_scenery__props_1_01_front.png",
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\art\\concepts\\cannabis\\01_compacte.png"
+      ],
+      "prompt": "Use case: stylized-concept. One polished LANDSCAPE 3D modeling reference sheet for a cartoon videogame underground florist basement. Professional adult science-fiction animation, Rick and Morty inspired, confident dark ink outlines, flat desaturated teal/olive/warm wood colors with violet and mint accents, restrained cel shadows. Ivory background, neatly separated spacious panels, fully visible objects, consistent geometry in all views, no photorealism, no childish scribbles, no people, no watermark. Image 1 is the existing game object or room for identity and function only: substantially refine it. Image 2 is the approved cartoon drawing and sheet style reference. Include orthographic FACE, DOS, PROFIL, DESSUS, a larger TROIS-QUARTS and construction closeups; use underside/section for ceiling and top plan for layout. Legible short French labels and palette swatches. Proposed metric dimensions only where useful. Every separate accessory is a separate modeling component and has multiple views. No practical growing instructions, real horticultural parameters or real odor concealment engineering: this is a fictional game prop design. Specific brief: Single warm wood shelf1.5m long with two iron scroll brackets, 5 separate cartoon glass specimen jars various heights/lids containing non-specific colorful liquid, chunks or seeds grounded at bottom. Separate NE PAS BOIRE plaque. Front/back/profile/top EMPTY shelf and3quarter dressed;2views of each jar form. Open shelf supports arbitrary player placement, no fused jars, lids removable, glass lightly translucent. Main title: \"23 — ÉTAGÈRE À CINQ BOCAUX\"."
+    },
+    {
+      "number": 24,
+      "id": "wall_shelves",
+      "title": "Étagères murales modulaires",
+      "catalogue_numbers": [
+        62,
+        67,
+        72,
+        73,
+        77,
+        81
+      ],
+      "brief": "Modular one-level wall shelves in two lengths1.5m and2m, warm planks, dark leaf-scroll brackets, olive fascia and small brass screws. Orthographic front/back/profile/top EMPTY plus3quarter dressed only with small silhouettes for scale. Labels OBJETS TROUVÉS and ZONE DE CONTREBANDE separate. Large bracket and hidden mounting rail detail. Minimum.90m clear vertical gap between separate shelves, never overlapping. Clear surfaces for player chosen objects.",
+      "output": "24_wall_shelves_sheet.png",
+      "refs": [
+        "C:/Users/Saïka/Documents/entreprises/jeu/fleuriste-galaxy/art/concepts/cellar/13_cabinet_sheet.png",
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\art\\concepts\\cannabis\\01_compacte.png"
+      ],
+      "prompt": "Use case: stylized-concept. One polished LANDSCAPE 3D modeling reference sheet for a cartoon videogame underground florist basement. Professional adult science-fiction animation, Rick and Morty inspired, confident dark ink outlines, flat desaturated teal/olive/warm wood colors with violet and mint accents, restrained cel shadows. Ivory background, neatly separated spacious panels, fully visible objects, consistent geometry in all views, no photorealism, no childish scribbles, no people, no watermark. Image 1 is the existing game object or room for identity and function only: substantially refine it. Image 2 is the approved cartoon drawing and sheet style reference. Include orthographic FACE, DOS, PROFIL, DESSUS, a larger TROIS-QUARTS and construction closeups; use underside/section for ceiling and top plan for layout. Legible short French labels and palette swatches. Proposed metric dimensions only where useful. Every separate accessory is a separate modeling component and has multiple views. No practical growing instructions, real horticultural parameters or real odor concealment engineering: this is a fictional game prop design. Specific brief: Modular one-level wall shelves in two lengths1.5m and2m, warm planks, dark leaf-scroll brackets, olive fascia and small brass screws. Orthographic front/back/profile/top EMPTY plus3quarter dressed only with small silhouettes for scale. Labels OBJETS TROUVÉS and ZONE DE CONTREBANDE separate. Large bracket and hidden mounting rail detail. Minimum.90m clear vertical gap between separate shelves, never overlapping. Clear surfaces for player chosen objects. Main title: \"24 — ÉTAGÈRES MURALES MODULAIRES\". Reference image1 is woodwork/material style ONLY. Draw ONLY empty wooden shelves, brackets and removable signs. No displayed collectibles or decorations whatsoever."
+    },
+    {
+      "number": 25,
+      "id": "duck_toaster",
+      "title": "Canard décoratif et grille-pain",
+      "catalogue_numbers": [
+        63,
+        64,
+        75,
+        76
+      ],
+      "brief": "Two isolated cartoon collectibles: charming chunky yellow rubber duck with sculpted bill/wing marks, flat underside and black eyes; retro ivory/teal toaster with TWO true recessed top slots, metal rim, lever, round browning dial, push button, crumb drawer and rear plug. Each front/back/side/top/3quarter, duck base and toaster crumbdrawer detail. Rich clean design, no child doodles, not basic cubes.",
+      "output": "25_duck_toaster_sheet.png",
+      "refs": [
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\out\\cellar_catalog\\63_duck_01_front.png",
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\art\\concepts\\cannabis\\01_compacte.png"
+      ],
+      "prompt": "Use case: stylized-concept. One polished LANDSCAPE 3D modeling reference sheet for a cartoon videogame underground florist basement. Professional adult science-fiction animation, Rick and Morty inspired, confident dark ink outlines, flat desaturated teal/olive/warm wood colors with violet and mint accents, restrained cel shadows. Ivory background, neatly separated spacious panels, fully visible objects, consistent geometry in all views, no photorealism, no childish scribbles, no people, no watermark. Image 1 is the existing game object or room for identity and function only: substantially refine it. Image 2 is the approved cartoon drawing and sheet style reference. Include orthographic FACE, DOS, PROFIL, DESSUS, a larger TROIS-QUARTS and construction closeups; use underside/section for ceiling and top plan for layout. Legible short French labels and palette swatches. Proposed metric dimensions only where useful. Every separate accessory is a separate modeling component and has multiple views. No practical growing instructions, real horticultural parameters or real odor concealment engineering: this is a fictional game prop design. Specific brief: Two isolated cartoon collectibles: charming chunky yellow rubber duck with sculpted bill/wing marks, flat underside and black eyes; retro ivory/teal toaster with TWO true recessed top slots, metal rim, lever, round browning dial, push button, crumb drawer and rear plug. Each front/back/side/top/3quarter, duck base and toaster crumbdrawer detail. Rich clean design, no child doodles, not basic cubes. Main title: \"25 — CANARD DÉCORATIF ET GRILLE-PAIN\"."
+    },
+    {
+      "number": 26,
+      "id": "bomb_bananas",
+      "title": "Bombe cartoon et bananes dorées",
+      "catalogue_numbers": [
+        65,
+        66,
+        78,
+        80
+      ],
+      "brief": "Two harmless cartoon collectible props: classic spherical dark purple decorative bomb with brass neck, curled unlit theatrical fuse and flat hidden foot, NO real device components; bunch of three golden stylized bananas with sculpted tapered ends, joined stalk and engraved base tray reading DORÉES. Each front/back/side/top/3quarter, material swatches. Pure game decoration, avoid photorealistic metal/no real explosives instructions.",
+      "output": "26_bomb_bananas_sheet.png",
+      "refs": [
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\out\\cellar_catalog\\65_bomb_01_front.png",
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\art\\concepts\\cannabis\\01_compacte.png"
+      ],
+      "prompt": "Use case: stylized-concept. One polished LANDSCAPE 3D modeling reference sheet for a cartoon videogame underground florist basement. Professional adult science-fiction animation, Rick and Morty inspired, confident dark ink outlines, flat desaturated teal/olive/warm wood colors with violet and mint accents, restrained cel shadows. Ivory background, neatly separated spacious panels, fully visible objects, consistent geometry in all views, no photorealism, no childish scribbles, no people, no watermark. Image 1 is the existing game object or room for identity and function only: substantially refine it. Image 2 is the approved cartoon drawing and sheet style reference. Include orthographic FACE, DOS, PROFIL, DESSUS, a larger TROIS-QUARTS and construction closeups; use underside/section for ceiling and top plan for layout. Legible short French labels and palette swatches. Proposed metric dimensions only where useful. Every separate accessory is a separate modeling component and has multiple views. No practical growing instructions, real horticultural parameters or real odor concealment engineering: this is a fictional game prop design. Specific brief: Two harmless cartoon collectible props: classic spherical dark purple decorative bomb with brass neck, curled unlit theatrical fuse and flat hidden foot, NO real device components; bunch of three golden stylized bananas with sculpted tapered ends, joined stalk and engraved base tray reading DORÉES. Each front/back/side/top/3quarter, material swatches. Pure game decoration, avoid photorealistic metal/no real explosives instructions. Main title: \"26 — BOMBE CARTOON ET BANANES DORÉES\"."
+    },
+    {
+      "number": 27,
+      "id": "fish_helmet",
+      "title": "Bocal à poisson et casque spatial sous cloche",
+      "catalogue_numbers": [
+        68,
+        69
+      ],
+      "brief": "Two whimsical shelf collectibles: short clear glass fish jar with chunky cork lid, pale cyan water and one tiny goofy fish visible, pebble bed at bottom; retro ivory/plum astronaut helmet inside transparent round display dome on teal base, helmet visor and side hinge readable. Front/back/profile/top and3quarter for EACH, removable jar lid and removable dome/exploded base closeups. Fish grounded in water space, modest transparency clear silhouettes.",
+      "output": "27_fish_helmet_sheet.png",
+      "refs": [
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\out\\cellar_catalog\\68_fish_jar_01_front.png",
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\art\\concepts\\cannabis\\01_compacte.png"
+      ],
+      "prompt": "Use case: stylized-concept. One polished LANDSCAPE 3D modeling reference sheet for a cartoon videogame underground florist basement. Professional adult science-fiction animation, Rick and Morty inspired, confident dark ink outlines, flat desaturated teal/olive/warm wood colors with violet and mint accents, restrained cel shadows. Ivory background, neatly separated spacious panels, fully visible objects, consistent geometry in all views, no photorealism, no childish scribbles, no people, no watermark. Image 1 is the existing game object or room for identity and function only: substantially refine it. Image 2 is the approved cartoon drawing and sheet style reference. Include orthographic FACE, DOS, PROFIL, DESSUS, a larger TROIS-QUARTS and construction closeups; use underside/section for ceiling and top plan for layout. Legible short French labels and palette swatches. Proposed metric dimensions only where useful. Every separate accessory is a separate modeling component and has multiple views. No practical growing instructions, real horticultural parameters or real odor concealment engineering: this is a fictional game prop design. Specific brief: Two whimsical shelf collectibles: short clear glass fish jar with chunky cork lid, pale cyan water and one tiny goofy fish visible, pebble bed at bottom; retro ivory/plum astronaut helmet inside transparent round display dome on teal base, helmet visor and side hinge readable. Front/back/profile/top and3quarter for EACH, removable jar lid and removable dome/exploded base closeups. Fish grounded in water space, modest transparency clear silhouettes. Main title: \"27 — BOCAL À POISSON ET CASQUE SPATIAL SOUS CLOCHE\"."
+    },
+    {
+      "number": 28,
+      "id": "skull_rocket_moon",
+      "title": "Tasse crâne, mini-fusée et mini-lune",
+      "catalogue_numbers": [
+        70,
+        71,
+        74,
+        79
+      ],
+      "brief": "Three independently modeled cartoon shelf collectibles: ivory ceramic skull mug with handle, integrated cheek arcs not side balls, hollow open rim and dark eye sockets; miniature retro ivory/red rocket with three fins, porthole and flat display foot; little lavender cratered moon on dark crescent support stand. Each front/back/profile/top and3quarter in three clear rows. Mug underside/handle join, rocket fin and moon support details, restrained small sci-fi accents.",
+      "output": "28_skull_rocket_moon_sheet.png",
+      "refs": [
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\out\\cellar_catalog\\70_skull_mug_01_front.png",
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\art\\concepts\\cannabis\\01_compacte.png"
+      ],
+      "prompt": "Use case: stylized-concept. One polished LANDSCAPE 3D modeling reference sheet for a cartoon videogame underground florist basement. Professional adult science-fiction animation, Rick and Morty inspired, confident dark ink outlines, flat desaturated teal/olive/warm wood colors with violet and mint accents, restrained cel shadows. Ivory background, neatly separated spacious panels, fully visible objects, consistent geometry in all views, no photorealism, no childish scribbles, no people, no watermark. Image 1 is the existing game object or room for identity and function only: substantially refine it. Image 2 is the approved cartoon drawing and sheet style reference. Include orthographic FACE, DOS, PROFIL, DESSUS, a larger TROIS-QUARTS and construction closeups; use underside/section for ceiling and top plan for layout. Legible short French labels and palette swatches. Proposed metric dimensions only where useful. Every separate accessory is a separate modeling component and has multiple views. No practical growing instructions, real horticultural parameters or real odor concealment engineering: this is a fictional game prop design. Specific brief: Three independently modeled cartoon shelf collectibles: ivory ceramic skull mug with handle, integrated cheek arcs not side balls, hollow open rim and dark eye sockets; miniature retro ivory/red rocket with three fins, porthole and flat display foot; little lavender cratered moon on dark crescent support stand. Each front/back/profile/top and3quarter in three clear rows. Mug underside/handle join, rocket fin and moon support details, restrained small sci-fi accents. Main title: \"28 — TASSE CRÂNE, MINI-FUSÉE ET MINI-LUNE\"."
+    },
+    {
+      "number": 29,
+      "id": "crates",
+      "title": "Caisses et colis de contrebande",
+      "catalogue_numbers": [
+        44,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        111
+      ],
+      "brief": "Modular timber shipping crates: small open crate, medium closed crate and tall strapped crate, iron corners, recessed carrying handles, stencil FRAGILE / HAUT / ÉCHANTILLONS on removable label cards. Individual front/back/side/top/3quarter and one stable stack example, separate lids and base plank detail. Include small paper parcel tied with string and TERRE label. Everything separate, boxes rest on supports, no floating props.",
+      "output": "29_crates_sheet.png",
+      "refs": [
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\out\\cellar_catalog\\44_cellar_view__build_decor_3_01_front.png",
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\art\\concepts\\cannabis\\01_compacte.png"
+      ],
+      "prompt": "Use case: stylized-concept. One polished LANDSCAPE 3D modeling reference sheet for a cartoon videogame underground florist basement. Professional adult science-fiction animation, Rick and Morty inspired, confident dark ink outlines, flat desaturated teal/olive/warm wood colors with violet and mint accents, restrained cel shadows. Ivory background, neatly separated spacious panels, fully visible objects, consistent geometry in all views, no photorealism, no childish scribbles, no people, no watermark. Image 1 is the existing game object or room for identity and function only: substantially refine it. Image 2 is the approved cartoon drawing and sheet style reference. Include orthographic FACE, DOS, PROFIL, DESSUS, a larger TROIS-QUARTS and construction closeups; use underside/section for ceiling and top plan for layout. Legible short French labels and palette swatches. Proposed metric dimensions only where useful. Every separate accessory is a separate modeling component and has multiple views. No practical growing instructions, real horticultural parameters or real odor concealment engineering: this is a fictional game prop design. Specific brief: Modular timber shipping crates: small open crate, medium closed crate and tall strapped crate, iron corners, recessed carrying handles, stencil FRAGILE / HAUT / ÉCHANTILLONS on removable label cards. Individual front/back/side/top/3quarter and one stable stack example, separate lids and base plank detail. Include small paper parcel tied with string and TERRE label. Everything separate, boxes rest on supports, no floating props. Main title: \"29 — CAISSES ET COLIS DE CONTREBANDE\"."
+    },
+    {
+      "number": 30,
+      "id": "barrels_bags",
+      "title": "Tonneaux, bidons et sacs",
+      "catalogue_numbers": [
+        88,
+        89,
+        90
+      ],
+      "brief": "Four separate storage props: green wooden barrel with dark iron hoops and removable lid; red jerrycan; mustard yellow jerrycan; tied burlap sack with slumped grounded bottom and stitched seam. Front/back/profile/top/3quarter per prop, barrel bung, jerrycan spout/handle and sack tie details. Separate small SIROP plaque. Cartoon broad material marks, no photorealism. Stable forms and removable contents.",
+      "output": "30_barrels_bags_sheet.png",
+      "refs": [
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\out\\cellar_catalog\\88_barrel_01_front.png",
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\art\\concepts\\cannabis\\01_compacte.png"
+      ],
+      "prompt": "Use case: stylized-concept. One polished LANDSCAPE 3D modeling reference sheet for a cartoon videogame underground florist basement. Professional adult science-fiction animation, Rick and Morty inspired, confident dark ink outlines, flat desaturated teal/olive/warm wood colors with violet and mint accents, restrained cel shadows. Ivory background, neatly separated spacious panels, fully visible objects, consistent geometry in all views, no photorealism, no childish scribbles, no people, no watermark. Image 1 is the existing game object or room for identity and function only: substantially refine it. Image 2 is the approved cartoon drawing and sheet style reference. Include orthographic FACE, DOS, PROFIL, DESSUS, a larger TROIS-QUARTS and construction closeups; use underside/section for ceiling and top plan for layout. Legible short French labels and palette swatches. Proposed metric dimensions only where useful. Every separate accessory is a separate modeling component and has multiple views. No practical growing instructions, real horticultural parameters or real odor concealment engineering: this is a fictional game prop design. Specific brief: Four separate storage props: green wooden barrel with dark iron hoops and removable lid; red jerrycan; mustard yellow jerrycan; tied burlap sack with slumped grounded bottom and stitched seam. Front/back/profile/top/3quarter per prop, barrel bung, jerrycan spout/handle and sack tie details. Separate small SIROP plaque. Cartoon broad material marks, no photorealism. Stable forms and removable contents. Main title: \"30 — TONNEAUX, BIDONS ET SACS\"."
+    },
+    {
+      "number": 31,
+      "id": "mushrooms",
+      "title": "Champignons et mousse lumineux",
+      "catalogue_numbers": [
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105
+      ],
+      "brief": "Glowing decorative fungus kit, three sizes of bulbous mint/pink/lilac mushroom, curved rooted stalks and visible underside gills. Front/back/profile/top/underside for individual mushrooms,3quarter cluster grounded in a separate irregular moss patch. Ten original exemplars realized by rotations/scale variations using3consistent master shapes. Detail small moss tufts, cluster base and restrained emissive edge. No floating caps, clean cartoon forms.",
+      "output": "31_mushrooms_sheet.png",
+      "refs": [
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\out\\cellar_catalog\\94_mushroom_01_front.png",
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\art\\concepts\\cannabis\\01_compacte.png"
+      ],
+      "prompt": "Use case: stylized-concept. One polished LANDSCAPE 3D modeling reference sheet for a cartoon videogame underground florist basement. Professional adult science-fiction animation, Rick and Morty inspired, confident dark ink outlines, flat desaturated teal/olive/warm wood colors with violet and mint accents, restrained cel shadows. Ivory background, neatly separated spacious panels, fully visible objects, consistent geometry in all views, no photorealism, no childish scribbles, no people, no watermark. Image 1 is the existing game object or room for identity and function only: substantially refine it. Image 2 is the approved cartoon drawing and sheet style reference. Include orthographic FACE, DOS, PROFIL, DESSUS, a larger TROIS-QUARTS and construction closeups; use underside/section for ceiling and top plan for layout. Legible short French labels and palette swatches. Proposed metric dimensions only where useful. Every separate accessory is a separate modeling component and has multiple views. No practical growing instructions, real horticultural parameters or real odor concealment engineering: this is a fictional game prop design. Specific brief: Glowing decorative fungus kit, three sizes of bulbous mint/pink/lilac mushroom, curved rooted stalks and visible underside gills. Front/back/profile/top/underside for individual mushrooms,3quarter cluster grounded in a separate irregular moss patch. Ten original exemplars realized by rotations/scale variations using3consistent master shapes. Detail small moss tufts, cluster base and restrained emissive edge. No floating caps, clean cartoon forms. Main title: \"31 — CHAMPIGNONS ET MOUSSE LUMINEUX\"."
+    },
+    {
+      "number": 32,
+      "id": "drying_rack",
+      "title": "Corde et bouquets suspendus",
+      "catalogue_numbers": [
+        106
+      ],
+      "brief": "Decorative florist drying line: braided rope between2real brackets, wooden clothes pegs gripping tied stems, five small varied hanging botanical bouquets with leaves and flowerheads DOWN under gravity. Front/back/profile/top and3quarter; isolated peg open/closed, knot and bouquet attachment details. Warm wood/olive/dusty violet. No practical cultivation or processing instructions, purely stylized prop design. All bouquet meshes removable.",
+      "output": "32_drying_rack_sheet.png",
+      "refs": [
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\out\\cellar_catalog\\106_dressing_dryer_0_01_front.png",
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\art\\concepts\\cannabis\\01_compacte.png"
+      ],
+      "prompt": "Use case: stylized-concept. One polished LANDSCAPE 3D modeling reference sheet for a cartoon videogame underground florist basement. Professional adult science-fiction animation, Rick and Morty inspired, confident dark ink outlines, flat desaturated teal/olive/warm wood colors with violet and mint accents, restrained cel shadows. Ivory background, neatly separated spacious panels, fully visible objects, consistent geometry in all views, no photorealism, no childish scribbles, no people, no watermark. Image 1 is the existing game object or room for identity and function only: substantially refine it. Image 2 is the approved cartoon drawing and sheet style reference. Include orthographic FACE, DOS, PROFIL, DESSUS, a larger TROIS-QUARTS and construction closeups; use underside/section for ceiling and top plan for layout. Legible short French labels and palette swatches. Proposed metric dimensions only where useful. Every separate accessory is a separate modeling component and has multiple views. No practical growing instructions, real horticultural parameters or real odor concealment engineering: this is a fictional game prop design. Specific brief: Decorative florist drying line: braided rope between2real brackets, wooden clothes pegs gripping tied stems, five small varied hanging botanical bouquets with leaves and flowerheads DOWN under gravity. Front/back/profile/top and3quarter; isolated peg open/closed, knot and bouquet attachment details. Warm wood/olive/dusty violet. No practical cultivation or processing instructions, purely stylized prop design. All bouquet meshes removable. Main title: \"32 — CORDE ET BOUQUETS SUSPENDUS\"."
+    },
+    {
+      "number": 33,
+      "id": "nap_corner",
+      "title": "Coin sieste, chat et radio",
+      "catalogue_numbers": [
+        107,
+        108
+      ],
+      "brief": "Two game decorative props: curled sleeping cartoon cat dark teal/grey with clear tucked paws, tail wrapping body, ears and closed eyes, flat textile cushion underneath; retro wood/teal radio with cloth speaker, readable tuner, two knobs, handle and folded antenna. Each front/back/profile/top and3quarter. Cat simple sleeping breathing pivot detail, radio back/battery cover, separate SIESTE plaque. No human character.",
+      "output": "33_nap_corner_sheet.png",
+      "refs": [
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\out\\cellar_catalog\\107_dressing_nap_corner_0_01_front.png",
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\art\\concepts\\cannabis\\01_compacte.png"
+      ],
+      "prompt": "Use case: stylized-concept. One polished LANDSCAPE 3D modeling reference sheet for a cartoon videogame underground florist basement. Professional adult science-fiction animation, Rick and Morty inspired, confident dark ink outlines, flat desaturated teal/olive/warm wood colors with violet and mint accents, restrained cel shadows. Ivory background, neatly separated spacious panels, fully visible objects, consistent geometry in all views, no photorealism, no childish scribbles, no people, no watermark. Image 1 is the existing game object or room for identity and function only: substantially refine it. Image 2 is the approved cartoon drawing and sheet style reference. Include orthographic FACE, DOS, PROFIL, DESSUS, a larger TROIS-QUARTS and construction closeups; use underside/section for ceiling and top plan for layout. Legible short French labels and palette swatches. Proposed metric dimensions only where useful. Every separate accessory is a separate modeling component and has multiple views. No practical growing instructions, real horticultural parameters or real odor concealment engineering: this is a fictional game prop design. Specific brief: Two game decorative props: curled sleeping cartoon cat dark teal/grey with clear tucked paws, tail wrapping body, ears and closed eyes, flat textile cushion underneath; retro wood/teal radio with cloth speaker, readable tuner, two knobs, handle and folded antenna. Each front/back/profile/top and3quarter. Cat simple sleeping breathing pivot detail, radio back/battery cover, separate SIESTE plaque. No human character. Main title: \"33 — COIN SIESTE, CHAT ET RADIO\"."
+    },
+    {
+      "number": 34,
+      "id": "signage",
+      "title": "Affiches et signalétique du sous-sol",
+      "catalogue_numbers": [
+        48,
+        109
+      ],
+      "brief": "Professional stylized sign/poster family: INTERDIT AUX FLICS warning with humorous crossed-out cartoon badge icon; TARIFS chalkboard; payment methods plaque using fictional coin/star icons. Each front/back/profile and mounted3quarter, canvas/paper/wood layers and mounting details. Hand-lettered bold highly readable refined typography, controlled worn edges, mature graphic design, not child drawing. Artwork flat plane separate from frame, exact text short, no prices needed.",
+      "output": "34_signage_sheet.png",
+      "refs": [
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\out\\cellar_catalog\\48_cellar_view__build_decor_7_01_front.png",
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\art\\concepts\\cannabis\\01_compacte.png"
+      ],
+      "prompt": "Use case: stylized-concept. One polished LANDSCAPE 3D modeling reference sheet for a cartoon videogame underground florist basement. Professional adult science-fiction animation, Rick and Morty inspired, confident dark ink outlines, flat desaturated teal/olive/warm wood colors with violet and mint accents, restrained cel shadows. Ivory background, neatly separated spacious panels, fully visible objects, consistent geometry in all views, no photorealism, no childish scribbles, no people, no watermark. Image 1 is the existing game object or room for identity and function only: substantially refine it. Image 2 is the approved cartoon drawing and sheet style reference. Include orthographic FACE, DOS, PROFIL, DESSUS, a larger TROIS-QUARTS and construction closeups; use underside/section for ceiling and top plan for layout. Legible short French labels and palette swatches. Proposed metric dimensions only where useful. Every separate accessory is a separate modeling component and has multiple views. No practical growing instructions, real horticultural parameters or real odor concealment engineering: this is a fictional game prop design. Specific brief: Professional stylized sign/poster family: INTERDIT AUX FLICS warning with humorous crossed-out cartoon badge icon; TARIFS chalkboard; payment methods plaque using fictional coin/star icons. Each front/back/profile and mounted3quarter, canvas/paper/wood layers and mounting details. Hand-lettered bold highly readable refined typography, controlled worn edges, mature graphic design, not child drawing. Artwork flat plane separate from frame, exact text short, no prices needed. Main title: \"34 — AFFICHES ET SIGNALÉTIQUE DU SOUS-SOL\"."
+    },
+    {
+      "number": 35,
+      "id": "floor_props",
+      "title": "Paillasson et pot destiné au compost",
+      "catalogue_numbers": [
+        110,
+        112
+      ],
+      "brief": "Two separate floor props: coir doormat.9x.55m with plum border, neat botanical corner motifs and BIENVENUE (non) in clear handwritten lettering; small terracotta pot with visibly wilted cartoon flower, drooping stem, hanging leaves, soil below rim and no floating roots. Front/back/side/top/3quarter per prop; mat underside/edge and pot hollow section. Do not place real objects across mat walkway, stylized wear.",
+      "output": "35_floor_props_sheet.png",
+      "refs": [
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\out\\cellar_catalog\\110_dressing_floor_clutter_0_01_front.png",
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\art\\concepts\\cannabis\\01_compacte.png"
+      ],
+      "prompt": "Use case: stylized-concept. One polished LANDSCAPE 3D modeling reference sheet for a cartoon videogame underground florist basement. Professional adult science-fiction animation, Rick and Morty inspired, confident dark ink outlines, flat desaturated teal/olive/warm wood colors with violet and mint accents, restrained cel shadows. Ivory background, neatly separated spacious panels, fully visible objects, consistent geometry in all views, no photorealism, no childish scribbles, no people, no watermark. Image 1 is the existing game object or room for identity and function only: substantially refine it. Image 2 is the approved cartoon drawing and sheet style reference. Include orthographic FACE, DOS, PROFIL, DESSUS, a larger TROIS-QUARTS and construction closeups; use underside/section for ceiling and top plan for layout. Legible short French labels and palette swatches. Proposed metric dimensions only where useful. Every separate accessory is a separate modeling component and has multiple views. No practical growing instructions, real horticultural parameters or real odor concealment engineering: this is a fictional game prop design. Specific brief: Two separate floor props: coir doormat.9x.55m with plum border, neat botanical corner motifs and BIENVENUE (non) in clear handwritten lettering; small terracotta pot with visibly wilted cartoon flower, drooping stem, hanging leaves, soil below rim and no floating roots. Front/back/side/top/3quarter per prop; mat underside/edge and pot hollow section. Do not place real objects across mat walkway, stylized wear. Main title: \"35 — PAILLASSON ET POT DESTINÉ AU COMPOST\"."
+    },
+    {
+      "number": 36,
+      "id": "grow_beds",
+      "title": "Bacs de culture modulaires",
+      "catalogue_numbers": [
+        117,
+        123,
+        129,
+        135
+      ],
+      "brief": "Shared reusable grow-bed container for4fictional crop families, not4permanently fused plants: rectangular1.8x1.1m walnut box on sturdy short legs, dark iron corners, raised planter lip, recessed soil insert, clip-on label and clean empty ledge. Front/back/side/top EMPTY plus3quarter dressed with separate cartoon plants only as placement example. Empty hollow bed section, legs/soil liner attachment,4removable crop icon labels. Preserve original multi-plant bed purpose; objects removable and moveable by player. No real growing instructions.",
+      "output": "36_grow_beds_sheet.png",
+      "refs": [
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\out\\cellar_catalog\\117_bac_0_front.png",
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\art\\concepts\\cannabis\\01_compacte.png"
+      ],
+      "prompt": "Use case: stylized-concept. One polished LANDSCAPE 3D modeling reference sheet for a cartoon videogame underground florist basement. Professional adult science-fiction animation, Rick and Morty inspired, confident dark ink outlines, flat desaturated teal/olive/warm wood colors with violet and mint accents, restrained cel shadows. Ivory background, neatly separated spacious panels, fully visible objects, consistent geometry in all views, no photorealism, no childish scribbles, no people, no watermark. Image 1 is the existing game object or room for identity and function only: substantially refine it. Image 2 is the approved cartoon drawing and sheet style reference. Include orthographic FACE, DOS, PROFIL, DESSUS, a larger TROIS-QUARTS and construction closeups; use underside/section for ceiling and top plan for layout. Legible short French labels and palette swatches. Proposed metric dimensions only where useful. Every separate accessory is a separate modeling component and has multiple views. No practical growing instructions, real horticultural parameters or real odor concealment engineering: this is a fictional game prop design. Specific brief: Shared reusable grow-bed container for4fictional crop families, not4permanently fused plants: rectangular1.8x1.1m walnut box on sturdy short legs, dark iron corners, raised planter lip, recessed soil insert, clip-on label and clean empty ledge. Front/back/side/top EMPTY plus3quarter dressed with separate cartoon plants only as placement example. Empty hollow bed section, legs/soil liner attachment,4removable crop icon labels. Preserve original multi-plant bed purpose; objects removable and moveable by player. No real growing instructions. Main title: \"36 — BACS DE CULTURE MODULAIRES\"."
+    },
+    {
+      "number": 37,
+      "id": "bed_lamps",
+      "title": "Lampes suspendues pour grands bacs",
+      "catalogue_numbers": [
+        118,
+        124,
+        130,
+        136
+      ],
+      "brief": "Wide cartoon growing lamp for a rectangular game bed, dark teal rectangular metal hood with two enclosed mint diffuser bars, small warm violet accent, separate hanging rods/chains with ceiling anchors and simplified cable connector. Front/back/profile/top/UNDERSIDE and3quarter above an EMPTY bed. Hood sized1.6x.5m as visual prop target, adjustable suspension for3.8m high basement. Fastener/driver cover detail, on/off. Do not include real lighting specifications or instructions. Separate lamp and bed models.",
+      "output": "37_bed_lamps_sheet.png",
+      "refs": [
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\out\\cellar_catalog\\118_lampe_bac_0_front.png",
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\art\\concepts\\cannabis\\01_compacte.png"
+      ],
+      "prompt": "Use case: stylized-concept. One polished LANDSCAPE 3D modeling reference sheet for a cartoon videogame underground florist basement. Professional adult science-fiction animation, Rick and Morty inspired, confident dark ink outlines, flat desaturated teal/olive/warm wood colors with violet and mint accents, restrained cel shadows. Ivory background, neatly separated spacious panels, fully visible objects, consistent geometry in all views, no photorealism, no childish scribbles, no people, no watermark. Image 1 is the existing game object or room for identity and function only: substantially refine it. Image 2 is the approved cartoon drawing and sheet style reference. Include orthographic FACE, DOS, PROFIL, DESSUS, a larger TROIS-QUARTS and construction closeups; use underside/section for ceiling and top plan for layout. Legible short French labels and palette swatches. Proposed metric dimensions only where useful. Every separate accessory is a separate modeling component and has multiple views. No practical growing instructions, real horticultural parameters or real odor concealment engineering: this is a fictional game prop design. Specific brief: Wide cartoon growing lamp for a rectangular game bed, dark teal rectangular metal hood with two enclosed mint diffuser bars, small warm violet accent, separate hanging rods/chains with ceiling anchors and simplified cable connector. Front/back/profile/top/UNDERSIDE and3quarter above an EMPTY bed. Hood sized1.6x.5m as visual prop target, adjustable suspension for3.8m high basement. Fastener/driver cover detail, on/off. Do not include real lighting specifications or instructions. Separate lamp and bed models. Main title: \"37 — LAMPES SUSPENDUES POUR GRANDS BACS\"."
+    },
+    {
+      "number": 38,
+      "id": "dark_herb",
+      "title": "Herbe sombre — quatre stades",
+      "catalogue_numbers": [
+        119,
+        120,
+        121,
+        122
+      ],
+      "brief": "Game crop HERBE SOMBRE based directly on approved EXISTING stylized cannabis compact model reference, not a new unrelated plant. Four clearly progressive fictional visual stages: tiny sprout, leafy growing plant, small developing buds, mature bush. Deep desaturated green/purple serrated compound leaves, branched bushy silhouette and stylized purple buds. Stage timeline TOP row; below mature front/back/profile/top/3quarter and separate leaf/bud cluster reference. Keep geometry centered at same stem origin, pot/soil separate. No real growth timetable, feed settings, cultivation guidance or real plant measurements. Pure videogame morph/mesh design.",
+      "output": "38_dark_herb_sheet.png",
+      "refs": [
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\art\\concepts\\cannabis\\01_compacte.png",
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\art\\concepts\\cannabis\\01_compacte.png"
+      ],
+      "prompt": "Use case: stylized-concept. One polished LANDSCAPE 3D modeling reference sheet for a cartoon videogame underground florist basement. Professional adult science-fiction animation, Rick and Morty inspired, confident dark ink outlines, flat desaturated teal/olive/warm wood colors with violet and mint accents, restrained cel shadows. Ivory background, neatly separated spacious panels, fully visible objects, consistent geometry in all views, no photorealism, no childish scribbles, no people, no watermark. Image 1 is the existing game object or room for identity and function only: substantially refine it. Image 2 is the approved cartoon drawing and sheet style reference. Include orthographic FACE, DOS, PROFIL, DESSUS, a larger TROIS-QUARTS and construction closeups; use underside/section for ceiling and top plan for layout. Legible short French labels and palette swatches. Proposed metric dimensions only where useful. Every separate accessory is a separate modeling component and has multiple views. No practical growing instructions, real horticultural parameters or real odor concealment engineering: this is a fictional game prop design. Specific brief: Game crop HERBE SOMBRE based directly on approved EXISTING stylized cannabis compact model reference, not a new unrelated plant. Four clearly progressive fictional visual stages: tiny sprout, leafy growing plant, small developing buds, mature bush. Deep desaturated green/purple serrated compound leaves, branched bushy silhouette and stylized purple buds. Stage timeline TOP row; below mature front/back/profile/top/3quarter and separate leaf/bud cluster reference. Keep geometry centered at same stem origin, pot/soil separate. No real growth timetable, feed settings, cultivation guidance or real plant measurements. Pure videogame morph/mesh design. Main title: \"38 — HERBE SOMBRE — QUATRE STADES\"."
+    },
+    {
+      "number": 39,
+      "id": "xeno_lotus",
+      "title": "Lotus xéno — quatre stades",
+      "catalogue_numbers": [
+        125,
+        126,
+        127,
+        128
+      ],
+      "brief": "Fictional alien crop LOTUS XÉNO,4visual stages sprout, growing broad leaves, closed purple alien buds, mature violet bulbous flowers on thin mint stems, broad fleshy pointed green leaves. Preserve recognizable original game crop shown in image1, refine leaf/flower shapes. Timeline4stages, mature front/back/profile/top/3quarter, separate leaf underside and bloom section. Same ground origin, no permanent pot. Pure fantasy game crop no real cultivation instructions.",
+      "output": "39_xeno_lotus_sheet.png",
+      "refs": [
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\out\\cellar_catalog\\125_plante_1_0_front.png",
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\art\\concepts\\cannabis\\01_compacte.png"
+      ],
+      "prompt": "Use case: stylized-concept. One polished LANDSCAPE 3D modeling reference sheet for a cartoon videogame underground florist basement. Professional adult science-fiction animation, Rick and Morty inspired, confident dark ink outlines, flat desaturated teal/olive/warm wood colors with violet and mint accents, restrained cel shadows. Ivory background, neatly separated spacious panels, fully visible objects, consistent geometry in all views, no photorealism, no childish scribbles, no people, no watermark. Image 1 is the existing game object or room for identity and function only: substantially refine it. Image 2 is the approved cartoon drawing and sheet style reference. Include orthographic FACE, DOS, PROFIL, DESSUS, a larger TROIS-QUARTS and construction closeups; use underside/section for ceiling and top plan for layout. Legible short French labels and palette swatches. Proposed metric dimensions only where useful. Every separate accessory is a separate modeling component and has multiple views. No practical growing instructions, real horticultural parameters or real odor concealment engineering: this is a fictional game prop design. Specific brief: Fictional alien crop LOTUS XÉNO,4visual stages sprout, growing broad leaves, closed purple alien buds, mature violet bulbous flowers on thin mint stems, broad fleshy pointed green leaves. Preserve recognizable original game crop shown in image1, refine leaf/flower shapes. Timeline4stages, mature front/back/profile/top/3quarter, separate leaf underside and bloom section. Same ground origin, no permanent pot. Pure fantasy game crop no real cultivation instructions. Main title: \"39 — LOTUS XÉNO — QUATRE STADES\"."
+    },
+    {
+      "number": 40,
+      "id": "gloom_moss",
+      "title": "Mousse de gouffre — quatre stades",
+      "catalogue_numbers": [
+        131,
+        132,
+        133,
+        134
+      ],
+      "brief": "Fictional alien crop MOUSSE DE GOUFFRE,4visual stages little grounded tuft, spreading dark teal cushions, curved fleshy blue shoots, mature clustered rounded teal/blue moss mounds with tiny subtle mint nodules. Preserve low rounded original game silhouette shown image1, refined organic tufts not giant cannabis bush. Timeline4stages, mature front/back/profile/top/3quarter, patch edge/underside details. All clusters touch same ground, no permanent pot. Pure fantasy game crop.",
+      "output": "40_gloom_moss_sheet.png",
+      "refs": [
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\out\\cellar_catalog\\131_plante_2_0_front.png",
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\art\\concepts\\cannabis\\01_compacte.png"
+      ],
+      "prompt": "Use case: stylized-concept. One polished LANDSCAPE 3D modeling reference sheet for a cartoon videogame underground florist basement. Professional adult science-fiction animation, Rick and Morty inspired, confident dark ink outlines, flat desaturated teal/olive/warm wood colors with violet and mint accents, restrained cel shadows. Ivory background, neatly separated spacious panels, fully visible objects, consistent geometry in all views, no photorealism, no childish scribbles, no people, no watermark. Image 1 is the existing game object or room for identity and function only: substantially refine it. Image 2 is the approved cartoon drawing and sheet style reference. Include orthographic FACE, DOS, PROFIL, DESSUS, a larger TROIS-QUARTS and construction closeups; use underside/section for ceiling and top plan for layout. Legible short French labels and palette swatches. Proposed metric dimensions only where useful. Every separate accessory is a separate modeling component and has multiple views. No practical growing instructions, real horticultural parameters or real odor concealment engineering: this is a fictional game prop design. Specific brief: Fictional alien crop MOUSSE DE GOUFFRE,4visual stages little grounded tuft, spreading dark teal cushions, curved fleshy blue shoots, mature clustered rounded teal/blue moss mounds with tiny subtle mint nodules. Preserve low rounded original game silhouette shown image1, refined organic tufts not giant cannabis bush. Timeline4stages, mature front/back/profile/top/3quarter, patch edge/underside details. All clusters touch same ground, no permanent pot. Pure fantasy game crop. Main title: \"40 — MOUSSE DE GOUFFRE — QUATRE STADES\"."
+    },
+    {
+      "number": 41,
+      "id": "star_vine",
+      "title": "Liane d’étoile — quatre stades",
+      "catalogue_numbers": [
+        137,
+        138,
+        139,
+        140
+      ],
+      "brief": "Fantasy LIANE D’ÉTOILE game crop: four stages rooted sprout, narrow blue/teal twining stems and pointed leaves, small star-shaped buds, mature delicate pale yellow luminous five-point stars on curled stems with lilac tiny berry nodes. Preserve original game crop image1 while refining readable star flowers. Timeline4stages, mature front/back/profile/top/3quarter, leaf and star front/back details. Optional separate short support stake. Pure fantasy game asset, no real cultivation instructions.",
+      "output": "41_star_vine_sheet.png",
+      "refs": [
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\out\\cellar_catalog\\137_plante_3_0_front.png",
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\art\\concepts\\cannabis\\01_compacte.png"
+      ],
+      "prompt": "Use case: stylized-concept. One polished LANDSCAPE 3D modeling reference sheet for a cartoon videogame underground florist basement. Professional adult science-fiction animation, Rick and Morty inspired, confident dark ink outlines, flat desaturated teal/olive/warm wood colors with violet and mint accents, restrained cel shadows. Ivory background, neatly separated spacious panels, fully visible objects, consistent geometry in all views, no photorealism, no childish scribbles, no people, no watermark. Image 1 is the existing game object or room for identity and function only: substantially refine it. Image 2 is the approved cartoon drawing and sheet style reference. Include orthographic FACE, DOS, PROFIL, DESSUS, a larger TROIS-QUARTS and construction closeups; use underside/section for ceiling and top plan for layout. Legible short French labels and palette swatches. Proposed metric dimensions only where useful. Every separate accessory is a separate modeling component and has multiple views. No practical growing instructions, real horticultural parameters or real odor concealment engineering: this is a fictional game prop design. Specific brief: Fantasy LIANE D’ÉTOILE game crop: four stages rooted sprout, narrow blue/teal twining stems and pointed leaves, small star-shaped buds, mature delicate pale yellow luminous five-point stars on curled stems with lilac tiny berry nodes. Preserve original game crop image1 while refining readable star flowers. Timeline4stages, mature front/back/profile/top/3quarter, leaf and star front/back details. Optional separate short support stake. Pure fantasy game asset, no real cultivation instructions. Main title: \"41 — LIANE D’ÉTOILE — QUATRE STADES\"."
+    },
+    {
+      "number": 42,
+      "id": "harvest_jars",
+      "title": "Bocaux de récolte — qualités 1 à 4",
+      "catalogue_numbers": [
+        141
+      ],
+      "brief": "Reusable stock product jars for fictional game crops, thick lightly smoky glass cylinder with stable flat base, screw-on dark teal lid, removable cream icon label and small1to4quality badge. Four examples quality1/2/3/4 with recognizable different visual fill shapes; contents sit on bottom, do not levitate. Front/back/profile/top empty container,3quarter filled, lid underside/hollow section and4interchangeable label designs. One material color per stored crop stack. No practical processing instructions.",
+      "output": "42_harvest_jars_sheet.png",
+      "refs": [
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\out\\cellar_catalog\\141_stock_bocaux_front.png",
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\art\\concepts\\cannabis\\01_compacte.png"
+      ],
+      "prompt": "Use case: stylized-concept. One polished LANDSCAPE 3D modeling reference sheet for a cartoon videogame underground florist basement. Professional adult science-fiction animation, Rick and Morty inspired, confident dark ink outlines, flat desaturated teal/olive/warm wood colors with violet and mint accents, restrained cel shadows. Ivory background, neatly separated spacious panels, fully visible objects, consistent geometry in all views, no photorealism, no childish scribbles, no people, no watermark. Image 1 is the existing game object or room for identity and function only: substantially refine it. Image 2 is the approved cartoon drawing and sheet style reference. Include orthographic FACE, DOS, PROFIL, DESSUS, a larger TROIS-QUARTS and construction closeups; use underside/section for ceiling and top plan for layout. Legible short French labels and palette swatches. Proposed metric dimensions only where useful. Every separate accessory is a separate modeling component and has multiple views. No practical growing instructions, real horticultural parameters or real odor concealment engineering: this is a fictional game prop design. Specific brief: Reusable stock product jars for fictional game crops, thick lightly smoky glass cylinder with stable flat base, screw-on dark teal lid, removable cream icon label and small1to4quality badge. Four examples quality1/2/3/4 with recognizable different visual fill shapes; contents sit on bottom, do not levitate. Front/back/profile/top empty container,3quarter filled, lid underside/hollow section and4interchangeable label designs. One material color per stored crop stack. No practical processing instructions. Main title: \"42 — BOCAUX DE RÉCOLTE — QUALITÉS 1 À 4\"."
+    },
+    {
+      "number": 43,
+      "id": "single_pot",
+      "title": "Pot individuel — un seul plant",
+      "catalogue_numbers": [],
+      "brief": "NEW game item: one individual planting pot accommodating EXACTLY ONE cartoon cannabis/herbe sombre plant. Sturdy tapered terracotta/teal pot with rolled lip, molded grip tabs, matching separate saucer, inset soil surface and removable clip-on crop badge. Main front/back/profile/top EMPTY,3quarter empty and one dressed example with exactly ONE central plant based on approved compact model. Section shows one empty central placement socket, no multiple planting holes. Soil/pot/plant separate models, interchangeable at growth stages. Proposed potdiameter.48m height.42m for visual scaling only; no real growing instructions.",
+      "output": "43_single_pot_sheet.png",
+      "refs": [
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\out\\cellar_catalog\\00_contrechamp.png",
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\art\\concepts\\cannabis\\01_compacte.png"
+      ],
+      "prompt": "Use case: stylized-concept. One polished LANDSCAPE 3D modeling reference sheet for a cartoon videogame underground florist basement. Professional adult science-fiction animation, Rick and Morty inspired, confident dark ink outlines, flat desaturated teal/olive/warm wood colors with violet and mint accents, restrained cel shadows. Ivory background, neatly separated spacious panels, fully visible objects, consistent geometry in all views, no photorealism, no childish scribbles, no people, no watermark. Image 1 is the existing game object or room for identity and function only: substantially refine it. Image 2 is the approved cartoon drawing and sheet style reference. Include orthographic FACE, DOS, PROFIL, DESSUS, a larger TROIS-QUARTS and construction closeups; use underside/section for ceiling and top plan for layout. Legible short French labels and palette swatches. Proposed metric dimensions only where useful. Every separate accessory is a separate modeling component and has multiple views. No practical growing instructions, real horticultural parameters or real odor concealment engineering: this is a fictional game prop design. Specific brief: NEW game item: one individual planting pot accommodating EXACTLY ONE cartoon cannabis/herbe sombre plant. Sturdy tapered terracotta/teal pot with rolled lip, molded grip tabs, matching separate saucer, inset soil surface and removable clip-on crop badge. Main front/back/profile/top EMPTY,3quarter empty and one dressed example with exactly ONE central plant based on approved compact model. Section shows one empty central placement socket, no multiple planting holes. Soil/pot/plant separate models, interchangeable at growth stages. Proposed potdiameter.48m height.42m for visual scaling only; no real growing instructions. Main title: \"43 — POT INDIVIDUEL — UN SEUL PLANT\"."
+    },
+    {
+      "number": 44,
+      "id": "single_lamp",
+      "title": "Lampe pour pot individuel",
+      "catalogue_numbers": [],
+      "brief": "NEW compact dedicated game growing lamp for exactly ONE individual plant pot: small rounded-square teal hood with mint light panel underside, short adjustable telescopic gooseneck on sturdy counterweighted C-shaped floor stand surrounding single pot space; cable safely clipped along stand. Front/back/profile/top/UNDERSIDE and3quarter with ONE single pot below for scale. Hood/stand/base separate meshes, articulated height joint details, on/off. Lamp silhouette clearly smaller than bed lamp, stable grounded base and clear access to pot, no multiple plants, no real lighting settings.",
+      "output": "44_single_lamp_sheet_v2.png",
+      "refs": [
+        "C:/Users/Saïka/Documents/entreprises/jeu/fleuriste-galaxy/art/concepts/cellar/44_single_lamp_sheet.png",
+        "C:/Users/Saïka/Documents/entreprises/jeu/fleuriste-galaxy/art/concepts/cellar/43_single_pot_sheet.png"
+      ],
+      "prompt": "Use case: precise-object-edit. Revise image1, sheet44 LAMPE POUR POT INDIVIDUEL, to correct visual game scale and make it compatible with the SINGLE POT shown in image2, sheet43. Keep the same dark teal cartoon lamp design, C-shaped floor base, telescopic mast, rounded-square mint head, clean ink/cel drawing, ivory multi-view production sheet. This is a full-size fictional VIDEOGAME prop standing on the FLOOR, not a desktop miniature. Pot outerdiameter0.48m height0.42m as in image2, copy its teal-and-terracotta design and saucer exactly. Lamp floor footprint0.85x0.80m, C opening internal0.60m, mast overallheight1.40–2.20m adjustable, headwidth0.35m. Correct ALL dimension labels to these values in METERS, remove every former centimeter label including12cm,18cm,28–48cm; only small palette swatch text need remain. Show FRONT BACK SIDE TOP and UNDERSIDE EMPTY LAMP with no plant occluding construction; ONE large3quarter with exact pot fromimage2 holding EXACTLY ONE stylized plant. Lamp and pot separately movable; cables clipped. Provide enlarged pivot and telescopic collar details, lamp exploded parts. Lower context panel: two single pots and their individual floor lamps on basement FLOOR with clear walkway, not on a grow-bed ledge. This is modeling scale for fictional game assets only, no real horticultural lighting guidance, no power or growth settings. Title44 — LAMPE POUR POT INDIVIDUEL. Preserve professional cartoon style and simple coherent construction."
+    }
+  ]
+}

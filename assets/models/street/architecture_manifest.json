@@ -1,0 +1,30 @@
+[
+  {
+    "id": "corner_apartments",
+    "triangles": 87772,
+    "metres": true,
+    "source": "art/blender/street/corner_apartments.blend",
+    "reference": "art/concepts/street/opposite_buildings_sheet.png"
+  },
+  {
+    "id": "sage_townhouse",
+    "triangles": 56352,
+    "metres": true,
+    "source": "art/blender/street/sage_townhouse.blend",
+    "reference": "art/concepts/street/opposite_buildings_sheet.png"
+  },
+  {
+    "id": "brick_bakery",
+    "triangles": 89784,
+    "metres": true,
+    "source": "art/blender/street/brick_bakery.blend",
+    "reference": "art/concepts/street/opposite_buildings_sheet.png"
+  },
+  {
+    "id": "blue_workshop",
+    "triangles": 31912,
+    "metres": true,
+    "source": "art/blender/street/blue_workshop.blend",
+    "reference": "art/concepts/street/opposite_buildings_sheet.png"
+  }
+]

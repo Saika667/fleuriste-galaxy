@@ -1,0 +1,15 @@
+{
+  "id": "lavender",
+  "source": "art/concepts/flowers/lavender_cartoon.png",
+  "triangles_with_outlines": 25816,
+  "meshes": 1,
+  "surfaces": 6,
+  "height_m": 0.5300000309944153,
+  "features": {
+    "floret_tiers": 6,
+    "florets_per_tier": 4,
+    "narrow_leaves": 6
+  },
+  "head_height_m": 0.445,
+  "shading": "unlit; inverted hull contours"
+}

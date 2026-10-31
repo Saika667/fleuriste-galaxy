@@ -1,0 +1,10 @@
+{
+  "triangles_with_outlines": 23696,
+  "outer_petals": 6,
+  "inner_petals": 3,
+  "leaves": 2,
+  "thorns": 3,
+  "height_m": 0.52,
+  "source": "art/concepts/flowers/rose_cartoon.png",
+  "shading": "unlit; inverted hull contours"
+}

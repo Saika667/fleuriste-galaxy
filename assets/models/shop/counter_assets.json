@@ -1,0 +1,26 @@
+[
+  {
+    "asset": "counter_cabinet",
+    "triangles": 19990,
+    "source": "art/concepts/shop",
+    "metres": true
+  },
+  {
+    "asset": "cash_register",
+    "triangles": 17700,
+    "source": "art/concepts/shop",
+    "metres": true
+  },
+  {
+    "asset": "counter_bell",
+    "triangles": 2782,
+    "source": "art/concepts/shop",
+    "metres": true
+  },
+  {
+    "asset": "candy_jar",
+    "triangles": 25288,
+    "source": "art/concepts/shop",
+    "metres": true
+  }
+]

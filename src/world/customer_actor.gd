@@ -6,6 +6,26 @@ extends Node3D
 
 const MeshKit = preload("res://src/world/mesh_kit.gd")
 const Interactable = preload("res://src/world/world_interactable.gd")
+const ScientistVisual = preload("res://src/world/scientist_visual.gd")
+const MilaVisual = preload("res://src/world/mila_visual.gd")
+const NoeVisual = preload("res://src/world/noe_visual.gd")
+const AyaVisual = preload("res://src/world/aya_visual.gd")
+const GastonVisual = preload("res://src/world/gaston_visual.gd")
+const CastVisual = preload("res://src/world/cast_visual.gd")
+const CAST_MODELS = {
+	"odette": {"name": "Odette", "height": 1.96, "radius": 0.29, "speed": 0.95},
+	"leon": {"name": "Léon", "height": 1.56, "radius": 0.29, "speed": 0.75},
+	"vexa": {"name": "Vexa", "height": 2.15, "radius": 0.40, "speed": 1.1},
+	"bloop": {"name": "Bloop", "height": 1.39, "radius": 0.38, "speed": 0.9},
+	"kragg": {"name": "Kragg", "height": 1.18, "radius": 0.55, "speed": 0.8},
+	"luma": {"name": "Luma", "height": 1.83, "radius": 0.36, "speed": 1.0},
+	"reptile_mecano": {"name": "Mécanicien reptilien", "height": 1.98, "radius": 0.48, "speed": 1.0, "category": "alien"},
+	"cyclope_roche": {"name": "Cyclope rocheux", "height": 2.34, "radius": 0.53, "speed": 0.72, "category": "alien"},
+	"mantide": {"name": "Mantide", "height": 2.27, "radius": 0.39, "speed": 1.1, "category": "alien"},
+	"gel_bleu": {"name": "Alien de gel bleu", "height": 1.63, "radius": 0.36, "speed": 0.9, "category": "alien"},
+	"aventurier": {"name": "Aventurier", "height": 1.96, "radius": 0.30, "speed": 1.1, "category": "human"},
+	"heroine": {"name": "Héroïne", "height": 1.97, "radius": 0.41, "speed": 1.1, "category": "human"},
+}
 
 const HUMAN_STYLES = {
 	"regular_woman": {"skin": "#F2C09A", "top": "#FF7FA8", "bottom": "#9A6BE0", "dress": true, "hat": "sun", "hair": "#7A3B2E", "acc": ["basket", "scarf", "none"]},
@@ -26,6 +46,11 @@ const VISITOR_STYLES = [
 ]
 ## Archetypes des passants (figurants) : humour macabre absurde, pas de logique de jeu.
 const EXTRA_STYLES = {
+	"scientist": {"name": "Le savant"},
+	"mila": {"name": "Mila"},
+	"noe": {"name": "Noé"},
+	"aya": {"name": "Aya"},
+	"gaston": {"name": "Gaston"},
 	"granny": {"skin": "#F2C09A", "top": "#9A6BE0", "bottom": "#6E4A85", "dress": true, "hat": "flowers", "hair": "#E8E4F0", "acc": ["glasses", "cane"], "tall": 0.93, "girth": 1.2, "name": "Mamie Cercueil"},
 	"goth": {"skin": "#EDE6D3", "top": "#2B1E33", "bottom": "#2B1E33", "hat": "none", "hair": "#1E1620", "acc": ["scarf", "headphones"], "tall": 1.05, "girth": 0.85, "name": "Gothique"},
 	"skeleton": {"skin": "#EDE6D3", "top": "#EDE6D3", "bottom": "#D9D0BA", "hat": "tophat", "hair": "none", "acc": ["bone_tie"], "skeleton": true, "tall": 1.1, "girth": 0.6, "name": "Monsieur Os"},
@@ -131,6 +156,7 @@ var sp: Dictionary = {}  # noeuds animes des especes originales (species_kit.gd)
 var _outlined := true
 var _lod_t := 0.0
 var _meshes: Array = []
+var _scientist: Node3D
 
 
 func setup(c: Dictionary, def: Dictionary) -> void:
@@ -161,16 +187,29 @@ func setup(c: Dictionary, def: Dictionary) -> void:
 	add_child(rig)
 	add_to_group("customer_actor")
 	_quip_timer = 5.0 + float(_useed % 80) * 0.1
-	if species == "weeper":
-		SpeciesKit.build_weeper(self)
-	elif species == "ploc":
-		SpeciesKit.build_ploc(self)
-	elif _alien:
-		_build_alien()
+	var cast_id := def_id.trim_prefix("extra_")
+	var approved_humans=["scientist","mila","noe","aya","gaston","odette","leon","aventurier","heroine"]
+	var approved_aliens=["vexa","bloop","kragg","luma","reptile_mecano","cyclope_roche","mantide","gel_bleu"]
+	if cast_id not in approved_humans and cast_id not in approved_aliens:
+		cast_id = approved_aliens[absi(_useed)%approved_aliens.size()] if _alien else approved_humans[absi(_useed)%approved_humans.size()]
+	set_meta("approved_visual",cast_id)
+	if CAST_MODELS.has(cast_id):
+		_style=CAST_MODELS[cast_id].duplicate()
+		_scientist=CastVisual.new();_scientist.configure(cast_id)
 	else:
-		_build_human()
+		_style=EXTRA_STYLES[cast_id].duplicate()
+		match cast_id:
+			"mila":_scientist=MilaVisual.new()
+			"noe":_scientist=NoeVisual.new()
+			"aya":_scientist=AyaVisual.new()
+			"gaston":_scientist=GastonVisual.new()
+			_:_scientist=ScientistVisual.new()
+	rig.add_child(_scientist)
+	if not _scientist.build():push_error("Missing approved character: "+cast_id)
+	speed=float(CAST_MODELS[cast_id].speed) if CAST_MODELS.has(cast_id) else 1.0
 	# les pieces rigides d'un meme membre deviennent un seul maillage (moins d'appels de dessin)
-	StaticMerge.merge(rig, [self], [], [], 1.0e6)
+	if _scientist == null:
+		StaticMerge.merge(rig, [self], [], [], 1.0e6)
 	_meshes = MeshKit.meshes_of(rig)
 	# corps d'interaction (couche 2 : ne bloque pas le joueur)
 	body_ref = Interactable.new()
@@ -180,8 +219,33 @@ func setup(c: Dictionary, def: Dictionary) -> void:
 	var cap = CapsuleShape3D.new()
 	cap.radius = 0.4
 	cap.height = 1.9
+	if def_id == "extra_mila":
+		cap.height = 1.25
+		cap.radius = 0.25
+	elif def_id == "extra_noe":
+		cap.height = 1.65
+		cap.radius = 0.28
+	elif def_id == "extra_aya":
+		cap.height = 1.75
+		cap.radius = 0.32
+	elif def_id == "extra_gaston":
+		cap.height = 1.64
+		cap.radius = 0.43
+	elif is_extra and CAST_MODELS.has(cast_id):
+		cap.height = float(CAST_MODELS[cast_id].height)
+		cap.radius = float(CAST_MODELS[cast_id].radius)
 	cs.shape = cap
 	cs.position = Vector3(0, 0.95, 0)
+	if def_id == "extra_mila":
+		cs.position.y = 0.625
+	elif def_id == "extra_noe":
+		cs.position.y = 0.825
+	elif def_id == "extra_aya":
+		cs.position.y = 0.875
+	elif def_id == "extra_gaston":
+		cs.position.y = 0.82
+	elif is_extra and CAST_MODELS.has(cast_id):
+		cs.position.y = cap.height * 0.5
 	body_ref.add_child(cs)
 	body_ref.set_meta("customer_uid", uid)
 	_build_ui()
@@ -190,6 +254,17 @@ func setup(c: Dictionary, def: Dictionary) -> void:
 
 ## Hauteur de la tete (bulles, barre de patience) : propre a chaque silhouette.
 func _top() -> float:
+	if _scientist != null:
+		var cast_id := def_id.trim_prefix("extra_")
+		if CAST_MODELS.has(cast_id):
+			return float(CAST_MODELS[cast_id].height) + 0.06
+		if def_id == "extra_gaston":
+			return 1.77
+		if def_id == "extra_aya":
+			return 1.87
+		if def_id == "extra_noe":
+			return 1.78
+		return 1.4 if def_id == "extra_mila" else 2.2
 	if SpeciesKit.is_species(species):
 		return SpeciesKit.top_y(species)
 	return 2.55 if _alien else TOP_Y * _kind_scale
@@ -915,6 +990,8 @@ func _process(dt: float) -> void:
 
 ## Au-dela de 12 m le trait d'encre (et son liseré) n'est plus visible : on le retire (un appel de dessin de moins par forme).
 func _lod_outline() -> void:
+	if _scientist != null:
+		return  # contours deja inclus dans le GLB
 	var cam = get_viewport().get_camera_3d()
 	if cam == null:
 		return
@@ -1093,6 +1170,9 @@ func _ez(nd: Node3D, target: float, k: float) -> void:
 
 func _animate(dt: float) -> void:
 	var moving = state == "walk" or state == "leave"
+	if _scientist != null:
+		_scientist.animate(_t, _phase, moving, dt)
+		return
 	# clignement
 	var blink = 0.1 if fmod(_t * 1.0 + float(_seed % 40) * 0.1, 4.3) < 0.12 else 1.0
 	for e in _eyes:

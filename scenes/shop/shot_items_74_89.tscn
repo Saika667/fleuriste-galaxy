@@ -1,0 +1,4 @@
+[gd_scene load_steps=2 format=3]
+[ext_resource type="Script" path="res://src/world/shop_items_74_89_preview.gd" id="1"]
+[node name="ShopItems7489Preview" type="Node"]
+script=ExtResource("1")

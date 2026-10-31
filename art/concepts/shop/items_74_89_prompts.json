@@ -1,0 +1,423 @@
+{
+  "tool": "built-in image_gen",
+  "mode": "generation from catalogue and approved style references",
+  "date": "2026-10-27",
+  "jobs": [
+    {
+      "back": "74_hatch_rug_back.png",
+      "category": "Décoration / accessoires",
+      "front": "74_hatch_rug_front.png",
+      "id": "hatch_rug",
+      "instances_seen": 1,
+      "native_flowers": 0,
+      "number": 74,
+      "size_m": [
+        1.09999990463257,
+        0.0375000014901161,
+        1.09999990463257
+      ],
+      "title": "Tapis qui dissimule la trappe",
+      "title_fr": "Tapis qui dissimule la trappe",
+      "group": "Architecture et accès",
+      "code_source": "src/world/shop_room.gd",
+      "output": "74_hatch_rug_sheet.png",
+      "design_brief": "Square woven rug 1.10x1.10m, low thickness 12mm, lavender/plum border and ivory center, sophisticated woven botanical rosette in muted teal and dusty pink, neatly bound corners. No holes, lettering or giant fringe: completely conceals the separate 1m square hatch. TOP main orthographic, UNDERSIDE anti-slip backing, FRONT edge, PROFILE thickness, 3/4 lying flat plus partially rolled corner construction detail. Pattern woven flat, not raised physical flowers. Preserve original square silhouette.",
+      "status": "catalogue",
+      "refs": [
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\out\\shop_catalog\\74_hatch_rug_front.png",
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\art\\concepts\\shop\\01_counter_sheet_v2.png"
+      ],
+      "submitted_prompt": "Use case: stylized-concept. Create ONE landscape production reference sheet for ONE redesigned game prop in a cartoon florist shop. Mature professional 2D animation concept art inspired by Rick and Morty: clean strong dark outlines, flat coordinated colors, restrained cel shadows, readable slightly quirky forms, sophisticated craftsmanship, NO photorealistic materials and no childish doodles. Warm ivory background, neatly framed panels, ample margins. Input image 1 is the old in-game object: preserve identity/function, improve the design substantially. Input image 2 is the approved STYLE AND SHEET LAYOUT reference, not the subject to copy. Consistent exact same object geometry/colors in every view. French legible labels, large numbered title, 5-7 palette swatches. Include orthographic FACE, DOS, PROFIL, DESSUS and a larger TROIS-QUARTS; add two useful construction closeups. For architecture adapt views as specified. All objects fully visible, no cropped edges, no people, no watermark. Only a few clear metric dimensions; dimensions are proposed modeling targets, not measurements derived from a photo. Specific design: Square woven rug 1.10x1.10m, low thickness 12mm, lavender/plum border and ivory center, sophisticated woven botanical rosette in muted teal and dusty pink, neatly bound corners. No holes, lettering or giant fringe: completely conceals the separate 1m square hatch. TOP main orthographic, UNDERSIDE anti-slip backing, FRONT edge, PROFILE thickness, 3/4 lying flat plus partially rolled corner construction detail. Pattern woven flat, not raised physical flowers. Preserve original square silhouette. Exact title: \"74 — TAPIS QUI DISSIMULE LA TRAPPE\"."
+    },
+    {
+      "back": "75_hatch_closed_back.png",
+      "category": "Décoration / accessoires",
+      "front": "75_hatch_closed_front.png",
+      "id": "hatch_closed",
+      "instances_seen": 1,
+      "native_flowers": 0,
+      "number": 75,
+      "size_m": [
+        1.0,
+        0.179999992251396,
+        1.0
+      ],
+      "title": "Trappe — couvercle fermé",
+      "title_fr": "Trappe — couvercle fermé",
+      "group": "Architecture et accès",
+      "code_source": "src/world/shop_room.gd",
+      "output": "75_hatch_closed_sheet.png",
+      "design_brief": "Square walnut timber cellar hatch 1x1m, four broad warm wood planks in continuous stout dark frame, brass corner straps with visible rivets, flush recessed blackened brass ring pull near right edge and removable brass padlock on front hasp. TOP, UNDERSIDE with two reinforcement battens, SIDE edge hinge axis, FRONT, closed3/4 and detailed recessed handle/hasp. Target timber lid .06m thick, two real hinges on LEFT edge, latch on opposite RIGHT edge. Flush upper surface except removable padlock, no raised decorative objects. This is closed state of item76: same four planks, hardware, left hinge axis, square frame and walnut/brass palette. No flowers on top.",
+      "status": "catalogue",
+      "refs": [
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\out\\shop_catalog\\75_hatch_closed_front.png",
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\art\\concepts\\shop\\01_counter_sheet_v2.png"
+      ],
+      "submitted_prompt": "Use case: stylized-concept. Create ONE landscape production reference sheet for ONE redesigned game prop in a cartoon florist shop. Mature professional 2D animation concept art inspired by Rick and Morty: clean strong dark outlines, flat coordinated colors, restrained cel shadows, readable slightly quirky forms, sophisticated craftsmanship, NO photorealistic materials and no childish doodles. Warm ivory background, neatly framed panels, ample margins. Input image 1 is the old in-game object: preserve identity/function, improve the design substantially. Input image 2 is the approved STYLE AND SHEET LAYOUT reference, not the subject to copy. Consistent exact same object geometry/colors in every view. French legible labels, large numbered title, 5-7 palette swatches. Include orthographic FACE, DOS, PROFIL, DESSUS and a larger TROIS-QUARTS; add two useful construction closeups. For architecture adapt views as specified. All objects fully visible, no cropped edges, no people, no watermark. Only a few clear metric dimensions; dimensions are proposed modeling targets, not measurements derived from a photo. Specific design: Square walnut timber cellar hatch 1x1m, four broad warm wood planks in continuous stout dark frame, brass corner straps with visible rivets, flush recessed blackened brass ring pull near right edge and removable brass padlock on front hasp. TOP, UNDERSIDE with two reinforcement battens, SIDE edge hinge axis, FRONT, closed3/4 and detailed recessed handle/hasp. Target timber lid .06m thick, two real hinges on LEFT edge, latch on opposite RIGHT edge. Flush upper surface except removable padlock, no raised decorative objects. This is closed state of item76: same four planks, hardware, left hinge axis, square frame and walnut/brass palette. No flowers on top. Exact title: \"75 — TRAPPE — COUVERCLE FERMÉ\"."
+    },
+    {
+      "back": "76_hatch_open_back.png",
+      "category": "Décoration / accessoires",
+      "front": "76_hatch_open_front.png",
+      "id": "hatch_open",
+      "instances_seen": 1,
+      "native_flowers": 0,
+      "number": 76,
+      "size_m": [
+        1.05999994277954,
+        1.0,
+        1.0
+      ],
+      "title": "Trappe — ouverte avec échelle",
+      "title_fr": "Trappe — ouverte avec échelle",
+      "group": "Architecture et accès",
+      "code_source": "src/world/shop_room.gd",
+      "output": "76_hatch_open_sheet.png",
+      "design_brief": "OPEN state of a walnut square 1x1m cellar hatch with four timber planks, brass corner straps/rivets, blackened brass recessed ring pull and hasp. Lid .06m thick hinged along LEFT edge, opened about100degrees; same design as closed item75. Floor frame opening .82x.82m, dark shaft, separate timber ladder .52m wide with two rails,8rungs descending2m, slightly tilted, visible connections. NO horizontal ladder lying across hole. Main 3/4 CUTAWAY shaft and open lid, TOP with unobstructed access, FRONT section showing ladder connected to lower floor, side and underside of lid, hinge/rung details. Mark depth2m indicative, adapt to game cellar. No new room/stairs. Safe rigid hinges stop lid falling.",
+      "status": "catalogue",
+      "refs": [
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\out\\shop_catalog\\76_hatch_open_front.png",
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\art\\concepts\\shop\\01_counter_sheet_v2.png"
+      ],
+      "submitted_prompt": "Use case: stylized-concept. Create ONE landscape production reference sheet for ONE redesigned game prop in a cartoon florist shop. Mature professional 2D animation concept art inspired by Rick and Morty: clean strong dark outlines, flat coordinated colors, restrained cel shadows, readable slightly quirky forms, sophisticated craftsmanship, NO photorealistic materials and no childish doodles. Warm ivory background, neatly framed panels, ample margins. Input image 1 is the old in-game object: preserve identity/function, improve the design substantially. Input image 2 is the approved STYLE AND SHEET LAYOUT reference, not the subject to copy. Consistent exact same object geometry/colors in every view. French legible labels, large numbered title, 5-7 palette swatches. Include orthographic FACE, DOS, PROFIL, DESSUS and a larger TROIS-QUARTS; add two useful construction closeups. For architecture adapt views as specified. All objects fully visible, no cropped edges, no people, no watermark. Only a few clear metric dimensions; dimensions are proposed modeling targets, not measurements derived from a photo. Specific design: OPEN state of a walnut square 1x1m cellar hatch with four timber planks, brass corner straps/rivets, blackened brass recessed ring pull and hasp. Lid .06m thick hinged along LEFT edge, opened about100degrees; same design as closed item75. Floor frame opening .82x.82m, dark shaft, separate timber ladder .52m wide with two rails,8rungs descending2m, slightly tilted, visible connections. NO horizontal ladder lying across hole. Main 3/4 CUTAWAY shaft and open lid, TOP with unobstructed access, FRONT section showing ladder connected to lower floor, side and underside of lid, hinge/rung details. Mark depth2m indicative, adapt to game cellar. No new room/stairs. Safe rigid hinges stop lid falling. Exact title: \"76 — TRAPPE — OUVERTE AVEC ÉCHELLE\"."
+    },
+    {
+      "back": "77_doormat_back.png",
+      "category": "Décoration / agencement",
+      "front": "77_doormat_front.png",
+      "id": "doormat",
+      "instances_seen": 1,
+      "native_flowers": 0,
+      "number": 77,
+      "size_m": [
+        0.899999618530273,
+        0.025000000372529,
+        0.550000190734863
+      ],
+      "title": "Paillasson de l’entrée",
+      "title_fr": "Paillasson de l’entrée",
+      "group": "Architecture et accès",
+      "code_source": "src/world/shop_room.gd",
+      "output": "77_doormat_sheet.png",
+      "design_brief": "Rectangular coir doormat .90x.55m, thickness .018m, charcoal rubber binding and non-slip underside, honey coir face with dark teal flowing vintage lettering BIENVENUE centered, small ivory/teal botanical sprigs in two corners. Sophisticated typography, margins and readability. TOP main, UNDERSIDE, FRONT long edge, SIDE short edge,3/4 flat on floor, binding section and coir texture closeup. Soft stylized few fibers, not photorealistic. Single thin stable mat, no feet/legs.",
+      "status": "catalogue",
+      "refs": [
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\out\\shop_catalog\\77_doormat_front.png",
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\art\\concepts\\shop\\01_counter_sheet_v2.png"
+      ],
+      "submitted_prompt": "Use case: stylized-concept. Create ONE landscape production reference sheet for ONE redesigned game prop in a cartoon florist shop. Mature professional 2D animation concept art inspired by Rick and Morty: clean strong dark outlines, flat coordinated colors, restrained cel shadows, readable slightly quirky forms, sophisticated craftsmanship, NO photorealistic materials and no childish doodles. Warm ivory background, neatly framed panels, ample margins. Input image 1 is the old in-game object: preserve identity/function, improve the design substantially. Input image 2 is the approved STYLE AND SHEET LAYOUT reference, not the subject to copy. Consistent exact same object geometry/colors in every view. French legible labels, large numbered title, 5-7 palette swatches. Include orthographic FACE, DOS, PROFIL, DESSUS and a larger TROIS-QUARTS; add two useful construction closeups. For architecture adapt views as specified. All objects fully visible, no cropped edges, no people, no watermark. Only a few clear metric dimensions; dimensions are proposed modeling targets, not measurements derived from a photo. Specific design: Rectangular coir doormat .90x.55m, thickness .018m, charcoal rubber binding and non-slip underside, honey coir face with dark teal flowing vintage lettering BIENVENUE centered, small ivory/teal botanical sprigs in two corners. Sophisticated typography, margins and readability. TOP main, UNDERSIDE, FRONT long edge, SIDE short edge,3/4 flat on floor, binding section and coir texture closeup. Soft stylized few fibers, not photorealistic. Single thin stable mat, no feet/legs. Exact title: \"77 — PAILLASSON DE L’ENTRÉE\"."
+    },
+    {
+      "back": "78_private_plaque_back.png",
+      "category": "Décoration / agencement",
+      "front": "78_private_plaque_front.png",
+      "id": "private_plaque",
+      "instances_seen": 1,
+      "native_flowers": 0,
+      "number": 78,
+      "size_m": [
+        0.5,
+        0.199999928474426,
+        0.0300006866455078
+      ],
+      "title": "Plaque privé de la porte de service",
+      "title_fr": "Plaque privé de la porte de service",
+      "group": "Architecture et accès",
+      "code_source": "src/world/shop_room.gd",
+      "output": "78_private_plaque_sheet.png",
+      "design_brief": "Elegant small service-door plaque .38x.16m thickness.018m, rounded ivory enamel plate with plum stepped rim, narrow brass beads and four discreet flush fixing screws, bold readable refined vintage serif lettering PRIVÉ in dark burgundy centered. Two tiny leaf flourishes around text, restrained professional design. FRONT word spelled PRIVÉ, BACK showing screw recesses, SIDE, TOP,3/4, mounting detail and enamel rim section. No chains, legs or other furniture.",
+      "status": "catalogue",
+      "refs": [
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\out\\shop_catalog\\78_private_plaque_front.png",
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\art\\concepts\\shop\\01_counter_sheet_v2.png"
+      ],
+      "submitted_prompt": "Use case: stylized-concept. Create ONE landscape production reference sheet for ONE redesigned game prop in a cartoon florist shop. Mature professional 2D animation concept art inspired by Rick and Morty: clean strong dark outlines, flat coordinated colors, restrained cel shadows, readable slightly quirky forms, sophisticated craftsmanship, NO photorealistic materials and no childish doodles. Warm ivory background, neatly framed panels, ample margins. Input image 1 is the old in-game object: preserve identity/function, improve the design substantially. Input image 2 is the approved STYLE AND SHEET LAYOUT reference, not the subject to copy. Consistent exact same object geometry/colors in every view. French legible labels, large numbered title, 5-7 palette swatches. Include orthographic FACE, DOS, PROFIL, DESSUS and a larger TROIS-QUARTS; add two useful construction closeups. For architecture adapt views as specified. All objects fully visible, no cropped edges, no people, no watermark. Only a few clear metric dimensions; dimensions are proposed modeling targets, not measurements derived from a photo. Specific design: Elegant small service-door plaque .38x.16m thickness.018m, rounded ivory enamel plate with plum stepped rim, narrow brass beads and four discreet flush fixing screws, bold readable refined vintage serif lettering PRIVÉ in dark burgundy centered. Two tiny leaf flourishes around text, restrained professional design. FRONT word spelled PRIVÉ, BACK showing screw recesses, SIDE, TOP,3/4, mounting detail and enamel rim section. No chains, legs or other furniture. Exact title: \"78 — PLAQUE PRIVÉ DE LA PORTE DE SERVICE\"."
+    },
+    {
+      "back": "79_stock_shelf_0_back.png",
+      "category": "Décoration / agencement",
+      "front": "79_stock_shelf_0_front.png",
+      "id": "stock_shelf_0",
+      "instances_seen": 1,
+      "native_flowers": 12,
+      "number": 79,
+      "size_m": [
+        5.59999942779541,
+        1.03353726863861,
+        0.575857222080231
+      ],
+      "title": "Étagère de stock — rangée 1",
+      "title_fr": "Étagère de stock — rangée 1",
+      "group": "Décor mural et signalétique",
+      "code_source": "src/world/shop_room.gd",
+      "output": "79_stock_shelf_0_sheet.png",
+      "design_brief": "Single wall-mounted stock shelf redesigned at2m long .38m deep, plank .055m thick, warm walnut top, teal painted front fascia with slim brass line, two ornate but restrained leaf-scroll metal support brackets and hidden wall mounting rail. IMPORTANT only ONE shelf level, NOT whole wall system and not one shelf stacked into another. Show FRONT BACK SIDE TOP EMPTY, large3/4 with four independent small removable vases and four removable inventory label holders; example flowers rose/tulip/lily/sunflower airy and low, height clear of next shelf. Each label cream on plum, bold no prices; dynamic count layer separate. Plant/vase/label separate from plank. DETAIL bracket and movable blank label. At least .90m clear vertical spacing if later mounted above another shelf; note .90m MINI LIBRE. Player can arrange objects freely on clear shelf. Original screenshot identity only, redesign width2m rather than5.6m.",
+      "status": "catalogue",
+      "refs": [
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\out\\shop_catalog\\79_stock_shelf_0_front.png",
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\art\\concepts\\shop\\01_counter_sheet_v2.png"
+      ],
+      "submitted_prompt": "Use case: stylized-concept. Create ONE landscape production reference sheet for ONE redesigned game prop in a cartoon florist shop. Mature professional 2D animation concept art inspired by Rick and Morty: clean strong dark outlines, flat coordinated colors, restrained cel shadows, readable slightly quirky forms, sophisticated craftsmanship, NO photorealistic materials and no childish doodles. Warm ivory background, neatly framed panels, ample margins. Input image 1 is the old in-game object: preserve identity/function, improve the design substantially. Input image 2 is the approved STYLE AND SHEET LAYOUT reference, not the subject to copy. Consistent exact same object geometry/colors in every view. French legible labels, large numbered title, 5-7 palette swatches. Include orthographic FACE, DOS, PROFIL, DESSUS and a larger TROIS-QUARTS; add two useful construction closeups. For architecture adapt views as specified. All objects fully visible, no cropped edges, no people, no watermark. Only a few clear metric dimensions; dimensions are proposed modeling targets, not measurements derived from a photo. Specific design: Single wall-mounted stock shelf redesigned at2m long .38m deep, plank .055m thick, warm walnut top, teal painted front fascia with slim brass line, two ornate but restrained leaf-scroll metal support brackets and hidden wall mounting rail. IMPORTANT only ONE shelf level, NOT whole wall system and not one shelf stacked into another. Show FRONT BACK SIDE TOP EMPTY, large3/4 with four independent small removable vases and four removable inventory label holders; example flowers rose/tulip/lily/sunflower airy and low, height clear of next shelf. Each label cream on plum, bold no prices; dynamic count layer separate. Plant/vase/label separate from plank. DETAIL bracket and movable blank label. At least .90m clear vertical spacing if later mounted above another shelf; note .90m MINI LIBRE. Player can arrange objects freely on clear shelf. Original screenshot identity only, redesign width2m rather than5.6m. Exact title: \"79 — ÉTAGÈRE DE STOCK — RANGÉE 1\"."
+    },
+    {
+      "back": "80_stock_shelf_1_back.png",
+      "category": "Décoration / agencement",
+      "front": "80_stock_shelf_1_front.png",
+      "id": "stock_shelf_1",
+      "instances_seen": 1,
+      "native_flowers": 9,
+      "number": 80,
+      "size_m": [
+        5.59999942779541,
+        1.01721787452698,
+        0.56768536567688
+      ],
+      "title": "Étagère de stock — rangée 2",
+      "title_fr": "Étagère de stock — rangée 2",
+      "group": "Décor mural et signalétique",
+      "code_source": "src/world/shop_room.gd",
+      "output": "80_stock_shelf_1_sheet.png",
+      "design_brief": "Single wall stock shelf 1.50m long .38m deep, .055m thick, warm wood shelf with ivory molded fascia, plum metal leaf brackets and narrow teal/brass accents. Distinct companion of item79, still onlyONE horizontal shelf level. OrthographicFRONT BACK SIDE TOP EMPTY; large3/4 example with4 independent removable small vases for lavender/daisy/poppy/xeno, spaced and differing flower heights, no fused props. Movable plum label holders with bold ivory typography and detachable dynamic count graphics, no prices. Detailed back mountingrail/anchors and empty movable label. Show clear surface available to any player-arranged objects. Indicate minimum .90m unobstructed height to any separately mounted shelf, avoid shelf overlap. Empty allaround views essential.",
+      "status": "catalogue",
+      "refs": [
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\out\\shop_catalog\\80_stock_shelf_1_front.png",
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\art\\concepts\\shop\\01_counter_sheet_v2.png"
+      ],
+      "submitted_prompt": "Use case: stylized-concept. Create ONE landscape production reference sheet for ONE redesigned game prop in a cartoon florist shop. Mature professional 2D animation concept art inspired by Rick and Morty: clean strong dark outlines, flat coordinated colors, restrained cel shadows, readable slightly quirky forms, sophisticated craftsmanship, NO photorealistic materials and no childish doodles. Warm ivory background, neatly framed panels, ample margins. Input image 1 is the old in-game object: preserve identity/function, improve the design substantially. Input image 2 is the approved STYLE AND SHEET LAYOUT reference, not the subject to copy. Consistent exact same object geometry/colors in every view. French legible labels, large numbered title, 5-7 palette swatches. Include orthographic FACE, DOS, PROFIL, DESSUS and a larger TROIS-QUARTS; add two useful construction closeups. For architecture adapt views as specified. All objects fully visible, no cropped edges, no people, no watermark. Only a few clear metric dimensions; dimensions are proposed modeling targets, not measurements derived from a photo. Specific design: Single wall stock shelf 1.50m long .38m deep, .055m thick, warm wood shelf with ivory molded fascia, plum metal leaf brackets and narrow teal/brass accents. Distinct companion of item79, still onlyONE horizontal shelf level. OrthographicFRONT BACK SIDE TOP EMPTY; large3/4 example with4 independent removable small vases for lavender/daisy/poppy/xeno, spaced and differing flower heights, no fused props. Movable plum label holders with bold ivory typography and detachable dynamic count graphics, no prices. Detailed back mountingrail/anchors and empty movable label. Show clear surface available to any player-arranged objects. Indicate minimum .90m unobstructed height to any separately mounted shelf, avoid shelf overlap. Empty allaround views essential. Exact title: \"80 — ÉTAGÈRE DE STOCK — RANGÉE 2\"."
+    },
+    {
+      "back": "81_framed_flower_0_back.png",
+      "category": "Décoration / agencement",
+      "front": "81_framed_flower_0_front.png",
+      "id": "framed_flower_0",
+      "instances_seen": 1,
+      "native_flowers": 0,
+      "number": 81,
+      "size_m": [
+        0.599999904632568,
+        0.800000071525574,
+        0.104544244706631
+      ],
+      "title": "Cadre floral — variante 1",
+      "title_fr": "Cadre floral — rose",
+      "group": "Décor mural et signalétique",
+      "code_source": "src/world/shop_room.gd",
+      "output": "81_framed_flower_0_sheet.png",
+      "design_brief": "Portrait botanical PAINTING in .60x.80m walnut frame .05m deep, stepped carved molding, teal inner bead, slim brass corner leaf accents, cream linen mat. One beautiful pink rose bloom with two smaller buds, curved stem and carefully shaped leaves painted on muted ivory/teal background; confident adult illustrator brushwork translated into professional cartoon cel shapes. The artwork MUST look like a finished gallery botanical painting not a child doodle, no circle-on-stick icon. FRONT artwork, BACK backing board/brass hanging wire, SIDE molding, TOP depth, large3/4 and frame corner/artworkdetail. Painting flat printed plane distinct from physical frame and glass. No flowers protruding out of picture, no text on artwork.",
+      "status": "catalogue",
+      "refs": [
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\out\\shop_catalog\\81_framed_flower_0_front.png",
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\art\\concepts\\shop\\01_counter_sheet_v2.png"
+      ],
+      "submitted_prompt": "Use case: stylized-concept. Create ONE landscape production reference sheet for ONE redesigned game prop in a cartoon florist shop. Mature professional 2D animation concept art inspired by Rick and Morty: clean strong dark outlines, flat coordinated colors, restrained cel shadows, readable slightly quirky forms, sophisticated craftsmanship, NO photorealistic materials and no childish doodles. Warm ivory background, neatly framed panels, ample margins. Input image 1 is the old in-game object: preserve identity/function, improve the design substantially. Input image 2 is the approved STYLE AND SHEET LAYOUT reference, not the subject to copy. Consistent exact same object geometry/colors in every view. French legible labels, large numbered title, 5-7 palette swatches. Include orthographic FACE, DOS, PROFIL, DESSUS and a larger TROIS-QUARTS; add two useful construction closeups. For architecture adapt views as specified. All objects fully visible, no cropped edges, no people, no watermark. Only a few clear metric dimensions; dimensions are proposed modeling targets, not measurements derived from a photo. Specific design: Portrait botanical PAINTING in .60x.80m walnut frame .05m deep, stepped carved molding, teal inner bead, slim brass corner leaf accents, cream linen mat. One beautiful pink rose bloom with two smaller buds, curved stem and carefully shaped leaves painted on muted ivory/teal background; confident adult illustrator brushwork translated into professional cartoon cel shapes. The artwork MUST look like a finished gallery botanical painting not a child doodle, no circle-on-stick icon. FRONT artwork, BACK backing board/brass hanging wire, SIDE molding, TOP depth, large3/4 and frame corner/artworkdetail. Painting flat printed plane distinct from physical frame and glass. No flowers protruding out of picture, no text on artwork. Exact title: \"81 — CADRE FLORAL — ROSE\"."
+    },
+    {
+      "back": "82_framed_flower_1_back.png",
+      "category": "Décoration / agencement",
+      "front": "82_framed_flower_1_front.png",
+      "id": "framed_flower_1",
+      "instances_seen": 1,
+      "native_flowers": 0,
+      "number": 82,
+      "size_m": [
+        0.600000381469727,
+        0.800000071525574,
+        0.104544252157211
+      ],
+      "title": "Cadre floral — variante 2",
+      "title_fr": "Cadre floral — tournesol",
+      "group": "Décor mural et signalétique",
+      "code_source": "src/world/shop_room.gd",
+      "output": "82_framed_flower_1_sheet.png",
+      "design_brief": "Portrait botanical PAINTING .60x.80m, ochre sunflower with layered readable petals and dark textured disc, smaller tilted flower and broad foliage, sophisticated composition against dusty sage field, adult professional painted cartoon shapes, not childish icon. Teal lacquer wooden frame .05m deep with ivory stepped inner molding and brass floral corner pin details. FRONT painting, BACK backingboard and hanging wire, SIDE, TOP, larger3/4, molding section and painting closeup. Same art and sunflower placement every front view. Canvas/print is flat, distinct from frame/glass, no real stems extending outside frame, no text.",
+      "status": "catalogue",
+      "refs": [
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\out\\shop_catalog\\82_framed_flower_1_front.png",
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\art\\concepts\\shop\\01_counter_sheet_v2.png"
+      ],
+      "submitted_prompt": "Use case: stylized-concept. Create ONE landscape production reference sheet for ONE redesigned game prop in a cartoon florist shop. Mature professional 2D animation concept art inspired by Rick and Morty: clean strong dark outlines, flat coordinated colors, restrained cel shadows, readable slightly quirky forms, sophisticated craftsmanship, NO photorealistic materials and no childish doodles. Warm ivory background, neatly framed panels, ample margins. Input image 1 is the old in-game object: preserve identity/function, improve the design substantially. Input image 2 is the approved STYLE AND SHEET LAYOUT reference, not the subject to copy. Consistent exact same object geometry/colors in every view. French legible labels, large numbered title, 5-7 palette swatches. Include orthographic FACE, DOS, PROFIL, DESSUS and a larger TROIS-QUARTS; add two useful construction closeups. For architecture adapt views as specified. All objects fully visible, no cropped edges, no people, no watermark. Only a few clear metric dimensions; dimensions are proposed modeling targets, not measurements derived from a photo. Specific design: Portrait botanical PAINTING .60x.80m, ochre sunflower with layered readable petals and dark textured disc, smaller tilted flower and broad foliage, sophisticated composition against dusty sage field, adult professional painted cartoon shapes, not childish icon. Teal lacquer wooden frame .05m deep with ivory stepped inner molding and brass floral corner pin details. FRONT painting, BACK backingboard and hanging wire, SIDE, TOP, larger3/4, molding section and painting closeup. Same art and sunflower placement every front view. Canvas/print is flat, distinct from frame/glass, no real stems extending outside frame, no text. Exact title: \"82 — CADRE FLORAL — TOURNESOL\"."
+    },
+    {
+      "back": "83_framed_flower_2_back.png",
+      "category": "Décoration / agencement",
+      "front": "83_framed_flower_2_front.png",
+      "id": "framed_flower_2",
+      "instances_seen": 1,
+      "native_flowers": 0,
+      "number": 83,
+      "size_m": [
+        0.600000381469727,
+        0.800000071525574,
+        0.104544259607792
+      ],
+      "title": "Cadre floral — variante 3",
+      "title_fr": "Cadre floral — fleur xéno",
+      "group": "Décor mural et signalétique",
+      "code_source": "src/world/shop_room.gd",
+      "output": "83_framed_flower_2_sheet.png",
+      "design_brief": "Portrait refined alien botanical PAINTING .60x.80m, elegant sculptural lavender/magenta extraterrestrial flower with nested curved petals, subtle cyan stamen glow and curling emerald leaves, sophisticated painted still-life composition on deep plum background, clean adult animation brushwork. Ivory gently carved wood frame .05mdeep with mauve inner bead, restrained brass leaf corners. FRONT, BACK hangingwire and sealed backboard, SIDE molding, TOP,3/4, frame joinery and artwork detail. Artwork physically flat beneath separate glass, not sculpted flowers protruding. Same picture every view, no text, no childish circle flower.",
+      "status": "catalogue",
+      "refs": [
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\out\\shop_catalog\\83_framed_flower_2_front.png",
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\art\\concepts\\shop\\01_counter_sheet_v2.png"
+      ],
+      "submitted_prompt": "Use case: stylized-concept. Create ONE landscape production reference sheet for ONE redesigned game prop in a cartoon florist shop. Mature professional 2D animation concept art inspired by Rick and Morty: clean strong dark outlines, flat coordinated colors, restrained cel shadows, readable slightly quirky forms, sophisticated craftsmanship, NO photorealistic materials and no childish doodles. Warm ivory background, neatly framed panels, ample margins. Input image 1 is the old in-game object: preserve identity/function, improve the design substantially. Input image 2 is the approved STYLE AND SHEET LAYOUT reference, not the subject to copy. Consistent exact same object geometry/colors in every view. French legible labels, large numbered title, 5-7 palette swatches. Include orthographic FACE, DOS, PROFIL, DESSUS and a larger TROIS-QUARTS; add two useful construction closeups. For architecture adapt views as specified. All objects fully visible, no cropped edges, no people, no watermark. Only a few clear metric dimensions; dimensions are proposed modeling targets, not measurements derived from a photo. Specific design: Portrait refined alien botanical PAINTING .60x.80m, elegant sculptural lavender/magenta extraterrestrial flower with nested curved petals, subtle cyan stamen glow and curling emerald leaves, sophisticated painted still-life composition on deep plum background, clean adult animation brushwork. Ivory gently carved wood frame .05mdeep with mauve inner bead, restrained brass leaf corners. FRONT, BACK hangingwire and sealed backboard, SIDE molding, TOP,3/4, frame joinery and artwork detail. Artwork physically flat beneath separate glass, not sculpted flowers protruding. Same picture every view, no text, no childish circle flower. Exact title: \"83 — CADRE FLORAL — FLEUR XÉNO\"."
+    },
+    {
+      "back": "84_book_0_back.png",
+      "category": "Décoration / agencement",
+      "front": "84_book_0_front.png",
+      "id": "book_0",
+      "instances_seen": 1,
+      "native_flowers": 0,
+      "number": 84,
+      "size_m": [
+        0.319999694824219,
+        0.070000171661377,
+        0.219999998807907
+      ],
+      "title": "Livre décoratif — variante 1",
+      "title_fr": "Livre décoratif — botanique",
+      "group": "Accessoires et rangement",
+      "code_source": "src/world/shop_room.gd",
+      "output": "84_book_0_sheet.png",
+      "design_brief": "One closed landscape-format botanical hardback .32m long .22m wide .05m thick, dusty rose cloth cover, burgundy rounded spine, brass-gold embossed botanical leaf wreath and refined serif title BOTANIQUE. Ivory pageblock visible on3edges, stitched headband, two spine ribs, narrow teal ribbon bookmark peeks beneath. FRONT COVER / BACK COVER / SPINE / FORE-EDGE /3/4 lying flat, topedge section and hinge detail. Delicate controlled wear only, book proportion is thin not gigantic block. Same title/spine binding acrossviews; no stacks of books or additional objects.",
+      "status": "catalogue",
+      "refs": [
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\out\\shop_catalog\\84_book_0_front.png",
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\art\\concepts\\shop\\01_counter_sheet_v2.png"
+      ],
+      "submitted_prompt": "Use case: stylized-concept. Create ONE landscape production reference sheet for ONE redesigned game prop in a cartoon florist shop. Mature professional 2D animation concept art inspired by Rick and Morty: clean strong dark outlines, flat coordinated colors, restrained cel shadows, readable slightly quirky forms, sophisticated craftsmanship, NO photorealistic materials and no childish doodles. Warm ivory background, neatly framed panels, ample margins. Input image 1 is the old in-game object: preserve identity/function, improve the design substantially. Input image 2 is the approved STYLE AND SHEET LAYOUT reference, not the subject to copy. Consistent exact same object geometry/colors in every view. French legible labels, large numbered title, 5-7 palette swatches. Include orthographic FACE, DOS, PROFIL, DESSUS and a larger TROIS-QUARTS; add two useful construction closeups. For architecture adapt views as specified. All objects fully visible, no cropped edges, no people, no watermark. Only a few clear metric dimensions; dimensions are proposed modeling targets, not measurements derived from a photo. Specific design: One closed landscape-format botanical hardback .32m long .22m wide .05m thick, dusty rose cloth cover, burgundy rounded spine, brass-gold embossed botanical leaf wreath and refined serif title BOTANIQUE. Ivory pageblock visible on3edges, stitched headband, two spine ribs, narrow teal ribbon bookmark peeks beneath. FRONT COVER / BACK COVER / SPINE / FORE-EDGE /3/4 lying flat, topedge section and hinge detail. Delicate controlled wear only, book proportion is thin not gigantic block. Same title/spine binding acrossviews; no stacks of books or additional objects. Exact title: \"84 — LIVRE DÉCORATIF — BOTANIQUE\"."
+    },
+    {
+      "back": "85_book_1_back.png",
+      "category": "Décoration / agencement",
+      "front": "85_book_1_front.png",
+      "id": "book_1",
+      "instances_seen": 1,
+      "native_flowers": 0,
+      "number": 85,
+      "size_m": [
+        0.355014801025391,
+        0.070000171661377,
+        0.305700778961182
+      ],
+      "title": "Livre décoratif — variante 2",
+      "title_fr": "Livre décoratif — guide des fleurs",
+      "group": "Accessoires et rangement",
+      "code_source": "src/world/shop_room.gd",
+      "output": "85_book_1_sheet.png",
+      "design_brief": "One closed hardcover guide .30x.23x.045m, teal woven cloth, dark blue spine with three shallow bands and cream title GUIDE DES FLEURS, finely composed small botanical flower relief in ivory/gold on front, elegant cream corner embossing. Ivory pages clearly separated from covers, plum ribbon marker. FRONT COVER BACK COVER SPINE FOREEDGE and3/4 flat plus headband/endpaper detail and reliefcloseup. Adult illustrated book design, no childish pictograms. Complete physically bound book, minimal stylized pagelines, coherent typography in allviews.",
+      "status": "catalogue",
+      "refs": [
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\out\\shop_catalog\\85_book_1_front.png",
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\art\\concepts\\shop\\01_counter_sheet_v2.png"
+      ],
+      "submitted_prompt": "Use case: stylized-concept. Create ONE landscape production reference sheet for ONE redesigned game prop in a cartoon florist shop. Mature professional 2D animation concept art inspired by Rick and Morty: clean strong dark outlines, flat coordinated colors, restrained cel shadows, readable slightly quirky forms, sophisticated craftsmanship, NO photorealistic materials and no childish doodles. Warm ivory background, neatly framed panels, ample margins. Input image 1 is the old in-game object: preserve identity/function, improve the design substantially. Input image 2 is the approved STYLE AND SHEET LAYOUT reference, not the subject to copy. Consistent exact same object geometry/colors in every view. French legible labels, large numbered title, 5-7 palette swatches. Include orthographic FACE, DOS, PROFIL, DESSUS and a larger TROIS-QUARTS; add two useful construction closeups. For architecture adapt views as specified. All objects fully visible, no cropped edges, no people, no watermark. Only a few clear metric dimensions; dimensions are proposed modeling targets, not measurements derived from a photo. Specific design: One closed hardcover guide .30x.23x.045m, teal woven cloth, dark blue spine with three shallow bands and cream title GUIDE DES FLEURS, finely composed small botanical flower relief in ivory/gold on front, elegant cream corner embossing. Ivory pages clearly separated from covers, plum ribbon marker. FRONT COVER BACK COVER SPINE FOREEDGE and3/4 flat plus headband/endpaper detail and reliefcloseup. Adult illustrated book design, no childish pictograms. Complete physically bound book, minimal stylized pagelines, coherent typography in allviews. Exact title: \"85 — LIVRE DÉCORATIF — GUIDE DES FLEURS\"."
+    },
+    {
+      "back": "86_book_2_back.png",
+      "category": "Décoration / agencement",
+      "front": "86_book_2_front.png",
+      "id": "book_2",
+      "instances_seen": 1,
+      "native_flowers": 0,
+      "number": 86,
+      "size_m": [
+        0.384222030639648,
+        0.070000171661377,
+        0.366807103157043
+      ],
+      "title": "Livre décoratif — variante 3",
+      "title_fr": "Livre décoratif — plantes étranges",
+      "group": "Accessoires et rangement",
+      "code_source": "src/world/shop_room.gd",
+      "output": "86_book_2_sheet.png",
+      "design_brief": "One closed illustrated botany hardback .28x.21x.055m, ochre cloth cover with plum leather spine and four modest binding ribs, elegant burgundy title PLANTES ÉTRANGES, sophisticated teal/purple alien botanical specimen framed by fine dark lines. Cream pageblock, teal bookmark, subtle corner caps, restrained use wear. FRONT COVER BACK COVER SPINE FOREEDGE, large3/4 lying flat, headband and spine joints. No cartoon faces or monsters, no separate loose floating pages; slim complete book not yellow brick. Same graphic in every view.",
+      "status": "catalogue",
+      "refs": [
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\out\\shop_catalog\\86_book_2_front.png",
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\art\\concepts\\shop\\01_counter_sheet_v2.png"
+      ],
+      "submitted_prompt": "Use case: stylized-concept. Create ONE landscape production reference sheet for ONE redesigned game prop in a cartoon florist shop. Mature professional 2D animation concept art inspired by Rick and Morty: clean strong dark outlines, flat coordinated colors, restrained cel shadows, readable slightly quirky forms, sophisticated craftsmanship, NO photorealistic materials and no childish doodles. Warm ivory background, neatly framed panels, ample margins. Input image 1 is the old in-game object: preserve identity/function, improve the design substantially. Input image 2 is the approved STYLE AND SHEET LAYOUT reference, not the subject to copy. Consistent exact same object geometry/colors in every view. French legible labels, large numbered title, 5-7 palette swatches. Include orthographic FACE, DOS, PROFIL, DESSUS and a larger TROIS-QUARTS; add two useful construction closeups. For architecture adapt views as specified. All objects fully visible, no cropped edges, no people, no watermark. Only a few clear metric dimensions; dimensions are proposed modeling targets, not measurements derived from a photo. Specific design: One closed illustrated botany hardback .28x.21x.055m, ochre cloth cover with plum leather spine and four modest binding ribs, elegant burgundy title PLANTES ÉTRANGES, sophisticated teal/purple alien botanical specimen framed by fine dark lines. Cream pageblock, teal bookmark, subtle corner caps, restrained use wear. FRONT COVER BACK COVER SPINE FOREEDGE, large3/4 lying flat, headband and spine joints. No cartoon faces or monsters, no separate loose floating pages; slim complete book not yellow brick. Same graphic in every view. Exact title: \"86 — LIVRE DÉCORATIF — PLANTES ÉTRANGES\"."
+    },
+    {
+      "back": "87_curtains_back.png",
+      "category": "Décoration / agencement",
+      "front": "87_curtains_front.png",
+      "id": "curtains",
+      "instances_seen": 1,
+      "native_flowers": 0,
+      "number": 87,
+      "size_m": [
+        3.30000019073486,
+        2.4850001335144,
+        0.194340705871582
+      ],
+      "title": "Rideaux violets et tringle",
+      "title_fr": "Rideaux violets et tringle",
+      "group": "Éclairage et textiles",
+      "code_source": "src/world/shop_room.gd",
+      "output": "87_curtains_sheet.png",
+      "design_brief": "Pair of purple textile shop curtains on one continuous brass rod totalwidth3.30m, height2.48m; plum/violet broad gravity folds, narrow cream embroidered botanical hems, brass rings and finials shaped subtle leaf buds, teal tiebacks each attached towallhook. Front view fullyshows both panels drawn apart with clear centralwindow, BACK shows lining/seams/rings same geometry, SIDE clothfold profile, TOP rod/wall brackets,3/4 andcloseups ringclip/tieback. Also small CLOSED state with matching pairedpanels. Fabric contours genuinely folded cloth, not straight cylinders. Clear floor .04m beneathhem and generouscentraldoor/windowopening; no obstructions.",
+      "status": "catalogue",
+      "refs": [
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\out\\shop_catalog\\87_curtains_front.png",
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\art\\concepts\\shop\\01_counter_sheet_v2.png"
+      ],
+      "submitted_prompt": "Use case: stylized-concept. Create ONE landscape production reference sheet for ONE redesigned game prop in a cartoon florist shop. Mature professional 2D animation concept art inspired by Rick and Morty: clean strong dark outlines, flat coordinated colors, restrained cel shadows, readable slightly quirky forms, sophisticated craftsmanship, NO photorealistic materials and no childish doodles. Warm ivory background, neatly framed panels, ample margins. Input image 1 is the old in-game object: preserve identity/function, improve the design substantially. Input image 2 is the approved STYLE AND SHEET LAYOUT reference, not the subject to copy. Consistent exact same object geometry/colors in every view. French legible labels, large numbered title, 5-7 palette swatches. Include orthographic FACE, DOS, PROFIL, DESSUS and a larger TROIS-QUARTS; add two useful construction closeups. For architecture adapt views as specified. All objects fully visible, no cropped edges, no people, no watermark. Only a few clear metric dimensions; dimensions are proposed modeling targets, not measurements derived from a photo. Specific design: Pair of purple textile shop curtains on one continuous brass rod totalwidth3.30m, height2.48m; plum/violet broad gravity folds, narrow cream embroidered botanical hems, brass rings and finials shaped subtle leaf buds, teal tiebacks each attached towallhook. Front view fullyshows both panels drawn apart with clear centralwindow, BACK shows lining/seams/rings same geometry, SIDE clothfold profile, TOP rod/wall brackets,3/4 andcloseups ringclip/tieback. Also small CLOSED state with matching pairedpanels. Fabric contours genuinely folded cloth, not straight cylinders. Clear floor .04m beneathhem and generouscentraldoor/windowopening; no obstructions. Exact title: \"87 — RIDEAUX VIOLETS ET TRINGLE\"."
+    },
+    {
+      "back": "88_back_neon_back.png",
+      "category": "Décoration / agencement",
+      "front": "88_back_neon_front.png",
+      "id": "back_neon",
+      "instances_seen": 1,
+      "native_flowers": 0,
+      "number": 88,
+      "size_m": [
+        1.25,
+        2.81999969482422,
+        0.0550003051757813
+      ],
+      "title": "Encadrement néon arrière-boutique",
+      "title_fr": "Encadrement néon arrière-boutique",
+      "group": "Éclairage et textiles",
+      "code_source": "src/world/shop_room.gd",
+      "output": "88_back_neon_sheet.png",
+      "design_brief": "U-shaped neon portal around existing service passage, outerwidth1.25m height2.55m plus separate overhead sign makingoverallheight2.82m. Dark plum stepped slimmetal surround, green luminous glass tube recessed along innerU, narrowbrass clips each .45m, protected cable outlet and smalltransformer behindtop. Header darkplum plaque reads ARRIÈRE-BOUTIQUE in attractive rounded vintage condensed cream/softgreen lettering, text fits margins. Front back side top large3/4 open passage and clips/electrical section; show ON/OFF small detail with identicalphysical tube. No doorleaf, no floor bar or thresholdacrosspassage, no wallblockingopening. Restrained glow edges not giant bloom.",
+      "status": "catalogue",
+      "refs": [
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\out\\shop_catalog\\88_back_neon_front.png",
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\art\\concepts\\shop\\01_counter_sheet_v2.png"
+      ],
+      "submitted_prompt": "Use case: stylized-concept. Create ONE landscape production reference sheet for ONE redesigned game prop in a cartoon florist shop. Mature professional 2D animation concept art inspired by Rick and Morty: clean strong dark outlines, flat coordinated colors, restrained cel shadows, readable slightly quirky forms, sophisticated craftsmanship, NO photorealistic materials and no childish doodles. Warm ivory background, neatly framed panels, ample margins. Input image 1 is the old in-game object: preserve identity/function, improve the design substantially. Input image 2 is the approved STYLE AND SHEET LAYOUT reference, not the subject to copy. Consistent exact same object geometry/colors in every view. French legible labels, large numbered title, 5-7 palette swatches. Include orthographic FACE, DOS, PROFIL, DESSUS and a larger TROIS-QUARTS; add two useful construction closeups. For architecture adapt views as specified. All objects fully visible, no cropped edges, no people, no watermark. Only a few clear metric dimensions; dimensions are proposed modeling targets, not measurements derived from a photo. Specific design: U-shaped neon portal around existing service passage, outerwidth1.25m height2.55m plus separate overhead sign makingoverallheight2.82m. Dark plum stepped slimmetal surround, green luminous glass tube recessed along innerU, narrowbrass clips each .45m, protected cable outlet and smalltransformer behindtop. Header darkplum plaque reads ARRIÈRE-BOUTIQUE in attractive rounded vintage condensed cream/softgreen lettering, text fits margins. Front back side top large3/4 open passage and clips/electrical section; show ON/OFF small detail with identicalphysical tube. No doorleaf, no floor bar or thresholdacrosspassage, no wallblockingopening. Restrained glow edges not giant bloom. Exact title: \"88 — ENCADREMENT NÉON ARRIÈRE-BOUTIQUE\"."
+    },
+    {
+      "back": "89_neon_strips_back.png",
+      "category": "Décoration / agencement",
+      "front": "89_neon_strips_front.png",
+      "id": "neon_strips",
+      "instances_seen": 1,
+      "native_flowers": 0,
+      "number": 89,
+      "size_m": [
+        9.9375,
+        0.0349998474121094,
+        7.4375
+      ],
+      "title": "Bandeaux néon muraux",
+      "title_fr": "Bandeaux néon muraux",
+      "group": "Éclairage et textiles",
+      "code_source": "src/world/shop_room.gd",
+      "output": "89_neon_strips_sheet.png",
+      "design_brief": "Modular indoor walltop neon strip system for10x8m shop, lilac/purple long runs and subtle mint accent run. Complete three-wall U plan only, not room furniture. Profiles: charcoal/brass slim wall channel .045m tall .035m deep, pale lavender curved diffuser, tiny brass attachment clips, endcaps,90degree corner and concealedcable/driver. Panels MAIN3/4 isolated1.20m straightmodule, FRONT module BACK cliprail PROFILE section TOP fullU layout with10x8mindicative room dimensions, explodedconnector/endcap andON/OFF details. No shelves or decorative floatingstrips, each luminous tube fully supported inchannel; no giant bloom washesoutlines. Flexible length repeats, clean buttjoints.",
+      "status": "catalogue",
+      "refs": [
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\out\\shop_catalog\\89_neon_strips_front.png",
+        "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\art\\concepts\\shop\\01_counter_sheet_v2.png"
+      ],
+      "submitted_prompt": "Use case: stylized-concept. Create ONE landscape production reference sheet for ONE redesigned game prop in a cartoon florist shop. Mature professional 2D animation concept art inspired by Rick and Morty: clean strong dark outlines, flat coordinated colors, restrained cel shadows, readable slightly quirky forms, sophisticated craftsmanship, NO photorealistic materials and no childish doodles. Warm ivory background, neatly framed panels, ample margins. Input image 1 is the old in-game object: preserve identity/function, improve the design substantially. Input image 2 is the approved STYLE AND SHEET LAYOUT reference, not the subject to copy. Consistent exact same object geometry/colors in every view. French legible labels, large numbered title, 5-7 palette swatches. Include orthographic FACE, DOS, PROFIL, DESSUS and a larger TROIS-QUARTS; add two useful construction closeups. For architecture adapt views as specified. All objects fully visible, no cropped edges, no people, no watermark. Only a few clear metric dimensions; dimensions are proposed modeling targets, not measurements derived from a photo. Specific design: Modular indoor walltop neon strip system for10x8m shop, lilac/purple long runs and subtle mint accent run. Complete three-wall U plan only, not room furniture. Profiles: charcoal/brass slim wall channel .045m tall .035m deep, pale lavender curved diffuser, tiny brass attachment clips, endcaps,90degree corner and concealedcable/driver. Panels MAIN3/4 isolated1.20m straightmodule, FRONT module BACK cliprail PROFILE section TOP fullU layout with10x8mindicative room dimensions, explodedconnector/endcap andON/OFF details. No shelves or decorative floatingstrips, each luminous tube fully supported inchannel; no giant bloom washesoutlines. Flexible length repeats, clean buttjoints. Exact title: \"89 — BANDEAUX NÉON MURAUX\"."
+    }
+  ]
+}

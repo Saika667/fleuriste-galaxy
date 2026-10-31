@@ -1,0 +1,17 @@
+{
+  "tool": "built-in image_gen",
+  "jobs": [
+    {
+      "id": "bouquet",
+      "source": "C:\\Users\\Saïka\\.codex\\generated_images\\01a179f3-32bb-7ba3-95b3-c5afd66e2c02\\exec-6ca4cf84-58fa-43a6-9545-14f9079f3ba0.png",
+      "output": "poster_bouquet_painting_v2.png",
+      "prompt": "Create a polished portrait flat printable artwork texture for a cartoon sci-fi florist shop. A professional decorative botanical painting of a lush bouquet in an elegant teal ceramic vase on a warm dark wooden table: layered pink roses, ivory lilies with visible stamens, small purple blooms, rich varied leaves, delicate stems. Painterly cel shaded illustration with tasteful visible brushwork, sophisticated composition and controlled warm yellow/ivory background, clean dark contours, same cartoon universe as Rick and Morty but artisanal picture quality. This must look like a finished framed still-life painting, not a children's drawing or a single simple flower icon. At top exact French text 'COURS DE BOUQUET', beautifully composed bold hand-lettered vintage botanical heading. Decorative botanical flourishes, restrained fine gold inner border. The image fills the entire portrait canvas edge to edge. ONLY the flat printed artwork, NO physical frame, no perspective, no wall, no mockup, no dimensions or labels, no watermark. Portrait aspect ratio 2:3. It will be UV mapped onto a real 3D frame."
+    },
+    {
+      "id": "warning",
+      "source": "C:\\Users\\Saïka\\.codex\\generated_images\\01a179f3-32bb-7ba3-95b3-c5afd66e2c02\\exec-5be50ff2-a5ee-461b-8332-4d7291417037.png",
+      "output": "poster_warning_art_v2.png",
+      "prompt": "Create a polished portrait flat printable poster artwork texture, following the FRONT printed poster design in the reference sheet. Exact large headline 'NE PAS NOURRIR', in decorative heavy cream vintage slab serif letterforms with slightly irregular cartoon shapes and dark outline/shadow, tightly composed in two lines, matching the reference's bold elegant lettering. Center an expertly drawn stylized ivory skull with expressive dark sockets, subtle cel shading and carefully shaped cheekbones and teeth, surrounded by symmetrical green botanical branches, small gold leaves and cream accent rays. Coral red printed background. Rich but readable professional retro botanical warning poster design, clean dark cartoon outlines, flat colors and tasteful small cel shadows, consistent with a Rick and Morty type cartoon florist shop. Not a children's doodle, not realistic or gory. Flat printed illustration ONLY: NO physical frame, no wall, no perspective, no mockup, no reference-sheet panels, no dimensions or palette. Crop to printed poster artwork edge to edge. Portrait 2:3. It will be UV mapped onto a real 3D frame."
+    }
+  ]
+}

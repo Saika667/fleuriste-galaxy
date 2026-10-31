@@ -7,7 +7,7 @@ extends Node3D
 const MeshKit = preload("res://src/world/mesh_kit.gd")
 const Actor = preload("res://src/world/customer_actor.gd")
 
-const KINDS = ["granny", "goth", "skeleton", "kid", "mourner", "zombie", "tourist", "jogger", "commuter", "umbrella"]
+const KINDS = ["scientist","mila","noe","aya","gaston","odette","leon","aventurier","heroine"]
 const GAZE_X = [1.7, 3.2, 3.9, 6.9, 8.4]
 const GAZE_LINES = ["Jolis bouquets...", "Des crânes ? Mignon.", "Ça sent la tombe fraîche.", "Ooh, des pivoines !", "Je reviens plus tard."]
 const END_L = -5.0
@@ -78,6 +78,8 @@ func browser_cap() -> int:
 func _make_walker(x: float, dir: float, mode: String) -> Dictionary:
 	_n += 1
 	var kind = KINDS[randi() % KINDS.size()]
+	if _n == 1:
+		kind = "scientist"
 	var a = Actor.new()
 	add_child(a)
 	a.setup({"uid": "w%d" % _n, "def": "extra_" + kind, "kind": "florist", "route": "street"}, {})
@@ -225,39 +227,11 @@ func _leg(parent: Node3D, pos: Vector3, col: Color) -> Node3D:
 
 
 func _build_cat() -> void:
-	_cat = Node3D.new()
-	_cat.name = "Cat"
-	add_child(_cat)
-	var rig = Node3D.new()
-	rig.name = "rig"
-	_cat.add_child(rig)
-	var fur = Color("#4A3A5C")
-	var body = MeshKit.capsule(rig, 0.1, 0.46, Vector3(0, 0.22, 0), fur)
-	body.rotation.x = PI * 0.5
-	MeshKit.sphere(rig, 0.1, Vector3(0, 0.31, 0.27), fur)
-	MeshKit.cylinder(rig, 0.0, 0.04, 0.08, Vector3(-0.06, 0.4, 0.27), fur)
-	MeshKit.cylinder(rig, 0.0, 0.04, 0.08, Vector3(0.06, 0.4, 0.27), fur)
-	for sx in [-1, 1]:
-		var e = MeshKit.sphere(rig, 0.02, Vector3(sx * 0.045, 0.325, 0.355), Color("#D6FF5A"), Vector3(1, 1.3, 0.6), 0.3, 2.0)
-		e.set_meta("no_outline", true)
-		MeshKit.sphere(rig, 0.008, Vector3(sx * 0.045, 0.325, 0.368), MeshKit.INK, Vector3(0.6, 1.6, 0.5)).set_meta("no_outline", true)
-	MeshKit.sphere(rig, 0.016, Vector3(0, 0.29, 0.372), MeshKit.PETAL, Vector3(1, 0.7, 0.6))
-	var legs = []
-	for p in [Vector3(-0.07, 0.15, 0.14), Vector3(0.07, 0.15, 0.14), Vector3(-0.07, 0.15, -0.14), Vector3(0.07, 0.15, -0.14)]:
-		legs.append(_leg(rig, p, fur))
-	var tail = Node3D.new()
-	tail.name = "tail"
-	tail.position = Vector3(0, 0.25, -0.27)
-	rig.add_child(tail)
-	var tc = MeshKit.capsule(tail, 0.028, 0.46, Vector3(0, 0.2, -0.05), fur)
-	tc.rotation.x = -0.25
-	_cat.set_meta("legs", legs)
-	_cat.set_meta("tail", tail)
-	_cat.set_meta("rig", rig)
-	MeshKit.apply_outline(_cat, MeshKit.INK, 0.006)
-	_cat.position = Vector3(6.0, 0, 10.2)
-	_cat.scale = Vector3.ONE * 1.25
-
+	_cat=_animal("cat");_cat.position=Vector3(6,0,10.2)
+	_cat.set_meta("rig",_cat.find_child("rig",true,false));_cat.set_meta("tail",_cat.find_child("tail",true,false))
+	var legs=[]
+	for i in 4:legs.append(_cat.find_child("leg_"+str(i),true,false))
+	_cat.set_meta("legs",legs)
 
 func _update_cat(dt: float) -> void:
 	_cat_t -= dt
@@ -295,35 +269,12 @@ func _update_cat(dt: float) -> void:
 
 
 func _build_pigeon() -> void:
-	_pigeon = Node3D.new()
-	_pigeon.name = "Pigeon"
-	add_child(_pigeon)
-	var rig = Node3D.new()
-	rig.name = "rig"
-	_pigeon.add_child(rig)
-	var col = Color("#8A8FA8")
-	MeshKit.sphere(rig, 0.1, Vector3(0, 0.17, 0), col, Vector3(1, 0.95, 1.5))
-	var head = Node3D.new()
-	head.name = "head"
-	head.position = Vector3(0, 0.27, 0.12)
-	rig.add_child(head)
-	MeshKit.sphere(head, 0.055, Vector3.ZERO, Color("#6E7390"))
-	var beak = MeshKit.cylinder(head, 0.0, 0.015, 0.045, Vector3(0, -0.005, 0.07), MeshKit.WARN)
-	beak.rotation.x = PI * 0.5
-	for sx in [-1, 1]:
-		MeshKit.sphere(head, 0.01, Vector3(sx * 0.035, 0.012, 0.04), MeshKit.INK)
-		MeshKit.cylinder(rig, 0.008, 0.008, 0.1, Vector3(sx * 0.04, 0.05, 0), MeshKit.PETAL)
-		var wing = MeshKit.sphere(rig, 0.07, Vector3(sx * 0.09, 0.19, -0.02), Color("#767B96"), Vector3(0.3, 0.9, 1.4))
-		wing.name = "wing_%d" % sx
-	MeshKit.apply_outline(_pigeon, MeshKit.INK, 0.005)
-	_pigeon.position = Vector3(9.8, 0, 9.9)
-	_pigeon.rotation.y = 2.0
-
+	_pigeon=_animal("pigeon");_pigeon.position=Vector3(9.8,0,9.9);_pigeon.rotation.y=2.0
 
 func _update_pigeon(dt: float) -> void:
 	_pigeon_t -= dt
-	var rig: Node3D = _pigeon.get_node("rig")
-	var head: Node3D = rig.get_node("head")
+	var rig: Node3D = _pigeon.find_child("rig",true,false)
+	var head: Node3D = rig.find_child("head",true,false)
 	match _pigeon_state:
 		"peck":
 			head.rotation.x = maxf(0.0, sin(_t * 7.0 + _pigeon.position.x)) * 0.9
@@ -344,7 +295,7 @@ func _update_pigeon(dt: float) -> void:
 			_pigeon.position.z -= dt * 0.6
 			head.rotation.x = 0.0
 			for sx in [-1, 1]:
-				rig.get_node("wing_%d" % sx).rotation.z = sx * sin(_t * 30.0) * 0.9
+				rig.find_child("wing_%d" % sx,true,false).rotation.z = sx * sin(_t * 30.0) * 0.9
 			if _pigeon_t <= 0.0:
 				_pigeon_state = "away"
 				_pigeon_t = randf_range(10.0, 20.0)
@@ -356,29 +307,15 @@ func _update_pigeon(dt: float) -> void:
 				_pigeon.visible = true
 				rig.position.y = 0.0
 				for sx in [-1, 1]:
-					rig.get_node("wing_%d" % sx).rotation.z = 0.0
+					rig.find_child("wing_%d" % sx,true,false).rotation.z = 0.0
 				_pigeon_state = "peck"
 				_pigeon_t = 0.0
 
 
 func _build_butterflies() -> void:
-	var cols = [MeshKit.PETAL, MeshKit.SUN, Color("#B58CFF"), Color("#6FD6C2")]
-	var centers = [Vector3(1.4, 1.3, 4.6), Vector3(8.4, 1.3, 5.4), Vector3(5.0, 1.8, 3.2), Vector3(3.0, 1.5, 6.8)]
 	for i in 4:
-		var n = Node3D.new()
-		add_child(n)
-		var wl = Node3D.new()
-		var wr = Node3D.new()
-		n.add_child(wl)
-		n.add_child(wr)
-		var col = cols[i % cols.size()]
-		MeshKit.sphere(wl, 0.05, Vector3(-0.045, 0, 0), col, Vector3(1, 0.12, 0.85), 0.6, 0.15)
-		MeshKit.sphere(wr, 0.05, Vector3(0.045, 0, 0), col, Vector3(1, 0.12, 0.85), 0.6, 0.15)
-		MeshKit.sphere(n, 0.016, Vector3.ZERO, MeshKit.INK, Vector3(0.7, 0.7, 2.0)).set_meta("no_outline", true)
-		for m in MeshKit.meshes_of(n):
-			m.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
-		_flies.append({"node": n, "c": centers[i], "ph": randf() * TAU, "r": 0.5 + 0.25 * i, "wl": wl, "wr": wr})
-
+		var n=_animal("butterfly")
+		_flies.append({"node":n,"c":Vector3(2+i*1.8,1.5,4.5),"ph":i*1.4,"r":.5+i*.25,"wl":n.find_child("wing_-1",true,false),"wr":n.find_child("wing_1",true,false)})
 
 func _update_butterflies(day: float) -> void:
 	for f in _flies:
@@ -401,8 +338,7 @@ func _build_fireflies() -> void:
 	var rng = RandomNumberGenerator.new()
 	rng.seed = 11
 	for i in 10:
-		var m = MeshKit.sphere(self, 0.022, Vector3.ZERO, MeshKit.TOXIC, Vector3.ONE, 0.3, 3.0)
-		m.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
+		var m = _animal("firefly")
 		m.set_meta("no_outline", true)
 		var c = Vector3(rng.randf_range(8.3, 13.0), rng.randf_range(0.8, 2.2), rng.randf_range(1.5, 6.5)) if i < 7 else Vector3(rng.randf_range(2.0, 4.0), rng.randf_range(10.8, 12.0), 0.0)
 		if i >= 7:
@@ -420,20 +356,16 @@ func _update_fireflies(night: float) -> void:
 
 
 func _build_spider() -> void:
-	_spider = Node3D.new()
-	_spider.position = Vector3(6.3, 3.0, 3.6)
-	add_child(_spider)
-	_spider_thread = MeshKit.cylinder(self, 0.004, 0.004, 1.0, Vector3(6.3, 2.7, 3.6), Color("#EDE6D3"))
-	_spider_thread.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
-	MeshKit.sphere(_spider, 0.06, Vector3.ZERO, MeshKit.INK, Vector3(1, 0.85, 1.1))
-	MeshKit.sphere(_spider, 0.04, Vector3(0, 0.02, 0.07), MeshKit.INK)
-	for sx in [-1, 1]:
-		MeshKit.sphere(_spider, 0.012, Vector3(sx * 0.02, 0.04, 0.1), MeshKit.TOXIC, Vector3.ONE, 0.3, 1.5).set_meta("no_outline", true)
-		for k in 4:
-			var leg = MeshKit.capsule(_spider, 0.006, 0.16, Vector3(sx * 0.1, -0.02 + (k - 1.5) * 0.001, (k - 1.5) * 0.035), MeshKit.INK)
-			leg.rotation = Vector3(0, 0, sx * 1.0 + 0.0)
-			leg.rotation.y = (k - 1.5) * 0.35 * sx
+	_spider=_animal("spider");_spider.position=Vector3(6.3,3,3.6)
+	_spider_thread=MeshKit.cylinder(self,.002,.002,1,Vector3(6.3,2.7,3.6),Color("#EDE6D3"))
+	_spider_thread.cast_shadow=GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
 
+func _animal(id:String) -> Node3D:
+	var n=load("res://assets/models/animals/"+id+".glb").instantiate();add_child(n)
+	preload("res://src/world/shop_collection_visual.gd")._prepare(n)
+	preload("res://src/world/static_merge.gd").merge(n,[],[],[],1000)
+	n.set_meta("concept_sheet","res://art/concepts/animals/"+id+"_sheet.png")
+	return n
 
 func _update_spider() -> void:
 	var drop = 0.45 + 0.4 * sin(_t * 0.35) * sin(_t * 0.13 + 1.0)

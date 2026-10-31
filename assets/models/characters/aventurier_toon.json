@@ -1,0 +1,17 @@
+{
+  "file": "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\assets/models/characters/aventurier_toon.glb",
+  "bytes": 3659104,
+  "triangles_including_outlines": 128736,
+  "meshes": 17,
+  "material_primitives": 61,
+  "materials": 16,
+  "skins": 1,
+  "joints": 17,
+  "animations": 0,
+  "shading": "KHR_materials_unlit; inverted hull outlines",
+  "checks": [
+    "GLB header and JSON parsed",
+    "skeleton exported",
+    "hidden expressions excluded"
+  ]
+}

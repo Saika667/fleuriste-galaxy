@@ -1,0 +1,41 @@
+{
+  "_doc": "Variantes visuelles par tige. Les couleurs logiques des commandes restent dans flowers.json. Seuls les rôles listés sont recolorés, avec des copies de matériaux propres à chaque palette.",
+  "variants": {
+    "rose": [
+      {"id":"original","name":"Rouge","colors":{}},
+      {"id":"ivory","name":"Ivoire","colors":{"red":"#FFF3D9","red_dark":"#DCCEB4"}},
+      {"id":"pink","name":"Rose","colors":{"red":"#F58DBB","red_dark":"#C94D8B"}},
+      {"id":"violet","name":"Violette","colors":{"red":"#AA7AD9","red_dark":"#70449D"}}
+    ],
+    "tulip": [
+      {"id":"original","name":"Rose","colors":{}},
+      {"id":"red","name":"Rouge","colors":{"petal":"#E54D54","petal_dark":"#B72D42"}},
+      {"id":"yellow","name":"Jaune","colors":{"petal":"#FFCF45","petal_dark":"#DDA42E"}},
+      {"id":"violet","name":"Violette","colors":{"petal":"#AA79D6","petal_dark":"#754DA7"}}
+    ],
+    "lily": [
+      {"id":"original","name":"Ivoire","colors":{}},
+      {"id":"pink","name":"Rose","colors":{"petal":"#F2A4C8","petal_dark":"#D87BAA"}},
+      {"id":"orange","name":"Orange","colors":{"petal":"#FFAA57","petal_dark":"#E78339"}},
+      {"id":"lilac","name":"Lilas","colors":{"petal":"#CCB4ED","petal_dark":"#A78ACD"}}
+    ],
+    "xeno_bloom": [
+      {"id":"original","name":"Vert acide","colors":{}},
+      {"id":"cyan","name":"Cyan","colors":{"petal":"#62DDEB","bead":"#A3FFFF"}},
+      {"id":"coral","name":"Corail","colors":{"petal":"#F8948E","bead":"#FFD69C"}},
+      {"id":"violet","name":"Violette","colors":{"petal":"#B590EF","bead":"#EAC7FF"}}
+    ],
+    "snap_orchid": [
+      {"id":"original","name":"Rose","colors":{}},
+      {"id":"violet","name":"Violette","colors":{"petal":"#AC83DA","lip":"#7950AD"}},
+      {"id":"orange","name":"Orange","colors":{"petal":"#F7A95C","lip":"#D7733B"}},
+      {"id":"cyan","name":"Bleue","colors":{"petal":"#83D4E9","lip":"#4997C5"}}
+    ],
+    "pleurelune": [
+      {"id":"original","name":"Violette","colors":{}},
+      {"id":"blue","name":"Bleue","colors":{"petal":"#80ACE7","inside":"#405F9D"}},
+      {"id":"pink","name":"Rose","colors":{"petal":"#EAA3CD","inside":"#A4568B"}},
+      {"id":"ivory","name":"Ivoire","colors":{"petal":"#F1E8D8","inside":"#A69AB8"}}
+    ]
+  }
+}

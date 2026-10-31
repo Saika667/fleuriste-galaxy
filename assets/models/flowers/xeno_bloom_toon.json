@@ -1,0 +1,16 @@
+{
+  "id": "xeno_bloom",
+  "source": "art/concepts/flowers/xeno_bloom_cartoon.png",
+  "triangles_with_outlines": 17072,
+  "meshes": 1,
+  "surfaces": 9,
+  "height_m": 0.562999963760376,
+  "features": {
+    "fleshy_lobes": 3,
+    "eyes": 1,
+    "antennae": 1,
+    "leaves": 2
+  },
+  "head_height_m": 0.445,
+  "shading": "unlit; inverted hull contours"
+}

@@ -14,6 +14,8 @@ func rebuild() -> void:
 	grid.cell_size = Vector2.ONE
 	grid.diagonal_mode = AStarGrid2D.DIAGONAL_MODE_ONLY_IF_NO_OBSTACLES
 	grid.update()
+	for c in Game.logistics.shop_obstacles():
+		if grid.is_in_boundsv(c):grid.set_point_solid(c,true)
 	var shop = Game.rooms.shop
 	for it in shop.items:
 		if it.def == "rug":

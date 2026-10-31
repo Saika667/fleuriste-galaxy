@@ -1,0 +1,28 @@
+{
+  "id": "cannabis_sauvage_growing",
+  "source": "art/concepts/cannabis/growth/05_sauvage_stades.png",
+  "triangles_with_outlines": 74736,
+  "meshes": 1,
+  "surfaces": 14,
+  "height_m": 0.8892999291419983,
+  "features": {
+    "family": "cannabis_sauvage",
+    "stage": "growing",
+    "pot_size_unchanged": true,
+    "reference_soil_height_m": 0.2276,
+    "leaf_size_relative_to_adult": 0.62,
+    "bud_scale_range": [
+      0.25,
+      0.3
+    ],
+    "small_foliage_shoots": 2,
+    "canopy_height_m": 0.62,
+    "potted": true,
+    "flower_clusters": 4,
+    "palmate_leaf_fans": 10,
+    "fingers_per_leaf": 5,
+    "static_prop": true
+  },
+  "head_height_m": 0.8476,
+  "shading": "unlit; inverted hull contours"
+}

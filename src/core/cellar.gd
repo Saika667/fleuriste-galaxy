@@ -6,6 +6,9 @@ signal changed
 signal nuisance_signal(kind: String)
 
 var planters: Array = []  # Array[Planter]
+var single_pots: Array = []
+var vent_filters: Array = [false, false]
+var filters_managed := true
 var equipment: Dictionary = {"capacity": 0, "lamp": 0, "filter": 0, "lock": 0}
 var seeds: Dictionary = {"cannabis": 4}
 var stock: Array = []  # produits recoltes {crop, quality}
@@ -14,6 +17,7 @@ var weapon: String = "bat"  # arme debloquee (provisoire : la batte au depart de
 
 
 func _init() -> void:
+	for i in 8:single_pots.append(SinglePlantPot.new())
 	for i in int(GameData.bal("planters.start_planters", 1)):
 		planters.append(Planter.new())
 
@@ -32,6 +36,7 @@ func total_plants() -> int:
 	var n = 0
 	for p in planters:
 		n += p.count()
+	for p in single_pots:n += p.count()
 	return n
 
 
@@ -49,7 +54,7 @@ func nuisance_probability() -> float:
 		return 0.0
 	var n = GameData.bal("cellar.nuisance", {})
 	var p = float(n.get("base_when_overloaded", 0.2)) + float(n.get("per_overload", 0.4)) * over \
-		- float(n.get("filter_reduction_per_level", 0.15)) * equipment.filter
+		- float(n.get("filter_reduction_per_level", 0.15)) * equipment.filter * filter_coverage()
 	return clampf(p, 0.0, float(n.get("max", 0.9)))
 
 
@@ -71,6 +76,7 @@ func growth_mult() -> float:
 func tick(dt: float, growth_factor: float = 1.0) -> void:
 	for p in planters:
 		p.tick(dt, growth_mult() * growth_factor)
+	for p in single_pots:p.tick(dt, growth_mult() * growth_factor)
 	composter.tick(dt)
 
 
@@ -86,13 +92,15 @@ func compute_quality(crop: String, compost_units: int = 0) -> int:
 func plant(planter_index: int, crop: String, compost_units: int = 0) -> Dictionary:
 	if planter_index < 0 or planter_index >= planters.size():
 		return {"ok": false, "error": "no_such_planter"}
+	return _plant_into(planters[planter_index],crop,compost_units)
+
+func _plant_into(pl: Planter,crop: String,compost_units: int) -> Dictionary:
 	if int(seeds.get(crop, 0)) <= 0:
 		return {"ok": false, "error": "no_seed"}
 	if compost_units < 0 or compost_units > int(GameData.bal("quality.max_compost_units_per_plant", 2)):
 		return {"ok": false, "error": "invalid_compost"}
 	if compost_units > composter.units:
 		return {"ok": false, "error": "not_enough_compost"}
-	var pl = planters[planter_index]
 	if pl.is_full():
 		return {"ok": false, "error": "full"}
 	var quality = compute_quality(crop, compost_units)
@@ -158,11 +166,22 @@ func to_dict() -> Dictionary:
 	var pl = []
 	for p in planters:
 		pl.append(p.to_dict())
-	return {"planters": pl, "equipment": equipment.duplicate(), "seeds": seeds.duplicate(),
+	var pots=[]
+	for p in single_pots:pots.append(p.to_dict())
+	return {"planters": pl, "single_pots":pots,"vent_filters":vent_filters.duplicate(),"filters_managed":filters_managed,"equipment": equipment.duplicate(), "seeds": seeds.duplicate(),
 		"stock": stock.duplicate(true), "composter": composter.to_dict(), "weapon": weapon}
 
 
 func from_dict(d: Dictionary) -> void:
+	single_pots.clear()
+	var saved_pots=d.get("single_pots",[])
+	for i in 8:
+		var p=SinglePlantPot.new()
+		if i<saved_pots.size():p.from_dict(saved_pots[i])
+		single_pots.append(p)
+	filters_managed=bool(d.get("filters_managed",false))
+	var vf=d.get("vent_filters",[false,false])
+	vent_filters=[bool(vf[0]) if vf.size()>0 else false,bool(vf[1]) if vf.size()>1 else false]
 	planters = []
 	for pd in d.get("planters", []):
 		var p = Planter.new()
@@ -179,3 +198,28 @@ func from_dict(d: Dictionary) -> void:
 	composter.from_dict(d.get("composter", {}))
 	weapon = String(d.get("weapon", "bat"))
 	changed.emit()
+
+
+func filter_coverage() -> float:
+	# Existing saves retain the former upgrade effect until the player manages cartridges.
+	if not filters_managed:return 1.0
+	return (int(vent_filters[0])+int(vent_filters[1]))*.5
+
+func toggle_vent_filter(index: int) -> bool:
+	if index<0 or index>=2 or equipment.filter<=0:return false
+	filters_managed=true
+	vent_filters[index]=not vent_filters[index]
+	changed.emit()
+	return true
+
+func plant_single(index: int,crop: String,compost_units: int=0) -> Dictionary:
+	if index<0 or index>=single_pots.size():return {"ok":false,"error":"no_such_planter"}
+	return _plant_into(single_pots[index],crop,compost_units)
+
+func harvest_single(index: int) -> bool:
+	if index<0 or index>=single_pots.size():return false
+	var item=single_pots[index].harvest(0)
+	if item.is_empty():return false
+	stock.append(item)
+	changed.emit()
+	return true

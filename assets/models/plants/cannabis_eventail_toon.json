@@ -1,0 +1,21 @@
+{
+  "id": "cannabis_eventail",
+  "source": "art/concepts/cannabis/04_eventail.png",
+  "triangles_with_outlines": 172000,
+  "meshes": 1,
+  "surfaces": 14,
+  "height_m": 0.9159500002861023,
+  "features": {
+    "silhouette": "three-prong fan",
+    "additional_leaf_fans": 3,
+    "small_foliage_shoots": 6,
+    "leaves_on_small_shoots": 18,
+    "potted": true,
+    "flower_clusters": 3,
+    "palmate_leaf_fans": 29,
+    "fingers_per_leaf": 7,
+    "static_prop": true
+  },
+  "head_height_m": 0.8,
+  "shading": "unlit; inverted hull contours"
+}

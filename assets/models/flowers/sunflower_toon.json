@@ -1,0 +1,15 @@
+{
+  "id": "sunflower",
+  "source": "art/concepts/flowers/sunflower_cartoon.png",
+  "triangles_with_outlines": 30664,
+  "meshes": 1,
+  "surfaces": 7,
+  "height_m": 0.5306369662284851,
+  "features": {
+    "petals": 12,
+    "heart": "large brown disk",
+    "leaves": 2
+  },
+  "head_height_m": 0.445,
+  "shading": "unlit; inverted hull contours"
+}

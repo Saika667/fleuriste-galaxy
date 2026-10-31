@@ -1,0 +1,22 @@
+[
+  {
+    "asset": "garden_bench",
+    "triangles": 10304
+  },
+  {
+    "asset": "workshop_window",
+    "triangles": 4452
+  },
+  {
+    "asset": "pavement_board",
+    "triangles": 33664
+  },
+  {
+    "asset": "bucket_clearance",
+    "triangles": 14260
+  },
+  {
+    "asset": "bucket_biting",
+    "triangles": 10372
+  }
+]

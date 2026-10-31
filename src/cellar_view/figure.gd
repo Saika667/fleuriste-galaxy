@@ -140,6 +140,9 @@ static func set_face_on(head: Node3D, mode: String) -> void:
 ## Visiteur humain ou extraterrestre depuis la VUE PUBLIQUE du client (CustomerQueue.public_view) : species, tells, look_seed.
 ## Aucune lecture de kind / def : le look ne depend que de look_seed et des tells (GDD 9).
 static func person(v: Dictionary) -> Node3D:
+	return preload("res://src/cellar_view/approved_figure.gd").build(v)
+
+static func _retired_person(v: Dictionary) -> Node3D:
 	if String(v.get("species", "human")) != "human":
 		return alien(v.get("tells", []))
 	var seed: int = int(v.get("look_seed", 0))

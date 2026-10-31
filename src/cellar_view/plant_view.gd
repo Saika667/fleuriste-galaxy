@@ -1,7 +1,7 @@
 class_name PlantView
 extends RefCounted
-## Modeles de plantes de la cave (primitives). stage : seedling | growing | ripe (+ budding pour les cultures du tour 6,
-## voir plant_tour6.gd ; traite comme "growing" pour les autres).
+## Native cellar meshes: seedling, growing, budding, ripe.
+## Legacy primitive helpers remain available to older diagnostic scenes.
 const Tour6 = preload("res://src/cellar_view/plant_tour6.gd")
 
 
@@ -14,18 +14,7 @@ static func quality_color(q: int) -> Color:
 
 
 static func build(crop: String, stage: String, quality: int) -> Node3D:
-	var root := Node3D.new()
-	var old_stage = "growing" if stage == "budding" else stage
-	match crop:
-		"xeno_lotus":
-			_lotus(root, old_stage, quality)
-		"gloom_moss":
-			Tour6.moss(root, stage, quality)
-		"star_vine":
-			Tour6.vine(root, stage, quality)
-		_:
-			_herb(root, old_stage, quality)
-	return root
+	return preload("res://src/cellar_view/cellar_collection.gd").plant(crop,stage)
 
 
 static func _herb(root: Node3D, stage: String, quality: int) -> void:

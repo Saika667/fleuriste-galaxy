@@ -56,7 +56,7 @@
     "color_penalty": 0.2,
     "reputation_per_star": 0.1
   },
-  "planters": { "max_slots": 4, "start_planters": 1, "max_planters": 4 },
+  "planters": { "max_slots": 4, "start_planters": 1, "max_planters": 24 },
   "crops": {
     "cannabis": {
       "_doc": "Plante fictive de la cave. growth_seconds: duree de pousse de base; value: prix de vente de base clandestin.",

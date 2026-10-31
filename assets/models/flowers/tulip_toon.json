@@ -1,0 +1,15 @@
+{
+  "id": "tulip",
+  "source": "art/concepts/flowers/tulip_cartoon.png",
+  "triangles_with_outlines": 14616,
+  "meshes": 1,
+  "surfaces": 7,
+  "height_m": 0.5123295187950134,
+  "features": {
+    "petals": 6,
+    "long_leaves": 2,
+    "cup": "hollow"
+  },
+  "head_height_m": 0.445,
+  "shading": "unlit; inverted hull contours"
+}

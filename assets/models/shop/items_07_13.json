@@ -1,0 +1,37 @@
+[
+  {
+    "asset": "vase_rose",
+    "triangles": 5812,
+    "metres": true
+  },
+  {
+    "asset": "task_lamp",
+    "triangles": 5104,
+    "metres": true
+  },
+  {
+    "asset": "flower_fridge",
+    "triangles": 27308,
+    "metres": true
+  },
+  {
+    "asset": "vase_lily",
+    "triangles": 7504,
+    "metres": true
+  },
+  {
+    "asset": "vase_sunflower",
+    "triangles": 4446,
+    "metres": true
+  },
+  {
+    "asset": "vase_lavender",
+    "triangles": 1696,
+    "metres": true
+  },
+  {
+    "asset": "vase_poppy",
+    "triangles": 7008,
+    "metres": true
+  }
+]

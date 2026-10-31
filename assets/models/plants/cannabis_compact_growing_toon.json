@@ -1,0 +1,24 @@
+{
+  "id": "cannabis_compact_growing",
+  "source": "art/concepts/cannabis/growth/01_compacte_stades.png",
+  "triangles_with_outlines": 107864,
+  "meshes": 1,
+  "surfaces": 14,
+  "height_m": 0.6666999459266663,
+  "features": {
+    "stage": "growing",
+    "family": "cannabis_compact",
+    "pot_size_unchanged": true,
+    "reference_soil_height_m": 0.234,
+    "leaf_size_relative_to_adult": 0.62,
+    "bud_size_relative_to_adult": 0.23,
+    "small_foliage_shoots": 2,
+    "potted": true,
+    "flower_clusters": 5,
+    "palmate_leaf_fans": 12,
+    "fingers_per_leaf": 7,
+    "static_prop": true
+  },
+  "head_height_m": 0.63,
+  "shading": "unlit; inverted hull contours"
+}

@@ -2,7 +2,8 @@ class_name CellarView
 extends Node3D
 ## Cave 3D stylisee. Lit l'etat reel de Game (cultures, equipements, composteur, file clandestine,
 ## voleurs, indices publics) ; toute action passe par Game. Aucune jauge visible.
-## Contrat : get_spawn_point(), signal exit_requested, objets interactifs (groupe `interactable`).
+## Contrat : get_spawn_point(), signal exit_requested, objets interactifs.
+const Remodel=preload("res://src/cellar_view/cellar_remodel.gd")
 
 signal exit_requested
 signal menu_opened   # le monde peut figer le joueur
@@ -10,14 +11,14 @@ signal menu_closed
 
 const StaticMerge = preload("res://src/world/static_merge.gd")
 const CellarVisitors = preload("res://src/cellar_view/visitors.gd")
-const ROOM := Vector3(10.0, 3.0, 8.0)  # x, hauteur, z (centre au sol en 0,0)
-const STAIRS_X := -3.6
-const BIN_POS := [Vector3(0.4, 0, -3.1), Vector3(3.0, 0, -3.1), Vector3(0.4, 0, -1.2), Vector3(3.0, 0, -1.2)]
-const CABINET_POS := Vector3(3.6, 0, 3.55)
-const COMPOSTER_POS := Vector3(-3.5, 0, 2.7)
-const COUNTER_POS := Vector3(-0.6, 0, 2.75)
-const GUEST_Z := 3.5
-const HATCH_POS := Vector3(2.0, 0, 1.0)
+const ROOM := Vector3(24.0, 3.8, 18.0)  # x, hauteur, z (centre au sol en 0,0)
+const STAIRS_X := -10.5
+const BIN_POS := [Vector3(-6,0,-6.2),Vector3(-9,0,-3.0),Vector3(2,0,-6.2),Vector3(6,0,-6.2)]
+const CABINET_POS := Vector3(10.9,0,3.2)
+const COMPOSTER_POS := Vector3(-10.0,0,-2.4)
+const COUNTER_POS := Vector3(1,0,8.5)
+const GUEST_Z := 11.4
+const HATCH_POS := Vector3(8.0,0,17.5)
 const EQUIP := {
 	"capacity": {"name": "Ventilation et espace", "short": "Espace", "z": -0.6},
 	"lamp": {"name": "Lampes de culture", "short": "Lampes", "z": 0.4},
@@ -86,7 +87,7 @@ func _ready() -> void:
 	_build_seed_crate()
 	_build_hatch()
 	_build_decor()
-	CellarScenery.build(self)
+	# Native decor is built by Remodel; the old dressing is intentionally replaced.
 	_build_audio()
 	overlay = CellarOverlay.new()
 	add_child(overlay)
@@ -106,7 +107,7 @@ func _ready() -> void:
 
 
 func get_spawn_point() -> Vector3:
-	var p = Vector3(STAIRS_X, 0.1, 0.9)
+	var p = Vector3(-3.4,0.1,-4.5)
 	return global_transform * p if is_inside_tree() else p
 
 
@@ -184,6 +185,7 @@ func _process(delta: float) -> void:
 
 
 func _refresh_all(force: bool) -> void:
+	_planters=_planters.filter(func(p):return is_instance_valid(p) and not p.is_queued_for_deletion())
 	for p in _planters:
 		p.refresh(force)
 	_composter.refresh()
@@ -199,30 +201,7 @@ func _refresh_all(force: bool) -> void:
 # ---------------------------------------------------------------- construction
 
 func _build_room() -> void:
-	var stone = CellarKit.stone(Color("6A5890"), 0.34)
-	var stone_s = CellarKit.stone(Color("5E4E80"), 0.34)
-	var floor_m = CellarKit.stone(Color("4A3A5C"), 0.45)
-	var ceil_m = CellarKit.stone(Color("2C2040"), 0.3)
-	CellarKit.box(self, Vector3(ROOM.x, 0.2, ROOM.z), Vector3(0, -0.1, 0), floor_m)
-	CellarKit.solid(self, Vector3(ROOM.x + 2, 0.4, ROOM.z + 2), Vector3(0, -0.2, 0))
-	CellarKit.box(self, Vector3(ROOM.x, 0.2, ROOM.z), Vector3(0, ROOM.y + 0.1, 0), ceil_m)
-	CellarKit.solid(self, Vector3(ROOM.x + 2, 0.4, ROOM.z + 2), Vector3(0, ROOM.y + 0.2, 0))
-	for z in [-1, 1]:
-		CellarKit.box(self, Vector3(ROOM.x, ROOM.y, 0.2), Vector3(0, ROOM.y * 0.5, z * (ROOM.z * 0.5 + 0.1)), stone)
-		CellarKit.solid(self, Vector3(ROOM.x + 2, ROOM.y, 0.6), Vector3(0, ROOM.y * 0.5, z * (ROOM.z * 0.5 + 0.3)))
-	for x in [-1, 1]:
-		CellarKit.box(self, Vector3(0.2, ROOM.y, ROOM.z), Vector3(x * (ROOM.x * 0.5 + 0.1), ROOM.y * 0.5, 0), stone_s)
-		CellarKit.solid(self, Vector3(0.6, ROOM.y, ROOM.z + 2), Vector3(x * (ROOM.x * 0.5 + 0.3), ROOM.y * 0.5, 0))
-	# poutres du plafond
-	var beam = CellarKit.wood(Color("6A4636"), false)
-	for z in [-3.0, 0.0, 3.0]:
-		CellarKit.box(self, Vector3(ROOM.x, 0.22, 0.28), Vector3(0, ROOM.y - 0.11, z), beam)
-	# plinthe sombre
-	var base = CellarKit.mat(Color("1F1530"))
-	CellarKit.box(self, Vector3(ROOM.x, 0.18, 0.1), Vector3(0, 0.09, -ROOM.z * 0.5 + 0.05), base)
-	CellarKit.box(self, Vector3(ROOM.x, 0.18, 0.1), Vector3(0, 0.09, ROOM.z * 0.5 - 0.05), base)
-	CellarKit.box(self, Vector3(0.1, 0.18, ROOM.z), Vector3(-ROOM.x * 0.5 + 0.05, 0.09, 0), base)
-	CellarKit.box(self, Vector3(0.1, 0.18, ROOM.z), Vector3(ROOM.x * 0.5 - 0.05, 0.09, 0), base)
+	Remodel.room(self)
 
 
 func _build_lighting() -> void:
@@ -231,7 +210,7 @@ func _build_lighting() -> void:
 	env.background_color = Color("0A0610")
 	env.ambient_light_source = Environment.AMBIENT_SOURCE_COLOR
 	env.ambient_light_color = Color("4C4682")
-	env.ambient_light_energy = 0.55
+	env.ambient_light_energy = 0.80
 	env.tonemap_mode = Environment.TONE_MAPPER_FILMIC
 	env.glow_enabled = true
 	env.glow_intensity = 0.35
@@ -246,47 +225,32 @@ func _build_lighting() -> void:
 	env.ssao_light_affect = 0.35
 	env.fog_enabled = true
 	env.fog_light_color = Color("1A1230")
-	env.fog_density = 0.03
+	env.fog_density = 0.004
 	env.volumetric_fog_enabled = true
-	env.volumetric_fog_density = 0.06
+	env.volumetric_fog_density = 0.008
 	env.volumetric_fog_albedo = Color("A08CD0")
 	env.volumetric_fog_emission = Color("070410")
 	env.volumetric_fog_anisotropy = 0.55
-	env.volumetric_fog_length = 14.0
+	env.volumetric_fog_length = 32.0
 	env.adjustment_enabled = true
 	env.adjustment_saturation = 1.12
 	env.adjustment_contrast = 1.1
 	var we := WorldEnvironment.new()
 	we.environment = env
 	add_child(we)
-	# ampoule centrale chaude (ombres) + faible fill froid ; les accents sont poses localement (bacs, escalier, comptoir)
-	CellarKit.omni(self, Vector3(-0.6, 2.55, 0.8), Color("FFB866"), 1.4, 7.0, true)
-	CellarKit.omni(self, Vector3(3.5, 2.4, 1.8), Color("5A6CFF"), 0.45, 6.0)
-	var bulb = CellarKit.mat(Color("FFC27A"), 1.1)
-	for p in [Vector3(-0.6, 2.6, 0.8), Vector3(3.5, 2.5, 1.8)]:
-		CellarKit.sphere(self, 0.1, p, bulb)
-		CellarKit.cyl(self, 0.01, 0.01, 0.4, p + Vector3(0, 0.25, 0), CellarKit.mat(Color("1B0F26")), 6)
+	Preferences.apply_environment(env)
+	# All visible lighting is supplied by the ceiling fluorescent fixtures.
 	# poussiere en suspension + vignette
 	CellarKit.dust(self, Vector3(0, 1.5, 0), Vector3(4.6, 1.4, 3.7), 110)
 	add_child(CellarKit.vignette())
 
 
 func _build_stairs() -> void:
-	var wood = CellarKit.wood(Color("9A6444"))
-	for i in 10:
-		var h = 0.3 * (i + 1)
-		CellarKit.box(self, Vector3(1.3, h, 0.3), Vector3(STAIRS_X, h * 0.5, -1.15 - 0.3 * i), wood)
-	CellarKit.solid(self, Vector3(1.3, 1.5, 3.0), Vector3(STAIRS_X, 0.75, -2.5))
-	CellarKit.box(self, Vector3(1.3, 0.05, 0.9), Vector3(STAIRS_X, 3.0, -3.7), CellarKit.mat(Color("FFC070"), 1.6))
-	# lumiere orange chaude qui descend l'escalier + halo
-	CellarKit.omni(self, Vector3(STAIRS_X, 2.6, -3.3), Color("FF8A2A"), 1.5, 3.6)
-	CellarKit.spot(self, Vector3(STAIRS_X, 2.9, -3.7), Vector3(STAIRS_X, 0.0, -0.6), Color("FF9A40"), 3.5, 6.0, 34.0)
-	CellarKit.sign_board(self, "SOUS-SOL (très) PRIVÉ", Vector3(STAIRS_X, 2.45, -0.75), 0.13, Color("7CFF6B"))
-	CellarKit.interactable(self, Vector3(1.5, 2.2, 1.3), Vector3(STAIRS_X, 1.1, -0.65),
-		func(): return "Monter a la boutique", func(_p): exit_requested.emit())
+	Remodel.stairs(self)
 
 
 func _build_bins() -> void:
+	if Game.progression.has_flag("empty_shop_start"):return
 	for i in 4:
 		var pv := PlanterView.new()
 		pv.position = BIN_POS[i]
@@ -296,246 +260,39 @@ func _build_bins() -> void:
 
 
 func _build_consoles() -> void:
-	for kind in EQUIP:
-		var c := _Console.new()
-		c.position = Vector3(4.55, 0, EQUIP[kind].z)
-		add_child(c)
-		c.setup(kind, self)
-		_consoles[kind] = c
-		if kind == "filter":
-			_fans.append({"node": c.fan, "level": func(): return Game.cellar.equipment.filter})
-	# chemin de cables et enseigne au-dessus des consoles
-	CellarKit.box(self, Vector3(0.22, 0.14, 5.0), Vector3(4.86, 2.68, 0.9), CellarKit.mat(Color("4A4A5E"), 0.0, 0.5, true))
-	var cs = CellarKit.sign_board(self, "AMÉLIORATIONS", Vector3(4.9, 2.9, 0.9), 0.13, Color("7CFF6B"))
-	cs.rotation.y = -PI * 0.5
+	Remodel.consoles(self)
 
 
 func _build_cabinet() -> void:
-	_cabinet = Node3D.new()
-	_cabinet.position = CABINET_POS
-	add_child(_cabinet)
-	var wood = CellarKit.wood(Color("8A5E48"))
-	var back = CellarKit.mat(Color("2B1E33"), 0.0, 0.9)
-	CellarKit.box(_cabinet, Vector3(1.8, 2.0, 0.08), Vector3(0, 1.0, 0.36), back)
-	for s in [-1, 1]:
-		CellarKit.box(_cabinet, Vector3(0.1, 2.0, 0.8), Vector3(0.85 * s, 1.0, 0), wood)
-	for y in [0.05, 0.7, 1.35, 2.0]:
-		CellarKit.box(_cabinet, Vector3(1.8, 0.08, 0.8), Vector3(0, y, 0), wood)
-	CellarKit.sign_board(_cabinet, "PRODUITS", Vector3(0, 2.3, 0.0), 0.16, Color("7CFF6B"))
-	for sx in [-1, 1]:
-		for sz in [-1, 1]:
-			CellarKit.box(_cabinet, Vector3(0.12, 0.1, 0.12), Vector3(0.8 * sx, -0.0, 0.3 * sz), CellarKit.mat(Color("1F1530")))
-	_jars = Node3D.new()
-	_cabinet.add_child(_jars)
-	_lock_vis = Node3D.new()
-	_cabinet.add_child(_lock_vis)
-	CellarKit.solid(_cabinet, Vector3(1.8, 2.0, 0.8), Vector3(0, 1.0, 0))
-	CellarKit.interactable(_cabinet, Vector3(1.8, 2.1, 0.9), Vector3(0, 1.05, -0.05),
-		func(): return "Armoire a produits (%d)" % Game.cellar.stock.size(), func(_p): _cabinet_action())
+	Remodel.cabinet(self)
 
 
 func _refresh_cabinet() -> void:
-	var stock = Game.cellar.stock
-	var sig = ",".join(stock.map(func(s): return str(int(s.quality))))
-	if sig != _jar_sig:
-		_jar_sig = sig
-		for c in _jars.get_children():
-			c.queue_free()
-		for i in mini(9, stock.size()):
-			var row = i / 3
-			var col = i % 3
-			var q = int(stock[i].quality)
-			var glass = CellarKit.mat(Color(0.8, 1.0, 0.8, 0.35), 0.0, 0.1)
-			glass.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
-			var pos = Vector3(-0.55 + 0.55 * col, 0.2 + 0.65 * row, 0.0)
-			var jar = CellarKit.cyl(_jars, 0.17, 0.17, 0.34, pos + Vector3(0, 0.17, 0), glass, 14)
-			CellarKit.sphere(jar, 0.12, Vector3(0, -0.02, 0), CellarKit.mat(PlantView.quality_color(q), 0.6 + 0.15 * q, 0.5), 1.2)
-			CellarKit.cyl(jar, 0.12, 0.12, 0.05, Vector3(0, 0.2, 0), CellarKit.mat(Color("C98B5B")), 10)
-	var lv = int(Game.cellar.equipment.lock)
-	if lv != _lock_level:
-		_lock_level = lv
-		for c in _lock_vis.get_children():
-			c.queue_free()
-		_coil_lights.clear()
-		var iron = CellarKit.mat(Color("8A8A9C"), 0.0, 0.4, true)
-		if lv >= 1:
-			CellarKit.box(_lock_vis, Vector3(0.26, 0.22, 0.1), Vector3(0, 1.0, -0.43), CellarKit.mat(Color("FFD24A"), 0.2, 0.4, true))
-			CellarKit.torus(_lock_vis, 0.05, 0.1, Vector3(0, 1.17, -0.43), iron).rotation.x = PI * 0.5
-		if lv >= 2:
-			for y in [0.45, 1.6]:
-				var chain = CellarKit.box(_lock_vis, Vector3(1.8, 0.06, 0.05), Vector3(0, y, -0.42), iron)
-			CellarKit.box(_lock_vis, Vector3(0.06, 1.7, 0.05), Vector3(0, 1.0, -0.42), iron)
-		if lv >= 3:
-			var zm = CellarKit.mat(Color("7CF5FF"), 3.0)
-			for sx in [-0.85, 0.85]:
-				for y in [0.4, 1.0, 1.6]:
-					CellarKit.sphere(_lock_vis, 0.07, Vector3(sx, y, -0.44), zm)
-			var l = CellarKit.omni(_lock_vis, Vector3(0, 1.0, -0.8), Color("7CF5FF"), 0.8, 2.5)
-			_coil_lights.append(l)
+	Remodel.cabinet_refresh(self)
 
 
 func _build_composter() -> void:
-	_composter = ComposterView.new()
+	_composter = load("res://src/cellar_view/composter_remodel.gd").new()
 	_composter.position = COMPOSTER_POS
-	_composter.rotation.y = 2.5
+	_composter.rotation.y = PI * .5
 	add_child(_composter)
 	_composter.setup(self)
 
 
 func _build_counter() -> void:
-	var wood = CellarKit.wood(Color("8A5E48"))
-	var top = CellarKit.wood(Color("3A2C48"), true, 1.0)
-	var c := Node3D.new()
-	c.position = COUNTER_POS
-	add_child(c)
-	CellarKit.box(c, Vector3(2.8, 0.88, 0.8), Vector3(0, 0.58, 0), wood)
-	for sx in [-1, 1]:
-		for sz in [-1, 1]:
-			CellarKit.box(c, Vector3(0.14, 0.16, 0.14), Vector3(1.3 * sx, 0.07, 0.3 * sz), CellarKit.mat(Color("1F1530"), 0.0, 0.7, true))
-	CellarKit.box(c, Vector3(3.0, 0.1, 1.0), Vector3(0, 1.05, 0), top)
-	CellarKit.cyl(c, 0.12, 0.12, 0.1, Vector3(0.9, 1.15, 0.1), CellarKit.mat(Color("FFD24A"), 0.4, 0.3, true), 12)  # sonnette
-	CellarKit.sign_board(c, "PAS DE CRÉDIT", Vector3(0, 2.4, 1.07), 0.17, Color("7CFF6B"))
-	CellarKit.sign_board(c, "PAS DE QUESTIONS", Vector3(0, 2.1, 1.07), 0.11, Color("EDE6D3"))
-	CellarKit.omni(c, Vector3(0, 2.2, 0.9), Color("7CFF6B"), 1.0, 3.5)
-	CellarKit.spot(c, Vector3(0, 2.7, -0.2), Vector3(0, 1.0, 0.0), Color("FFB866"), 3.0, 4.0, 60.0)
-	CellarKit.solid(c, Vector3(2.8, 1.1, 0.8), Vector3(0, 0.55, 0))
-	_counter_it = CellarKit.interactable(c, Vector3(3.0, 1.3, 1.1), Vector3(0, 0.65, 0.2),
-		func(): return _counter_prompt(), func(p): _counter_action(p))
-	# bocal et pieces poses sur le comptoir, devant le premier client (visibles seulement s'il y a quelqu'un)
-	_deal = Node3D.new()
-	_deal.position = Vector3(-1.0, 1.1, 2.8)
-	_deal.visible = false
-	add_child(_deal)
-	var jar = Node3D.new()
-	jar.name = "Jar"
-	jar.position = Vector3.ZERO
-	_deal.add_child(jar)
-	var glass = CellarKit.mat(Color(0.8, 1.0, 0.8, 0.35), 0.0, 0.1)
-	glass.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
-	CellarKit.cyl(jar, 0.12, 0.12, 0.26, Vector3(0, 0.13, 0), glass, 14)
-	var fill = CellarKit.sphere(jar, 0.09, Vector3(0, 0.12, 0), CellarKit.mat(Color("7CFF6B"), 0.9, 0.4), 1.0)
-	fill.name = "Fill"
-	CellarKit.cyl(jar, 0.09, 0.09, 0.04, Vector3(0, 0.28, 0), CellarKit.mat(Color("C98B5B")), 10)
-	var coins = Node3D.new()
-	coins.position = Vector3(-0.45, 0, 0.15)
-	_deal.add_child(coins)
-	var gold = CellarKit.mat(Color("FFD24A"), 0.6, 0.3, true)
-	for k in 5:
-		CellarKit.cyl(coins, 0.07, 0.07, 0.022, Vector3(0.01 * (k % 2), 0.011 + 0.024 * k, 0.0), gold, 12)
-	CellarKit.cyl(coins, 0.07, 0.07, 0.022, Vector3(0.18, 0.011, 0.06), gold, 12)
-	# porte de service par ou arrivent les visiteurs
-	var door_root = Node3D.new()
-	door_root.position = Vector3(-2.9, 0, 3.9)
-	add_child(door_root)
-	var frame = CellarKit.mat(Color("2B1E33"), 0.0, 0.7, true)
-	for sx in [-0.05, 0.85]:
-		CellarKit.box(door_root, Vector3(0.1, 2.2, 0.14), Vector3(sx, 1.1, 0.0), frame)
-	CellarKit.box(door_root, Vector3(1.0, 0.1, 0.14), Vector3(0.4, 2.2, 0.0), frame)
-	CellarKit.box(door_root, Vector3(0.7, 2.1, 0.04), Vector3(0.4, 1.05, 0.06), CellarKit.mat(Color("0C0612")))
-	_door = Node3D.new()
-	_door.position = Vector3(0.05, 0, -0.04)
-	door_root.add_child(_door)
-	CellarKit.box(_door, Vector3(0.74, 2.0, 0.06), Vector3(0.37, 1.0, 0.0), CellarKit.wood(Color("6A4636")))
-	CellarKit.sphere(_door, 0.04, Vector3(0.62, 1.0, -0.05), CellarKit.mat(Color("FFD24A"), 0.4, 0.3))
-	CellarKit.sign_board(door_root, "ENTRÉE DISCRÈTE", Vector3(0.4, 2.45, -0.06), 0.1, Color("7CFF6B")).rotation.y = PI
-	CellarKit.omni(door_root, Vector3(0.4, 2.0, -0.5), Color("7CFF6B"), 0.5, 2.5)
+	Remodel.counter(self)
 
 
 func _build_seed_crate() -> void:
-	var c := Node3D.new()
-	c.position = Vector3(1.7, 0, 3.45)
-	c.rotation.y = PI
-	add_child(c)
-	CellarKit.box(c, Vector3(1.0, 0.7, 0.8), Vector3(0, 0.35, 0), CellarKit.wood(Color("9A6444")))
-	for i in 3:
-		CellarKit.sphere(c, 0.14, Vector3(-0.3 + 0.3 * i, 0.78, 0.0), CellarKit.mat(Color("C98B5B"), 0.0, 0.8, true), 0.8)
-	CellarKit.sign_board(c, "GRAINES", Vector3(0, 1.2, 0.0), 0.16, Color("FFD24A"))
-	CellarKit.solid(c, Vector3(1.0, 0.7, 0.8), Vector3(0, 0.35, 0))
-	CellarKit.interactable(c, Vector3(1.1, 0.9, 0.9), Vector3(0, 0.45, 0),
-		func(): return "Graines (%s)" % _seed_summary(), func(_p): _open_seed_menu())
+	Remodel.seed_crate(self)
 
 
 func _build_hatch() -> void:
-	var h := Node3D.new()
-	h.position = HATCH_POS
-	add_child(h)
-	CellarKit.cyl(h, 0.65, 0.65, 0.03, Vector3(0, 0.015, 0), CellarKit.mat(Color("0C0612")), 20)
-	CellarKit.torus(h, 0.6, 0.72, Vector3(0, 0.03, 0), CellarKit.mat(Color("5A5470"), 0.0, 0.5, true))
-	_hatch_lid = Node3D.new()
-	_hatch_lid.position = Vector3(0.65, 0.05, 0)
-	h.add_child(_hatch_lid)
-	var lid = CellarKit.cyl(_hatch_lid, 0.62, 0.62, 0.05, Vector3(-0.65, 0, 0), CellarKit.mat(Color("5A5470"), 0.0, 0.4, true), 20)
-	for i in 4:
-		CellarKit.box(lid, Vector3(1.0, 0.02, 0.05), Vector3(0, 0.03, -0.25 + 0.17 * i), CellarKit.mat(Color("2B1E33")))
-	_hatch_lid.rotation.z = 0.0
-	_hatch_light = CellarKit.omni(h, Vector3(0, 0.3, 0), Color("7CFF6B"), 0.7, 3.0)
-	_smoke = CellarKit.puffs(h, Vector3(0, 0.1, 0), Color("A6FF9A"), 8, 2.5, 0.35, 20.0, 0.4, false)
-	_smoke.emitting = false
-	# decor de la sortie d'egout : panneau, champignons luisants, tuyau qui goutte, cone de chantier
-	CellarKit.cyl(h, 0.03, 0.03, 1.6, Vector3(0.95, 0.8, -0.8), CellarKit.mat(Color("5A5470"), 0.0, 0.5, true), 6)
-	CellarKit.sign_board(h, "SORTIE D'ÉGOUT n°42\n(livraisons de l'espace)", Vector3(0.95, 1.55, -0.8), 0.09, Color("7CFF6B")).rotation.y = 0.8
-	for e in [[Vector3(-1.1, 0, 0.9), 1.0], [Vector3(-0.85, 0, 1.15), 0.7], [Vector3(1.2, 0, 1.0), 0.85]]:
-		var mp = e[0]
-		var sc = e[1]
-		CellarKit.cyl(h, 0.04 * sc, 0.05 * sc, 0.3 * sc, mp + Vector3(0, 0.15 * sc, 0), CellarKit.mat(Color("D9F5E0"), 0.2, 0.6), 8)
-		CellarKit.sphere(h, 0.17 * sc, mp + Vector3(0, 0.33 * sc, 0), CellarKit.mat(Color("5CFF9A"), 1.2, 0.5), 0.6)
-	CellarKit.omni(h, Vector3(-1.0, 0.5, 1.0), Color("5CFF9A"), 0.7, 2.0)
-	CellarKit.cyl(h, 0.09, 0.09, 1.1, Vector3(1.4, 0.55, 0.7), CellarKit.mat(Color("5A5470"), 0.0, 0.5, true), 10)
-	var drip = CellarKit.puffs(h, Vector3(1.4, 1.0, 0.7), Color("7CFF6B"), 6, 1.0, 0.0, 6.0, 0.07, false)
-	(drip.process_material as ParticleProcessMaterial).gravity = Vector3(0, -2.2, 0)
-	(drip.process_material as ParticleProcessMaterial).initial_velocity_min = 0.0
-	(drip.process_material as ParticleProcessMaterial).initial_velocity_max = 0.0
-	drip.emitting = true
-	var cone = CellarKit.cyl(h, 0.02, 0.16, 0.5, Vector3(1.35, 0.25, -0.3), CellarKit.mat(Color("FF7A2A"), 0.2, 0.6, true), 10)
-	CellarKit.cyl(h, 0.165, 0.165, 0.07, Vector3(1.35, 0.35, -0.3), CellarKit.mat(Color("FFF6E5")), 10)
+	Remodel.hatch(self)
 
 
 func _build_decor() -> void:
-	var bone = CellarKit.mat(CellarKit.BONE, 0.0, 0.6, true)
-	var wood = CellarKit.wood(Color("9A6444"))
-	# squelette enchaine contre le mur nord
-	var sk := Node3D.new()
-	sk.position = Vector3(-1.9, 0, -3.85)
-	add_child(sk)
-	CellarKit.sphere(sk, 0.2, Vector3(0, 2.0, 0), bone)
-	for s in [-1, 1]:
-		CellarKit.sphere(sk, 0.045, Vector3(0.08 * s, 2.02, 0.17), CellarKit.mat(Color("1B0F26")))
-		CellarKit.capsule(sk, 0.04, 0.7, Vector3(0.28 * s, 1.5, 0), bone).rotation.z = 0.3 * s
-		CellarKit.capsule(sk, 0.04, 0.8, Vector3(0.12 * s, 0.8, 0), bone)
-	CellarKit.capsule(sk, 0.17, 0.8, Vector3(0, 1.5, 0), bone)
-	for y in [1.35, 1.5, 1.65]:
-		CellarKit.box(sk, Vector3(0.4, 0.035, 0.1), Vector3(0, y, 0.12), CellarKit.mat(Color("D9D0B8")))
-	# plaque peinte, suspendue par deux chaines, comme les autres enseignes
-	var pl = CellarKit.sign_board(sk, "ANCIEN ASSOCIÉ\n(a refusé de partager)", Vector3(0, 2.42, 0.14), 0.11, Color("2B1E33"), Color("D9C9A0"))
-	for sx in [-0.42, 0.42]:
-		CellarKit.cyl(sk, 0.008, 0.008, 0.3, Vector3(sx, 2.85, 0.14), CellarKit.mat(Color("8A8A9C"), 0.0, 0.4), 4)
-	pl.rotation.z = 0.04
-	# barils et caisses dans le coin nord-est
-	for p in [Vector3(4.55, 0, -3.5), Vector3(4.2, 0, -2.6)]:
-		CellarKit.cyl(self, 0.38, 0.34, 0.8, p + Vector3(0, 0.4, 0), CellarKit.mat(Color("5A3A2E"), 0.0, 0.8, true), 14)
-		CellarKit.torus(self, 0.32, 0.4, p + Vector3(0, 0.55, 0), CellarKit.mat(Color("2B1E33")))
-		CellarKit.solid(self, Vector3(0.76, 0.8, 0.76), p + Vector3(0, 0.4, 0))
-	CellarKit.box(self, Vector3(0.7, 0.6, 0.7), Vector3(-4.5, 0.3, -3.7), wood)
-	# tuyaux au plafond
-	var pipe = CellarKit.mat(Color("5A5470"), 0.0, 0.4, true)
-	CellarKit.cyl(self, 0.12, 0.12, ROOM.x, Vector3(0, 2.75, -3.75), pipe, 12).rotation.z = PI * 0.5
-	CellarKit.cyl(self, 0.09, 0.09, ROOM.z, Vector3(-4.75, 2.8, 0), pipe, 12).rotation.x = PI * 0.5
-	for x in [-3.0, 0.0, 3.0]:
-		CellarKit.torus(self, 0.12, 0.17, Vector3(x, 2.75, -3.75), CellarKit.mat(Color("2B1E33"))).rotation.z = PI * 0.5
-	# flaque + goutte
-	var pm = CellarKit.mat(Color(0.12, 0.14, 0.3, 0.7), 0.0, 0.05)
-	pm.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
-	CellarKit.cyl(self, 0.45, 0.45, 0.012, Vector3(-1.5, 0.006, 0.6), pm, 16)
-	# soupirail grille (gyrophare des "visiteurs" quand un vehicule revient)
-	var win := Node3D.new()
-	win.position = Vector3(2.2, 2.2, ROOM.z * 0.5 - 0.05)
-	add_child(win)
-	CellarKit.box(win, Vector3(0.95, 0.5, 0.06), Vector3.ZERO, CellarKit.mat(Color("0C0612")))
-	for i in 4:
-		CellarKit.cyl(win, 0.015, 0.015, 0.5, Vector3(-0.3 + 0.2 * i, 0, -0.04), CellarKit.mat(Color("5A5470"), 0.0, 0.4), 6)
-	_window_light = CellarKit.omni(win, Vector3(0, 0, -0.4), Color("FF4A5A"), 0.0, 6.0)
-	# affiche cartoon
-	CellarKit.sign_board(self, "INTERDIT\nAUX FLICS\n(et aux limaces)", Vector3(-4.9, 1.7, -0.3), 0.1, Color("FFB020")).rotation.y = PI * 0.5
+	Remodel.decor(self)
 
 
 func _build_audio() -> void:
@@ -834,7 +591,7 @@ func composter_action(_player) -> void:
 
 # ---------------------------------------------------------------- clients clandestins
 
-const DOOR_POS := Vector3(-2.5, 0.0, 3.85)
+const DOOR_POS := Vector3(-3.38, 0.0, 14.0)
 const BUBBLES := ["Un bocal ?", "Le meilleur !", "Discret...", "Vite !", "Psst... ?"]
 
 
@@ -855,6 +612,7 @@ func _counter_first() -> String:
 
 
 func _counter_prompt() -> String:
+	if not Game.progression.has_flag("service_shutter_open"):return "~Ouvrez le rideau métallique pour servir la ruelle"
 	var uid = _counter_first()
 	if uid == "":
 		return "Comptoir clandestin (personne)"
@@ -862,6 +620,7 @@ func _counter_prompt() -> String:
 
 
 func _counter_action(_player) -> void:
+	if not Game.progression.has_flag("service_shutter_open"):return
 	if overlay.is_open():
 		return
 	var uid = _counter_first()
@@ -931,14 +690,14 @@ func _deal_anim(uid: String) -> void:
 
 
 func _guest_slot_pos(slot: int) -> Vector3:
-	return to_local(to_global(Vector3(-1.0 + 0.95 * minf(slot, 2.0), 0, GUEST_Z)))
+	return to_local(to_global(Vector3(0.2 + 0.8 * minf(slot, 2.0), 0, GUEST_Z)))
 
 
 func _sync_guests() -> void:
 	var want = {}
 	var i = 0
 	for c in Game.customers.queue:
-		if c.kind == "shady":
+		if c.kind == "shady" and GameData.customer(String(c.def)).get("species","human")=="human":
 			want[c.uid] = {"slot": i, "pv": CustomerQueue.public_view(c), "patience": float(c.patience)}
 			i += 1
 	for uid in _guests.keys():
@@ -977,6 +736,7 @@ func _sync_guests() -> void:
 
 
 func _open_door() -> void:
+	if _door!=null and _door.get_meta("manual_door",false):return
 	if _door == null:
 		return
 	play("thump", -16.0)
@@ -1013,7 +773,7 @@ func _sync_aliens() -> void:
 	for lst in [Game.customers.arriving, Game.customers.queue]:
 		for c in lst:
 			var pv = CustomerQueue.public_view(c)
-			if String(pv.species) != "human" and (c.route == "sewer" or c.route == "portal"):
+			if Game.clock.phase==GameClock.Phase.NIGHT and String(pv.species) != "human":
 				want[c.uid] = pv
 	for uid in _aliens.keys():
 		if not want.has(uid):
@@ -1114,7 +874,7 @@ func _animate_aliens(delta: float, cam: Camera3D) -> void:
 					op.scale = Vector3(1.0 + 0.1 * sin(t * 2.0), 0.75 + 0.35 * maxf(0.0, sin(t * 5.3)), 1.0)
 		# apres l'emergence il se glisse lentement vers l'escalier en laissant une trainee (bave verte, flaque de larmes, gelee rose)
 		if t > 3.2:
-			var target = Vector3(STAIRS_X + 1.0, 0.0, 0.2)
+			var target = Vector3(STAIRS_X + 1.0, 0.0, 7.5)
 			var d = target - al.position
 			d.y = 0.0
 			if d.length() > 0.15:
@@ -1271,6 +1031,7 @@ func _tear_fog_burst() -> void:
 
 ## Un Ploc surgit de l'egout, repere un pot de tulipes, l'attrape avec la langue, l'avale (bosse qui descend dans la gelee), rote et repart.
 func ploc_munch_gag() -> void:
+	if Game.clock.phase!=GameClock.Phase.NIGHT:return
 	if _munch_busy or not is_inside_tree():
 		return
 	_munch_busy = true
@@ -1394,7 +1155,7 @@ func _sync_thieves() -> void:
 		if inc.state == "active" and not _thieves.has(id):
 			var tv := ThiefView.new()
 			add_child(tv)
-			tv.setup(id, self, Vector3(STAIRS_X, 0.0, -0.7), CABINET_POS + Vector3(0, 0, -1.0), Vector3(STAIRS_X, 0.0, -0.7))
+			tv.setup(id, self, Vector3(STAIRS_X, 0.0, 8.0), CABINET_POS + Vector3(-1, 0, 0), Vector3(STAIRS_X, 0.0, 8.0))
 			tv.gone.connect(func(): _thieves.erase(id))
 			_thieves[id] = tv
 			play("thump", -10.0)

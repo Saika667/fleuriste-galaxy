@@ -1,0 +1,17 @@
+{
+  "file": "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\assets/models/characters/odette_toon.glb",
+  "bytes": 3925908,
+  "triangles_including_outlines": 138348,
+  "meshes": 16,
+  "material_primitives": 53,
+  "materials": 17,
+  "skins": 1,
+  "joints": 17,
+  "animations": 0,
+  "shading": "KHR_materials_unlit; inverted hull outlines",
+  "checks": [
+    "GLB header and JSON parsed",
+    "skeleton exported",
+    "hidden expressions excluded"
+  ]
+}

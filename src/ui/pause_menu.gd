@@ -1,6 +1,7 @@
 extends "res://src/ui/ui_screen.gd"
 ## Menu pause : reprendre, sauvegarder, charger, nouvelle partie, quitter. Indique que le temps est arrete.
 
+signal unstuck_requested
 signal game_loaded
 signal streamer_requested
 
@@ -47,8 +48,10 @@ func _build() -> void:
 	_buttons = T.vbox(10)
 	left.add_child(_buttons)
 	_add("Reprendre la partie", close, "PrimaryButton")
+	_add("Se décoincer", func():close();unstuck_requested.emit())
 	_add("Sauvegarder", _save)
 	_add("Charger la sauvegarde", _load)
+	Preferences.settings_ui(left)
 	# Mode streamer : interrupteur direct + acces a l'ecran de details (fil d'activite, limites)
 	var srow := T.hbox(8)
 	_stream_btn = T.btn("", "")
@@ -129,7 +132,7 @@ func _ask(what: String) -> void:
 
 func _confirmed() -> void:
 	if _confirm == "new":
-		Game.new_game()
+		Game.new_game(-1,false)
 		_feedback.text = "Nouvelle partie."
 		_confirm_row.visible = false
 		game_loaded.emit()

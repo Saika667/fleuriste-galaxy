@@ -1,0 +1,15 @@
+{
+  "id": "poppy",
+  "source": "art/concepts/flowers/poppy_cartoon.png",
+  "triangles_with_outlines": 21336,
+  "meshes": 1,
+  "surfaces": 7,
+  "height_m": 0.5206005573272705,
+  "features": {
+    "petals": 4,
+    "heart": "black stamens and capsule",
+    "leaves": 2
+  },
+  "head_height_m": 0.445,
+  "shading": "unlit; inverted hull contours"
+}

@@ -113,6 +113,9 @@ static func _anchor_of(mi: Node, root: Node3D, pinned: Dictionary, cont: Diction
 		var id = n.get_instance_id()
 		if deep.has(id):
 			return null
+		# glTF extras are import annotations; articulated parts form separate batches.
+		if n is Node3D and n.get_meta("articulated",false):
+			return n if n!=mi else null
 		if pinned.has(id) or cont.has(id):
 			# un noeud qui porte des donnees (meta : visage, etc.) n'est jamais une ancre : le code y retrouve ses enfants
 			if n == mi or _has_data_meta(n):
@@ -217,7 +220,7 @@ static func _baked_mesh(mesh: Mesh, mat: StandardMaterial3D) -> ArrayMesh:
 
 static func _has_data_meta(n: Node) -> bool:
 	for m in n.get_meta_list():
-		if m != "no_outline" and m != "sway" and m != "tiny_off":
+		if m != "no_outline" and m != "sway" and m != "tiny_off" and m != "extras":
 			return true
 	return false
 
@@ -231,7 +234,7 @@ static func _plain(n: Node) -> bool:
 	if not n.visible:
 		return false
 	for m in n.get_meta_list():
-		if m != "no_outline" and m != "tiny_off":
+		if m != "no_outline" and m != "tiny_off" and m != "extras":
 			return false
 	return true
 

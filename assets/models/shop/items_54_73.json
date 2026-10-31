@@ -1,0 +1,122 @@
+[
+  {
+    "number": 54,
+    "asset": "bunting_botanical",
+    "triangles": 36224,
+    "metres": true
+  },
+  {
+    "number": 55,
+    "asset": "shop_floor_botanical",
+    "triangles": 113532,
+    "metres": true
+  },
+  {
+    "number": 56,
+    "asset": "shop_ceiling_botanical",
+    "triangles": 19396,
+    "metres": true
+  },
+  {
+    "number": 57,
+    "asset": "entrance_door",
+    "triangles": 10668,
+    "metres": true
+  },
+  {
+    "number": 58,
+    "asset": "service_door",
+    "triangles": 9884,
+    "metres": true
+  },
+  {
+    "number": 59,
+    "asset": "pendant_pink",
+    "triangles": 5348,
+    "metres": true
+  },
+  {
+    "number": 60,
+    "asset": "pendant_yellow",
+    "triangles": 5348,
+    "metres": true
+  },
+  {
+    "number": 61,
+    "asset": "stock_vase_rose",
+    "triangles": 5840,
+    "metres": true
+  },
+  {
+    "number": 62,
+    "asset": "stock_vase_tulip",
+    "triangles": 4576,
+    "metres": true
+  },
+  {
+    "number": 63,
+    "asset": "stock_vase_lily",
+    "triangles": 10848,
+    "metres": true
+  },
+  {
+    "number": 64,
+    "asset": "stock_vase_sunflower",
+    "triangles": 13600,
+    "metres": true
+  },
+  {
+    "number": 65,
+    "asset": "stock_vase_lavender",
+    "triangles": 9600,
+    "metres": true
+  },
+  {
+    "number": 66,
+    "asset": "stock_vase_daisy",
+    "triangles": 5312,
+    "metres": true
+  },
+  {
+    "number": 67,
+    "asset": "stock_vase_poppy",
+    "triangles": 9856,
+    "metres": true
+  },
+  {
+    "number": 68,
+    "asset": "stock_vase_xeno_bloom",
+    "triangles": 12800,
+    "metres": true
+  },
+  {
+    "number": 69,
+    "asset": "shelf_flowered_skull",
+    "triangles": 17022,
+    "metres": true
+  },
+  {
+    "number": 70,
+    "asset": "botanical_clock",
+    "triangles": 29468,
+    "metres": true
+  },
+  {
+    "number": 71,
+    "asset": "botanical_open_sign",
+    "triangles": 58900,
+    "metres": true
+  },
+  {
+    "number": 72,
+    "asset": "botanical_queue_sign",
+    "triangles": 5760,
+    "metres": true
+  },
+  {
+    "number": 73,
+    "asset": "hanging_simple_botanical",
+    "triangles": 167100,
+    "metres": true
+  }
+]

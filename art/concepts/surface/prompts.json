@@ -1,0 +1,409 @@
+[
+  {
+    "number": 1,
+    "id": "terrace_plan",
+    "title": "Terrasse — implantation",
+    "zone": "terrace",
+    "assets": [],
+    "brief": "Redesign existing 8.3 by 3.25m florist terrace. Entry at east must remain clear, two bistro tables at west with chairs, striped rose cream parasol, teal flower railing, wooden deck, warm festoon. Top plan with dimensions and perspective.",
+    "prompt": "Use case: stylized-concept. Asset type: production model sheet for florist-galaxy game. 01 — Terrasse — implantation. Primary request: Redesign existing 8.3 by 3.25m florist terrace. Entry at east must remain clear, two bistro tables at west with chairs, striped rose cream parasol, teal flower railing, wooden deck, warm festoon. Top plan with dimensions and perspective. Style: same approved adult sci-fi cartoon as reference, crisp black ink contours, restrained flat cel shading, sage teal walnut cream dustyrose palette, hand crafted whimsical details, no photorealism. Ivory background professional readable layout. Show consistent FRONT BACK SIDE TOP and THREE QUARTER views of every component plus exploded functional details and palette. Same geometry across views. Correct gravity, no floating objects, no excessive ornament blocking function. Include dimensions in meters. Keep openings and work surfaces accessible. No characters, no cannabis, no watermark. Reference image is style only.",
+    "output": "01_terrace_plan_sheet.png"
+  },
+  {
+    "number": 2,
+    "id": "bistro_table",
+    "title": "Table bistrot",
+    "zone": "terrace",
+    "assets": [
+      "bistro_table"
+    ],
+    "brief": "Round 0.8m ivory tabletop with walnut edge and botanical inlay, black elegant tripod pedestal, stable feet. Height .74m. No flowers baked into furniture.",
+    "prompt": "Use case: stylized-concept. Asset type: production model sheet for florist-galaxy game. 02 — Table bistrot. Primary request: Round 0.8m ivory tabletop with walnut edge and botanical inlay, black elegant tripod pedestal, stable feet. Height .74m. No flowers baked into furniture. Style: same approved adult sci-fi cartoon as reference, crisp black ink contours, restrained flat cel shading, sage teal walnut cream dustyrose palette, hand crafted whimsical details, no photorealism. Ivory background professional readable layout. Show consistent FRONT BACK SIDE TOP and THREE QUARTER views of every component plus exploded functional details and palette. Same geometry across views. Correct gravity, no floating objects, no excessive ornament blocking function. Include dimensions in meters. Keep openings and work surfaces accessible. No characters, no cannabis, no watermark. Reference image is style only.",
+    "output": "02_bistro_table_sheet.png"
+  },
+  {
+    "number": 3,
+    "id": "bistro_chair",
+    "title": "Chaises bistrot",
+    "zone": "terrace",
+    "assets": [
+      "chair_mint",
+      "chair_rose"
+    ],
+    "brief": "Two complementary mint and dusty rose metal chairs .44m wide, curved slat back botanical leaf medallion, wood seat .45m high, four braced feet.",
+    "prompt": "Use case: stylized-concept. Asset type: production model sheet for florist-galaxy game. 03 — Chaises bistrot. Primary request: Two complementary mint and dusty rose metal chairs .44m wide, curved slat back botanical leaf medallion, wood seat .45m high, four braced feet. Style: same approved adult sci-fi cartoon as reference, crisp black ink contours, restrained flat cel shading, sage teal walnut cream dustyrose palette, hand crafted whimsical details, no photorealism. Ivory background professional readable layout. Show consistent FRONT BACK SIDE TOP and THREE QUARTER views of every component plus exploded functional details and palette. Same geometry across views. Correct gravity, no floating objects, no excessive ornament blocking function. Include dimensions in meters. Keep openings and work surfaces accessible. No characters, no cannabis, no watermark. Reference image is style only.",
+    "output": "03_bistro_chair_sheet.png"
+  },
+  {
+    "number": 4,
+    "id": "parasol",
+    "title": "Parasol à pétales",
+    "zone": "terrace",
+    "assets": [
+      "parasol"
+    ],
+    "brief": "Rose and ivory striped canvas parasol diameter 2.1m, headroom 2.05m, crown 2.65m. Eight ribs, scalloped valance, finial, wood pole with heavy base.",
+    "prompt": "Use case: stylized-concept. Asset type: production model sheet for florist-galaxy game. 04 — Parasol à pétales. Primary request: Rose and ivory striped canvas parasol diameter 2.1m, headroom 2.05m, crown 2.65m. Eight ribs, scalloped valance, finial, wood pole with heavy base. Style: same approved adult sci-fi cartoon as reference, crisp black ink contours, restrained flat cel shading, sage teal walnut cream dustyrose palette, hand crafted whimsical details, no photorealism. Ivory background professional readable layout. Show consistent FRONT BACK SIDE TOP and THREE QUARTER views of every component plus exploded functional details and palette. Same geometry across views. Correct gravity, no floating objects, no excessive ornament blocking function. Include dimensions in meters. Keep openings and work surfaces accessible. No characters, no cannabis, no watermark. Reference image is style only.",
+    "output": "04_parasol_sheet.png"
+  },
+  {
+    "number": 5,
+    "id": "deck_rail",
+    "title": "Platelage et garde-corps",
+    "zone": "terrace",
+    "assets": [
+      "deck_tile",
+      "railing",
+      "rail_planter"
+    ],
+    "brief": "Modular walnut decking 1m square and 1m long teal railing .95m high, leaf ironwork, post caps, exterior removable flower box .8m, hollow soil cavity.",
+    "prompt": "Use case: stylized-concept. Asset type: production model sheet for florist-galaxy game. 05 — Platelage et garde-corps. Primary request: Modular walnut decking 1m square and 1m long teal railing .95m high, leaf ironwork, post caps, exterior removable flower box .8m, hollow soil cavity. Style: same approved adult sci-fi cartoon as reference, crisp black ink contours, restrained flat cel shading, sage teal walnut cream dustyrose palette, hand crafted whimsical details, no photorealism. Ivory background professional readable layout. Show consistent FRONT BACK SIDE TOP and THREE QUARTER views of every component plus exploded functional details and palette. Same geometry across views. Correct gravity, no floating objects, no excessive ornament blocking function. Include dimensions in meters. Keep openings and work surfaces accessible. No characters, no cannabis, no watermark. Reference image is style only.",
+    "output": "05_deck_rail_sheet.png"
+  },
+  {
+    "number": 6,
+    "id": "garden_plan",
+    "title": "Jardin — implantation",
+    "zone": "garden",
+    "assets": [],
+    "brief": "Existing 5.2 by 7m garden, center path at east x12.5, planted borders, gate south, greenhouse west. Clear 1.1m route through greenhouse doorway at northwest. Top plan plus perspective.",
+    "prompt": "Use case: stylized-concept. Asset type: production model sheet for florist-galaxy game. 06 — Jardin — implantation. Primary request: Existing 5.2 by 7m garden, center path at east x12.5, planted borders, gate south, greenhouse west. Clear 1.1m route through greenhouse doorway at northwest. Top plan plus perspective. Style: same approved adult sci-fi cartoon as reference, crisp black ink contours, restrained flat cel shading, sage teal walnut cream dustyrose palette, hand crafted whimsical details, no photorealism. Ivory background professional readable layout. Show consistent FRONT BACK SIDE TOP and THREE QUARTER views of every component plus exploded functional details and palette. Same geometry across views. Correct gravity, no floating objects, no excessive ornament blocking function. Include dimensions in meters. Keep openings and work surfaces accessible. No characters, no cannabis, no watermark. Reference image is style only.",
+    "output": "06_garden_plan_sheet.png"
+  },
+  {
+    "number": 7,
+    "id": "border",
+    "title": "Massifs et bordures",
+    "zone": "garden",
+    "assets": [
+      "border_bed",
+      "path_stone"
+    ],
+    "brief": "Cartoon raised border modular 1m long .45m deep .20m high, terracotta brick coping, visible soil. Small natural edge stones with chips and ink. Mature approved flowers inserted separately.",
+    "prompt": "Use case: stylized-concept. Asset type: production model sheet for florist-galaxy game. 07 — Massifs et bordures. Primary request: Cartoon raised border modular 1m long .45m deep .20m high, terracotta brick coping, visible soil. Small natural edge stones with chips and ink. Mature approved flowers inserted separately. Style: same approved adult sci-fi cartoon as reference, crisp black ink contours, restrained flat cel shading, sage teal walnut cream dustyrose palette, hand crafted whimsical details, no photorealism. Ivory background professional readable layout. Show consistent FRONT BACK SIDE TOP and THREE QUARTER views of every component plus exploded functional details and palette. Same geometry across views. Correct gravity, no floating objects, no excessive ornament blocking function. Include dimensions in meters. Keep openings and work surfaces accessible. No characters, no cannabis, no watermark. Reference image is style only.",
+    "output": "07_border_sheet.png"
+  },
+  {
+    "number": 8,
+    "id": "hedge",
+    "title": "Haies et arche",
+    "zone": "garden",
+    "assets": [
+      "hedge",
+      "garden_arch"
+    ],
+    "brief": "Dense shaped green hedge one meter section .75m high, clusters of pointed leaves with varied sizes, timber trellis arch clear width1.2m height2.4m. Climbing vines sparse blossoms.",
+    "prompt": "Use case: stylized-concept. Asset type: production model sheet for florist-galaxy game. 08 — Haies et arche. Primary request: Dense shaped green hedge one meter section .75m high, clusters of pointed leaves with varied sizes, timber trellis arch clear width1.2m height2.4m. Climbing vines sparse blossoms. Style: same approved adult sci-fi cartoon as reference, crisp black ink contours, restrained flat cel shading, sage teal walnut cream dustyrose palette, hand crafted whimsical details, no photorealism. Ivory background professional readable layout. Show consistent FRONT BACK SIDE TOP and THREE QUARTER views of every component plus exploded functional details and palette. Same geometry across views. Correct gravity, no floating objects, no excessive ornament blocking function. Include dimensions in meters. Keep openings and work surfaces accessible. No characters, no cannabis, no watermark. Reference image is style only.",
+    "output": "08_hedge_sheet.png"
+  },
+  {
+    "number": 9,
+    "id": "water_station",
+    "title": "Point d’eau et tuyau",
+    "zone": "garden",
+    "assets": [
+      "tap_post",
+      "hose_reel"
+    ],
+    "brief": "Teal metal garden tap on stone post .9m high, brass star handle, coiled hose reel, nozzle cradle and drain grate, cartoon florist.",
+    "prompt": "Use case: stylized-concept. Asset type: production model sheet for florist-galaxy game. 09 — Point d’eau et tuyau. Primary request: Teal metal garden tap on stone post .9m high, brass star handle, coiled hose reel, nozzle cradle and drain grate, cartoon florist. Style: same approved adult sci-fi cartoon as reference, crisp black ink contours, restrained flat cel shading, sage teal walnut cream dustyrose palette, hand crafted whimsical details, no photorealism. Ivory background professional readable layout. Show consistent FRONT BACK SIDE TOP and THREE QUARTER views of every component plus exploded functional details and palette. Same geometry across views. Correct gravity, no floating objects, no excessive ornament blocking function. Include dimensions in meters. Keep openings and work surfaces accessible. No characters, no cannabis, no watermark. Reference image is style only.",
+    "output": "09_water_station_sheet.png"
+  },
+  {
+    "number": 10,
+    "id": "garden_tools",
+    "title": "Outils et brouette",
+    "zone": "garden",
+    "assets": [
+      "wheelbarrow",
+      "spade",
+      "rake"
+    ],
+    "brief": "Functional readable garden wheelbarrow with hollow teal basin and single wheel, spade with D grip, rake with separated tines. Correct handles and gravity.",
+    "prompt": "Use case: stylized-concept. Asset type: production model sheet for florist-galaxy game. 10 — Outils et brouette. Primary request: Functional readable garden wheelbarrow with hollow teal basin and single wheel, spade with D grip, rake with separated tines. Correct handles and gravity. Style: same approved adult sci-fi cartoon as reference, crisp black ink contours, restrained flat cel shading, sage teal walnut cream dustyrose palette, hand crafted whimsical details, no photorealism. Ivory background professional readable layout. Show consistent FRONT BACK SIDE TOP and THREE QUARTER views of every component plus exploded functional details and palette. Same geometry across views. Correct gravity, no floating objects, no excessive ornament blocking function. Include dimensions in meters. Keep openings and work surfaces accessible. No characters, no cannabis, no watermark. Reference image is style only.",
+    "output": "10_garden_tools_sheet.png"
+  },
+  {
+    "number": 11,
+    "id": "greenhouse_plan",
+    "title": "Serre — architecture",
+    "zone": "greenhouse",
+    "assets": [
+      "greenhouse_shell"
+    ],
+    "brief": "4m wide by4.25m deep florist greenhouse. Gable roof ridge3.1m eaves2.35m, sage ivory structure, clear glass, brick base, east doorway1.25m wide aligned garden route. Front back side top and cutaway.",
+    "prompt": "Use case: stylized-concept. Asset type: production model sheet for florist-galaxy game. 11 — Serre — architecture. Primary request: 4m wide by4.25m deep florist greenhouse. Gable roof ridge3.1m eaves2.35m, sage ivory structure, clear glass, brick base, east doorway1.25m wide aligned garden route. Front back side top and cutaway. Style: same approved adult sci-fi cartoon as reference, crisp black ink contours, restrained flat cel shading, sage teal walnut cream dustyrose palette, hand crafted whimsical details, no photorealism. Ivory background professional readable layout. Show consistent FRONT BACK SIDE TOP and THREE QUARTER views of every component plus exploded functional details and palette. Same geometry across views. Correct gravity, no floating objects, no excessive ornament blocking function. Include dimensions in meters. Keep openings and work surfaces accessible. No characters, no cannabis, no watermark. Reference image is style only.",
+    "output": "11_greenhouse_plan_sheet.png"
+  },
+  {
+    "number": 12,
+    "id": "greenhouse_door",
+    "title": "Porte de serre",
+    "zone": "greenhouse",
+    "assets": [
+      "greenhouse_door"
+    ],
+    "brief": "Ivory sage framed glass door 1.2m wide2.1m high. Separate leaf pivot on left edge, brass handles both sides, hinges. Open closed views and hinge detail.",
+    "prompt": "Use case: stylized-concept. Asset type: production model sheet for florist-galaxy game. 12 — Porte de serre. Primary request: Ivory sage framed glass door 1.2m wide2.1m high. Separate leaf pivot on left edge, brass handles both sides, hinges. Open closed views and hinge detail. Style: same approved adult sci-fi cartoon as reference, crisp black ink contours, restrained flat cel shading, sage teal walnut cream dustyrose palette, hand crafted whimsical details, no photorealism. Ivory background professional readable layout. Show consistent FRONT BACK SIDE TOP and THREE QUARTER views of every component plus exploded functional details and palette. Same geometry across views. Correct gravity, no floating objects, no excessive ornament blocking function. Include dimensions in meters. Keep openings and work surfaces accessible. No characters, no cannabis, no watermark. Reference image is style only.",
+    "output": "12_greenhouse_door_sheet.png"
+  },
+  {
+    "number": 13,
+    "id": "nursery_bench",
+    "title": "Tables de culture",
+    "zone": "greenhouse",
+    "assets": [
+      "nursery_bench"
+    ],
+    "brief": "Slatted teak nursery bench 2.8m long .65m deep .8m high, teal braced legs, lower shelf .25m. Empty editable storage surfaces no fixed pots.",
+    "prompt": "Use case: stylized-concept. Asset type: production model sheet for florist-galaxy game. 13 — Tables de culture. Primary request: Slatted teak nursery bench 2.8m long .65m deep .8m high, teal braced legs, lower shelf .25m. Empty editable storage surfaces no fixed pots. Style: same approved adult sci-fi cartoon as reference, crisp black ink contours, restrained flat cel shading, sage teal walnut cream dustyrose palette, hand crafted whimsical details, no photorealism. Ivory background professional readable layout. Show consistent FRONT BACK SIDE TOP and THREE QUARTER views of every component plus exploded functional details and palette. Same geometry across views. Correct gravity, no floating objects, no excessive ornament blocking function. Include dimensions in meters. Keep openings and work surfaces accessible. No characters, no cannabis, no watermark. Reference image is style only.",
+    "output": "13_nursery_bench_sheet.png"
+  },
+  {
+    "number": 14,
+    "id": "propagation",
+    "title": "Pépinière et accessoires",
+    "zone": "greenhouse",
+    "assets": [
+      "seed_tray",
+      "nursery_pot"
+    ],
+    "brief": "Seed tray 12 separate cells with tiny two-leaf sprouts, terracotta individual pot with drain saucer, soil scoop, seed tags. Low sprouts distinct from mature flowers.",
+    "prompt": "Use case: stylized-concept. Asset type: production model sheet for florist-galaxy game. 14 — Pépinière et accessoires. Primary request: Seed tray 12 separate cells with tiny two-leaf sprouts, terracotta individual pot with drain saucer, soil scoop, seed tags. Low sprouts distinct from mature flowers. Style: same approved adult sci-fi cartoon as reference, crisp black ink contours, restrained flat cel shading, sage teal walnut cream dustyrose palette, hand crafted whimsical details, no photorealism. Ivory background professional readable layout. Show consistent FRONT BACK SIDE TOP and THREE QUARTER views of every component plus exploded functional details and palette. Same geometry across views. Correct gravity, no floating objects, no excessive ornament blocking function. Include dimensions in meters. Keep openings and work surfaces accessible. No characters, no cannabis, no watermark. Reference image is style only.",
+    "output": "14_propagation_sheet.png"
+  },
+  {
+    "number": 15,
+    "id": "climate",
+    "title": "Climatisation de serre",
+    "zone": "greenhouse",
+    "assets": [
+      "vent_fan",
+      "thermometer",
+      "irrigation_bar"
+    ],
+    "brief": "Sage fan with visible guard mesh and three blades, analog thermometer ivory board, fine irrigation pipe with3 nozzles, small warm pendant.",
+    "prompt": "Use case: stylized-concept. Asset type: production model sheet for florist-galaxy game. 15 — Climatisation de serre. Primary request: Sage fan with visible guard mesh and three blades, analog thermometer ivory board, fine irrigation pipe with3 nozzles, small warm pendant. Style: same approved adult sci-fi cartoon as reference, crisp black ink contours, restrained flat cel shading, sage teal walnut cream dustyrose palette, hand crafted whimsical details, no photorealism. Ivory background professional readable layout. Show consistent FRONT BACK SIDE TOP and THREE QUARTER views of every component plus exploded functional details and palette. Same geometry across views. Correct gravity, no floating objects, no excessive ornament blocking function. Include dimensions in meters. Keep openings and work surfaces accessible. No characters, no cannabis, no watermark. Reference image is style only.",
+    "output": "15_climate_sheet.png"
+  },
+  {
+    "number": 16,
+    "id": "shed_plan",
+    "title": "Remise — rangement accessible",
+    "zone": "shed",
+    "assets": [
+      "shed_shell"
+    ],
+    "brief": "Compact florist shed footprint1.14m by2.7m, sage vertical boards purple sloped metal roof. East double openable door1.6m wide centered along long side. No solid block inside, shallow shelves at west, storage accessible from courtyard. Section showing use.",
+    "prompt": "Use case: stylized-concept. Asset type: production model sheet for florist-galaxy game. 16 — Remise — rangement accessible. Primary request: Compact florist shed footprint1.14m by2.7m, sage vertical boards purple sloped metal roof. East double openable door1.6m wide centered along long side. No solid block inside, shallow shelves at west, storage accessible from courtyard. Section showing use. Style: same approved adult sci-fi cartoon as reference, crisp black ink contours, restrained flat cel shading, sage teal walnut cream dustyrose palette, hand crafted whimsical details, no photorealism. Ivory background professional readable layout. Show consistent FRONT BACK SIDE TOP and THREE QUARTER views of every component plus exploded functional details and palette. Same geometry across views. Correct gravity, no floating objects, no excessive ornament blocking function. Include dimensions in meters. Keep openings and work surfaces accessible. No characters, no cannabis, no watermark. Reference image is style only.",
+    "output": "16_shed_plan_sheet.png"
+  },
+  {
+    "number": 17,
+    "id": "shed_doors",
+    "title": "Portes et rangement de remise",
+    "zone": "shed",
+    "assets": [
+      "shed_door",
+      "shed_shelf"
+    ],
+    "brief": "Pair sage plank doors .8m wide2m high, black strap hinges, brass handles. Storage shelves .9m wide .4m deep1.7m high, three spacious levels, visible shelf clearance .50m.",
+    "prompt": "Use case: stylized-concept. Asset type: production model sheet for florist-galaxy game. 17 — Portes et rangement de remise. Primary request: Pair sage plank doors .8m wide2m high, black strap hinges, brass handles. Storage shelves .9m wide .4m deep1.7m high, three spacious levels, visible shelf clearance .50m. Style: same approved adult sci-fi cartoon as reference, crisp black ink contours, restrained flat cel shading, sage teal walnut cream dustyrose palette, hand crafted whimsical details, no photorealism. Ivory background professional readable layout. Show consistent FRONT BACK SIDE TOP and THREE QUARTER views of every component plus exploded functional details and palette. Same geometry across views. Correct gravity, no floating objects, no excessive ornament blocking function. Include dimensions in meters. Keep openings and work surfaces accessible. No characters, no cannabis, no watermark. Reference image is style only.",
+    "output": "17_shed_doors_sheet.png"
+  },
+  {
+    "number": 18,
+    "id": "supplies",
+    "title": "Consommables et stockage",
+    "zone": "shed",
+    "assets": [
+      "pot_stack",
+      "soil_bag",
+      "seed_organizer"
+    ],
+    "brief": "Pot stacks hollow nesting terracotta3pots, tied bag of soil .6m tall, seed organizerwoodbox with6labelcompartments, weatherproof crate.",
+    "prompt": "Use case: stylized-concept. Asset type: production model sheet for florist-galaxy game. 18 — Consommables et stockage. Primary request: Pot stacks hollow nesting terracotta3pots, tied bag of soil .6m tall, seed organizerwoodbox with6labelcompartments, weatherproof crate. Style: same approved adult sci-fi cartoon as reference, crisp black ink contours, restrained flat cel shading, sage teal walnut cream dustyrose palette, hand crafted whimsical details, no photorealism. Ivory background professional readable layout. Show consistent FRONT BACK SIDE TOP and THREE QUARTER views of every component plus exploded functional details and palette. Same geometry across views. Correct gravity, no floating objects, no excessive ornament blocking function. Include dimensions in meters. Keep openings and work surfaces accessible. No characters, no cannabis, no watermark. Reference image is style only.",
+    "output": "18_supplies_sheet.png"
+  },
+  {
+    "number": 19,
+    "id": "annex_plan",
+    "title": "Annexe — atelier",
+    "zone": "annex",
+    "assets": [],
+    "brief": "Existing5 by6m florist workshop annex, door east, spiralstair northeast, rear window. Keep central floor free for player furniture. Sage wainscot, botanical trim, wallpackingshelf, servicecart and wrappingstation on westwall. Topplan perspective.",
+    "prompt": "Use case: stylized-concept. Asset type: production model sheet for florist-galaxy game. 19 — Annexe — atelier. Primary request: Existing5 by6m florist workshop annex, door east, spiralstair northeast, rear window. Keep central floor free for player furniture. Sage wainscot, botanical trim, wallpackingshelf, servicecart and wrappingstation on westwall. Topplan perspective. Style: same approved adult sci-fi cartoon as reference, crisp black ink contours, restrained flat cel shading, sage teal walnut cream dustyrose palette, hand crafted whimsical details, no photorealism. Ivory background professional readable layout. Show consistent FRONT BACK SIDE TOP and THREE QUARTER views of every component plus exploded functional details and palette. Same geometry across views. Correct gravity, no floating objects, no excessive ornament blocking function. Include dimensions in meters. Keep openings and work surfaces accessible. No characters, no cannabis, no watermark. Reference image is style only.",
+    "output": "19_annex_plan_sheet.png"
+  },
+  {
+    "number": 20,
+    "id": "wrapping",
+    "title": "Station d’emballage",
+    "zone": "annex",
+    "assets": [
+      "wrapping_station"
+    ],
+    "brief": "Walnut and teal wrapping station1.5m wide .65m deep .9m high. Paper rollrack, real scissors, twinespools, empty broadworksurface andlowerstorage.",
+    "prompt": "Use case: stylized-concept. Asset type: production model sheet for florist-galaxy game. 20 — Station d’emballage. Primary request: Walnut and teal wrapping station1.5m wide .65m deep .9m high. Paper rollrack, real scissors, twinespools, empty broadworksurface andlowerstorage. Style: same approved adult sci-fi cartoon as reference, crisp black ink contours, restrained flat cel shading, sage teal walnut cream dustyrose palette, hand crafted whimsical details, no photorealism. Ivory background professional readable layout. Show consistent FRONT BACK SIDE TOP and THREE QUARTER views of every component plus exploded functional details and palette. Same geometry across views. Correct gravity, no floating objects, no excessive ornament blocking function. Include dimensions in meters. Keep openings and work surfaces accessible. No characters, no cannabis, no watermark. Reference image is style only.",
+    "output": "20_wrapping_sheet.png"
+  },
+  {
+    "number": 21,
+    "id": "trolley",
+    "title": "Chariot d’atelier",
+    "zone": "annex",
+    "assets": [
+      "service_trolley"
+    ],
+    "brief": "Two tier service trolley .75m wide .45m deep .85m high. Teal frame, four visiblecasters, brasshandles, emptyraisededge wood shelves.",
+    "prompt": "Use case: stylized-concept. Asset type: production model sheet for florist-galaxy game. 21 — Chariot d’atelier. Primary request: Two tier service trolley .75m wide .45m deep .85m high. Teal frame, four visiblecasters, brasshandles, emptyraisededge wood shelves. Style: same approved adult sci-fi cartoon as reference, crisp black ink contours, restrained flat cel shading, sage teal walnut cream dustyrose palette, hand crafted whimsical details, no photorealism. Ivory background professional readable layout. Show consistent FRONT BACK SIDE TOP and THREE QUARTER views of every component plus exploded functional details and palette. Same geometry across views. Correct gravity, no floating objects, no excessive ornament blocking function. Include dimensions in meters. Keep openings and work surfaces accessible. No characters, no cannabis, no watermark. Reference image is style only.",
+    "output": "21_trolley_sheet.png"
+  },
+  {
+    "number": 22,
+    "id": "wall_storage",
+    "title": "Rangements d’atelier",
+    "zone": "annex",
+    "assets": [
+      "paper_rack",
+      "notice_board"
+    ],
+    "brief": "Wallrack1.2m wide with3kraft paper rolls removable spindle, ribbons organizer, mailnoticeboard withpinned notes, botanical framedprint.",
+    "prompt": "Use case: stylized-concept. Asset type: production model sheet for florist-galaxy game. 22 — Rangements d’atelier. Primary request: Wallrack1.2m wide with3kraft paper rolls removable spindle, ribbons organizer, mailnoticeboard withpinned notes, botanical framedprint. Style: same approved adult sci-fi cartoon as reference, crisp black ink contours, restrained flat cel shading, sage teal walnut cream dustyrose palette, hand crafted whimsical details, no photorealism. Ivory background professional readable layout. Show consistent FRONT BACK SIDE TOP and THREE QUARTER views of every component plus exploded functional details and palette. Same geometry across views. Correct gravity, no floating objects, no excessive ornament blocking function. Include dimensions in meters. Keep openings and work surfaces accessible. No characters, no cannabis, no watermark. Reference image is style only.",
+    "output": "22_wall_storage_sheet.png"
+  },
+  {
+    "number": 23,
+    "id": "upstairs_plan",
+    "title": "Étage — postes et escalier",
+    "zone": "upstairs",
+    "assets": [],
+    "brief": "Existing5 by6m loft office atfloor3.4m, spiralstair northeast, twoemployee desks west. Botanical sage walnut cream, warmtasklights, smalllocker, bookcase. Topplan perspective. Keep3.4m spiralrise17steps.",
+    "prompt": "Use case: stylized-concept. Asset type: production model sheet for florist-galaxy game. 23 — Étage — postes et escalier. Primary request: Existing5 by6m loft office atfloor3.4m, spiralstair northeast, twoemployee desks west. Botanical sage walnut cream, warmtasklights, smalllocker, bookcase. Topplan perspective. Keep3.4m spiralrise17steps. Style: same approved adult sci-fi cartoon as reference, crisp black ink contours, restrained flat cel shading, sage teal walnut cream dustyrose palette, hand crafted whimsical details, no photorealism. Ivory background professional readable layout. Show consistent FRONT BACK SIDE TOP and THREE QUARTER views of every component plus exploded functional details and palette. Same geometry across views. Correct gravity, no floating objects, no excessive ornament blocking function. Include dimensions in meters. Keep openings and work surfaces accessible. No characters, no cannabis, no watermark. Reference image is style only.",
+    "output": "23_upstairs_plan_sheet.png"
+  },
+  {
+    "number": 24,
+    "id": "employee_desk",
+    "title": "Postes d’employés",
+    "zone": "upstairs",
+    "assets": [
+      "employee_desk",
+      "office_chair"
+    ],
+    "brief": "Desk .9m wide1.9m deep .76m high with drawerpedestal, scrollleaf detail, empty writingarea. Sideview shows chair on rightside. Separate teal swivelchair, fivecastorbase.",
+    "prompt": "Use case: stylized-concept. Asset type: production model sheet for florist-galaxy game. 24 — Postes d’employés. Primary request: Desk .9m wide1.9m deep .76m high with drawerpedestal, scrollleaf detail, empty writingarea. Sideview shows chair on rightside. Separate teal swivelchair, fivecastorbase. Style: same approved adult sci-fi cartoon as reference, crisp black ink contours, restrained flat cel shading, sage teal walnut cream dustyrose palette, hand crafted whimsical details, no photorealism. Ivory background professional readable layout. Show consistent FRONT BACK SIDE TOP and THREE QUARTER views of every component plus exploded functional details and palette. Same geometry across views. Correct gravity, no floating objects, no excessive ornament blocking function. Include dimensions in meters. Keep openings and work surfaces accessible. No characters, no cannabis, no watermark. Reference image is style only.",
+    "output": "24_employee_desk_sheet.png"
+  },
+  {
+    "number": 25,
+    "id": "office_details",
+    "title": "Accessoires de bureau",
+    "zone": "upstairs",
+    "assets": [
+      "task_lamp",
+      "filing_cabinet"
+    ],
+    "brief": "Articulated brass tasklamp with sage shade .45m tall, books withbotanicalcovers, lowfilingcabinet .8m wide1m high, nameplate blank.",
+    "prompt": "Use case: stylized-concept. Asset type: production model sheet for florist-galaxy game. 25 — Accessoires de bureau. Primary request: Articulated brass tasklamp with sage shade .45m tall, books withbotanicalcovers, lowfilingcabinet .8m wide1m high, nameplate blank. Style: same approved adult sci-fi cartoon as reference, crisp black ink contours, restrained flat cel shading, sage teal walnut cream dustyrose palette, hand crafted whimsical details, no photorealism. Ivory background professional readable layout. Show consistent FRONT BACK SIDE TOP and THREE QUARTER views of every component plus exploded functional details and palette. Same geometry across views. Correct gravity, no floating objects, no excessive ornament blocking function. Include dimensions in meters. Keep openings and work surfaces accessible. No characters, no cannabis, no watermark. Reference image is style only.",
+    "output": "25_office_details_sheet.png"
+  },
+  {
+    "number": 26,
+    "id": "balcony",
+    "title": "Balcon et escalier",
+    "zone": "upstairs",
+    "assets": [
+      "balcony_rail",
+      "spiral_stair"
+    ],
+    "brief": "Decorative sage curved iron balcony railing 1m section withleafmedallion, walnut floral newel and brasscap. Spiral stair .9m radius rise3.4m17treads, handrail safe and continuous.",
+    "prompt": "Use case: stylized-concept. Asset type: production model sheet for florist-galaxy game. 26 — Balcon et escalier. Primary request: Decorative sage curved iron balcony railing 1m section withleafmedallion, walnut floral newel and brasscap. Spiral stair .9m radius rise3.4m17treads, handrail safe and continuous. Style: same approved adult sci-fi cartoon as reference, crisp black ink contours, restrained flat cel shading, sage teal walnut cream dustyrose palette, hand crafted whimsical details, no photorealism. Ivory background professional readable layout. Show consistent FRONT BACK SIDE TOP and THREE QUARTER views of every component plus exploded functional details and palette. Same geometry across views. Correct gravity, no floating objects, no excessive ornament blocking function. Include dimensions in meters. Keep openings and work surfaces accessible. No characters, no cannabis, no watermark. Reference image is style only.",
+    "output": "26_balcony_sheet.png"
+  },
+  {
+    "number": 27,
+    "id": "gallery",
+    "title": "Galerie macabre",
+    "zone": "gallery",
+    "assets": [
+      "gallery_display",
+      "gallery_easel"
+    ],
+    "brief": "Facade display3.3m wide2.6m high: walnut gold botanical carved frame around three professional gothic floral relief artworks skullflower, wiltedrose, coffin. Purplebacking, brasspicturelights, easel. Shallow wallmounted display no newinterior.",
+    "prompt": "Use case: stylized-concept. Asset type: production model sheet for florist-galaxy game. 27 — Galerie macabre. Primary request: Facade display3.3m wide2.6m high: walnut gold botanical carved frame around three professional gothic floral relief artworks skullflower, wiltedrose, coffin. Purplebacking, brasspicturelights, easel. Shallow wallmounted display no newinterior. Style: same approved adult sci-fi cartoon as reference, crisp black ink contours, restrained flat cel shading, sage teal walnut cream dustyrose palette, hand crafted whimsical details, no photorealism. Ivory background professional readable layout. Show consistent FRONT BACK SIDE TOP and THREE QUARTER views of every component plus exploded functional details and palette. Same geometry across views. Correct gravity, no floating objects, no excessive ornament blocking function. Include dimensions in meters. Keep openings and work surfaces accessible. No characters, no cannabis, no watermark. Reference image is style only.",
+    "output": "27_gallery_sheet.png"
+  },
+  {
+    "number": 28,
+    "id": "warehouse",
+    "title": "Entrepôt de fret",
+    "zone": "warehouse",
+    "assets": [
+      "warehouse_bay",
+      "handtruck",
+      "pallet"
+    ],
+    "brief": "Facade freight bay3.3m wide2.5m high with halfraised ribbed shutter, tealsteel frame, yellow safetyedges, strappedwood shippingcrates staged inside shallow display. Independent handtruck redsteel rubberwheels andwoodpallet.",
+    "prompt": "Use case: stylized-concept. Asset type: production model sheet for florist-galaxy game. 28 — Entrepôt de fret. Primary request: Facade freight bay3.3m wide2.5m high with halfraised ribbed shutter, tealsteel frame, yellow safetyedges, strappedwood shippingcrates staged inside shallow display. Independent handtruck redsteel rubberwheels andwoodpallet. Style: same approved adult sci-fi cartoon as reference, crisp black ink contours, restrained flat cel shading, sage teal walnut cream dustyrose palette, hand crafted whimsical details, no photorealism. Ivory background professional readable layout. Show consistent FRONT BACK SIDE TOP and THREE QUARTER views of every component plus exploded functional details and palette. Same geometry across views. Correct gravity, no floating objects, no excessive ornament blocking function. Include dimensions in meters. Keep openings and work surfaces accessible. No characters, no cannabis, no watermark. Reference image is style only.",
+    "output": "28_warehouse_sheet.png"
+  },
+  {
+    "number": 29,
+    "id": "salon",
+    "title": "Salon interstellaire",
+    "zone": "salon",
+    "assets": [
+      "salon_display",
+      "salon_sofa",
+      "orb_table"
+    ],
+    "brief": "Facade salondisplay3.3m wide2.5m high, ornate purple frame, constellationbackpanel, teal upholstered curvedsofa with tuftedbuttons and brassfeet, small orb pedestal table. Shallowdisplay, notfullbuilding.",
+    "prompt": "Use case: stylized-concept. Asset type: production model sheet for florist-galaxy game. 29 — Salon interstellaire. Primary request: Facade salondisplay3.3m wide2.5m high, ornate purple frame, constellationbackpanel, teal upholstered curvedsofa with tuftedbuttons and brassfeet, small orb pedestal table. Shallowdisplay, notfullbuilding. Style: same approved adult sci-fi cartoon as reference, crisp black ink contours, restrained flat cel shading, sage teal walnut cream dustyrose palette, hand crafted whimsical details, no photorealism. Ivory background professional readable layout. Show consistent FRONT BACK SIDE TOP and THREE QUARTER views of every component plus exploded functional details and palette. Same geometry across views. Correct gravity, no floating objects, no excessive ornament blocking function. Include dimensions in meters. Keep openings and work surfaces accessible. No characters, no cannabis, no watermark. Reference image is style only.",
+    "output": "29_salon_sheet.png"
+  },
+  {
+    "number": 30,
+    "id": "embassy",
+    "title": "Ambassade galactique",
+    "zone": "embassy",
+    "assets": [
+      "embassy_front",
+      "galactic_flag"
+    ],
+    "brief": "Facade embassy3.3m wide3m high. Creamflutedcolumns, midnightblue double decorative doors, goldbotanical planetcrest, ivorypediment, three lowsteps. Separate midnightblue wavedflag with goldenringedplanet.",
+    "prompt": "Use case: stylized-concept. Asset type: production model sheet for florist-galaxy game. 30 — Ambassade galactique. Primary request: Facade embassy3.3m wide3m high. Creamflutedcolumns, midnightblue double decorative doors, goldbotanical planetcrest, ivorypediment, three lowsteps. Separate midnightblue wavedflag with goldenringedplanet. Style: same approved adult sci-fi cartoon as reference, crisp black ink contours, restrained flat cel shading, sage teal walnut cream dustyrose palette, hand crafted whimsical details, no photorealism. Ivory background professional readable layout. Show consistent FRONT BACK SIDE TOP and THREE QUARTER views of every component plus exploded functional details and palette. Same geometry across views. Correct gravity, no floating objects, no excessive ornament blocking function. Include dimensions in meters. Keep openings and work surfaces accessible. No characters, no cannabis, no watermark. Reference image is style only.",
+    "output": "30_embassy_sheet.png"
+  },
+  {
+    "number": 31,
+    "id": "courtyard",
+    "title": "Cour de service et abords",
+    "zone": "courtyard",
+    "assets": [
+      "wall_lantern",
+      "outdoor_garland",
+      "sorting_bins",
+      "delivery_bell"
+    ],
+    "brief": "Florist serviceyard accessories: weatherproof walllantern .5m, joined warm festoon4m, sortingbins pair sage andpurple hingedlids, deliverybell with brassbutton and parcelicon, no prices.",
+    "prompt": "Use case: stylized-concept. Asset type: production model sheet for florist-galaxy game. 31 — Cour de service et abords. Primary request: Florist serviceyard accessories: weatherproof walllantern .5m, joined warm festoon4m, sortingbins pair sage andpurple hingedlids, deliverybell with brassbutton and parcelicon, no prices. Style: same approved adult sci-fi cartoon as reference, crisp black ink contours, restrained flat cel shading, sage teal walnut cream dustyrose palette, hand crafted whimsical details, no photorealism. Ivory background professional readable layout. Show consistent FRONT BACK SIDE TOP and THREE QUARTER views of every component plus exploded functional details and palette. Same geometry across views. Correct gravity, no floating objects, no excessive ornament blocking function. Include dimensions in meters. Keep openings and work surfaces accessible. No characters, no cannabis, no watermark. Reference image is style only.",
+    "output": "31_courtyard_sheet.png"
+  },
+  {
+    "number": 32,
+    "id": "wayfinding",
+    "title": "Signalétique et accès",
+    "zone": "courtyard",
+    "assets": [
+      "sign_garden",
+      "sign_greenhouse",
+      "sign_workshop",
+      "sign_shed",
+      "drain_grate"
+    ],
+    "brief": "Coherent cartoon carved botanical directionboards JARDIN SERRE ATELIER REMISE, professional handlettered uppercase darkteal ivory, leaf andwateringcan medallions, hangingchain singlecontinuousloop. Doorhandles, latches, drainagegrate closeups.",
+    "prompt": "Use case: stylized-concept. Asset type: production model sheet for florist-galaxy game. 32 — Signalétique et accès. Primary request: Coherent cartoon carved botanical directionboards JARDIN SERRE ATELIER REMISE, professional handlettered uppercase darkteal ivory, leaf andwateringcan medallions, hangingchain singlecontinuousloop. Doorhandles, latches, drainagegrate closeups. Style: same approved adult sci-fi cartoon as reference, crisp black ink contours, restrained flat cel shading, sage teal walnut cream dustyrose palette, hand crafted whimsical details, no photorealism. Ivory background professional readable layout. Show consistent FRONT BACK SIDE TOP and THREE QUARTER views of every component plus exploded functional details and palette. Same geometry across views. Correct gravity, no floating objects, no excessive ornament blocking function. Include dimensions in meters. Keep openings and work surfaces accessible. No characters, no cannabis, no watermark. Reference image is style only.",
+    "output": "32_wayfinding_sheet.png"
+  }
+]

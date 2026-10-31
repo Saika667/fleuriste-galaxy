@@ -1,0 +1,24 @@
+{
+  "id": "cannabis_elancee_seedling",
+  "source": "art/concepts/cannabis/growth/02_elancee_stades.png",
+  "triangles_with_outlines": 8744,
+  "meshes": 1,
+  "surfaces": 8,
+  "height_m": 0.38699570298194885,
+  "features": {
+    "family": "cannabis_elancee",
+    "stage": "seedling",
+    "pot_size_unchanged": true,
+    "reference_soil_height_m": 0.25339999999999996,
+    "cotyledons": 2,
+    "young_serrated_leaves": 2,
+    "buds_absent": true,
+    "potted": true,
+    "flower_clusters": 0,
+    "palmate_leaf_fans": 0,
+    "fingers_per_leaf": 7,
+    "static_prop": true
+  },
+  "head_height_m": 0.35339999999999994,
+  "shading": "unlit; inverted hull contours"
+}

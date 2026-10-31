@@ -278,7 +278,7 @@ func _home() -> Vector2i:
 
 
 func _blocked_cells() -> Dictionary:
-	var b = {}
+	var b = _g.logistics.shop_obstacles()
 	for it in _shop().items:
 		for c in _shop().cells_of(String(it.def), int(it.x), int(it.y), int(it.rot)):
 			b[c] = true
@@ -292,7 +292,7 @@ func _inside(c: Vector2i) -> bool:
 ## Cases libres voisines d'un meuble du type `station` : {cellule: true}.
 func _goals(station: String, blocked: Dictionary) -> Dictionary:
 	var out = {}
-	for it in _shop().items:
+	for it in _shop().items + _g.logistics.shop_stations():
 		if String(it.def) != station:
 			continue
 		for c in _shop().cells_of(String(it.def), int(it.x), int(it.y), int(it.rot)):

@@ -11,7 +11,7 @@ const FallbackBench = preload("res://src/world/fallback_bench.gd")
 const Reticle = preload("res://src/world/reticle.gd")
 
 const HUD_PATH = "res://scenes/ui/hud.tscn"
-const BENCH_PATH = "res://scenes/bench/bench_view.tscn"
+const BENCH_PATH = "res://scenes/bench/spatial_bench.tscn"
 const CELLAR_PATH = "res://scenes/cellar/cellar.tscn"
 
 ## Depart : poste du fleuriste (entre l etabli et le comptoir), face a la porte, aux vitrines et a la file.
@@ -30,11 +30,17 @@ var bench: Node
 var cellar: Node3D
 var cellar_menu_open := false
 var _last_mouse := -1
+var vase_controller: Node
+var free_layout: Node3D
+var surface_controller: Node
 
 
 func _ready() -> void:
-	if Game.rooms.shop.items.is_empty():
-		Game.new_game()
+	if not Game.session_initialized:
+		Game.new_game(-1,false)
+	ReviewAccess.active=ReviewAccess.ENABLED and not OS.get_cmdline_user_args().has("story-locks")
+	if ReviewAccess.active:Game.on_expansions_changed()
+	Game.apply_visitor_policy()
 	world = ShopWorld.new()
 	world.name = "ShopWorld"
 	add_child(world)
@@ -42,6 +48,7 @@ func _ready() -> void:
 	add_child(player)
 	player.teleport(SPAWN, SPAWN_YAW, SPAWN_PITCH)
 	hud = _make_hud()
+	hud.pause.unstuck_requested.connect(recover_player)
 	_mute_arrival_toast()
 	var rl = CanvasLayer.new()
 	rl.layer = 3
@@ -59,9 +66,22 @@ func _ready() -> void:
 	world.bench_requested.connect(open_bench)
 	world.cellar_requested.connect(enter_cellar)
 	Game.game_reset.connect(_on_game_reset)
+	vase_controller=preload("res://src/world/vase_controller.gd").new()
+	add_child(vase_controller)
+	vase_controller.setup(self)
+	surface_controller=preload("res://src/world/surface_controller.gd").new()
+	add_child(surface_controller)
+	surface_controller.setup(self)
+	_prepare_cellar()
+	# Keep the same functional compost interface, now physically in the garden.
+	cellar._composter.reparent(world,true);cellar._composter.global_position=Vector3(10,0,-6.2);cellar._composter.show();cellar.set_meta("interior_visibility",cellar.get_meta("interior_visibility",[]).filter(func(entry):return entry.node!=cellar._composter))
+	free_layout=preload("res://src/world/free_layout.gd").new();add_child(free_layout);free_layout.setup(self)
 	_apply_mouse()
+	if Game.logistics.tutorial and not Game.progression.has_flag("welcome_seen"):
+		Game.progression.set_flag("welcome_seen")
+		hud.call_deferred("open_message","Le notaire","La boutique est à vous. Elle est vide, mais vous disposez de 300 € pour la remettre sur pied. Ouvrez votre téléphone avec Tab, commandez le comptoir et récupérez son carton sur le trottoir. Les objectifs vous guideront jusqu’à votre première vente.")
 	if OS.get_cmdline_user_args().is_empty():
-		get_tree().create_timer(1.5).timeout.connect(func(): _on_toast("ZQSD : marcher  -  E : interagir  -  B : placer les meubles  -  Tab : stock", "info"))
+		get_tree().create_timer(1.5).timeout.connect(func(): _on_toast("ZQSD : marcher  -  Espace : sauter  -  E : interagir  -  R : déplacer un objet  -  Tab : téléphone", "info"))
 
 
 func _make_hud() -> Node:
@@ -86,6 +106,12 @@ func _free_mouse() -> bool:
 
 
 func _process(_dt: float) -> void:
+	if is_instance_valid(cellar) and mode in ["shop","cellar"]:
+		if player.global_position.y < -.15 and mode=="shop":_set_cellar_active(true)
+		elif player.global_position.y > -.05 and mode=="cellar":_set_cellar_active(false)
+		if mode=="cellar":
+			var local=cellar.to_local(player.global_position)
+			player.camera.environment=cellar.get_meta("interior_environment",null) if absf(local.x)<12 and absf(local.z)<9.1 else null
 	_apply_mouse()
 
 
@@ -116,6 +142,9 @@ func _mute_arrival_toast() -> void:
 
 
 func _on_game_reset() -> void:
+	ReviewAccess.active=ReviewAccess.ENABLED and not OS.get_cmdline_user_args().has("story-locks")
+	if ReviewAccess.active:Game.on_expansions_changed()
+	Game.apply_visitor_policy()
 	_mute_arrival_toast()
 	if mode == "cellar":
 		exit_cellar()
@@ -177,7 +206,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		return
 	if _hud_modal() or cellar_menu_open:
 		return
-	if event.is_action_pressed("placement_mode") and mode == "shop":
+	if event.is_action_pressed("placement_mode"):
 		enter_placement()
 		get_viewport().set_input_as_handled()
 	elif event.is_action_pressed("inventory") and hud != null and hud.has_method("open_stock"):
@@ -196,13 +225,8 @@ func _set_hud_escape(on: bool) -> void:
 # ---------------------------------------------------------------- placement
 
 func enter_placement() -> void:
-	if mode != "shop":
-		return
-	mode = "placement"
-	_set_hud_escape(false)
-	if hud != null and hud.has_method("hide_prompt"):
-		hud.hide_prompt()
-	placement.enter()
+	if mode not in ["shop","cellar"]:return
+	hud.open_stock();hud.stock.inventory_page()
 
 
 func _on_placement_exited() -> void:
@@ -213,19 +237,21 @@ func _on_placement_exited() -> void:
 # ---------------------------------------------------------------- etabli
 
 func open_bench() -> void:
-	if mode != "shop":
+	if mode not in ["shop","cellar"]:
 		return
 	var inst: Node
 	if ResourceLoader.exists(BENCH_PATH):
 		inst = load(BENCH_PATH).instantiate()
 	else:
 		inst = FallbackBench.new()
+	set_meta("bench_return_mode",mode)
 	bench_layer = CanvasLayer.new()
 	bench_layer.layer = 8
 	add_child(bench_layer)
 	bench_layer.add_child(inst)
 	bench = inst
 	mode = "bench"
+	hud.hide()
 	_set_hud_escape(false)
 	if hud != null and hud.has_method("hide_prompt"):
 		hud.hide_prompt()
@@ -243,43 +269,59 @@ func _close_bench() -> void:
 		bench_layer.queue_free()
 	bench_layer = null
 	bench = null
-	mode = "shop"
+	hud.show()
+	mode = String(get_meta("bench_return_mode","shop"))
 	_set_hud_escape(true)
 
 
 # ---------------------------------------------------------------- cave
 
-func enter_cellar() -> void:
-	if mode != "shop":
-		return
-	if not ResourceLoader.exists(CELLAR_PATH):
-		_on_toast("La cave n'est pas encore aménagée.", "info")
-		return
-	cellar = load(CELLAR_PATH).instantiate()
+func _prepare_cellar() -> void:
+	if is_instance_valid(cellar):return
+	cellar=load(CELLAR_PATH).instantiate()
+	cellar.position=Vector3(5,-4.2,-4)
+	cellar.rotation.y=PI
 	add_child(cellar)
-	world.set_active(false)
-	mode = "cellar"
-	cellar_menu_open = false
-	if cellar.has_signal("exit_requested"):
-		cellar.exit_requested.connect(exit_cellar)
-	if cellar.has_signal("menu_opened"):
-		cellar.menu_opened.connect(func():
-			cellar_menu_open = true
-			_set_hud_escape(false))  # Echap appartient au menu de la cave, pas a la pause du HUD
-		cellar.menu_closed.connect(func():
-			cellar_menu_open = false
-			_set_hud_escape(true))
-	var sp = cellar.get_spawn_point() if cellar.has_method("get_spawn_point") else Vector3(0, 0.1, 0)
-	player.teleport(sp, -PI * 0.5, 0.0)
+	cellar.exit_requested.connect(exit_cellar)
+	cellar.menu_opened.connect(func():cellar_menu_open=true;_set_hud_escape(false))
+	cellar.menu_closed.connect(func():cellar_menu_open=false;_set_hud_escape(true))
+	for env in cellar.find_children("*","WorldEnvironment",true,false):
+		cellar.set_meta("interior_environment",env.environment);env.environment=null
+	var defaults=[]
+	for child in cellar.get_children():
+		if (child is Node3D or child is CanvasLayer) and not child.get_meta("cellar_external",false):defaults.append({"node":child,"visible":child.visible})
+	cellar.set_meta("interior_visibility",defaults)
+	_set_cellar_active(false)
 
+func _set_cellar_active(on: bool) -> void:
+	cellar.show();cellar.set_process(on)
+	for entry in cellar.get_meta("interior_visibility",[]):
+		if is_instance_valid(entry.node):entry.node.visible=(on or entry.node is MeshInstance3D or entry.node is StaticBody3D) and bool(entry.visible)
+	mode="cellar" if on else "shop"
+	cellar_menu_open=false
+	player.camera.environment=cellar.get_meta("interior_environment",null) if on else null
+
+func enter_cellar() -> void:
+	if mode!="shop":return
+	_set_cellar_active(true)
+	player.teleport(cellar.get_spawn_point(),PI*.5,0)
 
 func exit_cellar() -> void:
-	if mode != "cellar":
-		return
-	if is_instance_valid(cellar):
-		cellar.queue_free()
-	cellar = null
-	cellar_menu_open = false
-	world.set_active(true)
-	mode = "shop"
-	player.teleport(Vector3(1.7, 0.0, 2.3), -PI * 0.25, -0.1)
+	if mode!="cellar":return
+	_set_cellar_active(false)
+	player.teleport(Vector3(1.7,0,2.3),-PI*.25,-.1)
+
+
+func recover_player() -> void:
+	if is_instance_valid(free_layout):
+		if free_layout.carried_box!="":free_layout.drop_box()
+		free_layout.cancel()
+	var point=Vector3(5.5,0,9.4)
+	if player.global_position.y< -1:point=cellar.to_global(Vector3(-1,0,12))
+	var shape=CapsuleShape3D.new();shape.height=1.75;shape.radius=.31
+	for i in 25:
+		var candidate=point+Vector3((i%5-2)*.7,0,(i/5-2)*.7)
+		var query=PhysicsShapeQueryParameters3D.new();query.shape=shape;query.collision_mask=1;query.transform=Transform3D(Basis.IDENTITY,candidate+Vector3(0,.91,0))
+		if player.get_world_3d().direct_space_state.intersect_shape(query).is_empty():
+			player.velocity=Vector3.ZERO;player.teleport(candidate,0,0);_on_toast("Vous avez été replacé sur un passage libre.","info");return
+	player.velocity=Vector3.ZERO;player.teleport(Vector3(5.5,0,9.4),0,0)

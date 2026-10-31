@@ -1,0 +1,21 @@
+{
+  "id": "cannabis_menthe_rose",
+  "source": "art/concepts/cannabis/06_menthe_rose.png",
+  "triangles_with_outlines": 168848,
+  "meshes": 1,
+  "surfaces": 14,
+  "height_m": 0.9456800222396851,
+  "features": {
+    "silhouette": "fictional mint and pink",
+    "additional_leaf_fans": 4,
+    "small_foliage_shoots": 6,
+    "leaves_on_small_shoots": 18,
+    "potted": true,
+    "flower_clusters": 5,
+    "palmate_leaf_fans": 34,
+    "fingers_per_leaf": 5,
+    "static_prop": true
+  },
+  "head_height_m": 0.85,
+  "shading": "unlit; inverted hull contours"
+}

@@ -1,0 +1,17 @@
+{
+  "file": "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\assets/models/characters/mantide_toon.glb",
+  "bytes": 2313724,
+  "triangles_including_outlines": 81652,
+  "meshes": 22,
+  "material_primitives": 66,
+  "materials": 9,
+  "skins": 1,
+  "joints": 24,
+  "animations": 0,
+  "shading": "KHR_materials_unlit; inverted hull outlines",
+  "checks": [
+    "GLB header and JSON parsed",
+    "skeleton exported",
+    "hidden expressions excluded"
+  ]
+}

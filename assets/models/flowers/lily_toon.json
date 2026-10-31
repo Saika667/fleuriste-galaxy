@@ -1,0 +1,16 @@
+{
+  "id": "lily",
+  "source": "art/concepts/flowers/lily_cartoon.png",
+  "triangles_with_outlines": 22008,
+  "meshes": 1,
+  "surfaces": 8,
+  "height_m": 0.5442909598350525,
+  "features": {
+    "tepals": 6,
+    "stamens": 6,
+    "pistil": 1,
+    "leaves": 5
+  },
+  "head_height_m": 0.445,
+  "shading": "unlit; inverted hull contours"
+}

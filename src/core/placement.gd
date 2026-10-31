@@ -10,6 +10,7 @@ var w: int = 0
 var h: int = 0
 var doors: Array = []  # {id, x, y}
 var items: Array = []  # {uid, def, x, y, rot}
+var fixed_cells: Array = []  # Built-in extension furniture; never sold or moved as owned items.
 var _seq: int = 0
 
 
@@ -19,6 +20,7 @@ func _init(room: String = "shop") -> void:
 	w = int(r.get("w", 0))
 	h = int(r.get("h", 0))
 	doors = r.get("doors", []).duplicate(true)
+	for cell in r.get("fixed",[]):fixed_cells.append(Vector2i(int(cell[0]),int(cell[1])))
 
 
 static func def_of(def_id: String) -> Dictionary:
@@ -53,6 +55,7 @@ func can_place(def_id: String, x: int, y: int, rot: int = 0, ignore_uid: String 
 		return {"ok": false, "error": "wrong_room"}
 	var cells = cells_of(def_id, x, y, rot)
 	var blocked = {}
+	for c in fixed_cells:blocked[c]="_architecture"
 	for it in items:
 		if it.uid == ignore_uid:
 			continue

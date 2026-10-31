@@ -1,0 +1,17 @@
+{
+  "file": "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\assets/models/characters/aya_toon.glb",
+  "bytes": 3745160,
+  "triangles_including_outlines": 132260,
+  "meshes": 7,
+  "material_primitives": 47,
+  "materials": 24,
+  "skins": 1,
+  "joints": 17,
+  "animations": 0,
+  "shading": "KHR_materials_unlit; inverted hull outlines",
+  "checks": [
+    "GLB header and JSON parsed",
+    "skeleton exported",
+    "hidden expressions excluded"
+  ]
+}

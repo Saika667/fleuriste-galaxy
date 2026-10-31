@@ -24,6 +24,7 @@ var _result: Dictionary = {}
 var _text: Label
 var _choices: VBoxContainer
 var _portrait
+var _notary:Control
 var _plate: Control
 var _wrap: VBoxContainer
 var _panel: PanelContainer
@@ -102,6 +103,9 @@ func _ready() -> void:
 	_portrait.offset_bottom = -34
 	_portrait.z_index = 1
 	add_child(_portrait)
+	_notary=preload("res://src/ui/notary_portrait.gd").new();add_child(_notary)
+	_notary.set_anchors_and_offsets_preset(Control.PRESET_CENTER_BOTTOM);_notary.offset_left=-665;_notary.offset_right=-285;_notary.offset_top=-514;_notary.offset_bottom=-34;_notary.z_index=1;_notary.hide()
+
 
 
 func _bubble_style(visitor: bool) -> StyleBoxFlat:
@@ -200,6 +204,7 @@ func open_message(speaker: String, text: String, button: String = "Continuer") -
 	_kind = "message"
 	_apply_style("florist", speaker, "")
 	_portrait.setup_view({"species": "human", "tells": [], "look_seed": absi(speaker.hash()), "face_id": "", "category": "florist"})
+	_portrait.visible=not "notaire" in speaker.to_lower();_notary.visible=not _portrait.visible
 	_say(text, "neutral")
 	_set_choices([{"label": button, "cb": close}])
 	visible = true
@@ -213,6 +218,7 @@ func close() -> void:
 
 
 func _reset(uid: String) -> void:
+	if _notary!=null:_notary.hide();_portrait.show()
 	_uid = uid
 	_dlg = null
 	_incident = ""

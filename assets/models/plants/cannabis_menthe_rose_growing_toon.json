@@ -1,0 +1,28 @@
+{
+  "id": "cannabis_menthe_rose_growing",
+  "source": "art/concepts/cannabis/growth/06_menthe_rose_stades.png",
+  "triangles_with_outlines": 89824,
+  "meshes": 1,
+  "surfaces": 14,
+  "height_m": 0.7206999659538269,
+  "features": {
+    "family": "cannabis_menthe_rose",
+    "stage": "growing",
+    "pot_size_unchanged": true,
+    "reference_soil_height_m": 0.219,
+    "leaf_size_relative_to_adult": 0.62,
+    "bud_scale_range": [
+      0.25,
+      0.3
+    ],
+    "small_foliage_shoots": 2,
+    "canopy_height_m": 0.46,
+    "potted": true,
+    "flower_clusters": 5,
+    "palmate_leaf_fans": 12,
+    "fingers_per_leaf": 5,
+    "static_prop": true
+  },
+  "head_height_m": 0.679,
+  "shading": "unlit; inverted hull contours"
+}

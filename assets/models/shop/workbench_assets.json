@@ -1,0 +1,37 @@
+[
+  {
+    "asset": "workbench",
+    "triangles": 1816,
+    "metres": true
+  },
+  {
+    "asset": "workbench_mat",
+    "triangles": 5828,
+    "metres": true
+  },
+  {
+    "asset": "workbench_scissors",
+    "triangles": 2604,
+    "metres": true
+  },
+  {
+    "asset": "workbench_kraft",
+    "triangles": 9000,
+    "metres": true
+  },
+  {
+    "asset": "workbench_spool",
+    "triangles": 1368,
+    "metres": true
+  },
+  {
+    "asset": "workbench_vase",
+    "triangles": 1232,
+    "metres": true
+  },
+  {
+    "asset": "workbench_lamp",
+    "triangles": 868,
+    "metres": true
+  }
+]

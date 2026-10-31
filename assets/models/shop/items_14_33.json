@@ -1,0 +1,122 @@
+[
+  {
+    "number": 14,
+    "asset": "vase_orange",
+    "triangles": 5456,
+    "metres": true
+  },
+  {
+    "number": 15,
+    "asset": "awning_display",
+    "triangles": 12764,
+    "metres": true
+  },
+  {
+    "number": 16,
+    "asset": "rose_planter",
+    "triangles": 41852,
+    "metres": true
+  },
+  {
+    "number": 17,
+    "asset": "floral_rug",
+    "triangles": 19592,
+    "metres": true
+  },
+  {
+    "number": 18,
+    "asset": "bouquet_silk",
+    "triangles": 7480,
+    "metres": true
+  },
+  {
+    "number": 19,
+    "asset": "bouquet_paper",
+    "triangles": 6088,
+    "metres": true
+  },
+  {
+    "number": 20,
+    "asset": "bouquet_none",
+    "triangles": 3664,
+    "metres": true
+  },
+  {
+    "number": 21,
+    "asset": "bouquet_black",
+    "triangles": 7480,
+    "metres": true
+  },
+  {
+    "number": 22,
+    "asset": "botanical_wall_shelf",
+    "triangles": 4260,
+    "metres": true
+  },
+  {
+    "number": 23,
+    "asset": "pot_ivy",
+    "triangles": 60036,
+    "metres": true
+  },
+  {
+    "number": 24,
+    "asset": "jar_eyes",
+    "triangles": 10464,
+    "metres": true
+  },
+  {
+    "number": 25,
+    "asset": "jar_bulbs",
+    "triangles": 12848,
+    "metres": true
+  },
+  {
+    "number": 26,
+    "asset": "pot_cactus",
+    "triangles": 20164,
+    "metres": true
+  },
+  {
+    "number": 27,
+    "asset": "jar_slime",
+    "triangles": 11592,
+    "metres": true
+  },
+  {
+    "number": 28,
+    "asset": "pot_skull",
+    "triangles": 16984,
+    "metres": true
+  },
+  {
+    "number": 29,
+    "asset": "jar_teeth",
+    "triangles": 19296,
+    "metres": true
+  },
+  {
+    "number": 30,
+    "asset": "jar_seeds",
+    "triangles": 49680,
+    "metres": true
+  },
+  {
+    "number": 31,
+    "asset": "florist_pegboard",
+    "triangles": 28300,
+    "metres": true
+  },
+  {
+    "number": 32,
+    "asset": "chalk_menu",
+    "triangles": 70097,
+    "metres": true
+  },
+  {
+    "number": 33,
+    "asset": "rip_promotion_sign",
+    "triangles": 40536,
+    "metres": true
+  }
+]

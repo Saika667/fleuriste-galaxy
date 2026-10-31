@@ -8,6 +8,7 @@ signal bench_requested
 signal cellar_requested
 signal toast(text: String, kind: String)
 
+const StockPanel=preload("res://src/world/stock_flower_panel.gd")
 const MeshKit = preload("res://src/world/mesh_kit.gd")
 const Interactable = preload("res://src/world/world_interactable.gd")
 const Factory = preload("res://src/world/furniture_factory.gd")
@@ -122,6 +123,7 @@ func _ready() -> void:
 
 
 func _on_game_reset() -> void:
+	room.apply_empty_start()
 	_wire_game()
 	_refresh_expansions()
 	for a in actors.values():
@@ -182,7 +184,7 @@ func set_active(on: bool) -> void:
 
 func _wire_interactables() -> void:
 	var it = room.interactables
-	for dn in ["front", "back"]:
+	for dn in ["front", "back","garden"]:
 		var body = it["door_" + dn]
 		body.prompt_fn = func(): return "Fermer la porte" if room.door_is_open(dn) else "Ouvrir la porte"
 		body.action_fn = func(_p): room.door_set(dn, not room.door_is_open(dn))
@@ -190,7 +192,7 @@ func _wire_interactables() -> void:
 	it["sign"].prompt_fn = _sign_prompt
 	it["sign"].action_fn = func(_p):
 		var ph = Game.clock.phase
-		if ph == GameClock.Phase.PREPARATION or ph == GameClock.Phase.REVIEW:
+		if ph in [GameClock.Phase.PREPARATION,GameClock.Phase.OPENING,GameClock.Phase.REVIEW]:
 			Game.clock.next_phase()
 	it["hatch"].prompt_fn = _hatch_prompt
 	it["hatch"].action_fn = _hatch_action
@@ -199,16 +201,17 @@ func _wire_interactables() -> void:
 func _sign_prompt() -> String:
 	match Game.clock.phase:
 		GameClock.Phase.PREPARATION:
-			return "Ouvrir la boutique"
+			return "Retourner l’enseigne — ouvrir la boutique"
 		GameClock.Phase.REVIEW:
 			return "Fermer le bilan et lancer la nuit"
 		GameClock.Phase.OPENING:
-			return "~Boutique ouverte"
+			return "Retourner l’enseigne — fermer la boutique et passer au bilan"
 		_:
 			return "~Boutique fermée"
 
 
 func _hatch_prompt() -> String:
+	if Game.logistics.tutorial and not Game.progression.has_flag("first_florist_sale"):return "~Installez la boutique et servez votre premier client avant d’explorer la cave."
 	var p = Game.progression
 	if not p.has_flag("secret_discovered"):
 		return "Soulever le tapis"
@@ -218,6 +221,7 @@ func _hatch_prompt() -> String:
 
 
 func _hatch_action(_p) -> void:
+	if Game.logistics.tutorial and not Game.progression.has_flag("first_florist_sale"):return
 	var p = Game.progression
 	if not p.has_flag("secret_discovered"):
 		Game.discover_secret()
@@ -341,7 +345,7 @@ func _spawn_item(it: Dictionary, room_id := "shop") -> void:
 	body.set_meta("visual", f.node)
 	_item_interaction(body, it.def)
 	if it.def != "rug" and it.def != "plant_pot":
-		body.enable_outline(0.012)
+		body.enable_outline(0.0012 if it.def in ["counter", "workbench", "fridge"] else 0.012)
 	items[it.uid] = {"body": body, "visual": f.node, "def": it.def, "room": room_id}
 
 
@@ -436,6 +440,7 @@ func set_item_hidden(uid: String, hide: bool) -> void:
 
 func ghost_for(def_id: String) -> Node3D:
 	var n: Node3D = Factory.build(def_id).node
+	n.set_meta("preview_vase",true)
 	for l in n.find_children("*", "Light3D", true, false):
 		l.queue_free()
 	for l in n.find_children("*", "Label3D", true, false):
@@ -496,22 +501,20 @@ func set_item_highlight(uid: String, on: bool) -> void:
 func _setup_shelf() -> void:
 	for i in room.shelf_anchors.size():
 		var a = room.shelf_anchors[i]
-		# plaque : petit chevalet creme devant le vase, nom de la fleur + stock en gros
-		var card = Node3D.new()
-		card.position = Vector3(0, 0.02, 0.15)
-		card.rotation.x = -0.28
-		card.visible = false
-		a.add_child(card)
-		MeshKit.box(card, Vector3(0.94, 0.4, 0.04), Vector3(0, 0.15, 0), Color("#F4E6C4"), 0.04)
-		var face = MeshKit.box(card, Vector3(0.88, 0.34, 0.03), Vector3(0, 0.15, 0.008), MeshKit.INK, 0.03, 0.9, 0.0, 0.0)
-		var dot = MeshKit.sphere(card, 0.07, Vector3(-0.36, 0.15, 0.04), MeshKit.PETAL, Vector3(1, 1, 0.4))
-		var nm = MeshKit.label(card, "", Vector3(-0.26, 0.24, 0.03), 44, MeshKit.PAPER, 0.0032, 6)
-		nm.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
-		var ct = MeshKit.label(card, "", Vector3(-0.26, 0.09, 0.03), 60, MeshKit.TOXIC, 0.0036, 8)
-		ct.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
-		_plaques.append({"card": card, "name": nm, "count": ct, "dot": dot})
-		_shelf_labels.append(nm)
+		var panel=StockPanel.create(a)
+		_plaques.append(panel)
+		_shelf_labels.append(panel.count)
 		_shelf_nodes.append(null)
+
+
+## A stock pot displays exactly one visual palette, shared by its logo and all stems.
+func set_stock_flower_variant(index: int,variant: String) -> bool:
+	if index<0 or index>=room.shelf_anchors.size() or index>=_flower_ids.size():return false
+	var choices=preload("res://src/world/flower_visual.gd").variants(String(_flower_ids[index]))
+	if not choices.any(func(choice):return String(choice.id)==variant):return false
+	room.shelf_anchors[index].set_meta("stock_flower_variant",variant)
+	_refresh_displays()
+	return true
 
 
 func _refresh_displays() -> void:
@@ -526,19 +529,14 @@ func _refresh_displays() -> void:
 		var fl = GameData.flower(vid)
 		var total = Game.inventory.total(vid)
 		var n = 0 if total <= 0 else clampi(3 + total / 3, 3, 9)
-		var v = Factory.vase(String(fl.get("color", "pink")), n, 1.7)
+		var variant=String(room.shelf_anchors[i].get_meta("stock_flower_variant","original"))
+		var v = Factory.vase(String(fl.get("color", "pink")), n, 1.7, Vector3.ZERO, vid,variant)
+		if room.shelf_anchors[i].get_meta("compact_stock",false):v.scale*=.48
 		room.shelf_anchors[i].add_child(v)
 		_shelf_nodes[i] = v
 		var pl = _plaques[i]
 		pl.card.visible = true
-		pl.name.text = String(fl.get("name", vid))
-		pl.dot.material_override = MeshKit.mat(MeshKit.flower_color(String(fl.get("color", "pink"))), 0.6, 0.0, 0.2)
-		if total > 0:
-			pl.count.text = "x%d" % total
-			pl.count.modulate = Color("#9CFF7A") if total >= 4 else MeshKit.SUN
-		else:
-			pl.count.text = "VIDE"
-			pl.count.modulate = Color("#FF7A8A")
+		StockPanel.update(pl,vid,variant,total)
 	# bouquets exposes
 	for n in _bouquet_nodes:
 		if is_instance_valid(n):
@@ -552,6 +550,9 @@ func _refresh_displays() -> void:
 		if not items.has(it.uid):
 			continue
 		var holder = items[it.uid]
+		# Player-arranged vases replace automatic bouquet decoration on this display.
+		if it.def=="display" and Game.surface_layout.objects.values().any(func(o):return String(o.surface).begins_with("item|%s|"%it.uid)):
+			continue
 		var slots = holder.body.get_meta("slots", [])
 		if slots.is_empty():
 			continue
@@ -599,13 +600,14 @@ func _signature() -> String:
 	for v in _flower_ids:
 		s += "%d," % Game.inventory.total(String(v))
 	s += "|%d" % Game.rooms.shop.items.size()
+	s += str(Game.logistics.shop_stations())+str(Game.logistics.shop_obstacles())
 	return s
 
 
 # ---------------------------------------------------------------- file d'attente
 
 func _counter_item() -> Dictionary:
-	for it in Game.rooms.shop.items:
+	for it in Game.logistics.shop_stations()+Game.rooms.shop.items:
 		if it.def == "counter":
 			return it
 	return {}
@@ -624,7 +626,7 @@ func _compute_slots() -> Array:
 			out.append(Vector3(5.5 + (k % 6) * 0.8, 0, 6.5 - (k / 6) * 0.9))
 		return out
 	var s = Placement.footprint_size("counter", ci.rot)
-	var center = Vector3(ci.x + s.x * 0.5, 0, ci.y + s.y * 0.5)
+	var center = ci.get("center",Vector3(ci.x + s.x * 0.5, 0, ci.y + s.y * 0.5))
 	var best = Vector3(0, 0, 1)
 	var best_d = -9.0
 	for d in [Vector3(0, 0, 1), Vector3(0, 0, -1), Vector3(1, 0, 0), Vector3(-1, 0, 0)]:
@@ -646,7 +648,7 @@ func _compute_slots() -> Array:
 		lat = pref
 	elif not (e2.x > 0.3 and e2.x < 9.7 and e2.z > 0.3 and e2.z < 7.7):
 		lat = pref
-	var taken = {}
+	var taken = Game.logistics.shop_obstacles()
 	var shop = Game.rooms.shop
 	for it in shop.items:
 		if it.def == "rug":
@@ -697,7 +699,7 @@ func counter_center() -> Vector3:
 	if ci.is_empty():
 		return Vector3(5.5, 0, 5.5)
 	var s = Placement.footprint_size("counter", ci.rot)
-	return Vector3(ci.x + s.x * 0.5, 0, ci.y + s.y * 0.5)
+	return ci.get("center",Vector3(ci.x + s.x * 0.5, 0, ci.y + s.y * 0.5))
 
 
 func lane_z() -> float:
@@ -751,7 +753,7 @@ func _spawn_position(a: Node3D, c: Dictionary, in_queue: bool) -> void:
 		return
 	match String(c.route):
 		"sewer":
-			a.start_emerge(Vector3(7.4, 0, 12.1))
+			a.start_emerge(Vector3(16,0,12.0))
 			var tw = create_tween()
 			tw.tween_property(room.manhole_lid, "position", Vector3(0.0, 0.5, 0.0), 0.5)
 			tw.tween_property(room.manhole_lid, "rotation", Vector3(0.0, 0.0, 0.5), 0.3)
@@ -796,8 +798,10 @@ func _send_to_slot(a: Node3D, slot: Vector3) -> void:
 
 
 func _poll_customers() -> void:
+	Game.apply_visitor_policy()
 	var seen = {}
 	for c in Game.customers.arriving:
+		if GameData.customer(String(c.def)).get("species","human")!="human":continue
 		var uid = String(c.uid)
 		seen[uid] = true
 		var a = actors.get(uid)
@@ -813,6 +817,7 @@ func _poll_customers() -> void:
 	var q = Game.customers.queue
 	for i in q.size():
 		var c = q[i]
+		if GameData.customer(String(c.def)).get("species","human")!="human":continue
 		var uid = String(c.uid)
 		seen[uid] = true
 		var a = actors.get(uid)
@@ -915,8 +920,8 @@ func _depart(a: Node3D, reason: String) -> void:
 		pts = [SIDEWALK]
 	match a.route:
 		"sewer":
-			pts.append(Vector3(7.4, 0, 10.9))
-			pts.append(Vector3(7.4, 0, 12.1))
+			pts.append(Vector3(16,0,9.4))
+			pts.append(Vector3(16,0,12.0))
 			a.leave_end = "sewer"
 		"portal":
 			pts.append(Vector3(8.4, 0, 10.2))
@@ -976,7 +981,7 @@ func _update_doors(dt: float) -> void:
 
 # ---------------------------------------------------------------- passants (figurants)
 
-const EXTRA_KINDS = ["granny", "goth", "skeleton", "kid", "mourner", "zombie", "tourist"]
+const EXTRA_KINDS = ["scientist","mila","noe","aya","gaston","odette","leon","aventurier","heroine"]
 var _extra_n := 0
 
 
@@ -1138,8 +1143,9 @@ func _process(dt: float) -> void:
 		var s = _signature()
 		if s != _sig:
 			_sig = s
+			nav.rebuild();_slot_cache=_compute_slots();_compute_behind()
 			_refresh_displays()
-		room.van.visible = Game.suspicion.public_hints().has("vehicle_returns")
+		room.van.visible = false # Surveillance is represented by moving police patrols.
 		_sync_staff()
 		fx.fog(_modifier_on("weeper_fog"))
 
@@ -1181,11 +1187,11 @@ func _compute_behind() -> void:
 func _station_center(def_id: String, near: Vector3):
 	var best = null
 	var bd = 1.0e9
-	for it in Game.rooms.shop.items:
+	for it in Game.rooms.shop.items+Game.logistics.shop_stations():
 		if it.def != def_id:
 			continue
 		var s = Placement.footprint_size(it.def, it.rot)
-		var c = Vector3(it.x + s.x * 0.5, 0.0, it.y + s.y * 0.5)
+		var c = it.get("center",Vector3(it.x + s.x * 0.5, 0.0, it.y + s.y * 0.5))
 		if c.distance_to(near) < bd:
 			bd = c.distance_to(near)
 			best = c
@@ -1313,6 +1319,8 @@ func _wire_stairs() -> void:
 func _climb(player, up: bool) -> void:
 	if _climbing or player == null:
 		return
+	if up and not Game.expansions.is_owned("upstairs"):
+		toast.emit("L’étage sera accessible en avançant dans l’histoire.","info");return
 	_climbing = true
 	var c = Ext.STAIR_C
 	var steps = Ext.STAIR_STEPS

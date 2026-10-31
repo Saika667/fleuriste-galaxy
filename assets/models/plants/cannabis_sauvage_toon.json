@@ -1,0 +1,21 @@
+{
+  "id": "cannabis_sauvage",
+  "source": "art/concepts/cannabis/05_sauvage.png",
+  "triangles_with_outlines": 150720,
+  "meshes": 1,
+  "surfaces": 14,
+  "height_m": 1.2192740440368652,
+  "features": {
+    "silhouette": "asymmetric S curve",
+    "additional_leaf_fans": 3,
+    "small_foliage_shoots": 6,
+    "leaves_on_small_shoots": 18,
+    "potted": true,
+    "flower_clusters": 4,
+    "palmate_leaf_fans": 31,
+    "fingers_per_leaf": 5,
+    "static_prop": true
+  },
+  "head_height_m": 1.13,
+  "shading": "unlit; inverted hull contours"
+}

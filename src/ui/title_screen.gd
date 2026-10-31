@@ -27,13 +27,16 @@ var _starting: bool = false
 
 
 func _ready() -> void:
+	if OS.get_cmdline_user_args().has("export-smoke"):
+		set_process(false)
+		get_tree().call_deferred("change_scene_to_file", "res://scenes/shop/export_smoke.tscn")
+		return
 	Game.manual_time = true  # la boutique reste figee dans le temps derriere le menu
 	Game.auto_spawn = false
-	if Game.rooms.shop.items.is_empty():
-		Game.new_game(7)
+	if not Game.session_initialized:
+		Game.new_game(7,false)
 		# Decor du titre : API normale de l'inventaire (les outils de dev sont inactifs dans l'executable de release).
-		for v in GameData.flowers():
-			Game.inventory.add(v, 4)
+
 	world = ShopWorld.new()
 	world.name = "ShopWorld"
 	add_child(world)
@@ -154,7 +157,7 @@ func _has_save() -> bool:
 func _new_game() -> void:
 	if _starting:
 		return
-	Game.new_game()
+	Game.new_game(-1,false)
 	_launch()
 
 

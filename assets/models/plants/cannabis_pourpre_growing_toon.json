@@ -1,0 +1,28 @@
+{
+  "id": "cannabis_pourpre_growing",
+  "source": "art/concepts/cannabis/growth/03_pourpre_stades.png",
+  "triangles_with_outlines": 105152,
+  "meshes": 1,
+  "surfaces": 14,
+  "height_m": 0.6576999425888062,
+  "features": {
+    "family": "cannabis_pourpre",
+    "stage": "growing",
+    "pot_size_unchanged": true,
+    "reference_soil_height_m": 0.17600000000000002,
+    "leaf_size_relative_to_adult": 0.62,
+    "bud_scale_range": [
+      0.25,
+      0.3
+    ],
+    "small_foliage_shoots": 2,
+    "canopy_height_m": 0.44,
+    "potted": true,
+    "flower_clusters": 6,
+    "palmate_leaf_fans": 14,
+    "fingers_per_leaf": 5,
+    "static_prop": true
+  },
+  "head_height_m": 0.616,
+  "shading": "unlit; inverted hull contours"
+}

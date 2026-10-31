@@ -12,7 +12,7 @@ const EYE = 1.6
 const REACH = 3.2
 
 var active: bool = true
-var sensitivity: float = 0.0024
+var sensitivity: float = 0.0012
 var head: Node3D
 var camera: Camera3D
 var ray: RayCast3D
@@ -24,6 +24,10 @@ var _pitch := 0.0
 
 
 func _ready() -> void:
+	sensitivity=Preferences.sensitivity
+	Preferences.changed.connect(func(): sensitivity=Preferences.sensitivity)
+	if not InputMap.has_action("jump"):
+		InputMap.add_action("jump");var key=InputEventKey.new();key.physical_keycode=KEY_SPACE;InputMap.action_add_event("jump",key)
 	name = "Player"
 	add_to_group("shop_player")
 	collision_layer = 4
@@ -51,6 +55,7 @@ func _ready() -> void:
 	camera.add_child(ray)
 	camera.make_current()
 	floor_snap_length = 0.3
+	floor_max_angle=deg_to_rad(60)
 
 
 func teleport(pos: Vector3, yaw := 0.0, pitch := 0.0) -> void:
@@ -104,7 +109,7 @@ func _physics_process(dt: float) -> void:
 	if not is_on_floor():
 		velocity.y -= 18.0 * dt
 	else:
-		velocity.y = -0.5
+		velocity.y = 6.2 if active and Input.is_action_just_pressed("jump") else -0.5
 	move_and_slide()
 	# leger balancement de camera en marchant
 	var moving = Vector2(velocity.x, velocity.z).length()

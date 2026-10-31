@@ -1,0 +1,22 @@
+{
+  "id": "cannabis_compact",
+  "source": "art/concepts/cannabis/01_compacte.png",
+  "triangles_with_outlines": 233776,
+  "meshes": 1,
+  "surfaces": 13,
+  "height_m": 0.9074400067329407,
+  "features": {
+    "potted": true,
+    "flower_clusters": 5,
+    "palmate_leaf_fans": 36,
+    "additional_leaf_fans": 4,
+    "foliage_only_branches": 2,
+    "fingers_per_leaf": 7,
+    "pot": "open terracotta with recessed soil",
+    "static_prop": true,
+    "small_foliage_shoots": 6,
+    "leaves_on_small_shoots": 18
+  },
+  "head_height_m": 0.79,
+  "shading": "unlit; inverted hull contours"
+}

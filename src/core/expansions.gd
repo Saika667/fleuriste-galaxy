@@ -35,11 +35,11 @@ static func order() -> Array:
 
 
 func is_owned(id: String) -> bool:
-	return owned.has(id)
+	return (ReviewAccess.active and defs().has(id)) or owned.has(id)
 
 
 func owned_ids() -> Array:
-	return order().filter(func(i): return owned.has(i))
+	return order() if ReviewAccess.active else order().filter(func(i): return owned.has(i))
 
 
 # --- Prerequis ---

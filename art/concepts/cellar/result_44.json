@@ -1,0 +1,13 @@
+{
+  "number": 44,
+  "source": "C:\\Users\\Saïka\\.codex\\generated_images\\01a179f3-32bb-7ba3-95b3-c5afd66e2c02\\exec-0aa30202-7ee4-40ec-bf09-8cac876cc7ab.png",
+  "output": "44_single_lamp_sheet_v2.png",
+  "tool": "built-in image_gen",
+  "mode": "edit",
+  "prompt": "Use case: precise-object-edit. Revise image1, sheet44 LAMPE POUR POT INDIVIDUEL, to correct visual game scale and make it compatible with the SINGLE POT shown in image2, sheet43. Keep the same dark teal cartoon lamp design, C-shaped floor base, telescopic mast, rounded-square mint head, clean ink/cel drawing, ivory multi-view production sheet. This is a full-size fictional VIDEOGAME prop standing on the FLOOR, not a desktop miniature. Pot outerdiameter0.48m height0.42m as in image2, copy its teal-and-terracotta design and saucer exactly. Lamp floor footprint0.85x0.80m, C opening internal0.60m, mast overallheight1.40–2.20m adjustable, headwidth0.35m. Correct ALL dimension labels to these values in METERS, remove every former centimeter label including12cm,18cm,28–48cm; only small palette swatch text need remain. Show FRONT BACK SIDE TOP and UNDERSIDE EMPTY LAMP with no plant occluding construction; ONE large3quarter with exact pot fromimage2 holding EXACTLY ONE stylized plant. Lamp and pot separately movable; cables clipped. Provide enlarged pivot and telescopic collar details, lamp exploded parts. Lower context panel: two single pots and their individual floor lamps on basement FLOOR with clear walkway, not on a grow-bed ledge. This is modeling scale for fictional game assets only, no real horticultural lighting guidance, no power or growth settings. Title44 — LAMPE POUR POT INDIVIDUEL. Preserve professional cartoon style and simple coherent construction.",
+  "refs": [
+    "C:/Users/Saïka/Documents/entreprises/jeu/fleuriste-galaxy/art/concepts/cellar/44_single_lamp_sheet.png",
+    "C:/Users/Saïka/Documents/entreprises/jeu/fleuriste-galaxy/art/concepts/cellar/43_single_pot_sheet.png"
+  ],
+  "revision": "Full-size floor lamp matched to pot43; corrected scale."
+}

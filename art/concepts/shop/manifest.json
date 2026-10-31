@@ -1,0 +1,38 @@
+[
+  {
+    "id": "01_counter",
+    "title": "01 — COMPTOIR",
+    "source": "C:\\Users\\Saïka\\.codex\\generated_images\\01a179f3-32bb-7ba3-95b3-c5afd66e2c02\\exec-41bc35b1-d8ab-43d0-b42c-5063fdbe1f41.png",
+    "file": "01_counter_sheet.png"
+  },
+  {
+    "id": "02_cash_register",
+    "title": "02 — CAISSE ENREGISTREUSE",
+    "source": "C:\\Users\\Saïka\\.codex\\generated_images\\01a179f3-32bb-7ba3-95b3-c5afd66e2c02\\exec-1b29f41a-2db0-4dbb-8528-5468fa735a1a.png",
+    "file": "02_cash_register_sheet.png"
+  },
+  {
+    "id": "03_counter_bell",
+    "title": "03 — CLOCHETTE DE COMPTOIR",
+    "source": "C:\\Users\\Saïka\\.codex\\generated_images\\01a179f3-32bb-7ba3-95b3-c5afd66e2c02\\exec-2b30a847-3dc4-4ac6-8148-27ffe93dbff5.png",
+    "file": "03_counter_bell_sheet.png"
+  },
+  {
+    "id": "04_candy_jar",
+    "title": "04 — BOCAL DE BONBONS EN OS",
+    "source": "C:\\Users\\Saïka\\.codex\\generated_images\\01a179f3-32bb-7ba3-95b3-c5afd66e2c02\\exec-30edb969-e0c8-4e85-9712-3519084c5d64.png",
+    "file": "04_candy_jar_sheet.png"
+  },
+  {
+    "id": "05_workbench",
+    "title": "05 — ÉTABLI DE FLEURISTE",
+    "source": "C:\\Users\\Saïka\\.codex\\generated_images\\01a179f3-32bb-7ba3-95b3-c5afd66e2c02\\exec-b6da99f5-fe4a-4bd8-bbeb-4f8f7237b102.png",
+    "file": "05_workbench_sheet.png"
+  },
+  {
+    "id": "06_workbench_tools",
+    "title": "06 — ACCESSOIRES D’ÉTABLI",
+    "source": "C:\\Users\\Saïka\\.codex\\generated_images\\01a179f3-32bb-7ba3-95b3-c5afd66e2c02\\exec-1491744a-a20c-41c4-86db-66c3b43e0dbc.png",
+    "file": "06_workbench_tools_sheet.png"
+  }
+]

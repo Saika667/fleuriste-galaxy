@@ -11,6 +11,7 @@ var action_fn: Callable = Callable()
 var outline: ShaderMaterial = null
 var focus_color: Color = MeshKit.ACCENT
 var base_color: Color = MeshKit.INK
+var base_outline_width := 0.012
 
 
 func _init() -> void:
@@ -30,10 +31,11 @@ func interact(player) -> void:
 
 
 func enable_outline(width := 0.012) -> void:
+	base_outline_width = width
 	outline = MeshKit.apply_outline(self, base_color, width)
 
 
 func set_focus(on: bool) -> void:
 	if outline != null:
 		outline.set_shader_parameter("color", focus_color if on else base_color)
-		outline.set_shader_parameter("width", 0.03 if on else 0.012)
+		outline.set_shader_parameter("width", base_outline_width * 2.5 if on else base_outline_width)

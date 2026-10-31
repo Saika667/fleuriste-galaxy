@@ -1,0 +1,297 @@
+[
+  {
+    "asset": "bistro_table",
+    "triangles": 9284,
+    "metres": true
+  },
+  {
+    "asset": "chair_mint",
+    "triangles": 4504,
+    "metres": true
+  },
+  {
+    "asset": "chair_rose",
+    "triangles": 4504,
+    "metres": true
+  },
+  {
+    "asset": "parasol",
+    "triangles": 2872,
+    "metres": true
+  },
+  {
+    "asset": "deck_tile",
+    "triangles": 4888,
+    "metres": true
+  },
+  {
+    "asset": "railing",
+    "triangles": 4048,
+    "metres": true
+  },
+  {
+    "asset": "rail_planter",
+    "triangles": 2816,
+    "metres": true
+  },
+  {
+    "asset": "border_bed",
+    "triangles": 2068,
+    "metres": true
+  },
+  {
+    "asset": "path_stone",
+    "triangles": 228,
+    "metres": true
+  },
+  {
+    "asset": "hedge",
+    "triangles": 10400,
+    "metres": true
+  },
+  {
+    "asset": "garden_arch",
+    "triangles": 22376,
+    "metres": true
+  },
+  {
+    "asset": "tap_post",
+    "triangles": 1284,
+    "metres": true
+  },
+  {
+    "asset": "hose_reel",
+    "triangles": 23872,
+    "metres": true
+  },
+  {
+    "asset": "wheelbarrow",
+    "triangles": 3948,
+    "metres": true
+  },
+  {
+    "asset": "spade",
+    "triangles": 1148,
+    "metres": true
+  },
+  {
+    "asset": "rake",
+    "triangles": 1368,
+    "metres": true
+  },
+  {
+    "asset": "greenhouse_shell",
+    "triangles": 8000,
+    "metres": true
+  },
+  {
+    "asset": "greenhouse_door",
+    "triangles": 1952,
+    "metres": true
+  },
+  {
+    "asset": "nursery_bench",
+    "triangles": 28124,
+    "metres": true
+  },
+  {
+    "asset": "nursery_pot",
+    "triangles": 4000,
+    "metres": true
+  },
+  {
+    "asset": "seed_tray",
+    "triangles": 36428,
+    "metres": true
+  },
+  {
+    "asset": "vent_fan",
+    "triangles": 4396,
+    "metres": true
+  },
+  {
+    "asset": "thermometer",
+    "triangles": 2672,
+    "metres": true
+  },
+  {
+    "asset": "irrigation_bar",
+    "triangles": 1332,
+    "metres": true
+  },
+  {
+    "asset": "shed_shell",
+    "triangles": 9608,
+    "metres": true
+  },
+  {
+    "asset": "shed_door",
+    "triangles": 1696,
+    "metres": true
+  },
+  {
+    "asset": "shed_shelf",
+    "triangles": 8288,
+    "metres": true
+  },
+  {
+    "asset": "pot_stack",
+    "triangles": 8508,
+    "metres": true
+  },
+  {
+    "asset": "soil_bag",
+    "triangles": 16532,
+    "metres": true
+  },
+  {
+    "asset": "seed_organizer",
+    "triangles": 7240,
+    "metres": true
+  },
+  {
+    "asset": "wrapping_station",
+    "triangles": 9744,
+    "metres": true
+  },
+  {
+    "asset": "service_trolley",
+    "triangles": 6568,
+    "metres": true
+  },
+  {
+    "asset": "paper_rack",
+    "triangles": 3212,
+    "metres": true
+  },
+  {
+    "asset": "notice_board",
+    "triangles": 6008,
+    "metres": true
+  },
+  {
+    "asset": "employee_desk",
+    "triangles": 19500,
+    "metres": true
+  },
+  {
+    "asset": "office_chair",
+    "triangles": 2836,
+    "metres": true
+  },
+  {
+    "asset": "task_lamp",
+    "triangles": 1140,
+    "metres": true
+  },
+  {
+    "asset": "filing_cabinet",
+    "triangles": 3476,
+    "metres": true
+  },
+  {
+    "asset": "balcony_rail",
+    "triangles": 4048,
+    "metres": true
+  },
+  {
+    "asset": "spiral_stair",
+    "triangles": 3256,
+    "metres": true
+  },
+  {
+    "asset": "gallery_display",
+    "triangles": 33956,
+    "metres": true
+  },
+  {
+    "asset": "gallery_easel",
+    "triangles": 3532,
+    "metres": true
+  },
+  {
+    "asset": "warehouse_bay",
+    "triangles": 28808,
+    "metres": true
+  },
+  {
+    "asset": "handtruck",
+    "triangles": 2972,
+    "metres": true
+  },
+  {
+    "asset": "pallet",
+    "triangles": 3584,
+    "metres": true
+  },
+  {
+    "asset": "salon_display",
+    "triangles": 30824,
+    "metres": true
+  },
+  {
+    "asset": "salon_sofa",
+    "triangles": 3064,
+    "metres": true
+  },
+  {
+    "asset": "orb_table",
+    "triangles": 1172,
+    "metres": true
+  },
+  {
+    "asset": "embassy_front",
+    "triangles": 35036,
+    "metres": true
+  },
+  {
+    "asset": "galactic_flag",
+    "triangles": 2060,
+    "metres": true
+  },
+  {
+    "asset": "wall_lantern",
+    "triangles": 1344,
+    "metres": true
+  },
+  {
+    "asset": "outdoor_garland",
+    "triangles": 10200,
+    "metres": true
+  },
+  {
+    "asset": "sorting_bins",
+    "triangles": 2664,
+    "metres": true
+  },
+  {
+    "asset": "delivery_bell",
+    "triangles": 976,
+    "metres": true
+  },
+  {
+    "asset": "sign_garden",
+    "triangles": 8092,
+    "metres": true
+  },
+  {
+    "asset": "sign_greenhouse",
+    "triangles": 8700,
+    "metres": true
+  },
+  {
+    "asset": "sign_workshop",
+    "triangles": 9252,
+    "metres": true
+  },
+  {
+    "asset": "sign_shed",
+    "triangles": 9516,
+    "metres": true
+  },
+  {
+    "asset": "drain_grate",
+    "triangles": 2444,
+    "metres": true
+  }
+]

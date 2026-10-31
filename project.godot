@@ -9,6 +9,7 @@ config/features=PackedStringArray("4.7")
 
 [autoload]
 
+Preferences="*res://src/core/preferences.gd"
 Game="*res://src/core/game.gd"
 
 [debug]

@@ -1,0 +1,23 @@
+{
+  "tool": "built-in image_gen",
+  "revisions": [
+    {
+      "id": "02_cash_register",
+      "prompt": "Redesign this production reference sheet for a florist videogame cash register. Keep the same outlined cartoon drawing style, ivory sheet, teal casing, dark plum frame, green display, yellow accents. User requests MUCH MORE DEVELOPED DESIGN: coherent rounded stepped housing, real full-width sliding CASH DRAWER at the base with recessed handle and keyhole, sloped keypad with 12 chunky numeric keys in 3 columns x4 rows plus 4 colored function buttons; small integrated receipt slot and paper roll/receipt, molded casing seam, rear ventilation and power socket, mounted tilted screen. Still readable playful cartoon, no realism or excessive greebles. Width0.46m depth0.36m closed height0.40m. Show consistent FACE (operator/keypad/drawer side), DOS (customer/back side), PROFIL, DESSUS, TROIS-QUARTS, plus separate DRAWER OPEN detail with coin and bill compartments. Clearly diagram drawer sliding toward operator. All views must have identical geometry/button count and orientation. Palette and useful construction closeups. Title \"02 — CAISSE ENREGISTREUSE\". Replace simplistic 3button version completely.",
+      "file": "02_cash_register_sheet_v2.png",
+      "source": "C:\\Users\\Saïka\\.codex\\generated_images\\01a179f3-32bb-7ba3-95b3-c5afd66e2c02\\exec-0fe166d1-419d-4ad2-a983-157df780c195.png"
+    },
+    {
+      "id": "05_workbench",
+      "prompt": "Edit this florist workbench production sheet. Preserve wooden bench dimensions, shape, palette, layout, rear panel and cartoon style. The lower shelf must be EMPTY by default in all primary orthographic and three-quarter views: remove ALL four decorative pots from main shelf and mini dimension diagram. This is usable storage for pots placed and retrieved by the player. Add separate small STORAGE EXAMPLE panel with same shelf showing 4 REMOVABLE terracotta pots, arrows of placing/retrieving, label \"POTS AMOVIBLES — STOCKAGE JOUEUR\" and \"ÉTAGÈRE VIDE PAR DÉFAUT\"; keep example distinct from barebench geometry. On the green mat correct the pair of scissors in ALL views: two oval black handle loops connected to two metallic gray tapered blades crossing at a small central round pivot, slightly open 20degrees, instantly recognizable normal scissors. Never four identical loops. Other accessories unchanged (kraft roll pinkspool cyanvase with3cartoonroses slimlamp). Title \"05 — ÉTABLI DE FLEURISTE\".",
+      "file": "05_workbench_sheet_v2.png",
+      "source": "C:\\Users\\Saïka\\.codex\\generated_images\\01a179f3-32bb-7ba3-95b3-c5afd66e2c02\\exec-f5273ff2-6766-4b84-8312-d9d69f76bc0a.png"
+    },
+    {
+      "id": "06_workbench_tools",
+      "prompt": "Edit ONLY the scissors designs in this cartoon accessories reference sheet. User says scissors on green cutting mat do not resemble scissors. Make ALL scissors in column B and assembled kit unequivocally recognizable: exactly TWO oval black hollow finger handles at ONE end, TWO long silvergray pointed blades at OTHER end, central round metal pivot joining them. Slightly open20degree scissors, realistic construction but simple bold cartoon outlined style, no extra loops, no 4handle figure8. In assembled kit place corrected scissors clearly ON TOP OF the green mat, large enough to read. ColumnB FACE/DOS/DESSUS show full silhouette with twohandles twoblades; PROFIL shows thin edge. Keep all other objects, dimensions including spool0.18m, labels and panel layout unchanged.",
+      "file": "06_workbench_tools_sheet_v2.png",
+      "source": "C:\\Users\\Saïka\\.codex\\generated_images\\01a179f3-32bb-7ba3-95b3-c5afd66e2c02\\exec-7b1e0e12-4551-41cb-a0fc-308644011a15.png"
+    }
+  ]
+}

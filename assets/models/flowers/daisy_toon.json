@@ -1,0 +1,15 @@
+{
+  "id": "daisy",
+  "source": "art/concepts/flowers/daisy_cartoon.png",
+  "triangles_with_outlines": 21768,
+  "meshes": 1,
+  "surfaces": 6,
+  "height_m": 0.5152081847190857,
+  "features": {
+    "petals": 12,
+    "heart": "small golden disk",
+    "leaves": 2
+  },
+  "head_height_m": 0.445,
+  "shading": "unlit; inverted hull contours"
+}

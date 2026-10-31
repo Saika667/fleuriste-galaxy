@@ -15,7 +15,7 @@ static func is_visitor_species(sp: String) -> bool:
 
 
 static func build(pv: Dictionary) -> Node3D:
-	return weeper(pv) if String(pv.get("species", "")) == "weeper" else ploc(pv)
+	return preload("res://src/cellar_view/approved_figure.gd").build(pv)
 
 
 ## Materiau translucide a deux faces (voile, gelee, larmes, flaque).
@@ -364,6 +364,8 @@ static func bubble_icon(species: String) -> Node3D:
 
 ## Anime un visiteur Pleurnoide ou Ploc (t : secondes de vie, delta : pas). `talk` : 0..1 (parle / mastique).
 static func animate(fig: Node3D, t: float, _delta: float) -> void:
+	if fig.has_meta("sheet_visual"):
+		fig.get_meta("sheet_visual").animate(t,t*5,false,_delta);return
 	var sp = String(fig.get_meta("species", ""))
 	var tt = t + float(fig.get_meta("t0", 0.0))
 	var body = fig.get_node_or_null("Body")

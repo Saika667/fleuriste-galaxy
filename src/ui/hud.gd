@@ -15,7 +15,7 @@ extends CanvasLayer
 const T = preload("res://src/ui/ui_theme.gd")
 const A = preload("res://src/ui/ui_art.gd")
 const ReportScreen = preload("res://src/ui/report_screen.gd")
-const StockScreen = preload("res://src/ui/stock_screen.gd")
+const StockScreen = preload("res://src/ui/phone_screen.gd")
 const PriceScreen = preload("res://src/ui/price_screen.gd")
 const ExpansionScreen = preload("res://src/ui/expansion_screen.gd")
 const EmployeeScreen = preload("res://src/ui/employee_screen.gd")
@@ -23,7 +23,7 @@ const StreamerScreen = preload("res://src/ui/streamer_screen.gd")
 const DialogueBox = preload("res://src/ui/dialogue_box.gd")
 const PauseMenu = preload("res://src/ui/pause_menu.gd")
 const DevPanel = preload("res://src/ui/dev_panel.gd")
-const Dial = preload("res://src/ui/dial.gd")
+const Dial = preload("res://src/ui/compact_dial.gd")
 const Icon = preload("res://src/ui/icon_draw.gd")
 
 signal screen_opened(screen_name: String)
@@ -135,12 +135,13 @@ func _build() -> void:
 	_clock.offset_left = -180
 	_clock.offset_right = 180
 	_clock.offset_top = 0
-	_clock.offset_bottom = 304
+	_clock.offset_bottom = 104
 	_root.add_child(_clock)
 	_build_banner()
 	_build_right_column()
 	_build_prompt()
 	_build_action_bar()
+	_bar_shelf.hide()
 	# Ecrans
 	report = _add_screen(ReportScreen.new(), "report")
 	stock = _add_screen(StockScreen.new(), "stock")
@@ -1057,7 +1058,7 @@ func _refresh_card(st: Dictionary) -> void:
 		_card_text.text = ot if ot != "" else "Un client attend à la caisse."
 		_card_extra.text = "+ %d autre(s) en file" % (waiting - 1) if waiting > 1 else ""
 	_card_extra.visible = _card_extra.text != ""
-	_card_obj.text = String(OBJECTIVES.get(String(st.chapter), "Faire prospérer la boutique."))
+	_card_obj.text = Game.logistics.objective() if Game.logistics.tutorial else String(OBJECTIVES.get(String(st.chapter), "Faire prospérer la boutique."))
 
 
 func _ripe_count() -> int:
@@ -1155,7 +1156,7 @@ func _rebuild_tiles() -> void:
 	else:
 		defs = [["stock", "crate", "Stock", "Tab", T.PETAL], ["prices", "tag", "Prix", "P", T.PETAL],
 			["bench", "scissors", "Établi", "E", T.PETAL], ["fridge", "fridge", "Frigo", "", Color("9FD8E8")],
-			["expansions", "house", "Agrandir", "X", T.PETAL]]
+			["expansions", "house", "Agrandir", "X", T.PETAL], ["vases", "leaf", "Vases", "V", T.PETAL], ["surfaces", "house", "Étagères", "O", T.PETAL]]
 		if _has_team():
 			defs.append(["employees", "star", "Équipe", "G", T.PETAL])
 		if _in_review:

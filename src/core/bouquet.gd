@@ -7,11 +7,18 @@ static var _seq: int = 1
 
 var id: String = ""
 var stems: Array = []  # {variety, quality, freshness, cost}
+var paper_length: float=.6
 var wrap: String = "none"
 var accessories: Array = []
 var price: int = 0
 var cold: bool = false
 var for_order: String = ""  # commande visee (optionnel)
+
+static func from_stems(selected: Array,wrap_id: String,length: float) -> Bouquet:
+	if selected.is_empty() or selected.size()>15 or GameData.wrap(wrap_id).is_empty():return null
+	var b=Bouquet.new();b.id="b%d"%_seq;_seq+=1
+	b.stems=selected.duplicate(true);b.wrap=wrap_id;b.paper_length=clampf(length,.2,1.8) if wrap_id!="none" else 0
+	return b
 
 
 ## Compose depuis le stock. picks = {variete: quantite}. Valide tout avant de modifier le stock.
@@ -51,7 +58,7 @@ func cost() -> int:
 	var c = 0
 	for s in stems:
 		c += int(s.cost)
-	c += int(GameData.wrap(wrap).get("cost", 0))
+	c += int(ceil(float(GameData.wrap(wrap).get("cost",0))*paper_length/.6))
 	for a in accessories:
 		c += int(GameData.accessory(a).get("cost", 0))
 	return c
@@ -83,7 +90,7 @@ func age(dt: float) -> void:
 
 func to_dict() -> Dictionary:
 	return {"id": id, "stems": stems.duplicate(true), "wrap": wrap, "accessories": accessories.duplicate(),
-		"price": price, "cold": cold, "for_order": for_order}
+		"paper_length":paper_length,"price": price, "cold": cold, "for_order": for_order}
 
 
 static func from_dict(d: Dictionary) -> Bouquet:
@@ -91,7 +98,9 @@ static func from_dict(d: Dictionary) -> Bouquet:
 	b.id = String(d.get("id", ""))
 	for s in d.get("stems", []):
 		b.stems.append({"variety": String(s.variety), "quality": int(s.quality), "freshness": float(s.freshness), "cost": int(s.cost)})
+		if s.has("variant"):b.stems.back()["variant"]=String(s.variant)
 	b.wrap = String(d.get("wrap", "none"))
+	b.paper_length=clampf(float(d.get("paper_length",.6)),0,1.8)
 	b.accessories = Array(d.get("accessories", []))
 	b.price = int(d.get("price", 0))
 	b.cold = bool(d.get("cold", false))

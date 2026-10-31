@@ -1,0 +1,21 @@
+{
+  "id": "cannabis_pourpre",
+  "source": "art/concepts/cannabis/03_pourpre.png",
+  "triangles_with_outlines": 180704,
+  "meshes": 1,
+  "surfaces": 14,
+  "height_m": 0.9017800092697144,
+  "features": {
+    "silhouette": "broad purple bush",
+    "additional_leaf_fans": 4,
+    "small_foliage_shoots": 6,
+    "leaves_on_small_shoots": 18,
+    "potted": true,
+    "flower_clusters": 6,
+    "palmate_leaf_fans": 35,
+    "fingers_per_leaf": 5,
+    "static_prop": true
+  },
+  "head_height_m": 0.8,
+  "shading": "unlit; inverted hull contours"
+}

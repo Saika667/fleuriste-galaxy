@@ -1,0 +1,507 @@
+[
+  {
+    "asset": "floor",
+    "triangles": 81968,
+    "metres": true
+  },
+  {
+    "asset": "ceiling",
+    "triangles": 26156,
+    "metres": true
+  },
+  {
+    "asset": "vent_socket",
+    "triangles": 4272,
+    "metres": true
+  },
+  {
+    "asset": "filter_cartridge",
+    "triangles": 21140,
+    "metres": true
+  },
+  {
+    "asset": "duct_module",
+    "triangles": 2540,
+    "metres": true
+  },
+  {
+    "asset": "duct_elbow",
+    "triangles": 336,
+    "metres": true
+  },
+  {
+    "asset": "stairs",
+    "triangles": 8872,
+    "metres": true
+  },
+  {
+    "asset": "entry_sign",
+    "triangles": 18556,
+    "metres": true
+  },
+  {
+    "asset": "step_warning",
+    "triangles": 20804,
+    "metres": true
+  },
+  {
+    "asset": "boots",
+    "triangles": 2552,
+    "metres": true
+  },
+  {
+    "asset": "bulb",
+    "triangles": 636,
+    "metres": true
+  },
+  {
+    "asset": "garland",
+    "triangles": 10200,
+    "metres": true
+  },
+  {
+    "asset": "lantern",
+    "triangles": 1488,
+    "metres": true
+  },
+  {
+    "asset": "culture_jar",
+    "triangles": 5864,
+    "metres": true
+  },
+  {
+    "asset": "trowel",
+    "triangles": 216,
+    "metres": true
+  },
+  {
+    "asset": "shears",
+    "triangles": 2080,
+    "metres": true
+  },
+  {
+    "asset": "watering_can",
+    "triangles": 1472,
+    "metres": true
+  },
+  {
+    "asset": "bucket",
+    "triangles": 1952,
+    "metres": true
+  },
+  {
+    "asset": "label",
+    "triangles": 1844,
+    "metres": true
+  },
+  {
+    "asset": "power_strip",
+    "triangles": 3428,
+    "metres": true
+  },
+  {
+    "asset": "terminal_capacity",
+    "triangles": 19352,
+    "metres": true
+  },
+  {
+    "asset": "terminal_lamp",
+    "triangles": 18452,
+    "metres": true
+  },
+  {
+    "asset": "terminal_filter",
+    "triangles": 19880,
+    "metres": true
+  },
+  {
+    "asset": "terminal_lock",
+    "triangles": 23772,
+    "metres": true
+  },
+  {
+    "asset": "cabinet",
+    "triangles": 3948,
+    "metres": true
+  },
+  {
+    "asset": "cabinet_lock",
+    "triangles": 1132,
+    "metres": true
+  },
+  {
+    "asset": "composter",
+    "triangles": 18920,
+    "metres": true
+  },
+  {
+    "asset": "counter",
+    "triangles": 5720,
+    "metres": true
+  },
+  {
+    "asset": "register",
+    "triangles": 18884,
+    "metres": true
+  },
+  {
+    "asset": "tip_jar",
+    "triangles": 14624,
+    "metres": true
+  },
+  {
+    "asset": "desk_bell",
+    "triangles": 1236,
+    "metres": true
+  },
+  {
+    "asset": "visitor_door",
+    "triangles": 3772,
+    "metres": true
+  },
+  {
+    "asset": "seed_crate",
+    "triangles": 6080,
+    "metres": true
+  },
+  {
+    "asset": "sewer",
+    "triangles": 2984,
+    "metres": true
+  },
+  {
+    "asset": "sewer_sign",
+    "triangles": 25240,
+    "metres": true
+  },
+  {
+    "asset": "cone",
+    "triangles": 820,
+    "metres": true
+  },
+  {
+    "asset": "skeleton",
+    "triangles": 35808,
+    "metres": true
+  },
+  {
+    "asset": "pipes",
+    "triangles": 2384,
+    "metres": true
+  },
+  {
+    "asset": "fusebox",
+    "triangles": 26772,
+    "metres": true
+  },
+  {
+    "asset": "window",
+    "triangles": 1512,
+    "metres": true
+  },
+  {
+    "asset": "shelf_150",
+    "triangles": 1236,
+    "metres": true
+  },
+  {
+    "asset": "shelf_200",
+    "triangles": 1236,
+    "metres": true
+  },
+  {
+    "asset": "duck",
+    "triangles": 1532,
+    "metres": true
+  },
+  {
+    "asset": "toaster",
+    "triangles": 1164,
+    "metres": true
+  },
+  {
+    "asset": "cartoon_bomb",
+    "triangles": 748,
+    "metres": true
+  },
+  {
+    "asset": "gold_bananas",
+    "triangles": 1324,
+    "metres": true
+  },
+  {
+    "asset": "fish_jar",
+    "triangles": 2720,
+    "metres": true
+  },
+  {
+    "asset": "space_helmet",
+    "triangles": 1852,
+    "metres": true
+  },
+  {
+    "asset": "skull_mug",
+    "triangles": 1488,
+    "metres": true
+  },
+  {
+    "asset": "mini_rocket",
+    "triangles": 1028,
+    "metres": true
+  },
+  {
+    "asset": "mini_moon",
+    "triangles": 1308,
+    "metres": true
+  },
+  {
+    "asset": "shipping_crate",
+    "triangles": 18824,
+    "metres": true
+  },
+  {
+    "asset": "barrel",
+    "triangles": 3820,
+    "metres": true
+  },
+  {
+    "asset": "jerrycan_red",
+    "triangles": 776,
+    "metres": true
+  },
+  {
+    "asset": "jerrycan_yellow",
+    "triangles": 776,
+    "metres": true
+  },
+  {
+    "asset": "sack",
+    "triangles": 1168,
+    "metres": true
+  },
+  {
+    "asset": "mushroom_mint",
+    "triangles": 1584,
+    "metres": true
+  },
+  {
+    "asset": "mushroom_pink",
+    "triangles": 1584,
+    "metres": true
+  },
+  {
+    "asset": "mushroom_lilac",
+    "triangles": 1584,
+    "metres": true
+  },
+  {
+    "asset": "moss_patch",
+    "triangles": 2688,
+    "metres": true
+  },
+  {
+    "asset": "drying_line",
+    "triangles": 25148,
+    "metres": true
+  },
+  {
+    "asset": "sleeping_cat",
+    "triangles": 1376,
+    "metres": true
+  },
+  {
+    "asset": "radio",
+    "triangles": 4680,
+    "metres": true
+  },
+  {
+    "asset": "warning_poster",
+    "triangles": 34748,
+    "metres": true
+  },
+  {
+    "asset": "tariffs_sign",
+    "triangles": 15732,
+    "metres": true
+  },
+  {
+    "asset": "payments_sign",
+    "triangles": 31080,
+    "metres": true
+  },
+  {
+    "asset": "found_sign",
+    "triangles": 28776,
+    "metres": true
+  },
+  {
+    "asset": "contraband_sign",
+    "triangles": 38688,
+    "metres": true
+  },
+  {
+    "asset": "nap_sign",
+    "triangles": 14788,
+    "metres": true
+  },
+  {
+    "asset": "syrup_sign",
+    "triangles": 12248,
+    "metres": true
+  },
+  {
+    "asset": "doormat",
+    "triangles": 13480,
+    "metres": true
+  },
+  {
+    "asset": "single_pot",
+    "triangles": 3368,
+    "metres": true
+  },
+  {
+    "asset": "single_lamp",
+    "triangles": 4124,
+    "metres": true
+  },
+  {
+    "asset": "grow_bed",
+    "triangles": 21164,
+    "metres": true
+  },
+  {
+    "asset": "bed_lamp",
+    "triangles": 756,
+    "metres": true
+  },
+  {
+    "asset": "wilted_pot",
+    "triangles": 6436,
+    "metres": true
+  },
+  {
+    "asset": "paper_parcel",
+    "triangles": 13744,
+    "metres": true
+  },
+  {
+    "asset": "cable_tray",
+    "triangles": 852,
+    "metres": true
+  },
+  {
+    "asset": "door_frame",
+    "triangles": 564,
+    "metres": true
+  },
+  {
+    "asset": "harvest_jar_q1",
+    "triangles": 5864,
+    "metres": true
+  },
+  {
+    "asset": "harvest_jar_q2",
+    "triangles": 6816,
+    "metres": true
+  },
+  {
+    "asset": "harvest_jar_q3",
+    "triangles": 6520,
+    "metres": true
+  },
+  {
+    "asset": "harvest_jar_q4",
+    "triangles": 6636,
+    "metres": true
+  },
+  {
+    "asset": "herb_seedling",
+    "triangles": 2404,
+    "metres": true
+  },
+  {
+    "asset": "herb_growing",
+    "triangles": 62912,
+    "metres": true
+  },
+  {
+    "asset": "herb_budding",
+    "triangles": 151404,
+    "metres": true
+  },
+  {
+    "asset": "herb_ripe",
+    "triangles": 151404,
+    "metres": true
+  },
+  {
+    "asset": "lotus_seedling",
+    "triangles": 1760,
+    "metres": true
+  },
+  {
+    "asset": "lotus_growing",
+    "triangles": 3840,
+    "metres": true
+  },
+  {
+    "asset": "lotus_budding",
+    "triangles": 6240,
+    "metres": true
+  },
+  {
+    "asset": "lotus_ripe",
+    "triangles": 10480,
+    "metres": true
+  },
+  {
+    "asset": "moss_crop_seedling",
+    "triangles": 672,
+    "metres": true
+  },
+  {
+    "asset": "moss_crop_growing",
+    "triangles": 1328,
+    "metres": true
+  },
+  {
+    "asset": "moss_crop_budding",
+    "triangles": 2416,
+    "metres": true
+  },
+  {
+    "asset": "moss_crop_ripe",
+    "triangles": 3280,
+    "metres": true
+  },
+  {
+    "asset": "star_vine_seedling",
+    "triangles": 3120,
+    "metres": true
+  },
+  {
+    "asset": "star_vine_growing",
+    "triangles": 5760,
+    "metres": true
+  },
+  {
+    "asset": "star_vine_budding",
+    "triangles": 9368,
+    "metres": true
+  },
+  {
+    "asset": "star_vine_ripe",
+    "triangles": 10512,
+    "metres": true
+  },
+  {
+    "asset": "cabinet_lock_electronic",
+    "triangles": 2448,
+    "metres": true
+  },
+  {
+    "asset": "cabinet_lock_heavy",
+    "triangles": 2424,
+    "metres": true
+  }
+]

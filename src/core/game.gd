@@ -13,6 +13,10 @@ signal message(id: String, args: Dictionary)  # notifications courtes pour l'int
 
 var clock: GameClock
 var inventory: Inventory
+var logistics: RefCounted
+var session_initialized:=false
+var vases: RefCounted
+var surface_layout: RefCounted
 var economy: Economy
 var cellar: Cellar
 var suspicion: Suspicion
@@ -62,6 +66,8 @@ func _process(delta: float) -> void:
 func _build() -> void:
 	clock = GameClock.new()
 	inventory = Inventory.new()
+	vases = preload("res://src/core/vase_arrangements.gd").new(self)
+	surface_layout = preload("res://src/core/surface_layout.gd").new(self)
 	economy = Economy.new()
 	cellar = Cellar.new()
 	suspicion = Suspicion.new()
@@ -74,6 +80,7 @@ func _build() -> void:
 	expansions = Expansions.new(self)
 	employees = Employees.new(self)
 	exchange = Exchange.new()
+	logistics=preload("res://src/core/shop_logistics.gd").new(self)
 	rooms = {"shop": Placement.new("shop"), "cellar": Placement.new("cellar")}
 	for rk in rooms:
 		rooms[rk].changed.connect(_on_room_changed)
@@ -98,16 +105,20 @@ func _build() -> void:
 
 
 ## Nouvelle partie : etat initial + mobilier de depart (etabli, refrigerateur, comptoir).
-func new_game(seed_value: int = -1) -> void:
+func new_game(seed_value: int = -1, furnished: bool=true) -> void:
+	session_initialized=true
 	_build()
 	if seed_value >= 0:
 		rng.seed = seed_value
 	else:
 		rng.randomize()
 	var shop: Placement = rooms.shop
-	shop.place("workbench", 2, 1, 0)
-	shop.place("fridge", 7, 1, 0)
-	shop.place("counter", 4, 5, 0)
+	if furnished:
+		shop.place("workbench", 2, 1, 0);shop.place("fridge", 7, 1, 0);shop.place("counter", 4, 5, 0)
+	else:
+		logistics.tutorial=true;economy.earn_legit(150,"reprise_boutique")
+		cellar.planters.clear();cellar.single_pots.clear()
+		progression.set_flag("empty_shop_start")
 	refresh_decoration()
 	game_reset.emit()
 	state_changed.emit()
@@ -116,11 +127,14 @@ func new_game(seed_value: int = -1) -> void:
 # --- Temps ---
 
 func tick(delta: float) -> void:
+	economy.shop_level=logistics.level()
 	var dt = clock.tick(delta)
 	if dt <= 0.0:
 		return
+	logistics.tick(dt)
 	now += dt
 	inventory.age(dt)
+	vases.age(dt)
 	for b in bouquets:
 		b.age(dt)
 	cellar.tick(dt, growth_factor())
@@ -227,6 +241,10 @@ func _ctx() -> Dictionary:
 
 
 func _on_phase_changed(new_phase: int, _old: int) -> void:
+	if new_phase!=GameClock.Phase.NIGHT:
+		for c in customers.queue.duplicate():
+			if GameData.customer(String(c.def)).get("species","human")!="human":customers.remove(c.uid,"dawn")
+		customers.arriving=customers.arriving.filter(func(c):return GameData.customer(String(c.def)).get("species","human")=="human")
 	match new_phase:
 		GameClock.Phase.OPENING:
 			employees.on_phase_changed("opening")
@@ -302,7 +320,9 @@ func _auto_spawn(dt: float) -> void:
 	var pool = []
 	for id in GameData.customers():
 		var d = GameData.customer(id)
-		if d.kind == ("shady" if want_shady else "florist") and customer_available(String(id)):
+		var alien=String(d.get("species","human"))!="human"
+		if alien and opening:continue
+		if (d.kind == ("shady" if want_shady else "florist") or (alien and not opening)) and customer_available(String(id)):
 			pool.append(id)
 	if pool.is_empty():
 		return
@@ -319,7 +339,8 @@ func _auto_spawn(dt: float) -> void:
 				pick = String(id)
 				break
 	var routes = GameData.customer(pick).get("routes", ["street"])
-	customers.spawn(pick, String(routes[rng.randi() % routes.size()]), progression.chapter, rng)
+	var spawned=customers.spawn(pick,String(routes[rng.randi()%routes.size()]),progression.chapter,rng)
+	if not spawned.is_empty() and GameData.customer(pick).get("species","human")!="human":spawned.kind="shady";spawned.order=""
 
 
 ## Un client est disponible quand son chapitre est atteint ET que ses autres conditions sont remplies
@@ -381,6 +402,7 @@ func _eligible_for_subs() -> Array:
 		out.append({"kind": "event", "id": id})
 	for id in GameData.customers():
 		var d = GameData.customer(id)
+		if d.get("species","human")!="human":continue # Aliens use the discreet nocturnal cellar flow.
 		if not d.get("sub_spawnable", false) or not customer_available(String(id)):
 			continue
 		var is_day = d.kind == "florist"
@@ -518,7 +540,7 @@ func stock_capacity() -> int:
 
 
 func stock_used() -> int:
-	return inventory.stem_count()
+	return inventory.stem_count()+vases.total()
 
 
 func stock_free() -> int:
@@ -532,14 +554,14 @@ func capacity_state() -> Dictionary:
 
 
 func has_fridge() -> bool:
-	return rooms.shop.count_of("fridge") > 0
+	return rooms.shop.count_of("fridge")+logistics.count_role("fridge") > 0
 
 
 # --- Refrigerateur : capacite en tiges (bouquets = nombre de tiges), reglable dans balance.fridge ---
 
 ## Capacite totale en tiges : capacite par refrigerateur place x nombre de refrigerateurs (+ bonus des extensions : remise, agrandissement).
 func fridge_capacity() -> int:
-	var units = rooms.shop.count_of("fridge")
+	var units = rooms.shop.count_of("fridge")+logistics.count_role("fridge")
 	if units <= 0:
 		return 0  # sans refrigerateur, les extensions n'ajoutent rien
 	return units * int(GameData.bal("fridge.capacity_per_unit", 24)) + expansions.fridge_capacity_bonus()
@@ -547,7 +569,7 @@ func fridge_capacity() -> int:
 
 ## Tiges actuellement au froid (lots + bouquets).
 func fridge_used() -> int:
-	var n = inventory.cold_count()
+	var n = inventory.cold_count()+vases.total(true)
 	for b in bouquets:
 		if b.cold:
 			n += b.stem_count()
@@ -623,10 +645,11 @@ func find_bouquet(id: String) -> Bouquet:
 	return null
 
 
-func compose_bouquet(picks: Dictionary, wrap: String = "none", accessories: Array = [], price: int = -1, for_order: String = "", owner: String = "") -> Bouquet:
+func compose_bouquet(picks: Dictionary, wrap: String = "none", accessories: Array = [], price: int = -1, for_order: String = "", owner: String = "", paper_length: float=.6) -> Bouquet:
 	var b = Bouquet.compose(inventory, picks, wrap, accessories, -1, owner)
 	if b == null:
 		return null
+	b.paper_length=clampf(paper_length,.2,1.8) if wrap!="none" else 0.0
 	b.for_order = for_order
 	b.price = price if price >= 0 else b.recommended_price(economy.reputation, economy.decoration)
 	bouquets.append(b)
@@ -681,6 +704,8 @@ func sell_bouquet_to(uid: String, bouquet_id: String, price: int = -1, actor: St
 		if def.get("species", "human") != "human":
 			progression.set_flag("first_alien_served")
 	progression.check_advance({"day": clock.day, "reputation": economy.reputation})
+	progression.set_flag("first_florist_sale")
+	logistics.tutorial=false
 	customer_served.emit(res)
 	return res
 
@@ -752,6 +777,10 @@ func sell_product(uid: String, stock_index: int = 0) -> Dictionary:
 	if not tx.ok:
 		return tx
 	cellar.stock.remove_at(stock_index)
+	var definition=GameData.customer(String(c.def))
+	if definition.get("species","human")!="human":
+		if definition.has("reward") and events.claim_once("reward:"+String(c.def)):apply_reward(definition.reward)
+		progression.set_flag("first_alien_served");progression.check_advance({"day":clock.day,"reputation":economy.reputation})
 	customers.remove(uid, "served")
 	if clock.phase == GameClock.Phase.OPENING:
 		suspicion.add_signal("shady_day_sale")
@@ -780,7 +809,11 @@ func _next_id() -> int:
 
 ## Conversion quotidienne clandestin -> legitime (borne par la capacite fictive).
 func convert_money(amount: int, allow_overflow: bool = false) -> Dictionary:
-	return economy.convert(amount, allow_overflow)
+	var previous_level=economy.shop_level
+	economy.shop_level=logistics.level()
+	var result=economy.convert(amount,allow_overflow)
+	if not result.get("ok",false):economy.shop_level=previous_level
+	return result
 
 
 # --- Meubles, cave, histoire ---
@@ -874,6 +907,7 @@ func on_expansions_changed() -> void:
 
 ## Un plan de piece a change (meuble pose, deplace, retire) : valeur percue, capacite du frigo, employes coinces.
 func _on_room_changed() -> void:
+	vases.release_missing_furniture()
 	refresh_decoration()
 	_enforce_fridge()
 	employees.on_layout_changed()
@@ -899,6 +933,7 @@ func _enforce_fridge() -> void:
 		if b.cold:
 			b.cold = false
 			over -= b.stem_count()
+	vases.warm_overflow(over)
 
 
 ## Appele par Employees apres une embauche, un licenciement ou une demission : salaires annonces, etat public.
@@ -941,6 +976,12 @@ func refresh_decoration() -> void:
 	for k in rooms:
 		if k != "shop" and k != "cellar":
 			total += rooms[k].decoration_score()
+	var types={}
+	for item in logistics.owned.values():
+		if not item.deployed:continue
+		var d=logistics.catalog().get(item.asset,{})
+		if d.get("category","")!="decoration":continue
+		var count=int(types.get(item.asset,0));total+=pow(.6,count);types[item.asset]=count+1
 	economy.decoration = total + expansions.decoration_bonus()
 
 
@@ -985,7 +1026,7 @@ func to_dict() -> Dictionary:
 	var rl = {}
 	for k in rooms:
 		rl[k] = rooms[k].to_dict()
-	return {"clock": clock.to_dict(), "economy": economy.to_dict(), "inventory": inventory.to_dict(),
+	return {"logistics":logistics.to_dict(),"clock": clock.to_dict(), "economy": economy.to_dict(), "inventory": inventory.to_dict(), "vases":vases.to_dict(), "surface_layout":surface_layout.to_dict(),
 		"bouquets": bl, "cellar": cellar.to_dict(), "thieves": thieves.to_dict(), "suspicion": suspicion.to_dict(),
 		"police": police.to_dict(), "customers": customers.to_dict(), "events": events.to_dict(), "subs": subs.to_dict(),
 		"progression": progression.to_dict(), "expansions": expansions.to_dict(), "employees": employees.to_dict(),
@@ -993,6 +1034,8 @@ func to_dict() -> Dictionary:
 
 
 func from_dict(d: Dictionary) -> void:
+	session_initialized=true
+	vases.from_dict({})
 	employees.staff.clear()  # avant le rechargement des pieces : aucun employe de la partie precedente ne reagit
 	employees.claims.clear()
 	clock.from_dict(d.get("clock", {}))
@@ -1016,6 +1059,9 @@ func from_dict(d: Dictionary) -> void:
 	_sync_rooms()
 	for k in rooms:
 		rooms[k].from_dict(d.get("rooms", {}).get(k, {}))
+	vases.from_dict(d.get("vases",{}))
+	surface_layout.from_dict(d.get("surface_layout",{}))
+	logistics.from_dict(d.get("logistics",{}))
 	employees.from_dict(d.get("employees", {}))
 	exchange.from_dict(d.get("exchange", {}))
 	if d.has("streamer"):
@@ -1043,3 +1089,12 @@ func load_game(path: String = "") -> Dictionary:
 		if clock.phase == GameClock.Phase.SAVING:  # anciennes sauvegardes ecrites en fin de cycle
 			clock.next_phase()
 	return {"ok": r.ok, "from_backup": r.from_backup}
+
+## Keep older saves compatible while applying the new nocturnal visitor policy on world entry.
+func apply_visitor_policy() -> void:
+	for c in (customers.queue+customers.arriving).duplicate():
+		if GameData.customer(String(c.def)).get("species","human")=="human":continue
+		if clock.phase!=GameClock.Phase.NIGHT:
+			if c in customers.arriving:customers.arriving.erase(c)
+			else:customers.remove(c.uid,"daylight")
+		else:c.kind="shady";c.order=""

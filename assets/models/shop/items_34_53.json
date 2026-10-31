@@ -1,0 +1,122 @@
+[
+  {
+    "number": 34,
+    "asset": "poster_flower",
+    "triangles": 7806,
+    "metres": true
+  },
+  {
+    "number": 35,
+    "asset": "bucket_roses",
+    "triangles": 11016,
+    "metres": true
+  },
+  {
+    "number": 36,
+    "asset": "bucket_lilies",
+    "triangles": 11856,
+    "metres": true
+  },
+  {
+    "number": 37,
+    "asset": "bucket_tulips",
+    "triangles": 10392,
+    "metres": true
+  },
+  {
+    "number": 38,
+    "asset": "bucket_poppies",
+    "triangles": 10032,
+    "metres": true
+  },
+  {
+    "number": 39,
+    "asset": "shelf_wide",
+    "triangles": 4300,
+    "metres": true
+  },
+  {
+    "number": 40,
+    "asset": "big_plant",
+    "triangles": 28436,
+    "metres": true
+  },
+  {
+    "number": 41,
+    "asset": "crate_flowers",
+    "triangles": 22064,
+    "metres": true
+  },
+  {
+    "number": 42,
+    "asset": "crate_bulbs",
+    "triangles": 51576,
+    "metres": true
+  },
+  {
+    "number": 43,
+    "asset": "crate_skulls",
+    "triangles": 32615,
+    "metres": true
+  },
+  {
+    "number": 44,
+    "asset": "crate_seedlings",
+    "triangles": 57252,
+    "metres": true
+  },
+  {
+    "number": 45,
+    "asset": "stand_classic",
+    "triangles": 8620,
+    "metres": true
+  },
+  {
+    "number": 46,
+    "asset": "flytrap",
+    "triangles": 12764,
+    "metres": true
+  },
+  {
+    "number": 47,
+    "asset": "poster_skull",
+    "triangles": 6254,
+    "metres": true
+  },
+  {
+    "number": 48,
+    "asset": "stand_botanical",
+    "triangles": 10512,
+    "metres": true
+  },
+  {
+    "number": 49,
+    "asset": "bucket_daisies",
+    "triangles": 12828,
+    "metres": true
+  },
+  {
+    "number": 50,
+    "asset": "bucket_widow",
+    "triangles": 11796,
+    "metres": true
+  },
+  {
+    "number": 51,
+    "asset": "shelf_medium_wide",
+    "triangles": 4300,
+    "metres": true
+  },
+  {
+    "number": 52,
+    "asset": "coffin_planter",
+    "triangles": 114648,
+    "metres": true
+  },
+  {
+    "number": 53,
+    "asset": "hanging_flowered",
+    "triangles": 236980,
+    "metres": true
+  }
+]

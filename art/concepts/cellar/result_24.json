@@ -1,0 +1,12 @@
+{
+  "number": 24,
+  "source": "C:\\Users\\Saïka\\.codex\\generated_images\\01a179f3-32bb-7ba3-95b3-c5afd66e2c02\\exec-17e1aa8d-2190-4991-878e-368e8e3a4d18.png",
+  "output": "24_wall_shelves_sheet.png",
+  "tool": "built-in image_gen",
+  "prompt": "Use case: stylized-concept. One polished LANDSCAPE 3D modeling reference sheet for a cartoon videogame underground florist basement. Professional adult science-fiction animation, Rick and Morty inspired, confident dark ink outlines, flat desaturated teal/olive/warm wood colors with violet and mint accents, restrained cel shadows. Ivory background, neatly separated spacious panels, fully visible objects, consistent geometry in all views, no photorealism, no childish scribbles, no people, no watermark. Image 1 is the existing game object or room for identity and function only: substantially refine it. Image 2 is the approved cartoon drawing and sheet style reference. Include orthographic FACE, DOS, PROFIL, DESSUS, a larger TROIS-QUARTS and construction closeups; use underside/section for ceiling and top plan for layout. Legible short French labels and palette swatches. Proposed metric dimensions only where useful. Every separate accessory is a separate modeling component and has multiple views. No practical growing instructions, real horticultural parameters or real odor concealment engineering: this is a fictional game prop design. Specific brief: Modular one-level wall shelves in two lengths1.5m and2m, warm planks, dark leaf-scroll brackets, olive fascia and small brass screws. Orthographic front/back/profile/top EMPTY plus3quarter dressed only with small silhouettes for scale. Labels OBJETS TROUVÉS and ZONE DE CONTREBANDE separate. Large bracket and hidden mounting rail detail. Minimum.90m clear vertical gap between separate shelves, never overlapping. Clear surfaces for player chosen objects. Main title: \"24 — ÉTAGÈRES MURALES MODULAIRES\". Reference image1 is woodwork/material style ONLY. Draw ONLY empty wooden shelves, brackets and removable signs. No displayed collectibles or decorations whatsoever.",
+  "refs": [
+    "C:/Users/Saïka/Documents/entreprises/jeu/fleuriste-galaxy/art/concepts/cellar/13_cabinet_sheet.png",
+    "C:\\Users\\Saïka\\Documents\\entreprises\\jeu\\fleuriste-galaxy\\art\\concepts\\cannabis\\01_compacte.png"
+  ],
+  "revision": "Reference replaced with clean cabinet woodwork; shelves shown empty."
+}

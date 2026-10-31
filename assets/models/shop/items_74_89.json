@@ -1,0 +1,114 @@
+[
+  {
+    "number": 74,
+    "asset": "hatch_rug_botanical",
+    "triangles": 762,
+    "metres": true,
+    "embedded_textures": 1
+  },
+  {
+    "number": 75,
+    "asset": "cellar_hatch_closed",
+    "triangles": 10204,
+    "metres": true,
+    "embedded_textures": 0
+  },
+  {
+    "number": 76,
+    "asset": "cellar_hatch_open",
+    "triangles": 11348,
+    "metres": true,
+    "embedded_textures": 0
+  },
+  {
+    "number": 77,
+    "asset": "welcome_doormat",
+    "triangles": 13480,
+    "metres": true,
+    "embedded_textures": 0
+  },
+  {
+    "number": 78,
+    "asset": "service_private_plaque",
+    "triangles": 9884,
+    "metres": true,
+    "embedded_textures": 0
+  },
+  {
+    "number": 79,
+    "asset": "stock_shelf_botanical",
+    "triangles": 4552,
+    "metres": true,
+    "embedded_textures": 0
+  },
+  {
+    "number": 80,
+    "asset": "stock_shelf_ivory",
+    "triangles": 4552,
+    "metres": true,
+    "embedded_textures": 0
+  },
+  {
+    "number": 81,
+    "asset": "framed_botanical_rose",
+    "triangles": 6698,
+    "metres": true,
+    "embedded_textures": 1
+  },
+  {
+    "number": 82,
+    "asset": "framed_botanical_sunflower",
+    "triangles": 6698,
+    "metres": true,
+    "embedded_textures": 1
+  },
+  {
+    "number": 83,
+    "asset": "framed_botanical_xeno",
+    "triangles": 6698,
+    "metres": true,
+    "embedded_textures": 1
+  },
+  {
+    "number": 84,
+    "asset": "botanical_book_rose",
+    "triangles": 6066,
+    "metres": true,
+    "embedded_textures": 1
+  },
+  {
+    "number": 85,
+    "asset": "botanical_book_teal",
+    "triangles": 6066,
+    "metres": true,
+    "embedded_textures": 1
+  },
+  {
+    "number": 86,
+    "asset": "botanical_book_ochre",
+    "triangles": 6066,
+    "metres": true,
+    "embedded_textures": 1
+  },
+  {
+    "number": 87,
+    "asset": "purple_curtains",
+    "triangles": 45568,
+    "metres": true,
+    "embedded_textures": 0
+  },
+  {
+    "number": 88,
+    "asset": "backroom_neon_portal",
+    "triangles": 8868,
+    "metres": true,
+    "embedded_textures": 0
+  },
+  {
+    "number": 89,
+    "asset": "shop_neon_strips",
+    "triangles": 11852,
+    "metres": true,
+    "embedded_textures": 0
+  }
+]

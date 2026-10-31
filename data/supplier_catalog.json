@@ -1,0 +1,3862 @@
+{
+  "items": {
+    "counter": {
+      "name": "Comptoir de fleuriste",
+      "kind": "asset",
+      "category": "furniture",
+      "price": 50,
+      "level": 1,
+      "family": "shop",
+      "model": "res://assets/models/shop/counter_cabinet.glb",
+      "role": "counter",
+      "size": [
+        3,
+        0.98,
+        1
+      ]
+    },
+    "register": {
+      "name": "Caisse enregistreuse",
+      "kind": "asset",
+      "category": "furniture",
+      "price": 25,
+      "level": 1,
+      "family": "shop",
+      "model": "res://assets/models/shop/cash_register.glb",
+      "role": "register",
+      "size": [
+        0.65,
+        0.42,
+        0.5
+      ]
+    },
+    "workbench": {
+      "name": "Établi et outils",
+      "kind": "asset",
+      "category": "furniture",
+      "price": 60,
+      "level": 1,
+      "family": "shop",
+      "model": "res://assets/models/shop/workbench.glb",
+      "role": "workbench",
+      "size": [
+        3,
+        0.97,
+        1
+      ]
+    },
+    "stock_shelf": {
+      "name": "Étagère de stockage",
+      "kind": "asset",
+      "category": "furniture",
+      "price": 28,
+      "level": 1,
+      "family": "shop",
+      "model": "res://assets/models/shop/stock_shelf_botanical.glb",
+      "role": "stock_shelf",
+      "size": [
+        2,
+        0.15,
+        0.45
+      ]
+    },
+    "bouquet_stand": {
+      "name": "Présentoir de bouquets",
+      "kind": "asset",
+      "category": "furniture",
+      "price": 35,
+      "level": 1,
+      "family": "shop",
+      "model": "res://assets/models/shop/stand_classic.glb",
+      "role": "bouquet_stand",
+      "size": [
+        0.9,
+        1,
+        0.65
+      ]
+    },
+    "flower_pot:rose": {
+      "name": "Pot de stockage — roses",
+      "kind": "asset",
+      "category": "plants",
+      "price": 6,
+      "level": 1,
+      "family": "shop",
+      "model": "res://assets/models/shop/vase_lily.glb",
+      "role": "flower_pot",
+      "size": [
+        0.18,
+        0.26,
+        0.18
+      ],
+      "variety": "rose"
+    },
+    "flower_pot:tulip": {
+      "name": "Pot de stockage — tulipes",
+      "kind": "asset",
+      "category": "plants",
+      "price": 6,
+      "level": 1,
+      "family": "shop",
+      "model": "res://assets/models/shop/vase_lily.glb",
+      "role": "flower_pot",
+      "size": [
+        0.18,
+        0.26,
+        0.18
+      ],
+      "variety": "tulip"
+    },
+    "flower_pot:daisy": {
+      "name": "Pot de stockage — marguerites",
+      "kind": "asset",
+      "category": "plants",
+      "price": 6,
+      "level": 1,
+      "family": "shop",
+      "model": "res://assets/models/shop/vase_lily.glb",
+      "role": "flower_pot",
+      "size": [
+        0.18,
+        0.26,
+        0.18
+      ],
+      "variety": "daisy"
+    },
+    "grow_bed": {
+      "name": "Bac de culture à quatre pieds",
+      "kind": "asset",
+      "category": "plants",
+      "price": 40,
+      "level": 2,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/grow_bed.glb",
+      "role": "grow_bed",
+      "size": [
+        1.89,
+        0.55,
+        1.16
+      ]
+    },
+    "single_pot": {
+      "name": "Pot individuel de culture",
+      "kind": "asset",
+      "category": "plants",
+      "price": 15,
+      "level": 2,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/single_pot.glb",
+      "role": "single_pot",
+      "size": [
+        0.82,
+        0.45,
+        0.76
+      ]
+    },
+    "nursery_pot": {
+      "name": "Pot pour semis de fleurs",
+      "kind": "asset",
+      "category": "plants",
+      "price": 5,
+      "level": 1,
+      "family": "shop",
+      "model": "res://assets/models/surface/nursery_pot.glb",
+      "role": "flower_grow_pot",
+      "size": [
+        0.36,
+        0.32,
+        0.36
+      ]
+    },
+    "shop:awning_display": {
+      "name": "Awning display",
+      "kind": "asset",
+      "category": "furniture",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/awning_display.glb",
+      "role": "",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "shop:backroom_neon_portal": {
+      "name": "Backroom neon portal",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/backroom_neon_portal.glb",
+      "role": "",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "shop:big_plant": {
+      "name": "Grande plante verte",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/big_plant.glb",
+      "role": "",
+      "size": [
+        1.33084201812744,
+        2.13900542259216,
+        1.33985114097595
+      ]
+    },
+    "shop:botanical_book_ochre": {
+      "name": "Botanical book ochre",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/botanical_book_ochre.glb",
+      "role": "",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "shop:botanical_book_rose": {
+      "name": "Botanical book rose",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/botanical_book_rose.glb",
+      "role": "",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "shop:botanical_book_teal": {
+      "name": "Botanical book teal",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/botanical_book_teal.glb",
+      "role": "",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "shop:botanical_clock": {
+      "name": "Botanical clock",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/botanical_clock.glb",
+      "role": "",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "shop:botanical_open_sign": {
+      "name": "Botanical open sign",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/botanical_open_sign.glb",
+      "role": "",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "shop:botanical_queue_sign": {
+      "name": "Botanical queue sign",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/botanical_queue_sign.glb",
+      "role": "",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "shop:botanical_shelf_medium": {
+      "name": "Botanical shelf medium",
+      "kind": "asset",
+      "category": "furniture",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/botanical_shelf_medium.glb",
+      "role": "",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "shop:botanical_shelf_small": {
+      "name": "Botanical shelf small",
+      "kind": "asset",
+      "category": "furniture",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/botanical_shelf_small.glb",
+      "role": "",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "shop:botanical_wall_shelf": {
+      "name": "Botanical wall shelf",
+      "kind": "asset",
+      "category": "furniture",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/botanical_wall_shelf.glb",
+      "role": "",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "shop:bouquet_black": {
+      "name": "Bouquet — emballage black",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/bouquet_black.glb",
+      "role": "",
+      "size": [
+        0.281654357910156,
+        0.500224232673645,
+        0.320570766925812
+      ]
+    },
+    "shop:bouquet_none": {
+      "name": "Bouquet — emballage none",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/bouquet_none.glb",
+      "role": "",
+      "size": [
+        0.259868621826172,
+        0.519997715950012,
+        0.290695518255234
+      ]
+    },
+    "shop:bouquet_paper": {
+      "name": "Bouquet — emballage paper",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/bouquet_paper.glb",
+      "role": "",
+      "size": [
+        0.347820281982422,
+        0.517350256443024,
+        0.368783295154572
+      ]
+    },
+    "shop:bouquet_silk": {
+      "name": "Bouquet — emballage silk",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/bouquet_silk.glb",
+      "role": "",
+      "size": [
+        0.275058746337891,
+        0.5196373462677,
+        0.316373705863953
+      ]
+    },
+    "shop:bucket_daisies": {
+      "name": "Bucket daisies",
+      "kind": "asset",
+      "category": "plants",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/bucket_daisies.glb",
+      "role": "",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "shop:bucket_lilies": {
+      "name": "Bucket lilies",
+      "kind": "asset",
+      "category": "plants",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/bucket_lilies.glb",
+      "role": "",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "shop:bucket_poppies": {
+      "name": "Bucket poppies",
+      "kind": "asset",
+      "category": "plants",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/bucket_poppies.glb",
+      "role": "",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "shop:bucket_roses": {
+      "name": "Bucket roses",
+      "kind": "asset",
+      "category": "plants",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/bucket_roses.glb",
+      "role": "",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "shop:bucket_tulips": {
+      "name": "Bucket tulips",
+      "kind": "asset",
+      "category": "plants",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/bucket_tulips.glb",
+      "role": "",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "shop:bucket_widow": {
+      "name": "Bucket widow",
+      "kind": "asset",
+      "category": "plants",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/bucket_widow.glb",
+      "role": "",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "shop:bunting_botanical": {
+      "name": "Bunting botanical",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/bunting_botanical.glb",
+      "role": "",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "shop:candy_jar": {
+      "name": "Bocal de bonbons en os",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/candy_jar.glb",
+      "role": "",
+      "size": [
+        0.194984436035156,
+        0.220000028610229,
+        0.200000017881393
+      ]
+    },
+    "shop:chalk_menu": {
+      "name": "Chalk menu",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/chalk_menu.glb",
+      "role": "",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "shop:coffin_planter": {
+      "name": "Jardinière cercueil fleurie",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/coffin_planter.glb",
+      "role": "",
+      "size": [
+        0.761566638946533,
+        0.719309687614441,
+        1.27224206924438
+      ]
+    },
+    "shop:counter_bell": {
+      "name": "Clochette de comptoir",
+      "kind": "asset",
+      "category": "furniture",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/counter_bell.glb",
+      "role": "",
+      "size": [
+        0.194984436035156,
+        0.194999992847443,
+        0.200000017881393
+      ]
+    },
+    "shop:crate_bulbs": {
+      "name": "Cageot — bulbs",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/crate_bulbs.glb",
+      "role": "",
+      "size": [
+        0.644925117492676,
+        0.420500010251999,
+        0.509900093078613
+      ]
+    },
+    "shop:crate_flowers": {
+      "name": "Cageot — flowers",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/crate_flowers.glb",
+      "role": "",
+      "size": [
+        0.689401626586914,
+        0.832005679607391,
+        0.569202899932861
+      ]
+    },
+    "shop:crate_seedlings": {
+      "name": "Cageot — seedlings",
+      "kind": "asset",
+      "category": "plants",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/crate_seedlings.glb",
+      "role": "",
+      "size": [
+        0.600000143051147,
+        0.45100000500679,
+        0.449999809265137
+      ]
+    },
+    "shop:crate_skulls": {
+      "name": "Cageot — skulls",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/crate_skulls.glb",
+      "role": "",
+      "size": [
+        0.655767440795898,
+        0.389999985694885,
+        0.594709873199463
+      ]
+    },
+    "shop:entrance_door": {
+      "name": "Entrance door",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/entrance_door.glb",
+      "role": "",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "shop:floral_rug": {
+      "name": "Floral rug",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/floral_rug.glb",
+      "role": "",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "shop:florist_pegboard": {
+      "name": "Florist pegboard",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/florist_pegboard.glb",
+      "role": "",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "shop:flower_fridge": {
+      "name": "Flower fridge",
+      "kind": "asset",
+      "category": "furniture",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/flower_fridge.glb",
+      "role": "fridge",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "shop:flytrap": {
+      "name": "Plante carnivore animée",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/flytrap.glb",
+      "role": "",
+      "size": [
+        0.21917200088501,
+        0.551788508892059,
+        0.26278018951416
+      ]
+    },
+    "shop:framed_botanical_rose": {
+      "name": "Framed botanical rose",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/framed_botanical_rose.glb",
+      "role": "",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "shop:framed_botanical_sunflower": {
+      "name": "Framed botanical sunflower",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/framed_botanical_sunflower.glb",
+      "role": "",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "shop:framed_botanical_xeno": {
+      "name": "Framed botanical xeno",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/framed_botanical_xeno.glb",
+      "role": "",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "shop:hanging_flowered": {
+      "name": "Plante suspendue — retombante fleurie",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/hanging_flowered.glb",
+      "role": "",
+      "size": [
+        0.529265403747559,
+        1.19051671028137,
+        0.50476062297821
+      ]
+    },
+    "shop:hanging_simple_botanical": {
+      "name": "Hanging simple botanical",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/hanging_simple_botanical.glb",
+      "role": "",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "shop:jar_bulbs": {
+      "name": "Bocal — bulbs",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/jar_bulbs.glb",
+      "role": "",
+      "size": [
+        0.144560813903809,
+        0.240000009536743,
+        0.151999980211258
+      ]
+    },
+    "shop:jar_eyes": {
+      "name": "Bocal — eyes",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/jar_eyes.glb",
+      "role": "",
+      "size": [
+        0.144560575485229,
+        0.240000009536743,
+        0.151999980211258
+      ]
+    },
+    "shop:jar_seeds": {
+      "name": "Bocal — seeds",
+      "kind": "asset",
+      "category": "plants",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/jar_seeds.glb",
+      "role": "",
+      "size": [
+        0.144560813903809,
+        0.240000009536743,
+        0.151999980211258
+      ]
+    },
+    "shop:jar_slime": {
+      "name": "Bocal — slime",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/jar_slime.glb",
+      "role": "",
+      "size": [
+        0.144560813903809,
+        0.240000009536743,
+        0.151999980211258
+      ]
+    },
+    "shop:jar_teeth": {
+      "name": "Bocal — teeth",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/jar_teeth.glb",
+      "role": "",
+      "size": [
+        0.144560813903809,
+        0.240000009536743,
+        0.151999980211258
+      ]
+    },
+    "shop:pendant_pink": {
+      "name": "Pendant pink",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/pendant_pink.glb",
+      "role": "",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "shop:pendant_yellow": {
+      "name": "Pendant yellow",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/pendant_yellow.glb",
+      "role": "",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "shop:poster_flower": {
+      "name": "Affiche — COURS DE BOUQUET",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/poster_flower.glb",
+      "role": "",
+      "size": [
+        0.610000133514404,
+        0.859999895095825,
+        0.0721587687730789
+      ]
+    },
+    "shop:poster_skull": {
+      "name": "Affiche — NE PAS NOURRIR",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/poster_skull.glb",
+      "role": "",
+      "size": [
+        0.460000038146973,
+        0.610000133514404,
+        0.0708498954772949
+      ]
+    },
+    "shop:pot_cactus": {
+      "name": "Plante en pot — cactus",
+      "kind": "asset",
+      "category": "plants",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/pot_cactus.glb",
+      "role": "",
+      "size": [
+        0.315292835235596,
+        0.629218816757202,
+        0.28600001335144
+      ]
+    },
+    "shop:pot_ivy": {
+      "name": "Plante en pot — ivy",
+      "kind": "asset",
+      "category": "plants",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/pot_ivy.glb",
+      "role": "",
+      "size": [
+        0.396510660648346,
+        0.680352449417114,
+        0.343523979187012
+      ]
+    },
+    "shop:pot_skull": {
+      "name": "Plante en pot — skull",
+      "kind": "asset",
+      "category": "plants",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/pot_skull.glb",
+      "role": "",
+      "size": [
+        0.235932350158691,
+        0.635700941085815,
+        0.242000013589859
+      ]
+    },
+    "shop:purple_curtains": {
+      "name": "Purple curtains",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/purple_curtains.glb",
+      "role": "",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "shop:rip_promotion_sign": {
+      "name": "Rip promotion sign",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/rip_promotion_sign.glb",
+      "role": "",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "shop:rose_planter": {
+      "name": "Rose planter",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/rose_planter.glb",
+      "role": "",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "shop:service_door": {
+      "name": "Service door",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/service_door.glb",
+      "role": "",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "shop:service_private_plaque": {
+      "name": "Service private plaque",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/service_private_plaque.glb",
+      "role": "",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "shop:shelf_flowered_skull": {
+      "name": "Shelf flowered skull",
+      "kind": "asset",
+      "category": "furniture",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/shelf_flowered_skull.glb",
+      "role": "",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "shop:shelf_medium_wide": {
+      "name": "Shelf medium wide",
+      "kind": "asset",
+      "category": "furniture",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/shelf_medium_wide.glb",
+      "role": "",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "shop:shelf_wide": {
+      "name": "Shelf wide",
+      "kind": "asset",
+      "category": "furniture",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/shelf_wide.glb",
+      "role": "",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "shop:shop_neon_strips": {
+      "name": "Shop neon strips",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/shop_neon_strips.glb",
+      "role": "",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "shop:stand_botanical": {
+      "name": "Stand botanical",
+      "kind": "asset",
+      "category": "furniture",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/stand_botanical.glb",
+      "role": "",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "shop:stock_shelf_ivory": {
+      "name": "Stock shelf ivory",
+      "kind": "asset",
+      "category": "furniture",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/stock_shelf_ivory.glb",
+      "role": "",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "shop:stock_vase_daisy": {
+      "name": "Stock vase daisy",
+      "kind": "asset",
+      "category": "plants",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/stock_vase_daisy.glb",
+      "role": "",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "shop:stock_vase_lavender": {
+      "name": "Stock vase lavender",
+      "kind": "asset",
+      "category": "plants",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/stock_vase_lavender.glb",
+      "role": "",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "shop:stock_vase_lily": {
+      "name": "Stock vase lily",
+      "kind": "asset",
+      "category": "plants",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/stock_vase_lily.glb",
+      "role": "",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "shop:stock_vase_poppy": {
+      "name": "Stock vase poppy",
+      "kind": "asset",
+      "category": "plants",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/stock_vase_poppy.glb",
+      "role": "",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "shop:stock_vase_rose": {
+      "name": "Stock vase rose",
+      "kind": "asset",
+      "category": "plants",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/stock_vase_rose.glb",
+      "role": "",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "shop:stock_vase_sunflower": {
+      "name": "Stock vase sunflower",
+      "kind": "asset",
+      "category": "plants",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/stock_vase_sunflower.glb",
+      "role": "",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "shop:stock_vase_tulip": {
+      "name": "Stock vase tulip",
+      "kind": "asset",
+      "category": "plants",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/stock_vase_tulip.glb",
+      "role": "",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "shop:stock_vase_xeno_bloom": {
+      "name": "Stock vase xeno bloom",
+      "kind": "asset",
+      "category": "plants",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/stock_vase_xeno_bloom.glb",
+      "role": "",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "shop:task_lamp": {
+      "name": "task lamp",
+      "kind": "asset",
+      "category": "plants",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/task_lamp.glb",
+      "role": "",
+      "size": [
+        0.359996795654297,
+        0.451465785503387,
+        0.200000002980232
+      ]
+    },
+    "shop:vase_lavender": {
+      "name": "Vase — lavender",
+      "kind": "asset",
+      "category": "plants",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/vase_lavender.glb",
+      "role": "",
+      "size": [
+        0.365717589855194,
+        0.812217950820923,
+        0.300903856754303
+      ]
+    },
+    "shop:vase_lavender_flowers": {
+      "name": "Vase lavender flowers",
+      "kind": "asset",
+      "category": "plants",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/vase_lavender_flowers.glb",
+      "role": "",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "shop:vase_lily_flowers": {
+      "name": "Vase lily flowers",
+      "kind": "asset",
+      "category": "plants",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/vase_lily_flowers.glb",
+      "role": "",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "shop:vase_orange": {
+      "name": "Vase — orange",
+      "kind": "asset",
+      "category": "plants",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/vase_orange.glb",
+      "role": "",
+      "size": [
+        0.192176818847656,
+        0.372643768787384,
+        0.199673414230347
+      ]
+    },
+    "shop:vase_poppy": {
+      "name": "Vase — poppy",
+      "kind": "asset",
+      "category": "plants",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/vase_poppy.glb",
+      "role": "",
+      "size": [
+        0.226351261138916,
+        0.340000152587891,
+        0.238000005483627
+      ]
+    },
+    "shop:vase_poppy_flowers": {
+      "name": "Vase poppy flowers",
+      "kind": "asset",
+      "category": "plants",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/vase_poppy_flowers.glb",
+      "role": "",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "shop:vase_rose": {
+      "name": "Vase — rose",
+      "kind": "asset",
+      "category": "plants",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/vase_rose.glb",
+      "role": "",
+      "size": [
+        0.356505453586578,
+        0.794558525085449,
+        0.400569945573807
+      ]
+    },
+    "shop:vase_rose_flowers": {
+      "name": "Vase rose flowers",
+      "kind": "asset",
+      "category": "plants",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/vase_rose_flowers.glb",
+      "role": "",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "shop:vase_sunflower": {
+      "name": "Vase — sunflower",
+      "kind": "asset",
+      "category": "plants",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/vase_sunflower.glb",
+      "role": "",
+      "size": [
+        0.552375793457031,
+        0.824217081069946,
+        0.575857281684875
+      ]
+    },
+    "shop:vase_sunflower_flowers": {
+      "name": "Vase sunflower flowers",
+      "kind": "asset",
+      "category": "plants",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/vase_sunflower_flowers.glb",
+      "role": "",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "shop:welcome_doormat": {
+      "name": "Welcome doormat",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/welcome_doormat.glb",
+      "role": "",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "shop:workbench_assembled": {
+      "name": "Workbench assembled",
+      "kind": "asset",
+      "category": "furniture",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/workbench_assembled.glb",
+      "role": "",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "shop:workbench_kraft": {
+      "name": "Workbench kraft",
+      "kind": "asset",
+      "category": "furniture",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/workbench_kraft.glb",
+      "role": "",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "shop:workbench_lamp": {
+      "name": "Lampe d’établi",
+      "kind": "asset",
+      "category": "plants",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/workbench_lamp.glb",
+      "role": "",
+      "size": [
+        0.233985900878906,
+        0.601999998092651,
+        0.274066567420959
+      ]
+    },
+    "shop:workbench_mat": {
+      "name": "Workbench mat",
+      "kind": "asset",
+      "category": "furniture",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/workbench_mat.glb",
+      "role": "",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "shop:workbench_scissors": {
+      "name": "Workbench scissors",
+      "kind": "asset",
+      "category": "furniture",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/workbench_scissors.glb",
+      "role": "",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "shop:workbench_spool": {
+      "name": "Workbench spool",
+      "kind": "asset",
+      "category": "furniture",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/workbench_spool.glb",
+      "role": "",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "shop:workbench_vase": {
+      "name": "Workbench vase",
+      "kind": "asset",
+      "category": "plants",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/shop/workbench_vase.glb",
+      "role": "",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "surface:balcony_rail": {
+      "name": "balcony rail",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/surface/balcony_rail.glb",
+      "role": "",
+      "size": [
+        1.05999755859375,
+        1.04999995231628,
+        0.100000001490116
+      ]
+    },
+    "surface:bistro_table": {
+      "name": "bistro table",
+      "kind": "asset",
+      "category": "furniture",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/surface/bistro_table.glb",
+      "role": "",
+      "size": [
+        0.825958251953125,
+        0.752160727977753,
+        0.826000034809113
+      ]
+    },
+    "surface:border_bed": {
+      "name": "border bed",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/surface/border_bed.glb",
+      "role": "",
+      "size": [
+        1.01000213623047,
+        0.150000005960464,
+        0.550000011920929
+      ]
+    },
+    "surface:chair_mint": {
+      "name": "chair mint",
+      "kind": "asset",
+      "category": "furniture",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/surface/chair_mint.glb",
+      "role": "",
+      "size": [
+        0.451766967773438,
+        0.976993203163147,
+        0.413997322320938
+      ]
+    },
+    "surface:chair_rose": {
+      "name": "chair rose",
+      "kind": "asset",
+      "category": "furniture",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/surface/chair_rose.glb",
+      "role": "",
+      "size": [
+        0.451766967773438,
+        0.976993203163147,
+        0.413997322320938
+      ]
+    },
+    "surface:deck_tile": {
+      "name": "deck tile",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/surface/deck_tile.glb",
+      "role": "",
+      "size": [
+        0.996002197265625,
+        0.061999998986721,
+        0.991999983787537
+      ]
+    },
+    "surface:delivery_bell": {
+      "name": "delivery bell",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/surface/delivery_bell.glb",
+      "role": "",
+      "size": [
+        0.239997863769531,
+        0.340000003576279,
+        0.0685000047087669
+      ]
+    },
+    "surface:drain_grate": {
+      "name": "drain grate",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/surface/drain_grate.glb",
+      "role": "",
+      "size": [
+        0.404998779296875,
+        0.0499999970197678,
+        0.405000001192093
+      ]
+    },
+    "surface:embassy_front": {
+      "name": "embassy front",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/surface/embassy_front.glb",
+      "role": "",
+      "size": [
+        3.30000305175781,
+        3.07999992370605,
+        0.75
+      ]
+    },
+    "surface:employee_desk": {
+      "name": "employee desk",
+      "kind": "asset",
+      "category": "furniture",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/surface/employee_desk.glb",
+      "role": "",
+      "size": [
+        0.900001525878906,
+        0.774500072002411,
+        1.89199995994568
+      ]
+    },
+    "surface:filing_cabinet": {
+      "name": "filing cabinet",
+      "kind": "asset",
+      "category": "furniture",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/surface/filing_cabinet.glb",
+      "role": "",
+      "size": [
+        0.800003051757813,
+        0.980000019073486,
+        0.494000017642975
+      ]
+    },
+    "surface:galactic_flag": {
+      "name": "galactic flag",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/surface/galactic_flag.glb",
+      "role": "",
+      "size": [
+        1.22114944458008,
+        3.44000005722046,
+        0.379999995231628
+      ]
+    },
+    "surface:gallery_display": {
+      "name": "gallery display",
+      "kind": "asset",
+      "category": "furniture",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/surface/gallery_display.glb",
+      "role": "",
+      "size": [
+        3.30000305175781,
+        2.67000007629395,
+        0.275000005960464
+      ]
+    },
+    "surface:gallery_easel": {
+      "name": "gallery easel",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/surface/gallery_easel.glb",
+      "role": "",
+      "size": [
+        0.639999389648438,
+        1.3374981880188,
+        0.546238958835602
+      ]
+    },
+    "surface:garden_arch": {
+      "name": "garden arch",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/surface/garden_arch.glb",
+      "role": "",
+      "size": [
+        1.61662673950195,
+        2.50689244270325,
+        0.340000033378601
+      ]
+    },
+    "surface:handtruck": {
+      "name": "handtruck",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/surface/handtruck.glb",
+      "role": "",
+      "size": [
+        0.519996643066406,
+        1.24199998378754,
+        0.419992446899414
+      ]
+    },
+    "surface:hedge": {
+      "name": "hedge",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/surface/hedge.glb",
+      "role": "",
+      "size": [
+        1.29833602905273,
+        0.793256402015686,
+        0.501668095588684
+      ]
+    },
+    "surface:hose_reel": {
+      "name": "hose reel",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/surface/hose_reel.glb",
+      "role": "",
+      "size": [
+        0.524238586425781,
+        0.657999992370605,
+        0.585227072238922
+      ]
+    },
+    "surface:irrigation_bar": {
+      "name": "irrigation bar",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/surface/irrigation_bar.glb",
+      "role": "",
+      "size": [
+        2.8280029296875,
+        0.172999992966652,
+        0.0439999997615814
+      ]
+    },
+    "surface:notice_board": {
+      "name": "notice board",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/surface/notice_board.glb",
+      "role": "",
+      "size": [
+        1.00900268554688,
+        0.75900000333786,
+        0.0590000003576279
+      ]
+    },
+    "surface:nursery_bench": {
+      "name": "nursery bench",
+      "kind": "asset",
+      "category": "furniture",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/surface/nursery_bench.glb",
+      "role": "",
+      "size": [
+        0.650001525878906,
+        0.804499983787537,
+        2.79199981689453
+      ]
+    },
+    "surface:office_chair": {
+      "name": "office chair",
+      "kind": "asset",
+      "category": "furniture",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/surface/office_chair.glb",
+      "role": "",
+      "size": [
+        0.568435668945313,
+        0.949999988079071,
+        0.563570499420166
+      ]
+    },
+    "surface:orb_table": {
+      "name": "orb table",
+      "kind": "asset",
+      "category": "furniture",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/surface/orb_table.glb",
+      "role": "",
+      "size": [
+        0.5,
+        0.787000000476837,
+        0.5
+      ]
+    },
+    "surface:outdoor_garland": {
+      "name": "outdoor garland",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/surface/outdoor_garland.glb",
+      "role": "",
+      "size": [
+        4.01969909667969,
+        0.334087520837784,
+        0.0799999982118607
+      ]
+    },
+    "surface:pallet": {
+      "name": "pallet",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/surface/pallet.glb",
+      "role": "",
+      "size": [
+        1.09999847412109,
+        0.142000004649162,
+        0.810000002384186
+      ]
+    },
+    "surface:paper_rack": {
+      "name": "paper rack",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/surface/paper_rack.glb",
+      "role": "",
+      "size": [
+        1.19999694824219,
+        0.800000011920929,
+        0.270000010728836
+      ]
+    },
+    "surface:parasol": {
+      "name": "Parasol achetable",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/surface/parasol.glb",
+      "role": "",
+      "size": [
+        2.11799621582031,
+        2.77500009536743,
+        2.11799287796021
+      ]
+    },
+    "surface:path_stone": {
+      "name": "path stone",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/surface/path_stone.glb",
+      "role": "",
+      "size": [
+        0.800003051757813,
+        0.0400000028312206,
+        0.639999985694885
+      ]
+    },
+    "surface:pot_stack": {
+      "name": "pot stack",
+      "kind": "asset",
+      "category": "plants",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/surface/pot_stack.glb",
+      "role": "",
+      "size": [
+        0.2919921875,
+        0.399999976158142,
+        0.292000025510788
+      ]
+    },
+    "surface:rail_planter": {
+      "name": "rail planter",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/surface/rail_planter.glb",
+      "role": "",
+      "size": [
+        0.860000610351563,
+        0.294617146253586,
+        0.449488162994385
+      ]
+    },
+    "surface:railing": {
+      "name": "railing",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/surface/railing.glb",
+      "role": "",
+      "size": [
+        1.05999755859375,
+        1.04999995231628,
+        0.100000001490116
+      ]
+    },
+    "surface:rake": {
+      "name": "rake",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/surface/rake.glb",
+      "role": "",
+      "size": [
+        0.459999084472656,
+        1.35389745235443,
+        0.113897390663624
+      ]
+    },
+    "surface:salon_display": {
+      "name": "salon display",
+      "kind": "asset",
+      "category": "furniture",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/surface/salon_display.glb",
+      "role": "",
+      "size": [
+        3.30000305175781,
+        2.67000007629395,
+        0.208200007677078
+      ]
+    },
+    "surface:salon_sofa": {
+      "name": "salon sofa",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/surface/salon_sofa.glb",
+      "role": "",
+      "size": [
+        1.78000640869141,
+        1.03999996185303,
+        0.639999985694885
+      ]
+    },
+    "surface:seed_organizer": {
+      "name": "seed organizer",
+      "kind": "asset",
+      "category": "plants",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/surface/seed_organizer.glb",
+      "role": "",
+      "size": [
+        0.56500244140625,
+        0.199999988079071,
+        0.314999997615814
+      ]
+    },
+    "surface:seed_tray": {
+      "name": "seed tray",
+      "kind": "asset",
+      "category": "plants",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/surface/seed_tray.glb",
+      "role": "",
+      "size": [
+        0.459999084472656,
+        0.183000013232231,
+        0.319999992847443
+      ]
+    },
+    "surface:service_trolley": {
+      "name": "service trolley",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/surface/service_trolley.glb",
+      "role": "",
+      "size": [
+        0.75,
+        0.880250096321106,
+        0.465000003576279
+      ]
+    },
+    "surface:shed_shelf": {
+      "name": "shed shelf",
+      "kind": "asset",
+      "category": "furniture",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/surface/shed_shelf.glb",
+      "role": "",
+      "size": [
+        0.900001525878906,
+        1.74950003623962,
+        0.371999979019165
+      ]
+    },
+    "surface:sign_garden": {
+      "name": "sign garden",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/surface/sign_garden.glb",
+      "role": "",
+      "size": [
+        0.760002136230469,
+        0.239999994635582,
+        0.0620049983263016
+      ]
+    },
+    "surface:sign_greenhouse": {
+      "name": "sign greenhouse",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/surface/sign_greenhouse.glb",
+      "role": "",
+      "size": [
+        0.760002136230469,
+        0.239999994635582,
+        0.0620049983263016
+      ]
+    },
+    "surface:sign_shed": {
+      "name": "sign shed",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/surface/sign_shed.glb",
+      "role": "",
+      "size": [
+        0.760002136230469,
+        0.239999994635582,
+        0.0620049983263016
+      ]
+    },
+    "surface:sign_workshop": {
+      "name": "sign workshop",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/surface/sign_workshop.glb",
+      "role": "",
+      "size": [
+        0.760002136230469,
+        0.239999994635582,
+        0.0620049983263016
+      ]
+    },
+    "surface:soil_bag": {
+      "name": "soil bag",
+      "kind": "asset",
+      "category": "plants",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/surface/soil_bag.glb",
+      "role": "",
+      "size": [
+        0.47784423828125,
+        0.560000061988831,
+        0.367700576782227
+      ]
+    },
+    "surface:sorting_bins": {
+      "name": "sorting bins",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/surface/sorting_bins.glb",
+      "role": "",
+      "size": [
+        0.979995727539063,
+        0.732500016689301,
+        0.46000000834465
+      ]
+    },
+    "surface:spade": {
+      "name": "spade",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/surface/spade.glb",
+      "role": "",
+      "size": [
+        0.279998779296875,
+        1.47699987888336,
+        0.115776523947716
+      ]
+    },
+    "surface:tap_post": {
+      "name": "tap post",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/surface/tap_post.glb",
+      "role": "",
+      "size": [
+        0.349998474121094,
+        0.989000022411346,
+        0.457450211048126
+      ]
+    },
+    "surface:task_lamp": {
+      "name": "task lamp",
+      "kind": "asset",
+      "category": "plants",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/surface/task_lamp.glb",
+      "role": "",
+      "size": [
+        0.359996795654297,
+        0.451465785503387,
+        0.200000002980232
+      ]
+    },
+    "surface:thermometer": {
+      "name": "thermometer",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/surface/thermometer.glb",
+      "role": "",
+      "size": [
+        0.160003662109375,
+        0.469999998807907,
+        0.0494999997317791
+      ]
+    },
+    "surface:vent_fan": {
+      "name": "vent fan",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/surface/vent_fan.glb",
+      "role": "",
+      "size": [
+        0.459999084472656,
+        0.46000000834465,
+        0.168000012636185
+      ]
+    },
+    "surface:wall_lantern": {
+      "name": "wall lantern",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/surface/wall_lantern.glb",
+      "role": "",
+      "size": [
+        0.239997863769531,
+        0.581712603569031,
+        0.382861137390137
+      ]
+    },
+    "surface:warehouse_bay": {
+      "name": "warehouse bay",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/surface/warehouse_bay.glb",
+      "role": "",
+      "size": [
+        3.30000305175781,
+        2.67000007629395,
+        0.595000028610229
+      ]
+    },
+    "surface:wheelbarrow": {
+      "name": "wheelbarrow",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/surface/wheelbarrow.glb",
+      "role": "",
+      "size": [
+        0.655006408691406,
+        0.683635950088501,
+        1.56189215183258
+      ]
+    },
+    "surface:wrapping_station": {
+      "name": "wrapping station",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/surface/wrapping_station.glb",
+      "role": "",
+      "size": [
+        1.5,
+        1.29000008106232,
+        0.686750054359436
+      ]
+    },
+    "cellar:barrel": {
+      "name": "barrel",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/barrel.glb",
+      "role": "",
+      "size": [
+        0.715953826904297,
+        0.767500042915344,
+        0.716000020503998
+      ]
+    },
+    "cellar:bed_lamp": {
+      "name": "bed lamp",
+      "kind": "asset",
+      "category": "plants",
+      "price": 30,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/bed_lamp.glb",
+      "role": "bed_lamp",
+      "size": [
+        1.59999847412109,
+        1.21799993515015,
+        0.400000005960464
+      ]
+    },
+    "cellar:boots": {
+      "name": "boots",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/boots.glb",
+      "role": "",
+      "size": [
+        0.44000244140625,
+        0.310000002384186,
+        0.360000014305115
+      ]
+    },
+    "cellar:bucket": {
+      "name": "bucket",
+      "kind": "asset",
+      "category": "plants",
+      "price": 30,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/bucket.glb",
+      "role": "",
+      "size": [
+        0.445968627929688,
+        0.58899998664856,
+        0.42399999499321
+      ]
+    },
+    "cellar:bulb": {
+      "name": "bulb",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/bulb.glb",
+      "role": "",
+      "size": [
+        0.199996948242188,
+        0.798999965190887,
+        0.200000002980232
+      ]
+    },
+    "cellar:cabinet": {
+      "name": "cabinet",
+      "kind": "asset",
+      "category": "furniture",
+      "price": 30,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/cabinet.glb",
+      "role": "",
+      "size": [
+        2.22174072265625,
+        1.85000002384186,
+        1.30723547935486
+      ]
+    },
+    "cellar:cabinet_lock": {
+      "name": "cabinet lock",
+      "kind": "asset",
+      "category": "furniture",
+      "price": 30,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/cabinet_lock.glb",
+      "role": "",
+      "size": [
+        0.239997863769531,
+        0.219999998807907,
+        0.0820000022649765
+      ]
+    },
+    "cellar:cabinet_lock_electronic": {
+      "name": "cabinet lock electronic",
+      "kind": "asset",
+      "category": "furniture",
+      "price": 30,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/cabinet_lock_electronic.glb",
+      "role": "",
+      "size": [
+        0.239997863769531,
+        0.219999998807907,
+        0.109499998390675
+      ]
+    },
+    "cellar:cabinet_lock_heavy": {
+      "name": "cabinet lock heavy",
+      "kind": "asset",
+      "category": "furniture",
+      "price": 30,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/cabinet_lock_heavy.glb",
+      "role": "",
+      "size": [
+        0.319999694824219,
+        0.237499997019768,
+        0.123999997973442
+      ]
+    },
+    "cellar:cable_tray": {
+      "name": "cable tray",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/cable_tray.glb",
+      "role": "",
+      "size": [
+        1.01799774169922,
+        0.0925000011920929,
+        0.180000007152557
+      ]
+    },
+    "cellar:cartoon_bomb": {
+      "name": "cartoon bomb",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/cartoon_bomb.glb",
+      "role": "",
+      "size": [
+        0.260002136230469,
+        0.36540749669075,
+        0.259999990463257
+      ]
+    },
+    "cellar:composter": {
+      "name": "Composteur achetable",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/district/composter.glb",
+      "role": "composter",
+      "size": [
+        1.8350944519043,
+        1.50312507152557,
+        1.8610999584198
+      ]
+    },
+    "cellar:cone": {
+      "name": "cone",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/cone.glb",
+      "role": "",
+      "size": [
+        0.300003051757813,
+        0.430000007152557,
+        0.300000011920929
+      ]
+    },
+    "cellar:contraband_sign": {
+      "name": "contraband sign",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/contraband_sign.glb",
+      "role": "",
+      "size": [
+        0.800003051757813,
+        0.25,
+        0.0553999990224838
+      ]
+    },
+    "cellar:counter": {
+      "name": "Comptoir",
+      "kind": "asset",
+      "category": "furniture",
+      "price": 30,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/counter.glb",
+      "role": "",
+      "size": [
+        3.04000091552734,
+        1.37794733047485,
+        1.03999996185303
+      ]
+    },
+    "cellar:culture_jar": {
+      "name": "culture jar",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/culture_jar.glb",
+      "role": "",
+      "size": [
+        0.209999084472656,
+        0.269999980926514,
+        0.216199994087219
+      ]
+    },
+    "cellar:desk_bell": {
+      "name": "desk bell",
+      "kind": "asset",
+      "category": "furniture",
+      "price": 30,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/desk_bell.glb",
+      "role": "",
+      "size": [
+        0.220001220703125,
+        0.144999995827675,
+        0.219999998807907
+      ]
+    },
+    "cellar:doormat": {
+      "name": "Paillasson de l’entrée",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/doormat.glb",
+      "role": "",
+      "size": [
+        0.899999618530273,
+        0.025000000372529,
+        0.550000190734863
+      ]
+    },
+    "cellar:drying_line": {
+      "name": "drying line",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/drying_line.glb",
+      "role": "",
+      "size": [
+        2.41787719726563,
+        0.598937153816223,
+        0.0878720209002495
+      ]
+    },
+    "cellar:duck": {
+      "name": "duck",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/duck.glb",
+      "role": "",
+      "size": [
+        0.310005187988281,
+        0.324999988079071,
+        0.314999997615814
+      ]
+    },
+    "cellar:duct_elbow": {
+      "name": "duct elbow",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/duct_elbow.glb",
+      "role": "",
+      "size": [
+        0.609466552734375,
+        0.501557469367981,
+        0.230000048875809
+      ]
+    },
+    "cellar:duct_module": {
+      "name": "duct module",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/duct_module.glb",
+      "role": "",
+      "size": [
+        1.23999786376953,
+        0.552963018417358,
+        0.230000004172325
+      ]
+    },
+    "cellar:entry_sign": {
+      "name": "entry sign",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/entry_sign.glb",
+      "role": "",
+      "size": [
+        0.800003051757813,
+        0.25,
+        0.0559999980032444
+      ]
+    },
+    "cellar:filter_cartridge": {
+      "name": "Filtre à charbon — module clipsable",
+      "kind": "asset",
+      "category": "plants",
+      "price": 12,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/filter_cartridge.glb",
+      "role": "ceiling_filter",
+      "size": [
+        0.58,
+        0.18,
+        0.58
+      ]
+    },
+    "cellar:fish_jar": {
+      "name": "fish jar",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/fish_jar.glb",
+      "role": "",
+      "size": [
+        0.209999084472656,
+        0.277500003576279,
+        0.209999993443489
+      ]
+    },
+    "cellar:found_sign": {
+      "name": "found sign",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/found_sign.glb",
+      "role": "",
+      "size": [
+        0.800003051757813,
+        0.25,
+        0.0553999990224838
+      ]
+    },
+    "cellar:fusebox": {
+      "name": "fusebox",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/fusebox.glb",
+      "role": "",
+      "size": [
+        0.449996948242188,
+        0.649999976158142,
+        0.215000003576279
+      ]
+    },
+    "cellar:garland": {
+      "name": "garland",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/garland.glb",
+      "role": "",
+      "size": [
+        4.01969909667969,
+        0.334087520837784,
+        0.0799999982118607
+      ]
+    },
+    "cellar:gold_bananas": {
+      "name": "gold bananas",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/gold_bananas.glb",
+      "role": "",
+      "size": [
+        0.44000244140625,
+        0.23366966843605,
+        0.439999997615814
+      ]
+    },
+    "cellar:jerrycan_red": {
+      "name": "jerrycan red",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/jerrycan_red.glb",
+      "role": "",
+      "size": [
+        0.300003051757813,
+        0.553249955177307,
+        0.170000001788139
+      ]
+    },
+    "cellar:jerrycan_yellow": {
+      "name": "jerrycan yellow",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/jerrycan_yellow.glb",
+      "role": "",
+      "size": [
+        0.300003051757813,
+        0.553249955177307,
+        0.170000001788139
+      ]
+    },
+    "cellar:label": {
+      "name": "label",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/label.glb",
+      "role": "",
+      "size": [
+        0.180000305175781,
+        0.145000010728836,
+        0.0903999954462051
+      ]
+    },
+    "cellar:lantern": {
+      "name": "lantern",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/lantern.glb",
+      "role": "",
+      "size": [
+        0.339996337890625,
+        1.12000000476837,
+        0.340000003576279
+      ]
+    },
+    "cellar:mini_moon": {
+      "name": "mini moon",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/mini_moon.glb",
+      "role": "",
+      "size": [
+        0.260002136230469,
+        0.330499976873398,
+        0.267870754003525
+      ]
+    },
+    "cellar:mini_rocket": {
+      "name": "mini rocket",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/mini_rocket.glb",
+      "role": "",
+      "size": [
+        0.284629821777344,
+        0.419999986886978,
+        0.259999990463257
+      ]
+    },
+    "cellar:moss_patch": {
+      "name": "moss patch",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/moss_patch.glb",
+      "role": "",
+      "size": [
+        0.404495239257813,
+        0.0500000044703484,
+        0.536788940429688
+      ]
+    },
+    "cellar:mushroom_lilac": {
+      "name": "mushroom lilac",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/district/mushroom.glb",
+      "role": "",
+      "size": [
+        0.300003051757813,
+        0.392251253128052,
+        0.280000001192093
+      ]
+    },
+    "cellar:mushroom_mint": {
+      "name": "mushroom mint",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/district/mushroom.glb",
+      "role": "",
+      "size": [
+        0.300003051757813,
+        0.392251253128052,
+        0.280000001192093
+      ]
+    },
+    "cellar:mushroom_pink": {
+      "name": "mushroom pink",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/district/mushroom.glb",
+      "role": "",
+      "size": [
+        0.300003051757813,
+        0.392251253128052,
+        0.280000001192093
+      ]
+    },
+    "cellar:nap_sign": {
+      "name": "nap sign",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/nap_sign.glb",
+      "role": "",
+      "size": [
+        0.800003051757813,
+        0.25,
+        0.0553999990224838
+      ]
+    },
+    "cellar:paper_parcel": {
+      "name": "paper parcel",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/paper_parcel.glb",
+      "role": "",
+      "size": [
+        0.470001220703125,
+        0.338216304779053,
+        0.422440648078918
+      ]
+    },
+    "cellar:payments_sign": {
+      "name": "payments sign",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/payments_sign.glb",
+      "role": "",
+      "size": [
+        0.800003051757813,
+        0.25,
+        0.0553999990224838
+      ]
+    },
+    "cellar:pipes": {
+      "name": "pipes",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/pipes.glb",
+      "role": "",
+      "size": [
+        0.782978057861328,
+        0.941892564296722,
+        0.195500001311302
+      ]
+    },
+    "cellar:power_strip": {
+      "name": "power strip",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/power_strip.glb",
+      "role": "",
+      "size": [
+        0.687911987304688,
+        0.0525000020861626,
+        0.132931798696518
+      ]
+    },
+    "cellar:radio": {
+      "name": "radio",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/radio.glb",
+      "role": "",
+      "size": [
+        0.449996948242188,
+        0.364499986171722,
+        0.215000003576279
+      ]
+    },
+    "cellar:register": {
+      "name": "register",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/register.glb",
+      "role": "",
+      "size": [
+        0.459999084472656,
+        0.469999969005585,
+        0.370000004768372
+      ]
+    },
+    "cellar:sack": {
+      "name": "sack",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/sack.glb",
+      "role": "",
+      "size": [
+        0.459999084472656,
+        0.574999988079071,
+        0.360000014305115
+      ]
+    },
+    "cellar:seed_crate": {
+      "name": "seed crate",
+      "kind": "asset",
+      "category": "plants",
+      "price": 30,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/seed_crate.glb",
+      "role": "",
+      "size": [
+        0.81500244140625,
+        0.375,
+        0.535000026226044
+      ]
+    },
+    "cellar:sewer": {
+      "name": "sewer",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/sewer.glb",
+      "role": "",
+      "size": [
+        1.59999847412109,
+        0.115000009536743,
+        1.60000002384186
+      ]
+    },
+    "cellar:sewer_sign": {
+      "name": "sewer sign",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/sewer_sign.glb",
+      "role": "",
+      "size": [
+        0.800003051757813,
+        0.25,
+        0.0553999990224838
+      ]
+    },
+    "cellar:shears": {
+      "name": "shears",
+      "kind": "asset",
+      "category": "plants",
+      "price": 30,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/shears.glb",
+      "role": "",
+      "size": [
+        0.15399169921875,
+        0.260656446218491,
+        0.0320000015199184
+      ]
+    },
+    "cellar:shelf_150": {
+      "name": "shelf 150",
+      "kind": "asset",
+      "category": "furniture",
+      "price": 30,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/shelf_150.glb",
+      "role": "",
+      "size": [
+        1.5,
+        0.300000011920929,
+        0.379999995231628
+      ]
+    },
+    "cellar:shelf_200": {
+      "name": "shelf 200",
+      "kind": "asset",
+      "category": "furniture",
+      "price": 30,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/shelf_200.glb",
+      "role": "",
+      "size": [
+        2.0,
+        0.300000011920929,
+        0.379999995231628
+      ]
+    },
+    "cellar:shipping_crate": {
+      "name": "shipping crate",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/shipping_crate.glb",
+      "role": "",
+      "size": [
+        0.81500244140625,
+        0.600000023841858,
+        0.650200009346008
+      ]
+    },
+    "cellar:single_lamp": {
+      "name": "single lamp",
+      "kind": "asset",
+      "category": "plants",
+      "price": 30,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/single_lamp.glb",
+      "role": "single_lamp",
+      "size": [
+        0.828567504882813,
+        1.91779208183289,
+        0.829995393753052
+      ]
+    },
+    "cellar:skeleton": {
+      "name": "skeleton",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/district/skeleton.glb",
+      "role": "",
+      "size": [
+        0.949996948242188,
+        2.09499979019165,
+        0.339999973773956
+      ]
+    },
+    "cellar:skull_mug": {
+      "name": "skull mug",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/skull_mug.glb",
+      "role": "",
+      "size": [
+        0.366668701171875,
+        0.203406736254692,
+        0.239999994635582
+      ]
+    },
+    "cellar:sleeping_cat": {
+      "name": "sleeping cat",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/sleeping_cat.glb",
+      "role": "",
+      "size": [
+        0.699996948242188,
+        0.351791054010391,
+        0.558116734027863
+      ]
+    },
+    "cellar:space_helmet": {
+      "name": "space helmet",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/space_helmet.glb",
+      "role": "",
+      "size": [
+        0.379997253417969,
+        0.400000005960464,
+        0.379999995231628
+      ]
+    },
+    "cellar:step_warning": {
+      "name": "step warning",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/step_warning.glb",
+      "role": "",
+      "size": [
+        0.800003051757813,
+        0.25,
+        0.0553999990224838
+      ]
+    },
+    "cellar:syrup_sign": {
+      "name": "syrup sign",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/syrup_sign.glb",
+      "role": "",
+      "size": [
+        0.800003051757813,
+        0.25,
+        0.0553999990224838
+      ]
+    },
+    "cellar:tariffs_sign": {
+      "name": "tariffs sign",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/tariffs_sign.glb",
+      "role": "",
+      "size": [
+        0.800003051757813,
+        0.25,
+        0.0553999990224838
+      ]
+    },
+    "cellar:terminal_capacity": {
+      "name": "terminal capacity",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/terminal_capacity.glb",
+      "role": "terminal_capacity",
+      "size": [
+        0.550003051757813,
+        1.66499996185303,
+        0.550000011920929
+      ]
+    },
+    "cellar:terminal_filter": {
+      "name": "Filtre à charbon — module renforcé",
+      "kind": "asset",
+      "category": "plants",
+      "price": 12,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/filter_cartridge.glb",
+      "role": "ceiling_filter",
+      "size": [
+        0.58,
+        0.18,
+        0.58
+      ]
+    },
+    "cellar:terminal_lamp": {
+      "name": "terminal lamp",
+      "kind": "asset",
+      "category": "plants",
+      "price": 30,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/terminal_lamp.glb",
+      "role": "terminal_lamp",
+      "size": [
+        0.550003051757813,
+        1.66499996185303,
+        0.550000011920929
+      ]
+    },
+    "cellar:terminal_lock": {
+      "name": "terminal lock",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/terminal_lock.glb",
+      "role": "terminal_lock",
+      "size": [
+        0.550003051757813,
+        1.66499996185303,
+        0.550000011920929
+      ]
+    },
+    "cellar:tip_jar": {
+      "name": "tip jar",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/tip_jar.glb",
+      "role": "",
+      "size": [
+        0.279998779296875,
+        0.280000001192093,
+        0.283200025558472
+      ]
+    },
+    "cellar:toaster": {
+      "name": "toaster",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/toaster.glb",
+      "role": "",
+      "size": [
+        0.319999694824219,
+        0.246999993920326,
+        0.240000009536743
+      ]
+    },
+    "cellar:trowel": {
+      "name": "trowel",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/trowel.glb",
+      "role": "",
+      "size": [
+        0.120002746582031,
+        0.455000013113022,
+        0.0500000007450581
+      ]
+    },
+    "cellar:vent_socket": {
+      "name": "vent socket",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/vent_socket.glb",
+      "role": "",
+      "size": [
+        0.680000305175781,
+        0.582500040531158,
+        0.629999995231628
+      ]
+    },
+    "cellar:warning_poster": {
+      "name": "warning poster",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/warning_poster.glb",
+      "role": "",
+      "size": [
+        0.800003051757813,
+        0.25,
+        0.0553999990224838
+      ]
+    },
+    "cellar:watering_can": {
+      "name": "watering can",
+      "kind": "asset",
+      "category": "plants",
+      "price": 30,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/watering_can.glb",
+      "role": "",
+      "size": [
+        0.778896331787109,
+        0.335999995470047,
+        0.360000014305115
+      ]
+    },
+    "cellar:wilted_pot": {
+      "name": "wilted pot",
+      "kind": "asset",
+      "category": "plants",
+      "price": 30,
+      "level": 3,
+      "family": "darknet",
+      "model": "res://assets/models/cellar/wilted_pot.glb",
+      "role": "",
+      "size": [
+        0.520999908447266,
+        0.699787139892578,
+        0.351999998092651
+      ]
+    },
+    "completion:bucket_biting": {
+      "name": "Bucket biting",
+      "kind": "asset",
+      "category": "plants",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/completion/bucket_biting.glb",
+      "role": "",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "completion:bucket_clearance": {
+      "name": "Bucket clearance",
+      "kind": "asset",
+      "category": "plants",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/completion/bucket_clearance.glb",
+      "role": "",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "completion:garden_bench": {
+      "name": "Garden bench",
+      "kind": "asset",
+      "category": "furniture",
+      "price": 30,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/completion/garden_bench.glb",
+      "role": "",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "completion:pavement_board": {
+      "name": "Chevalet de file d’attente",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/completion/pavement_board.glb",
+      "role": "",
+      "size": [
+        0.99821949005127,
+        1.05693876743317,
+        0.72273588180542
+      ]
+    },
+    "completion:workshop_window": {
+      "name": "Fenêtre de l’atelier et de l’étage",
+      "kind": "asset",
+      "category": "decoration",
+      "price": 12,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/completion/workshop_window.glb",
+      "role": "",
+      "size": [
+        2.37999725341797,
+        1.84750008583069,
+        0.230000004172325
+      ]
+    },
+    "flower:rose": {
+      "name": "Rose — tige",
+      "kind": "flower",
+      "category": "flowers",
+      "price": 3,
+      "level": 1,
+      "family": "shop",
+      "model": "res://assets/models/flowers/rose_toon.glb",
+      "role": "rose",
+      "size": [
+        0.2,
+        0.45,
+        0.2
+      ]
+    },
+    "seed:rose": {
+      "name": "Graines — Rose",
+      "kind": "flower_seed",
+      "category": "flowers",
+      "price": 2,
+      "level": 1,
+      "family": "shop",
+      "model": "",
+      "role": "rose",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "flower:tulip": {
+      "name": "Tulipe — tige",
+      "kind": "flower",
+      "category": "flowers",
+      "price": 2,
+      "level": 1,
+      "family": "shop",
+      "model": "res://assets/models/flowers/tulip_toon.glb",
+      "role": "tulip",
+      "size": [
+        0.2,
+        0.45,
+        0.2
+      ]
+    },
+    "seed:tulip": {
+      "name": "Graines — Tulipe",
+      "kind": "flower_seed",
+      "category": "flowers",
+      "price": 1,
+      "level": 1,
+      "family": "shop",
+      "model": "",
+      "role": "tulip",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "flower:lily": {
+      "name": "Lys — tige",
+      "kind": "flower",
+      "category": "flowers",
+      "price": 4,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/flowers/lily_toon.glb",
+      "role": "lily",
+      "size": [
+        0.2,
+        0.45,
+        0.2
+      ]
+    },
+    "seed:lily": {
+      "name": "Graines — Lys",
+      "kind": "flower_seed",
+      "category": "flowers",
+      "price": 3,
+      "level": 2,
+      "family": "shop",
+      "model": "",
+      "role": "lily",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "flower:sunflower": {
+      "name": "Tournesol — tige",
+      "kind": "flower",
+      "category": "flowers",
+      "price": 3,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/flowers/sunflower_toon.glb",
+      "role": "sunflower",
+      "size": [
+        0.2,
+        0.45,
+        0.2
+      ]
+    },
+    "seed:sunflower": {
+      "name": "Graines — Tournesol",
+      "kind": "flower_seed",
+      "category": "flowers",
+      "price": 2,
+      "level": 2,
+      "family": "shop",
+      "model": "",
+      "role": "sunflower",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "flower:lavender": {
+      "name": "Lavande — tige",
+      "kind": "flower",
+      "category": "flowers",
+      "price": 3,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/flowers/lavender_toon.glb",
+      "role": "lavender",
+      "size": [
+        0.2,
+        0.45,
+        0.2
+      ]
+    },
+    "seed:lavender": {
+      "name": "Graines — Lavande",
+      "kind": "flower_seed",
+      "category": "flowers",
+      "price": 2,
+      "level": 2,
+      "family": "shop",
+      "model": "",
+      "role": "lavender",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "flower:daisy": {
+      "name": "Marguerite — tige",
+      "kind": "flower",
+      "category": "flowers",
+      "price": 2,
+      "level": 1,
+      "family": "shop",
+      "model": "res://assets/models/flowers/daisy_toon.glb",
+      "role": "daisy",
+      "size": [
+        0.2,
+        0.45,
+        0.2
+      ]
+    },
+    "seed:daisy": {
+      "name": "Graines — Marguerite",
+      "kind": "flower_seed",
+      "category": "flowers",
+      "price": 1,
+      "level": 1,
+      "family": "shop",
+      "model": "",
+      "role": "daisy",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "flower:poppy": {
+      "name": "Coquelicot — tige",
+      "kind": "flower",
+      "category": "flowers",
+      "price": 2,
+      "level": 2,
+      "family": "shop",
+      "model": "res://assets/models/flowers/poppy_toon.glb",
+      "role": "poppy",
+      "size": [
+        0.2,
+        0.45,
+        0.2
+      ]
+    },
+    "seed:poppy": {
+      "name": "Graines — Coquelicot",
+      "kind": "flower_seed",
+      "category": "flowers",
+      "price": 1,
+      "level": 2,
+      "family": "shop",
+      "model": "",
+      "role": "poppy",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "flower:xeno_bloom": {
+      "name": "Fleur xéno — tige",
+      "kind": "flower",
+      "category": "flowers",
+      "price": 7,
+      "level": 5,
+      "family": "shop",
+      "model": "res://assets/models/flowers/xeno_bloom_toon.glb",
+      "role": "xeno_bloom",
+      "size": [
+        0.2,
+        0.45,
+        0.2
+      ]
+    },
+    "seed:xeno_bloom": {
+      "name": "Graines — Fleur xéno",
+      "kind": "flower_seed",
+      "category": "flowers",
+      "price": 5,
+      "level": 5,
+      "family": "shop",
+      "model": "",
+      "role": "xeno_bloom",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "flower:snap_orchid": {
+      "name": "Orchidée mordeuse — tige",
+      "kind": "flower",
+      "category": "flowers",
+      "price": 7,
+      "level": 5,
+      "family": "shop",
+      "model": "res://assets/models/flowers/snap_orchid_toon.glb",
+      "role": "snap_orchid",
+      "size": [
+        0.2,
+        0.45,
+        0.2
+      ]
+    },
+    "seed:snap_orchid": {
+      "name": "Graines — Orchidée mordeuse",
+      "kind": "flower_seed",
+      "category": "flowers",
+      "price": 5,
+      "level": 5,
+      "family": "shop",
+      "model": "",
+      "role": "snap_orchid",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "flower:pleurelune": {
+      "name": "Pleurelune — tige",
+      "kind": "flower",
+      "category": "flowers",
+      "price": 5,
+      "level": 5,
+      "family": "shop",
+      "model": "res://assets/models/flowers/pleurelune_toon.glb",
+      "role": "pleurelune",
+      "size": [
+        0.2,
+        0.45,
+        0.2
+      ]
+    },
+    "seed:pleurelune": {
+      "name": "Graines — Pleurelune",
+      "kind": "flower_seed",
+      "category": "flowers",
+      "price": 4,
+      "level": 5,
+      "family": "shop",
+      "model": "",
+      "role": "pleurelune",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "dark_seed:cannabis": {
+      "name": "Graines — Herbe sombre",
+      "kind": "crop_seed",
+      "category": "flowers",
+      "price": 6,
+      "level": 2,
+      "family": "darknet",
+      "model": "",
+      "role": "cannabis",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "dark_seed:xeno_lotus": {
+      "name": "Graines — Lotus xéno",
+      "kind": "crop_seed",
+      "category": "flowers",
+      "price": 25,
+      "level": 2,
+      "family": "darknet",
+      "model": "",
+      "role": "xeno_lotus",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "dark_seed:gloom_moss": {
+      "name": "Graines — Mousse de gouffre",
+      "kind": "crop_seed",
+      "category": "flowers",
+      "price": 30,
+      "level": 2,
+      "family": "darknet",
+      "model": "",
+      "role": "gloom_moss",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "dark_seed:star_vine": {
+      "name": "Graines — Liane d'étoile",
+      "kind": "crop_seed",
+      "category": "flowers",
+      "price": 70,
+      "level": 2,
+      "family": "darknet",
+      "model": "",
+      "role": "star_vine",
+      "size": [
+        1,
+        1,
+        1
+      ]
+    }
+  }
+}
